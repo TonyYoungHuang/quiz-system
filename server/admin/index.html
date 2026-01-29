@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>刷题系统管理后台</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 登录界面 -->
+  <div id="login-screen" class="login-screen">
+    <div class="login-box">
+      <h1>🔐 管理后台登录</h1>
+      <form id="login-form">
+        <div class="form-group">
+          <label>管理员密码</label>
+          <input type="password" id="admin-password" placeholder="请输入管理员密码" required>
+        </div>
+        <button type="submit" class="btn btn-primary">登录</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 主界面 -->
+  <div id="main-screen" class="main-screen hidden">
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>📚 刷题管理</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-page="dashboard">
+          <span class="nav-icon">📊</span>
+          <span class="nav-text">数据概览</span>
+        </a>
+        <a href="#" class="nav-item" data-page="exams">
+          <span class="nav-icon">📖</span>
+          <span class="nav-text">科目管理</span>
+        </a>
+        <a href="#" class="nav-item" data-page="questions">
+          <span class="nav-icon">📝</span>
+          <span class="nav-text">题目管理</span>
+        </a>
+        <a href="#" class="nav-item" data-page="codes">
+          <span class="nav-icon">🔑</span>
+          <span class="nav-text">激活码管理</span>
+        </a>
+        <a href="#" class="nav-item" data-page="users">
+          <span class="nav-icon">👥</span>
+          <span class="nav-text">用户管理</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="logout-btn" class="btn btn-outline">退出登录</button>
+      </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+      <header class="top-bar">
+        <h1 id="page-title">数据概览</h1>
+        <div class="user-info">
+          <span>管理员</span>
+        </div>
+      </header>
+
+      <!-- 数据概览页面 -->
+      <div id="dashboard-page" class="page active">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📖</div>
+            <div class="stat-info">
+              <div class="stat-value" id="stat-exams">0</div>
+              <div class="stat-label">科目总数</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📝</div>
+            <div class="stat-info">
+              <div class="stat-value" id="stat-questions">0</div>
+              <div class="stat-label">题目总数</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🔑</div>
+            <div class="stat-info">
+              <div class="stat-value" id="stat-codes">0</div>
+              <div class="stat-label">激活码总数</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-info">
+              <div class="stat-value" id="stat-users">0</div>
+              <div class="stat-label">激活用户数</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 科目管理页面 -->
+      <div id="exams-page" class="page">
+        <div class="page-header">
+          <button id="add-exam-btn" class="btn btn-primary">+ 添加科目</button>
+        </div>
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>图标</th>
+                <th>科目名称</th>
+                <th>分类</th>
+                <th>题目数</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="exams-table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 题目管理页面 -->
+      <div id="questions-page" class="page">
+        <div class="page-header">
+          <select id="question-exam-filter" class="form-select">
+            <option value="">全部科目</option>
+          </select>
+          <select id="question-type-filter" class="form-select">
+            <option value="">全部题型</option>
+            <option value="SINGLE">单选题</option>
+            <option value="MULTI">多选题</option>
+            <option value="JUDGE">判断题</option>
+          </select>
+          <button id="add-question-btn" class="btn btn-primary">+ 添加题目</button>
+          <button id="import-questions-btn" class="btn btn-success">📤 批量导入</button>
+        </div>
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>题型</th>
+                <th>题目内容</th>
+                <th>科目</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="questions-table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 激活码管理页面 -->
+      <div id="codes-page" class="page">
+        <div class="page-header">
+          <select id="code-exam-filter" class="form-select">
+            <option value="">全部科目</option>
+          </select>
+          <button id="generate-codes-btn" class="btn btn-primary">+ 生成激活码</button>
+        </div>
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>激活码</th>
+                <th>科目</th>
+                <th>状态</th>
+                <th>激活时间</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="codes-table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 用户管理页面 -->
+      <div id="users-page" class="page">
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>用户ID</th>
+                <th>已激活科目</th>
+                <th>激活时间</th>
+              </tr>
+            </thead>
+            <tbody id="users-table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 模态框 -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title">标题</h2>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

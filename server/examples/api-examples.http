@@ -1,0 +1,152 @@
+### Quiz System API 测试集合
+### 使用 REST Client 扩展或类似工具执行
+
+@baseUrl = http://localhost:3000/api/v1
+@contentType = application/json
+
+### ==================== 健康检查 ====================
+
+### 1. 健康检查
+GET http://localhost:3000/health
+
+### ==================== 科目管理 ====================
+
+### 2. 获取所有科目
+GET {{baseUrl}}/exams
+
+### 3. 按分类获取科目
+GET {{baseUrl}}/exams?category=英语
+
+### 4. 获取单个科目详情
+GET {{baseUrl}}/exams/{{examId}}
+
+### 5. 创建科目（管理员）
+POST {{baseUrl}}/exams/admin
+Content-Type: {{contentType}}
+
+{
+  "name": "教育心理学复习题库",
+  "category": "专业课",
+  "icon": "/uploads/edu-psych.png",
+  "description": "教师资格证考试必备题库",
+  "sortOrder": 10
+}
+
+### 6. 切换科目启用状态（管理员）
+PATCH {{baseUrl}}/exams/admin/{{examId}}/toggle
+
+### ==================== 激活码管理 ====================
+
+### 7. 生成激活码（管理员）
+POST {{baseUrl}}/admin/codes/generate
+Content-Type: {{contentType}}
+
+{
+  "examId": "{{examId}}",
+  "count": 10,
+  "source": "XHS",
+  "note": "小红书活动赠送"
+}
+
+### 8. 查询激活码列表（管理员）
+GET {{baseUrl}}/admin/codes?examId={{examId}}&isUsed=false
+
+### 9. 激活码核销（用户）
+POST {{baseUrl}}/activate
+Content-Type: {{contentType}}
+
+{
+  "code": "ABC12345",
+  "userId": "wx_openid_123456"
+}
+
+### 10. 检查用户权限
+GET {{baseUrl}}/permissions/check?userId=wx_openid_123456&examId={{examId}}
+
+### 11. 获取用户的所有权限
+GET {{baseUrl}}/permissions/wx_openid_123456
+
+### ==================== 题目管理 ====================
+
+### 12. 获取题目列表（不含答案）
+GET {{baseUrl}}/questions/{{examId}}?userId=wx_openid_123456
+
+### 13. 按题型筛选题目
+GET {{baseUrl}}/questions/{{examId}}?type=SINGLE&userId=wx_openid_123456
+
+### 14. 获取单题详情（含答案）
+GET {{baseUrl}}/questions/{{examId}}/{{questionId}}?userId=wx_openid_123456
+
+### 15. 创建题目（管理员）
+POST {{baseUrl}}/questions/admin
+Content-Type: {{contentType}}
+
+{
+  "examId": "{{examId}}",
+  "type": "SINGLE",
+  "content": "教育的本质是什么？",
+  "options": [
+    { "key": "A", "value": "培养人" },
+    { "key": "B", "value": "传授知识" },
+    { "key": "C", "value": "发展智力" },
+    { "key": "D", "value": "塑造品格" }
+  ],
+  "answer": "A",
+  "explanation": "教育是一种培养人的社会活动，这是教育的本质属性。",
+  "difficulty": 2,
+  "tags": ["教育学", "基础概念"]
+}
+
+### 16. 批量导入题目（管理员）
+POST {{baseUrl}}/questions/admin/import
+Content-Type: {{contentType}}
+
+{
+  "examId": "{{examId}}",
+  "questions": [
+    {
+      "type": "SINGLE",
+      "content": "教学过程的本质是什么？",
+      "options": [
+        { "key": "A", "value": "认识过程" },
+        { "key": "B", "value": "实践活动" }
+      ],
+      "answer": "A",
+      "explanation": "教学过程本质上是一种认识过程"
+    },
+    {
+      "type": "MULTI",
+      "content": "以下哪些属于教学原则？",
+      "options": [
+        { "key": "A", "value": "科学性与教育性相结合" },
+        { "key": "B", "value": "理论联系实际" },
+        { "key": "C", "value": "因材施教" },
+        { "key": "D", "value": "死记硬背" }
+      ],
+      "answer": ["A", "B", "C"],
+      "explanation": "ABC都是教学原则，D不是"
+    },
+    {
+      "type": "JUDGE",
+      "content": "教育是人类特有的社会现象。",
+      "options": [
+        { "key": "A", "value": "正确" },
+        { "key": "B", "value": "错误" }
+      ],
+      "answer": "A",
+      "explanation": "教育是人类所特有的有意识的社会活动"
+    }
+  ]
+}
+
+### 17. 更新题目（管理员）
+PUT {{baseUrl}}/questions/admin/{{questionId}}
+Content-Type: {{contentType}}
+
+{
+  "content": "更新后的题目内容",
+  "explanation": "更新后的解析"
+}
+
+### 18. 删除题目（管理员）
+DELETE {{baseUrl}}/questions/admin/{{questionId}}

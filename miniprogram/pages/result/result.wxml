@@ -1,0 +1,49 @@
+<!--pages/result/result.wxml-->
+<view class="container">
+  <!-- 结果卡片 -->
+  <view class="result-card">
+    <!-- 分数圆环 -->
+    <view class="score-circle">
+      <view class="score-inner">
+        <view class="score-value">{{score}}</view>
+        <view class="score-label">分</view>
+      </view>
+    </view>
+
+    <!-- 统计信息 -->
+    <view class="stats-info">
+      <view class="stat-item">
+        <view class="stat-value text-primary">{{total}}</view>
+        <view class="stat-label">总题数</view>
+      </view>
+      <view class="stat-divider"></view>
+      <view class="stat-item">
+        <view class="stat-value text-success">{{correct}}</view>
+        <view class="stat-label">答对</view>
+      </view>
+      <view class="stat-divider"></view>
+      <view class="stat-item">
+        <view class="stat-value text-danger">{{wrong}}</view>
+        <view class="stat-label">答错</view>
+      </view>
+    </view>
+
+    <!-- 正确率 -->
+    <view class="accuracy-info">
+      <text class="accuracy-label">正确率</text>
+      <text class="accuracy-value text-primary">{{accuracy}}%</text>
+    </view>
+  </view>
+
+  <!-- 评价 -->
+  <view class="comment-card">
+    <view class="comment-icon">{{commentEmoji}}</view>
+    <view class="comment-text">{{commentText}}</view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-buttons">
+    <button class="btn-secondary" bindtap="onBackHome">返回首页</button>
+    <button class="btn-primary" bindtap="onRetry">再练一次</button>
+  </view>
+</view>

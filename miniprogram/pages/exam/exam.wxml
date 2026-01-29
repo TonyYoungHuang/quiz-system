@@ -1,0 +1,157 @@
+<!--pages/exam/exam.wxml-->
+<wxs module="exam">
+  // 判断选项是否被选中
+  var isSelected = function(userAnswer, optionKey, questionType) {
+    if (!userAnswer) return false;
+    if (questionType === 'MULTI') {
+      // 多选题：userAnswer是数组
+      return userAnswer.indexOf(optionKey) >= 0;
+    } else {
+      // 单选/判断：userAnswer是字符串
+      return userAnswer === optionKey;
+    }
+  };
+
+  // 判断是否答错
+  var isWrong = function(userAnswer, optionKey, questionType, answer, showResult) {
+    if (!showResult) return false;
+    if (answer === optionKey) return false; // 正确的不会是错的
+    if (questionType === 'MULTI') {
+      return userAnswer && userAnswer.indexOf(optionKey) >= 0;
+    } else {
+      return userAnswer === optionKey;
+    }
+  };
+
+  module.exports = {
+    isSelected: isSelected,
+    isWrong: isWrong
+  };
+</wxs>
+
+<view class="container">
+  <!-- 顶部信息栏 -->
+  <view class="header">
+    <view class="header-left" bindtap="onBack">
+      <text class="back-icon">‹</text>
+    </view>
+    <view class="header-center">
+      <view class="exam-title">{{examName}}</view>
+      <view class="exam-progress">第 {{currentIndex + 1}}/{{questions.length}} 题</view>
+    </view>
+    <view class="header-right" bindtap="onShowAnswerSheet">
+      <text class="sheet-icon">📋</text>
+    </view>
+  </view>
+
+  <!-- 进度条 -->
+  <view class="progress-bar">
+    <view class="progress-fill" style="width: {{(currentIndex + 1) / questions.length * 100}}%"></view>
+  </view>
+
+  <!-- 题目卡片 -->
+  <swiper
+    class="question-swiper"
+    current="{{currentIndex}}"
+    bindchange="onSwiperChange"
+    circular="{{false}}"
+  >
+    <swiper-item wx:for="{{questions}}" wx:key="_id">
+      <view class="question-card">
+        <!-- 题型标签 -->
+        <view class="question-type" style="background: {{item.typeColor}};">
+          {{item.typeName}}
+        </view>
+
+        <!-- 题目内容 -->
+        <view class="question-content">
+          <text class="question-index">{{index + 1}}.</text>
+          <text class="question-text">{{item.content}}</text>
+        </view>
+
+        <!-- 题目图片（如果有） -->
+        <image wx:if="{{item.mediaUrl}}" class="question-image" src="{{item.mediaUrl}}" mode="widthFix"></image>
+
+        <!-- 选项列表 -->
+        <view class="options-list">
+          <view
+            wx:for="{{item.options}}"
+            wx:for-item="option"
+            wx:for-index="optIndex"
+            wx:key="key"
+            class="option-item {{exam.isSelected(userAnswers[item._id], option.key, item.type) ? 'selected' : ''}} {{showResult && item.answer === option.key ? 'correct' : ''}} {{exam.isWrong(userAnswers[item._id], option.key, item.type, item.answer, showResult) ? 'wrong' : ''}}"
+            bindtap="onSelectOption"
+            data-question-id="{{item._id}}"
+            data-option="{{option.key}}"
+          >
+            <view class="option-key">{{option.key}}</view>
+            <view class="option-value">{{option.value}}</view>
+            <view wx:if="{{showResult}}" class="option-result">
+              <text wx:if="{{item.answer === option.key}}" class="result-icon correct">✓</text>
+              <text wx:elif="{{exam.isWrong(userAnswers[item._id], option.key, item.type, item.answer, showResult)}}" class="result-icon wrong">✗</text>
+            </view>
+          </view>
+        </view>
+
+        <!-- 答案解析 -->
+        <view wx:if="{{showResult}}" class="answer-analysis">
+          <view class="analysis-title">📖 答案解析</view>
+          <view class="analysis-content">{{item.explanation}}</view>
+          <view class="correct-answer">
+            正确答案：<text class="answer-text">{{item.answer}}</text>
+          </view>
+        </view>
+
+        <!-- 底部按钮 -->
+        <view class="footer-buttons">
+          <button wx:if="{{!showResult}}" class="btn-submit" bindtap="onSubmitAnswer" disabled="{{!userAnswers[item._id]}}">
+            提交答案
+          </button>
+          <view wx:else class="result-buttons">
+            <button wx:if="{{index < questions.length - 1}}" class="btn-next" bindtap="onNextQuestion">
+              下一题
+            </button>
+            <button wx:else class="btn-finish" bindtap="onFinishExam">
+              查看结果
+            </button>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 答题卡弹窗 -->
+<view class="answer-sheet-mask" wx:if="{{showSheet}}" bindtap="onHideAnswerSheet">
+  <view class="answer-sheet" catchtap="onStopPropagation">
+    <view class="sheet-header">
+      <view class="sheet-title">答题卡</view>
+      <view class="sheet-close" bindtap="onHideAnswerSheet">
+        <text>✕</text>
+      </view>
+    </view>
+
+    <view class="sheet-stats">
+      <view class="stat-item">
+        <text class="stat-value">{{answeredCount}}</text>
+        <text class="stat-label">已答</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-value">{{questions.length - answeredCount}}</text>
+        <text class="stat-label">未答</text>
+      </view>
+    </view>
+
+    <view class="sheet-grid">
+      <view
+        wx:for="{{questions}}"
+        wx:key="_id"
+        class="sheet-item {{userAnswers[item._id] ? 'answered' : ''}} {{currentIndex === index ? 'current' : ''}}"
+        bindtap="onJumpToQuestion"
+        data-index="{{index}}"
+      >
+        {{index + 1}}
+      </view>
+    </view>
+  </view>
+</view>

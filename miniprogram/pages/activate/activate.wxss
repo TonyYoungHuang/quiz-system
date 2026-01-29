@@ -1,0 +1,204 @@
+/* pages/activate/activate.wxss */
+
+/* 科目信息卡片 */
+.exam-info-card {
+  background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+  margin: 24rpx;
+  border-radius: 16rpx;
+  padding: 32rpx;
+  text-align: center;
+}
+
+.exam-info-title {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 12rpx;
+}
+
+.exam-info-name {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* 激活卡片 */
+.activate-card {
+  background: #fff;
+  margin: 0 24rpx 32rpx;
+  border-radius: 16rpx;
+  padding: 32rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.card-desc {
+  font-size: 26rpx;
+  color: #999;
+  margin-bottom: 32rpx;
+}
+
+/* 激活码输入 */
+.code-input-wrapper {
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+.code-input {
+  width: 100%;
+  height: 96rpx;
+  background: #F5F5F5;
+  border-radius: 12rpx;
+  padding: 0 24rpx;
+  font-size: 32rpx;
+  letter-spacing: 4rpx;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.code-clear {
+  position: absolute;
+  right: 24rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32rpx;
+  height: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #999;
+}
+
+.code-tips {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.tips-icon {
+  margin-right: 8rpx;
+  font-size: 28rpx;
+}
+
+/* 激活按钮 */
+.activate-btn {
+  margin: 0 24rpx 32rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  color: #fff;
+  border-radius: 48rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 8rpx 16rpx rgba(74, 144, 226, 0.3);
+}
+
+.activate-btn.disabled {
+  background: #E0E0E0;
+  box-shadow: none;
+  color: #999;
+}
+
+/* 已激活列表 */
+.activated-list {
+  margin: 0 24rpx;
+}
+
+.list-title {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 16rpx;
+}
+
+.empty-activated {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 80rpx 0;
+}
+
+.empty-icon {
+  font-size: 80rpx;
+  margin-bottom: 16rpx;
+  opacity: 0.5;
+}
+
+.empty-activated text {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.exam-items {
+  background: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+
+.activated-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  border-bottom: 1rpx solid #F0F0F0;
+}
+
+.activated-item:last-child {
+  border-bottom: none;
+}
+
+.item-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  margin-right: 16rpx;
+  background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+}
+
+.item-icon-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+}
+
+.item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.item-name {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 8rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-meta {
+  font-size: 24rpx;
+}
+
+.item-arrow {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #999;
+}

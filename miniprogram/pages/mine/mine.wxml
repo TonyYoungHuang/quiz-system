@@ -1,0 +1,58 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <!-- 用户信息卡片 -->
+  <view class="user-card">
+    <view class="user-avatar">
+      <text>👤</text>
+    </view>
+    <view class="user-info">
+      <view class="user-name">刷题用户</view>
+      <view class="user-id">ID: {{userId}}</view>
+    </view>
+  </view>
+
+  <!-- 统计数据 -->
+  <view class="stats-card">
+    <view class="stat-item">
+      <view class="stat-value">{{activatedCount}}</view>
+      <view class="stat-label">已激活科目</view>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <view class="stat-value">{{totalQuestions}}</view>
+      <view class="stat-label">可用题目</view>
+    </view>
+  </view>
+
+  <!-- 功能列表 -->
+  <view class="menu-list">
+    <view class="menu-item" bindtap="onMyExams">
+      <view class="menu-left">
+        <text class="menu-icon">📚</text>
+        <text class="menu-title">我的科目</text>
+      </view>
+      <text class="menu-arrow">›</text>
+    </view>
+
+    <view class="menu-item" bindtap="onHistory">
+      <view class="menu-left">
+        <text class="menu-icon">📝</text>
+        <text class="menu-title">答题记录</text>
+      </view>
+      <text class="menu-arrow">›</text>
+    </view>
+
+    <view class="menu-item" bindtap="onAbout">
+      <view class="menu-left">
+        <text class="menu-icon">ℹ️</text>
+        <text class="menu-title">关于我们</text>
+      </view>
+      <text class="menu-arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 版本信息 -->
+  <view class="version-info">
+    <text>版本 1.0.0</text>
+  </view>
+</view>

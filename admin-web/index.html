@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>刷题系统管理后台</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    /* 登录页面 */
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-title {
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #555;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #5568d3;
+    }
+
+    .btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    /* 主界面 */
+    .main-container {
+      display: none;
+    }
+
+    .header {
+      background: white;
+      padding: 16px 24px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .header-right {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 60px;
+      bottom: 0;
+      width: 220px;
+      background: white;
+      border-right: 1px solid #e5e7eb;
+      padding: 16px 0;
+    }
+
+    .sidebar-item {
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sidebar-item:hover {
+      background: #f5f7fa;
+    }
+
+    .sidebar-item.active {
+      background: #eef2ff;
+      color: #667eea;
+      border-right: 3px solid #667eea;
+    }
+
+    .content {
+      margin-left: 220px;
+      margin-top: 60px;
+      padding: 24px;
+    }
+
+    /* 统计卡片 */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .stat-value {
+      font-size: 28px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* 表格 */
+    .table-container {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .table-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .table-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px 20px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    th {
+      background: #f9fafb;
+      font-weight: 500;
+      color: #666;
+      font-size: 14px;
+    }
+
+    td {
+      font-size: 14px;
+    }
+
+    /* 按钮 */
+    .btn-sm {
+      padding: 6px 12px;
+      font-size: 14px;
+      width: auto;
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-success {
+      background: #10b981;
+      color: white;
+    }
+
+    .btn-danger {
+      background: #ef4444;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #6b7280;
+      color: white;
+    }
+
+    /* 模态框 */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .modal-header {
+      padding: 20px;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #999;
+    }
+
+    .modal-body {
+      padding: 20px;
+    }
+
+    .modal-footer {
+      padding: 16px 20px;
+      border-top: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    /* 提示消息 */
+    .toast {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 12px 20px;
+      border-radius: 6px;
+      color: white;
+      font-weight: 500;
+      z-index: 10000;
+      display: none;
+    }
+
+    .toast.show {
+      display: block;
+      animation: slideIn 0.3s ease;
+    }
+
+    .toast-success {
+      background: #10b981;
+    }
+
+    .toast-error {
+      background: #ef4444;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    /* 文本域 */
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 13px;
+      resize: vertical;
+      min-height: 200px;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    /* 页面切换 */
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    /* 分页 */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 16px;
+    }
+
+    .pagination button {
+      padding: 6px 12px;
+      border: 1px solid #ddd;
+      background: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .pagination button:hover {
+      background: #f5f7fa;
+    }
+
+    .pagination button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .pagination-info {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* 帮助文本 */
+    .help-text {
+      font-size: 12px;
+      color: #666;
+      margin-top: 4px;
+    }
+
+    .code-list {
+      max-height: 200px;
+      overflow-y: auto;
+      background: #f9fafb;
+      padding: 12px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 13px;
+    }
+
+    .code-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .code-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+  <!-- Cloudbase Web SDK -->
+  <script src="./cloudbase.full.js"></script>
+  <script>
+    // Fallback loader in case relative path or upload location differs
+    (function () {
+      if (window.cloudbase) return;
+      const tryUrls = [
+        new URL('cloudbase.full.js', window.location.href).toString(),
+        new URL('lib/cloudbase.full.js', window.location.href).toString()
+      ];
+      const loadNext = (idx) => {
+        if (idx >= tryUrls.length) return;
+        const sdkUrl = tryUrls[idx];
+        const s = document.createElement('script');
+        s.src = sdkUrl;
+        s.async = true;
+        s.onload = () => { window.__cloudbaseReady = true; };
+        s.onerror = () => { window.__cloudbaseLoadError = sdkUrl; loadNext(idx + 1); };
+        document.head.appendChild(s);
+      };
+      loadNext(0);
+    })();
+  </script>
+</head>
+<body>
+  <!-- 登录页面 -->
+  <div id="loginPage" class="login-container">
+    <div class="login-box">
+      <h1 class="login-title">管理后台登录</h1>
+      <div class="form-group">
+        <label class="form-label">管理员密码</label>
+        <input type="password" id="loginPassword" class="form-input" placeholder="请输入密码">
+      </div>
+      <button class="btn" onclick="login()">登录</button>
+      <p class="help-text" style="text-align: center; margin-top: 16px;">默认密码：admin123</p>
+    </div>
+  </div>
+
+  <!-- 主界面 -->
+  <div id="mainPage" class="main-container">
+    <div class="header">
+      <div class="header-title">刷题系统管理后台</div>
+      <div class="header-right">
+        <span id="adminInfo"></span>
+        <button class="btn-sm btn-secondary" onclick="logout()">退出登录</button>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="sidebar-item active" onclick="showPage('dashboard')">
+        <span>📊</span> 数据概览
+      </div>
+      <div class="sidebar-item" onclick="showPage('exams')">
+        <span>📚</span> 科目管理
+      </div>
+      <div class="sidebar-item" onclick="showPage('questions')">
+        <span>✏️</span> 题目管理
+      </div>
+      <div class="sidebar-item" onclick="showPage('codes')">
+        <span>🔑</span> 激活码管理
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- 数据概览页面 -->
+      <div id="dashboardPage" class="page active">
+        <h2 style="margin-bottom: 20px;">数据概览</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">科目总数</div>
+            <div class="stat-value" id="statExams">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">题目总数</div>
+            <div class="stat-value" id="statQuestions">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">激活码总数</div>
+            <div class="stat-value" id="statCodes">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">已激活用户</div>
+            <div class="stat-value" id="statUsers">0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 科目管理页面 -->
+      <div id="examsPage" class="page">
+        <div class="table-container">
+          <div class="table-header">
+            <div class="table-title">科目列表</div>
+            <button class="btn-sm btn-primary" onclick="showCreateExamModal()">添加科目</button>
+          </div>
+          <table id="examsTable">
+            <thead>
+              <tr>
+                <th>图标</th>
+                <th>科目名称</th>
+                <th>分类</th>
+                <th>题目数量</th>
+                <th>排序</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="examsTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 题目管理页面 -->
+      <div id="questionsPage" class="page">
+        <div class="table-container">
+          <div class="table-header">
+            <div class="table-title">题目导入</div>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <select id="exportExamSelect" class="form-input" style="width: 200px;">
+                <option value="">选择科目</option>
+              </select>
+              <button class="btn-sm btn-secondary" onclick="exportQuestions()">导出CSV</button>
+              <button class="btn-sm btn-secondary" onclick="downloadCsvTemplate()">下载CSV模板</button>
+              <button class="btn-sm btn-primary" onclick="showImportModal()">批量导入</button>
+            </div>
+          </div>
+          <div style="padding: 20px;">
+            <h3>CSV格式说明</h3>
+            <p style="margin: 12px 0; color: #666;">请按照以下格式准备CSV文件：</p>
+            <pre style="background: #f9fafb; padding: 12px; border-radius: 4px; overflow-x: auto;">
+题型,题目内容,A选项,B选项,C选项,D选项,答案,解析
+单选题,以下哪个是正确的？,选项A的内容,选项B的内容,选项C的内容,选项D的内容,A,这是解析内容
+多选题,以下哪些是正确的？,选项A的内容,选项B的内容,选项C的内容,选项D的内容,AB,这是解析内容
+判断题,地球是圆的吗？,,,,,A,这是解析内容
+            </pre>
+            <p class="help-text">支持题型：单选题、多选题、判断题</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 激活码管理页面 -->
+      <div id="codesPage" class="page">
+        <div class="table-container">
+          <div class="table-header">
+            <div class="table-title">激活码列表</div>
+            <button class="btn-sm btn-success" onclick="showGenerateModal()">生成激活码</button>
+          </div>
+          <div style="padding: 12px 20px; display: flex; gap: 12px; align-items: center;">
+            <label>筛选科目：</label>
+            <select id="filterExamSelect" class="form-input" style="width: 200px;" onchange="loadCodes()">
+              <option value="">全部科目</option>
+            </select>
+          </div>
+          <table id="codesTable">
+            <thead>
+              <tr>
+                <th>激活码</th>
+                <th>科目</th>
+                <th>来源</th>
+                <th>状态</th>
+                <th>创建时间</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="codesTableBody"></tbody>
+          </table>
+          <div class="pagination">
+            <button onclick="prevPage()" id="prevBtn">上一页</button>
+            <span class="pagination-info" id="paginationInfo"></span>
+            <button onclick="nextPage()" id="nextBtn">下一页</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 添加科目模态框 -->
+  <div id="createExamModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">添加科目</div>
+        <button class="modal-close" onclick="closeModal('createExamModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">科目名称 *</label>
+          <input type="text" id="examName" class="form-input" placeholder="请输入科目名称">
+        </div>
+        <div class="form-group">
+          <label class="form-label">分类</label>
+          <input type="text" id="examCategory" class="form-input" placeholder="请输入分类" value="默认分类">
+        </div>
+        <div class="form-group">
+          <label class="form-label">图标</label>
+          <input type="text" id="examIcon" class="form-input" placeholder="请输入emoji图标" value="📚">
+        </div>
+        <div class="form-group">
+          <label class="form-label">排序</label>
+          <input type="number" id="examSortOrder" class="form-input" placeholder="数字越小越靠前" value="0">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-sm btn-secondary" onclick="closeModal('createExamModal')">取消</button>
+        <button class="btn-sm btn-primary" onclick="createExam()">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 批量导入模态框 -->
+  <div id="importModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">批量导入题目</div>
+        <button class="modal-close" onclick="closeModal('importModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">选择科目 *</label>
+          <select id="importExamSelect" class="form-input">
+            <option value="">请选择科目</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">导入方式 *</label>
+          <select id="importMode" class="form-input">
+            <option value="overwrite">覆盖导入（将删除该科目旧题）</option>
+            <option value="append">追加导入</option>
+          </select>
+          <p class="help-text">覆盖导入会先清空该科目已有题目</p>
+        </div>
+        <div class="form-group">
+          <label class="form-label">CSV文件 *</label>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <input type="file" id="csvFileInput" accept=".csv" style="display: none;" onchange="handleCsvFile(event)">
+            <button class="btn-sm btn-secondary" onclick="document.getElementById('csvFileInput').click()">选择CSV文件</button>
+            <span class="help-text">选择后会自动读取，点击“开始导入”提交</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">CSV数据 *</label>
+          <textarea id="importData" placeholder="粘贴CSV数据，每行一道题..."></textarea>
+          <p class="help-text">支持逗号或管道符(|)分隔选项</p>
+        </div>
+        <div id="importResult" style="margin-top: 16px; padding: 12px; background: #f9fafb; border-radius: 4px; display: none;">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-sm btn-secondary" onclick="closeModal('importModal')">取消</button>
+        <button class="btn-sm btn-primary" id="importBtn" onclick="importQuestions()">开始导入</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 导入结果提示 -->
+  <div id="importResultModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">导入结果</div>
+        <button class="modal-close" onclick="closeModal('importResultModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="importResultSummary"></div>
+        <div id="importResultDetail" style="margin-top: 12px;"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-sm btn-primary" onclick="closeModal('importResultModal')">我知道了</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 生成激活码模态框 -->
+  <div id="generateModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">生成激活码</div>
+        <button class="modal-close" onclick="closeModal('generateModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">选择科目 *</label>
+          <select id="generateExamSelect" class="form-input">
+            <option value="">请选择科目</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">生成数量 *</label>
+          <input type="number" id="generateCount" class="form-input" placeholder="请输入生成数量" value="10" min="1" max="100">
+        </div>
+        <div class="form-group">
+          <label class="form-label">来源</label>
+          <select id="generateSource" class="form-input">
+            <option value="MANUAL">手动生成</option>
+            <option value="XHS">小红书</option>
+            <option value="TB">淘宝</option>
+            <option value="PDD">拼多多</option>
+            <option value="XY">闲鱼</option>
+          </select>
+        </div>
+        <div id="generatedCodes" style="margin-top: 16px; display: none;">
+          <label class="form-label">生成的激活码：</label>
+          <div class="code-list" id="generatedCodesList"></div>
+          <button class="btn-sm btn-primary" style="margin-top: 12px;" onclick="copyCodes()">复制全部</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-sm btn-secondary" onclick="closeModal('generateModal')">取消</button>
+        <button class="btn-sm btn-success" onclick="generateCodes()">生成</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 提示消息 -->
+  <div id="toast" class="toast"></div>
+
+  <script>
+﻿// 全局变量
+let currentToken = localStorage.getItem('adminToken') || '';
+let currentPage = 1;
+let pageSize = 20;
+let totalCodes = 0;
+let app = null;
+
+// 初始化 Cloudbase
+    async function initCloudbase() {
+      try {
+        // Wait for SDK to be available (static hosting may change path)
+        if (!window.cloudbase) {
+          await new Promise((resolve, reject) => {
+            const start = Date.now();
+            const timer = setInterval(() => {
+              if (window.cloudbase) {
+                clearInterval(timer);
+                resolve();
+                return;
+              }
+              if (Date.now() - start > 8000) {
+                clearInterval(timer);
+                reject(new Error(window.__cloudbaseLoadError || 'Cloudbase SDK load timeout'));
+              }
+            }, 200);
+          });
+        }
+
+        const sdk = window.cloudbase && (window.cloudbase.default || window.cloudbase);
+        if (!sdk || typeof sdk.init !== 'function') {
+          throw new Error('Cloudbase SDK not ready');
+        }
+
+        app = sdk.init({ env: 'cloud1-0g8twq2fde2fa6f0' });
+        const auth = app.auth();
+        const loginState = await auth.getLoginState();
+        if (!loginState) {
+          await auth.signInAnonymously();
+        }
+    console.log('Cloudbase 初始化成功');
+  } catch (err) {
+    console.error('Cloudbase 初始化失败：', err);
+    showToast('云环境初始化失败：' + err.message, 'error');
+  }
+}
+
+// 页面加载时初始化
+window.onload = async function() {
+  await initCloudbase();
+  if (currentToken) {
+    showMainPage();
+  }
+};
+
+// 显示提示消息
+function showToast(message, type = 'success') {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.className = `toast toast-${type} show`;
+  setTimeout(() => {
+    toast.className = 'toast';
+  }, 3000);
+}
+
+// 登录
+    async function login() {
+      const password = document.getElementById('loginPassword').value;
+      if (!password) {
+        showToast('请输入密码', 'error');
+        return;
+      }
+
+      try {
+        const result = await callCloudFunction('adminLogin', { password });
+        console.log('adminLogin result:', result);
+        if (result.success) {
+          currentToken = result.data.token;
+          localStorage.setItem('adminToken', currentToken);
+          showMainPage();
+          showToast('登录成功');
+        } else {
+          showToast(result.message || result.error || '登录失败', 'error');
+        }
+      } catch (error) {
+        showToast('登录失败：' + error.message, 'error');
+      }
+    }
+
+// 退出登录
+function logout() {
+  currentToken = '';
+  localStorage.removeItem('adminToken');
+  document.getElementById('loginPage').style.display = 'flex';
+  document.getElementById('mainPage').style.display = 'none';
+  document.getElementById('loginPassword').value = '';
+}
+
+// 显示主页面
+async function showMainPage() {
+  document.getElementById('loginPage').style.display = 'none';
+  document.getElementById('mainPage').style.display = 'block';
+  await loadStats();
+  await loadExams();
+  await loadExamSelects();
+}
+
+// 加载统计数据
+async function loadStats() {
+  try {
+    const result = await callCloudFunction('adminGetStats', { token: currentToken });
+    if (result.success) {
+      const data = result.data;
+      document.getElementById('statExams').textContent = data.examCount;
+      document.getElementById('statQuestions').textContent = data.questionCount;
+      document.getElementById('statCodes').textContent = data.codeCount;
+      document.getElementById('statUsers').textContent = data.userPermissionCount;
+    }
+  } catch (error) {
+    console.error('加载统计数据失败', error);
+  }
+}
+
+// 加载科目列表
+async function loadExams() {
+  try {
+    const result = await callCloudFunction('adminGetExams', { token: currentToken });
+    if (result.success) {
+      const exams = result.data;
+      const tbody = document.getElementById('examsTableBody');
+      tbody.innerHTML = exams.map(exam => `
+        <tr>
+          <td>${exam.icon}</td>
+          <td>${exam.name}</td>
+          <td>${exam.category}</td>
+          <td>${exam.questionCount}</td>
+          <td>${exam.sortOrder}</td>
+          <td>
+            <button class="btn-sm btn-danger" onclick="deleteExam('${exam._id}')">删除</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+  } catch (error) {
+    console.error('加载科目列表失败', error);
+  }
+}
+
+// 加载科目选择器
+async function loadExamSelects() {
+  try {
+    const result = await callCloudFunction('adminGetExams', { token: currentToken });
+    if (result.success) {
+      const exams = result.data;
+      const options = exams.map(exam => `<option value="${exam._id}">${exam.name}</option>`).join('');
+      document.getElementById('importExamSelect').innerHTML = '<option value="">?????</option>' + options;
+      document.getElementById('generateExamSelect').innerHTML = '<option value="">?????</option>' + options;
+      document.getElementById('filterExamSelect').innerHTML = '<option value="">????</option>' + options;
+      const exportSelect = document.getElementById('exportExamSelect');
+      if (exportSelect) {
+        exportSelect.innerHTML = '<option value="">????</option>' + options;
+      }
+    }
+  } catch (error) {
+    console.error('?????????', error);
+  }
+}
+
+function showPage(pageName) {
+  document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+  document.querySelectorAll('.sidebar-item').forEach(item => item.classList.remove('active'));
+
+  document.getElementById(pageName + 'Page').classList.add('active');
+  const evt = window.event;
+  if (evt && evt.target) {
+    const item = evt.target.closest('.sidebar-item');
+    if (item) item.classList.add('active');
+  }
+
+  if (pageName === 'codes') {
+    loadCodes();
+  }
+}
+
+// 显示添加科目模态框
+function showCreateExamModal() {
+  document.getElementById('createExamModal').classList.add('active');
+}
+
+// 创建科目
+async function createExam() {
+  const name = document.getElementById('examName').value.trim();
+  const category = document.getElementById('examCategory').value.trim();
+  const icon = document.getElementById('examIcon').value.trim();
+  const sortOrder = parseInt(document.getElementById('examSortOrder').value) || 0;
+
+  if (!name) {
+    showToast('请输入科目名称', 'error');
+    return;
+  }
+
+  try {
+    const result = await callCloudFunction('adminCreateExam', {
+      token: currentToken,
+      name,
+      category,
+      icon,
+      sortOrder
+    });
+
+    if (result.success) {
+      showToast('科目创建成功');
+      closeModal('createExamModal');
+      document.getElementById('examName').value = '';
+      await loadExams();
+      await loadExamSelects();
+      await loadStats();
+    } else {
+      showToast(result.message, 'error');
+    }
+  } catch (error) {
+    showToast('创建失败：' + error.message, 'error');
+  }
+}
+
+// 删除科目
+async function deleteExam(examId) {
+  if (!confirm('确定要删除这个科目吗？相关的题目和激活码也将被删除。')) {
+    return;
+  }
+
+  try {
+    const result = await callCloudFunction('adminDeleteExam', { token: currentToken, examId });
+    if (result.success) {
+      showToast('删除成功');
+      await loadExams();
+      await loadExamSelects();
+      await loadStats();
+    } else {
+      showToast(result.message, 'error');
+    }
+  } catch (error) {
+    showToast('删除失败：' + error.message, 'error');
+  }
+}
+
+// 显示导入模态框
+    function showImportModal() {
+      document.getElementById('importModal').classList.add('active');
+      document.getElementById('importResult').style.display = 'none';
+    }
+
+// handle CSV file selection
+function handleCsvFile(event) {
+  const file = event.target && event.target.files ? event.target.files[0] : null;
+  if (!file) return;
+  const examSelect = document.getElementById('importExamSelect');
+  const examId = examSelect ? examSelect.value : '';
+  if (!examId) {
+    showToast('\u8bf7\u9009\u62e9\u79d1\u76ee', 'error');
+    event.target.value = '';
+    return;
+  }
+
+  const readAsText = (enc) => new Promise((resolve, reject) => {
+    try {
+      const reader = new FileReader();
+      reader.onload = () => resolve(String(reader.result || ''));
+      reader.onerror = () => reject(reader.error || new Error('read failed'));
+      reader.readAsText(file, enc);
+    } catch (e) {
+      reject(e);
+    }
+  });
+
+  const readAsArrayBuffer = () => new Promise((resolve, reject) => {
+    try {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = () => reject(reader.error || new Error('read failed'));
+      reader.readAsArrayBuffer(file);
+    } catch (e) {
+      reject(e);
+    }
+  });
+
+  (async () => {
+    let text = '';
+    try {
+      const buf = await readAsArrayBuffer();
+      if (buf && typeof TextDecoder !== 'undefined') {
+        const tryDecode = (enc) => {
+          try {
+            return new TextDecoder(enc, { fatal: false }).decode(buf);
+          } catch (e) {
+            return '';
+          }
+        };
+        let t = tryDecode('utf-8');
+        const bad = (t.match(/\uFFFD/g) || []).length;
+        if (bad > 5) {
+          t = tryDecode('gb18030') || tryDecode('gbk') || t;
+        }
+        text = t;
+      } else {
+        text = await readAsText('utf-8');
+      }
+    } catch (e) {
+      text = await readAsText('utf-8');
+    }
+
+    if (text && text.charCodeAt(0) === 0xFEFF) {
+      text = text.slice(1);
+    }
+
+    const importData = document.getElementById('importData');
+    if (importData) {
+      importData.value = text.trim();
+    }
+  })().catch(() => {
+    showToast('\u8bfb\u53d6CSV\u6587\u4ef6\u5931\u8d25', 'error');
+  });
+
+  event.target.value = '';
+}
+
+function downloadCsvTemplate() {
+      const template = [
+        '题型,题目内容,A选项,B选项,C选项,D选项,答案,解析',
+        '单选题,下列哪项属于个人知识管理的核心功能？,标签管理,快递查询,机票预订,外卖点餐,A,个人知识管理常包含标签与检索等功能。',
+        '多选题,以下哪些属于高效学习习惯？,定期复盘,只看目录,做笔记,分散注意力,AC,复盘和笔记是常见高效学习方式。',
+        '判断题,知识卡片可以帮助记忆和复习。,,,,,A,知识卡片有助于记忆巩固。'
+      ].join('\n');
+      const blob = new Blob(['\ufeff' + template], { type: 'text/csv;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = '题目导入模板.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+async function exportQuestions() {
+      const examId = document.getElementById('exportExamSelect')?.value;
+      if (!examId) {
+        showToast('请选择科目', 'error');
+        return;
+      }
+
+      try {
+        const all = [];
+        let page = 1;
+        const pageSize = 200;
+        let total = 0;
+
+        do {
+          const result = await callCloudFunction('adminGetQuestions', {
+            token: currentToken,
+            examId,
+            page,
+            pageSize
+          });
+
+          if (!result.success) {
+            showToast(result.message || result.error || '导出失败', 'error');
+            return;
+          }
+
+          const data = result.data || {};
+          const list = data.questions || [];
+          total = data.total || 0;
+          all.push(...list);
+          page += 1;
+        } while (all.length < total);
+
+        const rows = [];
+        rows.push('题型,题目内容,A选项,B选项,C选项,D选项,答案,解析');
+
+        for (const q of all) {
+          const typeMap = { SINGLE: '单选题', MULTI: '多选题', JUDGE: '判断题' };
+          const t = typeMap[q.type] || '单选题';
+          const opts = q.options || {};
+          const A = opts.A || '';
+          const B = opts.B || '';
+          const C = opts.C || '';
+          const D = opts.D || '';
+          let ans = q.answer || '';
+          if (q.type === 'MULTI' && Array.isArray(ans)) {
+            ans = ans.join('');
+          }
+          if (q.type === 'JUDGE') {
+            if (ans === 'true' || ans === true || ans === 'A') ans = 'A';
+            if (ans === 'false' || ans === false || ans === 'B') ans = 'B';
+          }
+          const content = (q.content || '').replace(/\n/g, ' ');
+          const explanation = (q.explanation || '').replace(/\n/g, ' ');
+          rows.push([t, content, A, B, C, D, ans, explanation].join(','));
+        }
+
+        const csv = '\ufeff' + rows.join('\n');
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `题库导出_${Date.now()}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        showToast('导出成功');
+      } catch (error) {
+        showToast('导出失败：' + error.message, 'error');
+      }
+    }
+
+async function importQuestions() {
+  const examId = document.getElementById('importExamSelect').value;
+  const csvData = document.getElementById('importData').value.trim();
+  const importBtn = document.getElementById('importBtn');
+  const importMode = document.getElementById('importMode')?.value || 'overwrite';
+
+  if (!examId) {
+    showToast('\u8bf7\u9009\u62e9\u79d1\u76ee', 'error');
+    return;
+  }
+
+  if (!csvData) {
+    showToast('\u8bf7\u8f93\u5165CSV\u6570\u636e', 'error');
+    return;
+  }
+
+  if (importMode === 'overwrite') {
+    const ok = confirm('\u8986\u76d6\u5bfc\u5165\u4f1a\u5148\u6e05\u7a7a\u8be5\u79d1\u76ee\u4e0b\u5df2\u6709\u9898\u76ee\uff0c\u662f\u5426\u7ee7\u7eed\uff1f');
+    if (!ok) return;
+  }
+
+  if (importBtn) {
+    importBtn.disabled = true;
+    importBtn.textContent = '\u5bfc\u5165\u4e2d...';
+  }
+
+  const lines = csvData.split('\n').filter(line => line.trim());
+  const questions = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line) continue;
+
+    const parts = parseCSVLine(line);
+
+    if (parts.length < 7) {
+      console.warn(`\u7b2c ${i + 1} \u884c\u683c\u5f0f\u4e0d\u6b63\u786e\uff0c\u5df2\u8df3\u8fc7:`, line);
+      continue;
+    }
+
+    // skip header row
+    if (i == 0 && /\u9898\u578b/.test(parts[0])) {
+      continue;
+    }
+
+    let type = parts[0].trim();
+    const content = parts[1].trim();
+    const optionA = parts[2].trim();
+    const optionB = parts[3].trim();
+    const optionC = parts[4].trim();
+    const optionD = parts[5].trim();
+    const answer = parts[6].trim();
+    const explanation = parts[7] ? parts[7].trim() : '';
+
+    if (type.includes('\u591a\u9009')) {
+      type = 'MULTI';
+    } else if (type.includes('\u5224\u65ad')) {
+      type = 'JUDGE';
+    } else {
+      type = 'SINGLE';
+    }
+
+    const options = { A: optionA, B: optionB, C: optionC, D: optionD };
+
+    questions.push({
+      type,
+      content,
+      options,
+      answer,
+      explanation,
+      sortOrder: i
+    });
+  }
+
+  if (questions.length === 0) {
+    showToast('\u6ca1\u6709\u6709\u6548\u7684\u9898\u76ee\u6570\u636e', 'error');
+    if (importBtn) {
+      importBtn.disabled = false;
+      importBtn.textContent = '\u5f00\u59cb\u5bfc\u5165';
+    }
+    return;
+  }
+
+  try {
+    const result = await callCloudFunction('adminImportQuestions', {
+      token: currentToken,
+      examId,
+      questions,
+      mode: importMode
+    });
+
+    if (result.success) {
+      const { successCount, failCount, errors, deletedCount } = result.data;
+
+      document.getElementById('importResultSummary').innerHTML = `
+        <p><strong>\u5bfc\u5165\u5b8c\u6210\uff01</strong></p>
+        <p>\u6210\u529f\uff1a${successCount} \u6761</p>
+        <p>\u5931\u8d25\uff1a${failCount} \u6761</p>
+        ${typeof deletedCount === 'number' ? `<p>\u5df2\u5220\u9664\uff1a${deletedCount} \u6761</p>` : ''}
+      `;
+
+      if (errors && errors.length > 0) {
+        let detail = '<p><strong>\u5931\u8d25\u8be6\u60c5\uff1a</strong></p><ul>';
+        errors.slice(0, 10).forEach(err => {
+          detail += `<li>${err.question}: ${err.error}</li>`;
+        });
+        if (errors.length > 10) {
+          detail += `<li>...\u8fd8\u6709 ${errors.length - 10} \u6761</li>`;
+        }
+        detail += '</ul>';
+        document.getElementById('importResultDetail').innerHTML = detail;
+      } else {
+        document.getElementById('importResultDetail').innerHTML = '';
+      }
+
+      document.getElementById('importResultModal').classList.add('active');
+      showToast('\u5bfc\u5165\u5b8c\u6210');
+
+      if (successCount > 0) {
+        await loadStats();
+      }
+    } else {
+      document.getElementById('importResultSummary').innerHTML = '<p><strong>\u5bfc\u5165\u5931\u8d25</strong></p>';
+      document.getElementById('importResultDetail').innerHTML = `<p>${result.message || '\u672a\u77e5\u9519\u8bef'}</p>`;
+      document.getElementById('importResultModal').classList.add('active');
+      showToast('\u5bfc\u5165\u5931\u8d25', 'error');
+    }
+  } catch (error) {
+    document.getElementById('importResultSummary').innerHTML = '<p><strong>\u5bfc\u5165\u5931\u8d25</strong></p>';
+    document.getElementById('importResultDetail').innerHTML = `<p>${error.message}</p>`;
+    document.getElementById('importResultModal').classList.add('active');
+    showToast('\u5bfc\u5165\u5931\u8d25', 'error');
+  } finally {
+    if (importBtn) {
+      importBtn.disabled = false;
+      importBtn.textContent = '\u5f00\u59cb\u5bfc\u5165';
+    }
+  }
+}
+
+function parseCSVLine(line) {
+  const parts = [];
+  let current = '';
+  let inQuotes = false;
+
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+    if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === ',' && !inQuotes) {
+      parts.push(current);
+      current = '';
+    } else {
+      current += char;
+    }
+  }
+  parts.push(current);
+
+  return parts;
+}
+
+// 显示生成激活码模态框
+function showGenerateModal() {
+  document.getElementById('generateModal').classList.add('active');
+  document.getElementById('generatedCodes').style.display = 'none';
+  document.getElementById('generatedCodesList').innerHTML = '';
+}
+
+// 生成激活码
+async function generateCodes() {
+  const examId = document.getElementById('generateExamSelect').value;
+  const count = parseInt(document.getElementById('generateCount').value) || 10;
+  const source = document.getElementById('generateSource').value;
+
+  if (!examId) {
+    showToast('请选择科目', 'error');
+    return;
+  }
+
+  if (count < 1 || count > 100) {
+    showToast('生成数量必须在1-100之间', 'error');
+    return;
+  }
+
+  try {
+    const result = await callCloudFunction('adminGenerateCodes', {
+      token: currentToken,
+      examId,
+      count,
+      source
+    });
+
+    if (result.success) {
+      const codes = result.data.codes;
+      document.getElementById('generatedCodesList').innerHTML = codes.map(code =>
+        `<div class="code-item"><span>${code}</span><button class="btn-sm btn-secondary" onclick="copyCode('${code}')">复制</button></div>`
+      ).join('');
+      document.getElementById('generatedCodes').style.display = 'block';
+
+      showToast(`成功生成 ${count} 个激活码`);
+      await loadStats();
+      await loadCodes();
+    } else {
+      showToast(result.message, 'error');
+    }
+  } catch (error) {
+    showToast('生成失败：' + error.message, 'error');
+  }
+}
+
+// 复制单个激活码
+function copyCode(code) {
+  navigator.clipboard.writeText(code).then(() => {
+    showToast('已复制');
+  });
+}
+
+// 复制全部激活码
+function copyCodes() {
+  const codes = document.getElementById('generatedCodesList').innerText;
+  navigator.clipboard.writeText(codes).then(() => {
+    showToast('已复制全部');
+  });
+}
+
+// 加载激活码列表
+async function loadCodes() {
+  try {
+    const examId = document.getElementById('filterExamSelect').value;
+    const offset = (currentPage - 1) * pageSize;
+
+    const result = await callCloudFunction('adminGetCodes', {
+      token: currentToken,
+      examId,
+      limit: pageSize,
+      offset
+    });
+
+    if (result.success) {
+      const { list, total } = result.data;
+      totalCodes = total;
+
+      const tbody = document.getElementById('codesTableBody');
+      tbody.innerHTML = list.map(code => `
+        <tr>
+          <td style="font-family: monospace;">${code.code}</td>
+          <td>${code.examName}</td>
+          <td>${code.source}</td>
+          <td>${code.isUsed ? '<span style="color: #10b981;">已使用</span>' : '<span style="color: #f59e0b;">未使用</span>'}</td>
+          <td>${new Date(code.createdAt).toLocaleString()}</td>
+          <td>
+            ${!code.isUsed ? `<button class="btn-sm btn-danger" onclick="deleteCode('${code._id}')">删除</button>` : '-'}
+          </td>
+        </tr>
+      `).join('');
+
+      document.getElementById('paginationInfo').textContent = `${currentPage} / ${Math.ceil(total / pageSize) || 1}`;
+      document.getElementById('prevBtn').disabled = currentPage === 1;
+      document.getElementById('nextBtn').disabled = currentPage >= Math.ceil(total / pageSize);
+    }
+  } catch (error) {
+    console.error('加载激活码列表失败', error);
+  }
+}
+
+// 删除激活码
+async function deleteCode(codeId) {
+  if (!confirm('确定要删除这个激活码吗？')) {
+    return;
+  }
+
+  try {
+    const result = await callCloudFunction('adminDeleteCode', { token: currentToken, codeId });
+    if (result.success) {
+      showToast('删除成功');
+      await loadCodes();
+      await loadStats();
+    } else {
+      showToast(result.message, 'error');
+    }
+  } catch (error) {
+    showToast('删除失败：' + error.message, 'error');
+  }
+}
+
+// 上一页
+function prevPage() {
+  if (currentPage > 1) {
+    currentPage--;
+    loadCodes();
+  }
+}
+
+// 下一页
+function nextPage() {
+  if (currentPage < Math.ceil(totalCodes / pageSize)) {
+    currentPage++;
+    loadCodes();
+  }
+}
+
+// 关闭模态框
+function closeModal(modalId) {
+  document.getElementById(modalId).classList.remove('active');
+}
+
+// 调用云函数
+    async function callCloudFunction(name, data) {
+      if (!app) {
+        throw new Error('Cloudbase 未初始化');
+      }
+      try {
+        const res = await app.callFunction({
+          name: name,
+          data: data
+        });
+        return res.result || res.data || res;
+      } catch (err) {
+        throw err;
+      }
+    }
+
+// 键盘事件
+document.getElementById('loginPassword').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    login();
+  }
+});
+
+</script>
+</body>
+</html>

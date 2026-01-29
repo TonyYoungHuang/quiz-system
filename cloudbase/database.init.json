@@ -1,0 +1,121 @@
+{
+  "collections": [
+    {
+      "name": "exams",
+      "description": "考试科目表",
+      "indexes": [
+        {
+          "name": "idx_active_sort",
+          "fields": [
+            { "field": "isActive", "order": "desc" },
+            { "field": "sortOrder", "order": "asc" }
+          ]
+        },
+        {
+          "name": "idx_category_active",
+          "fields": [
+            { "field": "category", "order": "asc" },
+            { "field": "isActive", "order": "desc" }
+          ]
+        }
+      ],
+      "sampleData": [
+        {
+          "_id": "exam001",
+          "name": "对外汉语",
+          "category": "教师资格",
+          "icon": "📚",
+          "isActive": true,
+          "sortOrder": 1,
+          "createdAt": "2024-01-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "name": "questions",
+      "description": "题目表",
+      "indexes": [
+        {
+          "name": "idx_exam_sort",
+          "fields": [
+            { "field": "examId", "order": "asc" },
+            { "field": "sortOrder", "order": "asc" }
+          ]
+        },
+        {
+          "name": "idx_exam_type",
+          "fields": [
+            { "field": "examId", "order": "asc" },
+            { "field": "type", "order": "asc" }
+          ]
+        }
+      ],
+      "sampleData": [
+        {
+          "_id": "q001",
+          "examId": "exam001",
+          "type": "SINGLE",
+          "content": "以下哪个是正确的？",
+          "options": {
+            "A": "选项A",
+            "B": "选项B",
+            "C": "选项C",
+            "D": "选项D"
+          },
+          "answer": "A",
+          "explanation": "这是解析",
+          "sortOrder": 1,
+          "createdAt": "2024-01-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "name": "activation_codes",
+      "description": "激活码表",
+      "indexes": [
+        {
+          "name": "idx_code",
+          "fields": [
+            { "field": "code", "order": "asc" }
+          ],
+          "unique": true
+        }
+      ],
+      "sampleData": [
+        {
+          "_id": "code001",
+          "code": "TEST1234",
+          "examId": "exam001",
+          "isUsed": false,
+          "userId": "",
+          "source": "MANUAL",
+          "createdAt": "2024-01-01T00:00:00.000Z",
+          "usedAt": null
+        }
+      ]
+    },
+    {
+      "name": "user_permissions",
+      "description": "用户权限表",
+      "indexes": [
+        {
+          "name": "idx_user_exam",
+          "fields": [
+            { "field": "userId", "order": "asc" },
+            { "field": "examId", "order": "asc" }
+          ]
+        }
+      ],
+      "sampleData": [
+        {
+          "_id": "perm001",
+          "userId": "temp_user_123",
+          "examId": "exam001",
+          "isPermanent": true,
+          "expiresAt": null,
+          "createdAt": "2024-01-01T00:00:00.000Z"
+        }
+      ]
+    }
+  ]
+}
