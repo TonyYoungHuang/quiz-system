@@ -1,4 +1,4 @@
-// 云函数入口文件
+// 浜戝嚱鏁板叆鍙ｆ枃浠?
 const cloud = require('wx-server-sdk');
 
 cloud.init({
@@ -7,12 +7,12 @@ cloud.init({
 
 const db = cloud.database();
 
-// 云函数入口函数
+// 浜戝嚱鏁板叆鍙ｅ嚱鏁?
 exports.main = async (event, context) => {
   const { token, name, category, icon, sortOrder } = event;
 
   try {
-    // 验证token
+    // 楠岃瘉token
     const tokenResult = await db.collection('admin_tokens')
       .where({ token: token })
       .get();
@@ -36,16 +36,16 @@ exports.main = async (event, context) => {
       }
     }
 
-    // 生成科目ID
+    // 鐢熸垚绉戠洰ID
     const _id = 'exam_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 
-    // 创建科目
+    // 鍒涘缓绉戠洰
     await db.collection('exams').add({
       data: {
         _id: _id,
         name: name,
-        category: category || '默认分类',
-        icon: icon || '📚',
+        category: category || '榛樿鍒嗙被',
+        icon: icon || '馃摎',
         sortOrder: sortOrder || 0,
         isActive: true,
         createdAt: new Date(),
@@ -55,16 +55,16 @@ exports.main = async (event, context) => {
 
     return {
       success: true,
-      message: '科目创建成功',
+      message: '绉戠洰鍒涘缓鎴愬姛',
       data: {
         _id: _id
       }
     };
   } catch (error) {
-    console.error('创建科目失败:', error);
+    console.error('鍒涘缓绉戠洰澶辫触:', error);
     return {
       success: false,
-      message: '创建科目失败',
+      message: '鍒涘缓绉戠洰澶辫触',
       error: error.message
     };
   }

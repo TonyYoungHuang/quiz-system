@@ -1,4 +1,4 @@
-// 云函数入口文件
+// 浜戝嚱鏁板叆鍙ｆ枃浠?
 const cloud = require('wx-server-sdk');
 
 cloud.init({
@@ -8,12 +8,12 @@ cloud.init({
 const db = cloud.database();
 const _ = db.command;
 
-// 云函数入口函数
+// 浜戝嚱鏁板叆鍙ｅ嚱鏁?
 exports.main = async (event, context) => {
   const { token, examId, questions, mode = 'append' } = event;
 
   try {
-    // 验证token
+    // 楠岃瘉token
     const tokenResult = await db.collection('admin_tokens')
       .where({ token: token })
       .get();
@@ -37,7 +37,7 @@ exports.main = async (event, context) => {
       }
     }
 
-    // 验证examId是否存在
+    // 楠岃瘉examId鏄惁瀛樺湪
     const exam = await db.collection('exams')
       .doc(examId)
       .get();
@@ -45,7 +45,7 @@ exports.main = async (event, context) => {
     if (!exam.data) {
       return {
         success: false,
-        message: '科目不存在'
+        message: '绉戠洰涓嶅瓨鍦?
       };
     }
 
@@ -69,29 +69,29 @@ exports.main = async (event, context) => {
       }
     }
 
-    // 批量添加题目
+    // 鎵归噺娣诲姞棰樼洰
     const successCount = { value: 0 };
     const failCount = { value: 0 };
     const errors = [];
 
-    // 云函数单次最多操作20条记录，需要分批
+    // 浜戝嚱鏁板崟娆℃渶澶氭搷浣?0鏉¤褰曪紝闇€瑕佸垎鎵?
     const batchSize = 20;
     for (let i = 0; i < questions.length; i += batchSize) {
       const batch = questions.slice(i, i + batchSize);
 
       for (const q of batch) {
         try {
-          // 生成题目ID
+          // 鐢熸垚棰樼洰ID
           const _id = 'q_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 
-          // 处理选项格式：支持CSV的逗号分隔和管道符分隔
+          // 澶勭悊閫夐」鏍煎紡锛氭敮鎸丆SV鐨勯€楀彿鍒嗛殧鍜岀閬撶鍒嗛殧
           let options = {};
           if (typeof q.options === 'string') {
-            // 尝试解析JSON
+            // 灏濊瘯瑙ｆ瀽JSON
             try {
               options = JSON.parse(q.options);
             } catch (e) {
-              // 如果不是JSON，按管道符或逗号分隔
+              // 濡傛灉涓嶆槸JSON锛屾寜绠￠亾绗︽垨閫楀彿鍒嗛殧
               const parts = q.options.split(/[|,]/).filter(s => s.trim());
               const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
               parts.forEach((part, idx) => {
@@ -104,13 +104,13 @@ exports.main = async (event, context) => {
             options = q.options;
           }
 
-          // 处理答案格式
+          // 澶勭悊绛旀鏍煎紡
           let answer = q.answer;
           if (q.type === 'MULTI' && typeof answer === 'string') {
-            // 多选题答案可能是 "AB" 或 ["A", "B"]
+            // 澶氶€夐绛旀鍙兘鏄?"AB" 鎴?["A", "B"]
             answer = answer.split('').filter(c => ['A', 'B', 'C', 'D', 'E', 'F'].includes(c));
           } else if (q.type === 'JUDGE') {
-            // 判断题答案可能是 "true"/"false"/"A"/"B"
+            // 鍒ゆ柇棰樼瓟妗堝彲鑳芥槸 "true"/"false"/"A"/"B"
             if (answer === 'A' || answer === 'true') {
               answer = 'true';
             } else if (answer === 'B' || answer === 'false') {
@@ -136,7 +136,7 @@ exports.main = async (event, context) => {
         } catch (error) {
           failCount.value++;
           errors.push({
-            question: q.content || '未知题目',
+            question: q.content || '鏈煡棰樼洰',
             error: error.message
           });
         }
@@ -145,7 +145,7 @@ exports.main = async (event, context) => {
 
     return {
       success: true,
-      message: `导入完成：成功 ${successCount.value} 条，失败 ${failCount.value} 条`,
+      message: `瀵煎叆瀹屾垚锛氭垚鍔?${successCount.value} 鏉★紝澶辫触 ${failCount.value} 鏉,
       data: {
         successCount: successCount.value,
         failCount: failCount.value,
@@ -154,10 +154,10 @@ exports.main = async (event, context) => {
       }
     };
   } catch (error) {
-    console.error('批量导入题目失败:', error);
+    console.error('鎵归噺瀵煎叆棰樼洰澶辫触:', error);
     return {
       success: false,
-      message: '批量导入题目失败',
+      message: '鎵归噺瀵煎叆棰樼洰澶辫触',
       error: error.message
     };
   }

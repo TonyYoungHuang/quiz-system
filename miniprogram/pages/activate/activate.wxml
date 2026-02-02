@@ -1,21 +1,19 @@
-<!--pages/activate/activate.wxml-->
+﻿<!--pages/activate/activate.wxml-->
 <view class="container">
-  <!-- 科目信息 -->
   <view wx:if="{{examId}}" class="exam-info-card">
-    <view class="exam-info-title">正在激活</view>
-    <view class="exam-info-name">{{examName || '该科目'}}</view>
+    <view class="exam-info-title">当前待激活科目</view>
+    <view class="exam-info-name">{{examName || '未选择科目'}}</view>
   </view>
 
-  <!-- 输入激活码 -->
   <view class="activate-card">
-    <view class="card-title">输入激活码</view>
-    <view class="card-desc">请输入您购买后获得的激活码</view>
+    <view class="card-title">激活科目</view>
+    <view class="card-desc">输入激活码即可开通该科目</view>
 
     <view class="code-input-wrapper">
       <input
         class="code-input"
         type="text"
-        placeholder="请输入8-12位激活码"
+        placeholder="请输入 8-12 位激活码"
         value="{{activationCode}}"
         bindinput="onCodeInput"
         bindconfirm="onActivate"
@@ -24,17 +22,16 @@
         confirm-type="done"
       />
       <view class="code-clear" wx:if="{{activationCode}}" bindtap="onClearCode">
-        <text>✕</text>
+        <text>×</text>
       </view>
     </view>
 
     <view class="code-tips">
-      <text class="tips-icon">💡</text>
-      <text>激活码为8-12位大写字母或数字组合</text>
+      <text class="tips-icon">提示</text>
+      <text>激活码为 8-12 位字母或数字</text>
     </view>
   </view>
 
-  <!-- 激活按钮 -->
   <button
     class="activate-btn {{activating || !activationCode ? 'disabled' : ''}}"
     bindtap="onActivate"
@@ -43,13 +40,12 @@
     {{activating ? '激活中...' : '立即激活'}}
   </button>
 
-  <!-- 已激活的科目列表 -->
   <view class="activated-list">
-    <view class="list-title">我的已激活科目</view>
+    <view class="list-title">已激活科目</view>
 
     <view wx:if="{{activatedExams.length === 0}}" class="empty-activated">
-      <text class="empty-icon">📦</text>
-      <text>还没有激活任何科目</text>
+      <text class="empty-icon">暂无</text>
+      <text>暂无已激活科目</text>
     </view>
 
     <view wx:else class="exam-items">
@@ -61,7 +57,7 @@
         data-exam="{{item.examId}}"
       >
         <view class="item-icon">
-          <text class="item-icon-text">{{item.examId.iconText || '📚'}}</text>
+          <text class="item-icon-text">{{item.examId.iconText || '书'}}</text>
         </view>
         <view class="item-info">
           <view class="item-name">{{item.examId.name}}</view>
@@ -70,7 +66,7 @@
           </view>
         </view>
         <view class="item-arrow">
-          <text>›</text>
+          <text>></text>
         </view>
       </view>
     </view>

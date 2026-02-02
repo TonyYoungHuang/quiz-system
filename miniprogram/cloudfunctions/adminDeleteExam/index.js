@@ -1,4 +1,4 @@
-// 云函数入口文件
+// 浜戝嚱鏁板叆鍙ｆ枃浠?
 const cloud = require('wx-server-sdk');
 
 cloud.init({
@@ -9,71 +9,59 @@ const db = cloud.database();
 const _ = db.command;
 
 /**
- * 删除科目云函数
- * 级联删除：删除科目及其所有题目、激活码、用户权限
+ * 鍒犻櫎绉戠洰浜戝嚱鏁?
+ * 绾ц仈鍒犻櫎锛氬垹闄ょ鐩強鍏舵墍鏈夐鐩€佹縺娲荤爜銆佺敤鎴锋潈闄?
  */
 exports.main = async (event, context) => {
   const { token, examId } = event;
 
-  // 1. 验证管理员权限
+  // 1. 楠岃瘉绠＄悊鍛樻潈闄?
   if (!token) {
-    return { success: false, error: '未提供登录令牌' };
+    return { success: false, error: '鏈彁渚涚櫥褰曚护鐗? };
   }
 
   const tokenResult = await db.collection('admin_tokens')
-      .where({ token: token })
-      .get();
+    .where({ token: token })
+    .get();
 
-    if (tokenResult.data.length === 0) {
-      return {
-        success: false,
-        message: '???????????'
-      };
-    }
-
-    const tokenData = tokenResult.data[0];
-    if (tokenData.expiresAt) {
-      const exp = new Date(tokenData.expiresAt).getTime();
-      if (!Number.isNaN(exp) && exp <= Date.now()) {
-        await db.collection('admin_tokens').doc(tokenData._id).remove();
-        return {
-          success: false,
-          message: '???????????'
-        };
-      }
-    }
+  if (tokenResult.data.length === 0) {
+    return {
+      success: false,
+      message: '???????????'
+    };
+  }
 
   const tokenData = tokenResult.data[0];
 
-  // 2. 检查 token 是否过期
+  // 2. 妫€鏌?token 鏄惁杩囨湡
   if (new Date(tokenData.expiresAt) < new Date()) {
     await db.collection('admin_tokens').doc(tokenData._id).remove();
-    return { success: false, error: '登录令牌已过期，请重新登录' };
+    return { success: false, error: '鐧诲綍浠ょ墝宸茶繃鏈燂紝璇烽噸鏂扮櫥褰? };
   }
 
-  // 3. 验证参数
+  // 3. 楠岃瘉鍙傛暟
   if (!examId) {
-    return { success: false, error: '未提供科目 ID' };
+    return { success: false, error: '鏈彁渚涚鐩?ID' };
   }
 
-  // 4. 查询科目是否存在
+  // 4. 鏌ヨ绉戠洰鏄惁瀛樺湪
   const examResult = await db.collection('exams')
     .doc(examId)
     .get();
 
   if (!examResult.data) {
-    return { success: false, error: '科目不存在' };
+    return { success: false, error: '绉戠洰涓嶅瓨鍦? };
   }
 
   const exam = examResult.data;
 
-  // 5. 统计将删除的数据
+  // 5. 缁熻灏嗗垹闄ょ殑鏁版嵁
   let deletedQuestions = 0;
   let deletedCodes = 0;
   let deletedPermissions = 0;
 
   try {
-    // 6. 删除该科目下的所有题目
+    // 6. 鍒犻櫎璇ョ鐩笅鐨勬墍鏈夐鐩?
     const questionsResult = await db.collection('questions')
       .where({ examId: examId })
       .get();
@@ -85,7 +73,7 @@ exports.main = async (event, context) => {
       await db.collection('questions').doc(q._id).remove();
     }
 
-    // 7. 删除该科目下的所有激活码
+    // 7. 鍒犻櫎璇ョ鐩笅鐨勬墍鏈夋縺娲荤爜
     const codesResult = await db.collection('activation_codes')
       .where({ examId: examId })
       .get();
@@ -97,7 +85,7 @@ exports.main = async (event, context) => {
       await db.collection('activation_codes').doc(c._id).remove();
     }
 
-    // 8. 删除该科目下的所有用户权限
+    // 8. 鍒犻櫎璇ョ鐩笅鐨勬墍鏈夌敤鎴锋潈闄?
     const permissionsResult = await db.collection('user_permissions')
       .where({ examId: examId })
       .get();
@@ -109,13 +97,13 @@ exports.main = async (event, context) => {
       await db.collection('user_permissions').doc(p._id).remove();
     }
 
-    // 9. 最后删除科目
+    // 9. 鏈€鍚庡垹闄ょ鐩?
     await db.collection('exams').doc(examId).remove();
 
     return {
       success: true,
       data: {
-        message: '科目删除成功',
+        message: '绉戠洰鍒犻櫎鎴愬姛',
         deleted: {
           questions: deletedQuestions,
           codes: deletedCodes,
@@ -124,7 +112,7 @@ exports.main = async (event, context) => {
       }
     };
   } catch (err) {
-    console.error('删除科目失败：', err);
-    return { success: false, error: '删除科目失败：' + err.message };
+    console.error('鍒犻櫎绉戠洰澶辫触锛?, err);
+    return { success: false, error: '鍒犻櫎绉戠洰澶辫触锛? + err.message };
   }
 };

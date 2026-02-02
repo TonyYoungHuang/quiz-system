@@ -1,6 +1,6 @@
 /* pages/exam/exam.wxss */
 
-/* 顶部信息栏 */
+/* 澶撮儴淇℃伅鏍?*/
 .header {
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@
   color: #999;
 }
 
-/* 进度条 */
+/* 杩涘害鏉?*/
 .progress-bar {
   height: 4rpx;
   background: #E0E0E0;
@@ -56,7 +56,7 @@
   transition: width 0.3s;
 }
 
-/* 题目轮播 */
+/* 棰樼洰杞挱 */
 .question-swiper {
   height: calc(100vh - 120rpx);
 }
@@ -67,7 +67,7 @@
   overflow-y: auto;
 }
 
-/* 题型标签 */
+/* 棰樺瀷鏍囩 */
 .question-type {
   display: inline-block;
   padding: 8rpx 20rpx;
@@ -77,7 +77,7 @@
   margin-bottom: 20rpx;
 }
 
-/* 题目内容 */
+/* 棰樼洰鍐呭 */
 .question-content {
   font-size: 32rpx;
   line-height: 1.6;
@@ -94,14 +94,14 @@
   color: #333;
 }
 
-/* 题目图片 */
+/* 棰樼洰鍥剧墖 */
 .question-image {
   width: 100%;
   border-radius: 12rpx;
   margin-bottom: 24rpx;
 }
 
-/* 选项列表 */
+/* 閫夐」鍒楄〃 */
 .options-list {
   margin-bottom: 24rpx;
 }
@@ -195,7 +195,7 @@
   color: #FF4D4F;
 }
 
-/* 答案解析 */
+/* 绛旀瑙ｆ瀽 */
 .answer-analysis {
   background: rgba(82, 196, 26, 0.1);
   border-radius: 12rpx;
@@ -227,7 +227,7 @@
   font-weight: 500;
 }
 
-/* 底部按钮 */
+/* 搴曢儴鎸夐挳 */
 .footer-buttons {
   padding: 24rpx 0;
 }
@@ -264,7 +264,7 @@
   color: #fff;
 }
 
-/* 答题卡弹窗 */
+/* 绛旈鍗?*/
 .answer-sheet-mask {
   position: fixed;
   top: 0;
@@ -359,4 +359,97 @@
 
 .sheet-item.current {
   border: 2rpx solid #4A90E2;
+}
+
+/* blocks */
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.block-text {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1.6;
+}
+
+.block-image {
+  width: 100%;
+  border-radius: 12rpx;
+}
+
+.block-formula {
+  font-family: "Courier New", monospace;
+  font-size: 26rpx;
+  color: #1f2937;
+  background: #f5f5f5;
+  padding: 8rpx 12rpx;
+  border-radius: 8rpx;
+}
+
+.block-table {
+  border: 1rpx solid #e5e7eb;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.table-row {
+  display: flex;
+  border-bottom: 1rpx solid #e5e7eb;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  flex: 1;
+  padding: 12rpx;
+  font-size: 24rpx;
+  color: #333;
+  border-right: 1rpx solid #e5e7eb;
+}
+
+.table-cell:last-child {
+  border-right: none;
+}
+
+.case-children {
+  margin-top: 16rpx;
+  padding-top: 16rpx;
+  border-top: 1rpx dashed #e5e7eb;
+}
+
+.case-child {
+  margin-bottom: 24rpx;
+}
+
+.blank-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+  margin-bottom: 24rpx;
+}
+
+.blank-input {
+  background: #fff;
+  border: 1rpx solid #e5e7eb;
+  border-radius: 8rpx;
+  padding: 16rpx;
+  font-size: 28rpx;
+}
+
+.short-input {
+  margin-bottom: 24rpx;
+}
+
+.short-textarea {
+  width: 100%;
+  min-height: 180rpx;
+  padding: 16rpx;
+  border: 1rpx solid #e5e7eb;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  background: #fff;
 }

@@ -1,71 +1,148 @@
 const mongoose = require('mongoose');
 
-/**
- * 题目表
- * 支持单选、多选、判断三种题型
- */
+const blockSchema = new mongoose.Schema({
+  type: {
+    type: String,
+    enum: ['text', 'image', 'formula', 'table'],
+    required: true
+  },
+  content: {
+    zh: { type: String }
+  },
+  url: { type: String },
+  alt: { type: String, default: '' },
+  latex: { type: String },
+  rows: [[String]]
+}, { _id: false });
+
+const optionSchema = new mongoose.Schema({
+  key: {
+    type: String,
+    required: true
+  },
+  value: {
+    type: String
+  },
+  content: {
+    type: [blockSchema],
+    default: undefined
+  }
+}, { _id: false });
+
+optionSchema.path('value').validate(function(value) {
+  return !!value || (Array.isArray(this.content) && this.content.length > 0);
+}, 'Option requires value or content blocks');
+
+const childQuestionSchema = new mongoose.Schema({
+  type: {
+    type: String,
+    enum: ['SINGLE', 'MULTI', 'JUDGE', 'BLANK', 'SHORT', 'CALC'],
+    required: true
+  },
+  stem: {
+    type: [blockSchema],
+    default: undefined
+  },
+  options: {
+    type: [optionSchema],
+    default: undefined
+  },
+  answer: {
+    type: mongoose.Schema.Types.Mixed,
+    required: true
+  },
+  analysis: {
+    type: [blockSchema],
+    default: undefined
+  }
+}, { _id: false });
+
 const questionSchema = new mongoose.Schema({
-  // 关联的科目 ID
   examId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Exam',
-    required: [true, '必须关联一个科目'],
+    required: [true, 'examId is required'],
     index: true
   },
-  // 题型：SINGLE(单选) / MULTI(多选) / JUDGE(判断)
   type: {
     type: String,
-    enum: ['SINGLE', 'MULTI', 'JUDGE'],
-    required: [true, '题型不能为空']
+    enum: ['SINGLE', 'MULTI', 'JUDGE', 'BLANK', 'SHORT', 'CASE', 'CALC'],
+    required: [true, 'type is required']
   },
-  // 题干内容
+  // legacy plain text content
   content: {
     type: String,
-    required: [true, '题干内容不能为空'],
     trim: true
   },
-  // 选项列表（判断题只有 A/B 两个选项）
-  options: [{
-    key: {
-      type: String,      // A, B, C, D
-      required: true
-    },
-    value: {
-      type: String,      // 选项内容
-      required: true
-    }
-  }],
-  // 正确答案（单选/判断为字符串，多选为数组）
+  // blocks-based stem
+  stem: {
+    type: [blockSchema],
+    default: undefined
+  },
+  // options (legacy value + new content blocks)
+  options: {
+    type: [optionSchema],
+    default: undefined
+  },
   answer: {
     type: mongoose.Schema.Types.Mixed,
-    required: [true, '答案不能为空']
+    required: [true, 'answer is required']
   },
-  // 答案解析
+  // legacy plain text explanation
   explanation: {
     type: String,
     default: ''
   },
-  // 预留：图片或音频 URL
+  analysis: {
+    type: [blockSchema],
+    default: undefined
+  },
+  // legacy single media url
   mediaUrl: {
     type: String,
     default: ''
   },
-  // 难度等级：1-5
+  // new media array
+  media: {
+    type: [{
+      type: {
+        type: String,
+        enum: ['image', 'audio', 'video'],
+        required: true
+      },
+      url: {
+        type: String,
+        required: true
+      },
+      desc: {
+        type: String,
+        default: ''
+      }
+    }],
+    default: undefined
+  },
+  // case questions
+  children: {
+    type: [childQuestionSchema],
+    default: undefined
+  },
   difficulty: {
     type: Number,
     min: 1,
     max: 5,
     default: 3
   },
-  // 标签（用于分类筛选）
   tags: [{
     type: String,
     trim: true
   }],
-  // 排序
   sortOrder: {
     type: Number,
     default: 0
+  },
+  meta: {
+    type: mongoose.Schema.Types.Mixed,
+    default: {}
   }
 }, {
   timestamps: true,
@@ -73,11 +150,18 @@ const questionSchema = new mongoose.Schema({
   toObject: { virtuals: true }
 });
 
-// 索引优化
 questionSchema.index({ examId: 1, sortOrder: 1 });
 questionSchema.index({ examId: 1, type: 1 });
 
-// 验证答案格式
+questionSchema.pre('validate', function(next) {
+  const hasStem = Array.isArray(this.stem) && this.stem.length > 0;
+  const hasContent = typeof this.content === 'string' && this.content.trim().length > 0;
+  if (!hasStem && !hasContent) {
+    return next(new Error('content or stem is required'));
+  }
+  next();
+});
+
 questionSchema.pre('save', function(next) {
   if (this.type === 'MULTI' && !Array.isArray(this.answer)) {
     this.answer = [this.answer];

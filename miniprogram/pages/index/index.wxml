@@ -1,76 +1,52 @@
-<!--pages/index/index.wxml-->
+﻿<!--pages/index/index.wxml-->
 <view class="container">
-  <!-- 头部搜索 -->
   <view class="search-bar">
     <view class="search-input">
-      <text class="search-icon">🔍</text>
+      <text class="search-icon">搜</text>
       <input placeholder="搜索科目名称" value="{{searchText}}" bindinput="onSearchInput" />
     </view>
   </view>
 
-  <!-- 分类筛选 -->
   <scroll-view class="category-scroll" scroll-x enhanced show-scrollbar="{{false}}">
     <view class="category-list">
-      <view
-        class="category-item {{selectedCategory === '' ? 'active' : ''}}"
-        bindtap="onCategoryChange"
-        data-category=""
-      >
+      <view class="category-item {{selectedCategory === '' ? 'active' : ''}}" bindtap="onCategoryChange" data-category="">
         全部
       </view>
-      <view
-        wx:for="{{categories}}"
-        wx:key="index"
-        class="category-item {{selectedCategory === item ? 'active' : ''}}"
-        bindtap="onCategoryChange"
-        data-category="{{item}}"
-      >
+      <view wx:for="{{categories}}" wx:key="index" class="category-item {{selectedCategory === item ? 'active' : ''}}" bindtap="onCategoryChange" data-category="{{item}}">
         {{item}}
       </view>
     </view>
   </scroll-view>
 
-  <!-- 科目列表 -->
   <view class="exam-list">
-    <view
-      wx:for="{{filteredExams}}"
-      wx:key="_id"
-      class="exam-card"
-      bindtap="onExamTap"
-      data-exam="{{item}}"
-    >
-      <!-- 科目图标 -->
+    <view wx:for="{{filteredExams}}" wx:key="_id" class="exam-card" bindtap="onExamTap" data-exam="{{item}}">
       <view class="exam-icon">
-        <text class="exam-icon-text">{{item.iconText || '📚'}}</text>
+        <image class="exam-icon-img" src="/images/book.png" mode="aspectFit"></image>
       </view>
 
-      <!-- 科目信息 -->
       <view class="exam-info">
         <view class="exam-name">{{item.name}}</view>
-        <view class="exam-desc">{{item.description}}</view>
         <view class="exam-meta">
-          <text class="tag tag-primary">{{item.category}}</text>
+          <text class="exam-category">{{item.category}}</text>
           <text class="exam-count">{{item.questionCount}} 道题</text>
         </view>
       </view>
 
-      <!-- 状态标签 -->
       <view class="exam-status">
         <view wx:if="{{item.isActivated}}" class="status-badge activated">
-          <text class="status-icon">🔓</text>
+          <text class="status-icon">✓</text>
           已激活
         </view>
         <view wx:else class="status-badge locked">
-          <text class="status-icon">🔒</text>
+          <text class="status-icon">锁</text>
           待激活
         </view>
       </view>
     </view>
 
-    <!-- 空状态 -->
     <view wx:if="{{filteredExams.length === 0}}" class="empty-state">
-      <text class="empty-icon">📭</text>
-      <text class="empty-text">暂无相关科目</text>
+      <text class="empty-icon">空</text>
+      <text class="empty-text">暂无题库</text>
     </view>
   </view>
 </view>

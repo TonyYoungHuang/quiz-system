@@ -8,7 +8,7 @@
   ],
   "window": {
     "navigationBarBackgroundColor": "#4A90E2",
-    "navigationBarTitleText": "刷题小程序",
+    "navigationBarTitleText": "\u9898\u5e93",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#F5F5F5",
     "backgroundTextStyle": "light"
@@ -19,18 +19,9 @@
     "backgroundColor": "#ffffff",
     "borderStyle": "black",
     "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "题库"
-      },
-      {
-        "pagePath": "pages/activate/activate",
-        "text": "激活"
-      },
-      {
-        "pagePath": "pages/mine/mine",
-        "text": "我的"
-      }
+      {"pagePath": "pages/index/index", "text": "\u9898\u5e93"},
+      {"pagePath": "pages/activate/activate", "text": "\u6fc0\u6d3b"},
+      {"pagePath": "pages/mine/mine", "text": "\u6211\u7684"}
     ]
   },
   "sitemapLocation": "sitemap.json",

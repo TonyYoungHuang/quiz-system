@@ -1,7 +1,7 @@
 {
   "name": "getPermissions",
   "version": "1.0.0",
-  "description": "获取用户权限列表云函数",
+  "description": "鑾峰彇鐢ㄦ埛鏉冮檺鍒楄〃浜戝嚱鏁?,
   "main": "index.js",
   "dependencies": {
     "wx-server-sdk": "~2.6.3"

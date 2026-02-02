@@ -1,5 +1,4 @@
-// 云函数入口文件
-const cloud = require('wx-server-sdk');
+// 浜戝嚱鏁板叆鍙ｆ枃浠?const cloud = require('wx-server-sdk');
 
 cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
@@ -8,14 +7,13 @@ cloud.init({
 const db = cloud.database();
 const _ = db.command;
 
-// 云函数入口函数
-exports.main = async (event, context) => {
+// 浜戝嚱鏁板叆鍙ｅ嚱鏁?exports.main = async (event, context) => {
   const { userId } = event;
 
   if (!userId) {
     return {
       success: false,
-      message: '缺少userId参数'
+      message: '缂哄皯userId鍙傛暟'
     };
   }
 
@@ -28,16 +26,14 @@ exports.main = async (event, context) => {
 
     const permissions = permissionsResult.data;
 
-    // 获取有效的权限
-    const validPermissions = [];
+    // 鑾峰彇鏈夋晥鐨勬潈闄?    const validPermissions = [];
 
     for (const permission of permissions) {
-      // 检查权限是否有效
-      const isValid = permission.isPermanent ||
+      // 妫€鏌ユ潈闄愭槸鍚︽湁鏁?      const isValid = permission.isPermanent ||
                       (permission.expiresAt && new Date(permission.expiresAt) > new Date());
 
       if (isValid) {
-        // 获取关联的考试科目信息
+        // 鑾峰彇鍏宠仈鐨勮€冭瘯绉戠洰淇℃伅
         const examResult = await db.collection('exams')
           .doc(permission.examId)
           .get();
@@ -56,10 +52,10 @@ exports.main = async (event, context) => {
       data: validPermissions
     };
   } catch (error) {
-    console.error('获取权限列表失败:', error);
+    console.error('鑾峰彇鏉冮檺鍒楄〃澶辫触:', error);
     return {
       success: false,
-      message: '获取权限列表失败',
+      message: '鑾峰彇鏉冮檺鍒楄〃澶辫触',
       error: error.message
     };
   }

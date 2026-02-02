@@ -1,6 +1,6 @@
 /* pages/result/result.wxss */
 
-/* 结果卡片 */
+/* 缁撴灉鍗＄墖 */
 .result-card {
   background: #fff;
   margin: 40rpx 24rpx;
@@ -10,7 +10,7 @@
   box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.1);
 }
 
-/* 分数圆环 */
+/* 鍒嗘暟鍦嗙幆 */
 .score-circle {
   width: 240rpx;
   height: 240rpx;
@@ -50,7 +50,7 @@
   margin-top: 8rpx;
 }
 
-/* 统计信息 */
+/* 缁熻淇℃伅 */
 .stats-info {
   display: flex;
   justify-content: center;
@@ -82,7 +82,7 @@
   background: #F0F0F0;
 }
 
-/* 正确率 */
+/* 姝ｇ‘鐜?*/
 .accuracy-info {
   font-size: 28rpx;
 }
@@ -97,7 +97,7 @@
   font-weight: 500;
 }
 
-/* 评价卡片 */
+/* 璇勪环鍗＄墖 */
 .comment-card {
   background: #fff;
   margin: 0 24rpx 32rpx;
@@ -118,7 +118,7 @@
   line-height: 1.6;
 }
 
-/* 操作按钮 */
+/* 鎿嶄綔鎸夐挳 */
 .action-buttons {
   display: flex;
   padding: 0 24rpx;

@@ -1,6 +1,6 @@
 /* pages/mine/mine.wxss */
 
-/* 用户信息卡片 */
+/* 鐢ㄦ埛淇℃伅鍗＄墖 */
 .user-card {
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* 统计数据卡片 */
+/* 缁熻鏁版嵁鍗＄墖 */
 .stats-card {
   display: flex;
   justify-content: center;
@@ -76,7 +76,7 @@
   margin: 0 32rpx;
 }
 
-/* 功能列表 */
+/* 鍔熻兘鍒楄〃 */
 .menu-list {
   background: #fff;
   margin: 0 24rpx;
@@ -127,7 +127,7 @@
   justify-content: center;
 }
 
-/* 版本信息 */
+/* 鐗堟湰淇℃伅 */
 .version-info {
   text-align: center;
   padding: 40rpx 0;

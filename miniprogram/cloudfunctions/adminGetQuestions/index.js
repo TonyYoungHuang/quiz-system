@@ -1,4 +1,4 @@
-// 云函数入口文件
+// 浜戝嚱鏁板叆鍙ｆ枃浠?
 const cloud = require('wx-server-sdk');
 
 cloud.init({
@@ -8,15 +8,15 @@ cloud.init({
 const db = cloud.database();
 
 /**
- * 获取题目列表云函数（管理版）
- * 支持分页、按科目筛选、按题型筛选
+ * 鑾峰彇棰樼洰鍒楄〃浜戝嚱鏁帮紙绠＄悊鐗堬級
+ * 鏀寔鍒嗛〉銆佹寜绉戠洰绛涢€夈€佹寜棰樺瀷绛涢€?
  */
 exports.main = async (event, context) => {
   const { token, examId, questionType, page = 1, pageSize = 50 } = event;
 
-  // 1. 验证管理员权限
+  // 1. 楠岃瘉绠＄悊鍛樻潈闄?
   if (!token) {
-    return { success: false, error: '未提供登录令牌' };
+    return { success: false, error: '鏈彁渚涚櫥褰曚护鐗? };
   }
 
   const tokenResult = await db.collection('admin_tokens')
@@ -42,13 +42,13 @@ exports.main = async (event, context) => {
       }
     }
 
-  // 2.  检查 token 是否过期
+  // 2.  妫€鏌?token 鏄惁杩囨湡
   if (new Date(tokenData.expiresAt) < new Date()) {
     await db.collection('admin_tokens').doc(tokenData._id).remove();
-    return { success: false, error: '登录令牌已过期，请重新登录' };
+    return { success: false, error: '鐧诲綍浠ょ墝宸茶繃鏈燂紝璇烽噸鏂扮櫥褰? };
   }
 
-  // 3. 构建查询条件
+  // 3. 鏋勫缓鏌ヨ鏉′欢
   let whereCondition = {};
 
   if (examId) {
@@ -59,7 +59,7 @@ exports.main = async (event, context) => {
     whereCondition.type = questionType;
   }
 
-  // 4. 查询总数
+  // 4. 鏌ヨ鎬绘暟
   const countResult = await db.collection('questions')
     .where(whereCondition)
     .count();
@@ -72,7 +72,7 @@ exports.main = async (event, context) => {
   const pageResult = await query.skip(skip).limit(pageSize).get();
   let questions = pageResult.data || [];
 
-  // 6.  获取科目名称（如果按科目筛选）
+  // 6.  鑾峰彇绉戠洰鍚嶇О锛堝鏋滄寜绉戠洰绛涢€夛級
   let examName = null;
   if (examId) {
     try {
@@ -83,7 +83,7 @@ exports.main = async (event, context) => {
         examName = examResult.data.name;
       }
     } catch (err) {
-      console.error('获取科目名称失败：', err);
+      console.error('鑾峰彇绉戠洰鍚嶇О澶辫触锛?, err);
     }
   }
 

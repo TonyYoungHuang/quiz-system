@@ -1,52 +1,108 @@
 const Question = require('../models/Question');
 const UserPermission = require('../models/UserPermission');
+const TopicQuestion = require('../models/TopicQuestion');
+const PaperQuestion = require('../models/PaperQuestion');
+
+const normalizeBlocks = (blocks, fallbackText) => {
+  if (Array.isArray(blocks) && blocks.length > 0) return blocks;
+  if (!fallbackText) return [];
+  return [{ type: 'text', content: { zh: fallbackText } }];
+};
+
+const normalizeOptions = (options) => {
+  if (!Array.isArray(options)) return [];
+  return options.map(opt => {
+    const contentBlocks = Array.isArray(opt.content) && opt.content.length > 0
+      ? opt.content
+      : (opt.value ? [{ type: 'text', content: { zh: opt.value } }] : []);
+    const valueText = opt.value || (contentBlocks[0] && contentBlocks[0].content && contentBlocks[0].content.zh) || '';
+    return {
+      ...opt,
+      value: valueText,
+      content: contentBlocks
+    };
+  });
+};
+
+const normalizeQuestion = (q) => {
+  const stem = normalizeBlocks(q.stem, q.content);
+  const analysis = normalizeBlocks(q.analysis, q.explanation);
+  const options = normalizeOptions(q.options);
+  const media = (Array.isArray(q.media) && q.media.length > 0)
+    ? q.media
+    : (q.mediaUrl ? [{ type: 'image', url: q.mediaUrl, desc: '' }] : []);
+
+  return {
+    ...q,
+    stem,
+    options,
+    analysis,
+    media
+  };
+};
 
 /**
- * 获取某科目的题目列表
  * GET /api/v1/questions/:examId
- *
- * 查询参数：
- * - type: 题型筛选 (SINGLE/MULTI/JUDGE)
- * - userId: 用户ID（用于验证权限）
+ * Query: type, userId
  */
 exports.getQuestions = async (req, res) => {
   try {
     const { examId } = req.params;
-    const { type, userId } = req.query;
+    const { type, userId, topicId, paperId } = req.query;
 
-    // 如果提供了 userId，验证权限
     if (userId) {
       const hasPermission = await UserPermission.hasPermission(userId, examId);
       if (!hasPermission) {
         return res.status(403).json({
           success: false,
-          message: '您暂无权限访问该科目题目'
+          message: 'No permission to access this exam questions'
         });
       }
     }
 
     const query = { examId };
-    if (type) {
-      query.type = type;
+    if (type) query.type = type;
+    if (topicId || paperId) {
+      const ids = [];
+      if (topicId) {
+        const topicLinks = await TopicQuestion.find({ topicId }).select('questionId').lean();
+        ids.push(...topicLinks.map(link => String(link.questionId)));
+      }
+      if (paperId) {
+        const paperLinks = await PaperQuestion.find({ paperId }).select('questionId').lean();
+        const paperIds = paperLinks.map(link => String(link.questionId));
+        if (ids.length > 0) {
+          const set = new Set(paperIds);
+          const intersect = ids.filter(id => set.has(id));
+          query._id = { $in: intersect };
+        } else {
+          query._id = { $in: paperIds };
+        }
+      } else {
+        query._id = { $in: ids };
+      }
     }
 
     const questions = await Question.find(query)
-      .select('-__v') // 排除版本号
+      .select('-__v')
       .sort({ sortOrder: 1, createdAt: 1 })
       .lean();
 
-    // 剔除正确答案（前端答题时不应该看到答案）
-    const questionsForQuiz = questions.map(q => ({
-      _id: q._id,
-      examId: q.examId,
-      type: q.type,
-      content: q.content,
-      options: q.options,
-      mediaUrl: q.mediaUrl,
-      difficulty: q.difficulty,
-      tags: q.tags
-      // 注意：不返回 answer 和 explanation
-    }));
+    const questionsForQuiz = questions.map(q => {
+      const normalized = normalizeQuestion(q);
+      return {
+        _id: normalized._id,
+        examId: normalized.examId,
+        type: normalized.type,
+        content: normalized.content,
+        stem: normalized.stem,
+        options: normalized.options,
+        mediaUrl: normalized.mediaUrl,
+        media: normalized.media,
+        difficulty: normalized.difficulty,
+        tags: normalized.tags
+      };
+    });
 
     res.json({
       success: true,
@@ -56,14 +112,13 @@ exports.getQuestions = async (req, res) => {
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: '获取题目失败',
+      message: 'Failed to get questions',
       error: error.message
     });
   }
 };
 
 /**
- * 获取单道题目详情（含答案解析）
  * GET /api/v1/questions/:examId/:questionId
  */
 exports.getQuestionDetail = async (req, res) => {
@@ -76,36 +131,34 @@ exports.getQuestionDetail = async (req, res) => {
     if (!question) {
       return res.status(404).json({
         success: false,
-        message: '题目不存在'
+        message: 'Question not found'
       });
     }
 
-    // 验证权限
     if (userId) {
       const hasPermission = await UserPermission.hasPermission(userId, question.examId);
       if (!hasPermission) {
         return res.status(403).json({
           success: false,
-          message: '您暂无权限访问该题目'
+          message: 'No permission to access this question'
         });
       }
     }
 
     res.json({
       success: true,
-      data: question
+      data: normalizeQuestion(question)
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: '获取题目详情失败',
+      message: 'Failed to get question detail',
       error: error.message
     });
   }
 };
 
 /**
- * 获取题目总数统计
  * GET /api/v1/admin/count
  */
 exports.getQuestionsCount = async (req, res) => {
@@ -118,14 +171,13 @@ exports.getQuestionsCount = async (req, res) => {
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: '获取统计失败',
+      message: 'Failed to get count',
       error: error.message
     });
   }
 };
 
 /**
- * 获取所有题目（管理员功能）
  * GET /api/v1/admin
  */
 exports.getAllQuestions = async (req, res) => {
@@ -141,54 +193,48 @@ exports.getAllQuestions = async (req, res) => {
       .sort({ createdAt: -1 })
       .lean();
 
+    const normalized = questions.map(q => normalizeQuestion(q));
+
     res.json({
       success: true,
-      data: questions,
-      count: questions.length
+      data: normalized,
+      count: normalized.length
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: '获取题目列表失败',
+      message: 'Failed to get questions',
       error: error.message
     });
   }
 };
 
 /**
- * 创建题目（管理员功能）
  * POST /api/v1/admin/questions
  */
 exports.createQuestion = async (req, res) => {
   try {
     const question = await Question.create(req.body);
 
-    // 更新题库计数
     await updateExamQuestionCount(req.body.examId);
 
     res.status(201).json({
       success: true,
-      message: '题目创建成功',
+      message: 'Question created',
       data: question
     });
   } catch (error) {
     res.status(400).json({
       success: false,
-      message: '创建题目失败',
+      message: 'Failed to create question',
       error: error.message
     });
   }
 };
 
 /**
- * 批量导入题目（管理员功能）
  * POST /api/v1/admin/questions/import
- *
- * 请求体：
- * {
- *   "examId": "科目ID",
- *   "questions": [...]
- * }
+ * { examId, questions: [...] }
  */
 exports.importQuestions = async (req, res) => {
   try {
@@ -197,25 +243,22 @@ exports.importQuestions = async (req, res) => {
     if (!Array.isArray(questions) || questions.length === 0) {
       return res.status(400).json({
         success: false,
-        message: '题目数据不能为空'
+        message: 'Questions cannot be empty'
       });
     }
 
-    // 为每道题添加 examId
     const questionsWithExamId = questions.map(q => ({
       ...q,
       examId
     }));
 
-    // 批量插入
     const result = await Question.insertMany(questionsWithExamId);
 
-    // 更新题库计数
     await updateExamQuestionCount(examId);
 
     res.status(201).json({
       success: true,
-      message: `成功导入 ${result.length} 道题目`,
+      message: `Imported ${result.length} questions`,
       data: {
         imported: result.length,
         examId
@@ -224,14 +267,13 @@ exports.importQuestions = async (req, res) => {
   } catch (error) {
     res.status(400).json({
       success: false,
-      message: '导入题目失败',
+      message: 'Failed to import questions',
       error: error.message
     });
   }
 };
 
 /**
- * 更新题目（管理员功能）
  * PUT /api/v1/admin/questions/:id
  */
 exports.updateQuestion = async (req, res) => {
@@ -245,26 +287,25 @@ exports.updateQuestion = async (req, res) => {
     if (!question) {
       return res.status(404).json({
         success: false,
-        message: '题目不存在'
+        message: 'Question not found'
       });
     }
 
     res.json({
       success: true,
-      message: '题目更新成功',
+      message: 'Question updated',
       data: question
     });
   } catch (error) {
     res.status(400).json({
       success: false,
-      message: '更新题目失败',
+      message: 'Failed to update question',
       error: error.message
     });
   }
 };
 
 /**
- * 删除题目（管理员功能）
  * DELETE /api/v1/admin/questions/:id
  */
 exports.deleteQuestion = async (req, res) => {
@@ -274,31 +315,25 @@ exports.deleteQuestion = async (req, res) => {
     if (!question) {
       return res.status(404).json({
         success: false,
-        message: '题目不存在'
+        message: 'Question not found'
       });
     }
 
-    // 更新题库计数
     await updateExamQuestionCount(question.examId);
 
     res.json({
       success: true,
-      message: '题目删除成功'
+      message: 'Question deleted'
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: '删除题目失败',
+      message: 'Failed to delete question',
       error: error.message
     });
   }
 };
 
-// ==================== 辅助函数 ====================
-
-/**
- * 更新科目的题目计数
- */
 async function updateExamQuestionCount(examId) {
   const count = await Question.countDocuments({ examId });
   await require('../models/Exam').findByIdAndUpdate(examId, { questionCount: count });

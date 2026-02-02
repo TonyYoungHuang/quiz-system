@@ -1,4 +1,4 @@
-// 云函数入口文件
+// 浜戝嚱鏁板叆鍙ｆ枃浠?
 const cloud = require('wx-server-sdk');
 
 cloud.init({
@@ -8,9 +8,9 @@ cloud.init({
 const db = cloud.database();
 const _ = db.command;
 
-// 生成随机激活码
+// 鐢熸垚闅忔満婵€娲荤爜
 function generateCode() {
-  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // 去除易混淆字符
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // 鍘婚櫎鏄撴贩娣嗗瓧绗?
   let code = '';
   for (let i = 0; i < 8; i++) {
     code += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -18,12 +18,12 @@ function generateCode() {
   return code;
 }
 
-// 云函数入口函数
+// 浜戝嚱鏁板叆鍙ｅ嚱鏁?
 exports.main = async (event, context) => {
   const { token, examId, count, source } = event;
 
   try {
-    // 验证token
+    // 楠岃瘉token
     const tokenResult = await db.collection('admin_tokens')
       .where({ token: token })
       .get();
@@ -47,7 +47,7 @@ exports.main = async (event, context) => {
       }
     }
 
-    // 验证examId是否存在
+    // 楠岃瘉examId鏄惁瀛樺湪
     const exam = await db.collection('exams')
       .doc(examId)
       .get();
@@ -55,11 +55,11 @@ exports.main = async (event, context) => {
     if (!exam.data) {
       return {
         success: false,
-        message: '科目不存在'
+        message: '绉戠洰涓嶅瓨鍦?
       };
     }
 
-    // 批量生成激活码
+    // 鎵归噺鐢熸垚婵€娲荤爜
     const codes = [];
     const batchSize = 20;
 
@@ -89,17 +89,17 @@ exports.main = async (event, context) => {
 
     return {
       success: true,
-      message: `成功生成 ${count} 个激活码`,
+      message: `鎴愬姛鐢熸垚 ${count} 涓縺娲荤爜`,
       data: {
         count: count,
         codes: codes
       }
     };
   } catch (error) {
-    console.error('生成激活码失败:', error);
+    console.error('鐢熸垚婵€娲荤爜澶辫触:', error);
     return {
       success: false,
-      message: '生成激活码失败',
+      message: '鐢熸垚婵€娲荤爜澶辫触',
       error: error.message
     };
   }

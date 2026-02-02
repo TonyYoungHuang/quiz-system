@@ -1,5 +1,4 @@
-// 云函数入口文件
-const cloud = require('wx-server-sdk');
+// 浜戝嚱鏁板叆鍙ｆ枃浠?const cloud = require('wx-server-sdk');
 
 cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
@@ -8,19 +7,18 @@ cloud.init({
 const db = cloud.database();
 const _ = db.command;
 
-// 云函数入口函数
-exports.main = async (event, context) => {
+// 浜戝嚱鏁板叆鍙ｅ嚱鏁?exports.main = async (event, context) => {
   const { code, userId, examId } = event;
 
   if (!code || !userId || !examId) {
     return {
       success: false,
-      message: '缺少必要参数'
+      message: '缂哄皯蹇呰鍙傛暟'
     };
   }
 
   try {
-    // 1. 查找激活码
+    // 1. 鏌ユ壘婵€娲荤爜
     const codeResult = await db.collection('activation_codes')
       .where({
         code: code.toUpperCase()
@@ -30,30 +28,29 @@ exports.main = async (event, context) => {
     if (codeResult.data.length === 0) {
       return {
         success: false,
-        message: '激活码不存在'
+        message: '婵€娲荤爜涓嶅瓨鍦?
       };
     }
 
     const activationCode = codeResult.data[0];
 
-    // 2. 检查激活码是否已被使用
+    // 2. 妫€鏌ユ縺娲荤爜鏄惁宸茶浣跨敤
     if (activationCode.isUsed) {
       return {
         success: false,
-        message: '激活码已被使用'
+        message: '婵€娲荤爜宸茶浣跨敤'
       };
     }
 
-    // 3. 检查激活码是否对应正确的考试科目
+    // 3. 妫€鏌ユ縺娲荤爜鏄惁瀵瑰簲姝ｇ‘鐨勮€冭瘯绉戠洰
     if (activationCode.examId !== examId) {
       return {
         success: false,
-        message: '激活码与当前科目不匹配'
+        message: '婵€娲荤爜涓庡綋鍓嶇鐩笉鍖归厤'
       };
     }
 
-    // 4. 检查用户是否已有该科目的权限
-    const existingPermission = await db.collection('user_permissions')
+    // 4. 妫€鏌ョ敤鎴锋槸鍚﹀凡鏈夎绉戠洰鐨勬潈闄?    const existingPermission = await db.collection('user_permissions')
       .where({
         userId: userId,
         examId: examId
@@ -62,20 +59,20 @@ exports.main = async (event, context) => {
 
     if (existingPermission.data.length > 0) {
       const permission = existingPermission.data[0];
-      // 检查权限是否已过期
+      // 妫€鏌ユ潈闄愭槸鍚﹀凡杩囨湡
       if (permission.isPermanent || (permission.expiresAt && new Date(permission.expiresAt) > new Date())) {
         return {
           success: false,
-          message: '您已拥有该科目的权限'
+          message: '鎮ㄥ凡鎷ユ湁璇ョ鐩殑鏉冮檺'
         };
       }
     }
 
-    // 5. 使用事务：激活码标记为已使用 + 创建用户权限
+    // 5. 浣跨敤浜嬪姟锛氭縺娲荤爜鏍囪涓哄凡浣跨敤 + 鍒涘缓鐢ㄦ埛鏉冮檺
     const transaction = await db.startTransaction();
 
     try {
-      // 标记激活码为已使用
+      // 鏍囪婵€娲荤爜涓哄凡浣跨敤
       await transaction.collection('activation_codes')
         .doc(activationCode._id)
         .update({
@@ -86,7 +83,7 @@ exports.main = async (event, context) => {
           }
         });
 
-      // 创建用户权限
+      // 鍒涘缓鐢ㄦ埛鏉冮檺
       await transaction.collection('user_permissions')
         .add({
           data: {
@@ -101,17 +98,17 @@ exports.main = async (event, context) => {
 
       return {
         success: true,
-        message: '激活成功'
+        message: '婵€娲绘垚鍔?
       };
     } catch (transactionError) {
       await transaction.rollback();
       throw transactionError;
     }
   } catch (error) {
-    console.error('激活失败:', error);
+    console.error('婵€娲诲け璐?', error);
     return {
       success: false,
-      message: '激活失败',
+      message: '婵€娲诲け璐?,
       error: error.message
     };
   }

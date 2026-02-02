@@ -1,7 +1,7 @@
 {
   "name": "adminGetStats",
   "version": "1.0.0",
-  "description": "获取统计数据云函数",
+  "description": "鑾峰彇缁熻鏁版嵁浜戝嚱鏁?,
   "main": "index.js",
   "dependencies": {
     "wx-server-sdk": "~2.6.3"

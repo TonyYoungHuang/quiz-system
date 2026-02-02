@@ -1,0 +1,10 @@
+# Node / build artifacts
+node_modules/
+
+# Mini Program build artifacts
+miniprogram/node_modules/
+miniprogram/miniprogram_npm/
+
+# OS / editor
+.DS_Store
+Thumbs.db

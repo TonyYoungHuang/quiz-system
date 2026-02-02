@@ -1,4 +1,4 @@
-// 云函数入口文件
+// 浜戝嚱鏁板叆鍙ｆ枃浠?
 const cloud = require('wx-server-sdk');
 
 cloud.init({
@@ -8,12 +8,12 @@ cloud.init({
 const db = cloud.database();
 const _ = db.command;
 
-// 云函数入口函数
+// 浜戝嚱鏁板叆鍙ｅ嚱鏁?
 exports.main = async (event, context) => {
   const { token } = event;
 
   try {
-    // 验证token
+    // 楠岃瘉token
     const tokenResult = await db.collection('admin_tokens')
       .where({ token: token })
       .get();
@@ -37,7 +37,7 @@ exports.main = async (event, context) => {
       }
     }
 
-    // 获取统计数据
+    // 鑾峰彇缁熻鏁版嵁
     const [
       examCount,
       questionCount,
@@ -64,10 +64,10 @@ exports.main = async (event, context) => {
       }
     };
   } catch (error) {
-    console.error('获取统计数据失败:', error);
+    console.error('鑾峰彇缁熻鏁版嵁澶辫触:', error);
     return {
       success: false,
-      message: '获取统计数据失败',
+      message: '鑾峰彇缁熻鏁版嵁澶辫触',
       error: error.message
     };
   }

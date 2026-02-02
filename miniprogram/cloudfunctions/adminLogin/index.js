@@ -1,5 +1,4 @@
-// 云函数入口文件
-const cloud = require('wx-server-sdk');
+// 浜戝嚱鏁板叆鍙ｆ枃浠?const cloud = require('wx-server-sdk');
 
 cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
@@ -8,19 +7,18 @@ cloud.init({
 const db = cloud.database();
 const _ = db.command;
 
-// 云函数入口函数
-exports.main = async (event, context) => {
+// 浜戝嚱鏁板叆鍙ｅ嚱鏁?exports.main = async (event, context) => {
   const { password } = event;
 
   if (!password) {
     return {
       success: false,
-      message: '请输入密码'
+      message: '璇疯緭鍏ュ瘑鐮?
     };
   }
 
   try {
-    // 从配置集合获取管理员密码
+    // 浠庨厤缃泦鍚堣幏鍙栫鐞嗗憳瀵嗙爜
     const configResult = await db.collection('config')
       .where({
         key: 'admin_password'
@@ -28,7 +26,7 @@ exports.main = async (event, context) => {
       .get();
 
     if (configResult.data.length === 0) {
-      // 首次使用，创建默认密码：admin123
+      // 棣栨浣跨敤锛屽垱寤洪粯璁ゅ瘑鐮侊細admin123
       await db.collection('config').add({
         data: {
           key: 'admin_password',
@@ -43,21 +41,19 @@ exports.main = async (event, context) => {
       : 'admin123';
 
     if (password === storedPassword) {
-      // 生成登录token（使用时间戳）
-      const token = 'admin_' + Date.now();
+      // 鐢熸垚鐧诲綍token锛堜娇鐢ㄦ椂闂存埑锛?      const token = 'admin_' + Date.now();
 
-      // 存储token到数据库，有效期2小时
+      // 瀛樺偍token鍒版暟鎹簱锛屾湁鏁堟湡2灏忔椂
       await db.collection('admin_tokens').add({
         data: {
           token: token,
           createdAt: new Date(),
-          expiresAt: new Date(Date.now() + 2 * 60 * 60 * 1000) // 2小时后过期
-        }
+          expiresAt: new Date(Date.now() + 2 * 60 * 60 * 1000) // 2灏忔椂鍚庤繃鏈?        }
       });
 
       return {
         success: true,
-        message: '登录成功',
+        message: '鐧诲綍鎴愬姛',
         data: {
           token: token
         }
@@ -65,14 +61,14 @@ exports.main = async (event, context) => {
     } else {
       return {
         success: false,
-        message: '密码错误'
+        message: '瀵嗙爜閿欒'
       };
     }
   } catch (error) {
-    console.error('登录失败:', error);
+    console.error('鐧诲綍澶辫触:', error);
     return {
       success: false,
-      message: '登录失败',
+      message: '鐧诲綍澶辫触',
       error: error.message
     };
   }

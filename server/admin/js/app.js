@@ -45,6 +45,22 @@ function bindEvents() {
   document.getElementById('question-exam-filter').addEventListener('change', loadQuestions);
   document.getElementById('question-type-filter').addEventListener('change', loadQuestions);
 
+  // 专题管理
+  const addTopicBtn = document.getElementById('add-topic-btn');
+  if (addTopicBtn) addTopicBtn.addEventListener('click', showAddTopicModal);
+  const topicExamFilter = document.getElementById('topic-exam-filter');
+  if (topicExamFilter) topicExamFilter.addEventListener('change', loadTopics);
+
+  // 真题管理
+  const addPaperBtn = document.getElementById('add-paper-btn');
+  if (addPaperBtn) addPaperBtn.addEventListener('click', showAddPaperModal);
+  const paperExamFilter = document.getElementById('paper-exam-filter');
+  if (paperExamFilter) paperExamFilter.addEventListener('change', loadPapers);
+
+  // 导入任务
+  const createImportTaskBtn = document.getElementById('create-import-task-btn');
+  if (createImportTaskBtn) createImportTaskBtn.addEventListener('click', showCreateImportTaskModal);
+
   // 激活码管理
   document.getElementById('generate-codes-btn').addEventListener('click', showGenerateCodesModal);
   document.getElementById('code-exam-filter').addEventListener('change', loadCodes);
@@ -94,7 +110,10 @@ function navigateTo(page) {
     exams: '科目管理',
     questions: '题目管理',
     codes: '激活码管理',
-    users: '用户管理'
+    users: '用户管理',
+    topics: '专题管理',
+    papers: '真题管理',
+    imports: '导入任务'
   };
   document.getElementById('page-title').textContent = titles[page];
 
@@ -117,6 +136,17 @@ function navigateTo(page) {
     case 'codes':
       loadCodeFilters();
       loadCodes();
+      break;
+    case 'topics':
+      loadTopicFilters();
+      loadTopics();
+      break;
+    case 'papers':
+      loadPaperFilters();
+      loadPapers();
+      break;
+    case 'imports':
+      loadImportTasks();
       break;
     case 'users':
       loadUsers();
@@ -744,6 +774,395 @@ function showImportErrorReport(failedItems, successCount) {
   `);
 
   document.getElementById('close-error-report').addEventListener('click', closeModal);
+}
+
+// ==================== 专题管理 ====================
+async function loadTopicFilters() {
+  const res = await apiRequest(`${API_BASE}/exams`);
+  if (!res?.success) return;
+
+  const options = res.data.map(exam =>
+    `<option value="${exam._id}">${exam.name}</option>`
+  ).join('');
+
+  const select = document.getElementById('topic-exam-filter');
+  if (select) {
+    select.innerHTML = `<option value="">全部科目</option>${options}`;
+  }
+}
+
+async function loadTopics() {
+  const examId = document.getElementById('topic-exam-filter')?.value || '';
+  const [topicsRes, examsRes] = await Promise.all([
+    apiRequest(`${API_BASE}/admin/topics${examId ? `?examId=${examId}` : ''}`),
+    apiRequest(`${API_BASE}/exams`)
+  ]);
+  if (!topicsRes?.success || !examsRes?.success) return;
+
+  const examMap = new Map(examsRes.data.map(e => [e._id, e.name]));
+  const topics = topicsRes.data || [];
+  const topicMap = new Map(topics.map(t => [t._id, t.name]));
+
+  const tbody = document.getElementById('topics-table-body');
+  if (!tbody) return;
+  tbody.innerHTML = topics.map(t => `
+    <tr>
+      <td>${t.name}</td>
+      <td>${examMap.get(String(t.examId)) || '-'}</td>
+      <td>${t.parentId ? (topicMap.get(String(t.parentId)) || '-') : '-'}</td>
+      <td>${t.order || 0}</td>
+      <td>
+        <div class="action-buttons">
+          <button class="btn btn-sm btn-outline" onclick="editTopic('${t._id}')">编辑</button>
+          <button class="btn btn-sm btn-danger" onclick="deleteTopic('${t._id}')">删除</button>
+        </div>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function showAddTopicModal() {
+  showModal('添加专题', `
+    <form id="topic-form">
+      <div class="form-group">
+        <label>科目 *</label>
+        <select class="form-select" name="examId" required id="topic-exam-select">
+          <option value="">请选择科目</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>专题名称 *</label>
+        <input type="text" class="form-control" name="name" required>
+      </div>
+      <div class="form-group">
+        <label>上级专题</label>
+        <select class="form-select" name="parentId" id="topic-parent-select">
+          <option value="">无（一级专题）</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>排序</label>
+        <input type="number" class="form-control" name="order" value="0">
+      </div>
+      <button type="submit" class="btn btn-primary" style="width: 100%">提交</button>
+    </form>
+  `);
+
+  Promise.all([
+    apiRequest(`${API_BASE}/exams`),
+    apiRequest(`${API_BASE}/admin/topics`)
+  ]).then(([examsRes, topicsRes]) => {
+    if (examsRes?.success) {
+      const select = document.getElementById('topic-exam-select');
+      select.innerHTML = '<option value="">请选择科目</option>' +
+        examsRes.data.map(e => `<option value="${e._id}">${e.name}</option>`).join('');
+    }
+    if (topicsRes?.success) {
+      const parentSelect = document.getElementById('topic-parent-select');
+      parentSelect.innerHTML = '<option value="">无（一级专题）</option>' +
+        topicsRes.data.map(t => `<option value="${t._id}">${t.name}</option>`).join('');
+    }
+  });
+
+  document.getElementById('topic-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+    if (!data.parentId) delete data.parentId;
+
+    const res = await apiRequest(`${API_BASE}/admin/topics`, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    });
+    if (res?.success) {
+      showToast('专题创建成功', 'success');
+      closeModal();
+      loadTopics();
+    }
+  });
+}
+
+async function editTopic(id) {
+  const res = await apiRequest(`${API_BASE}/admin/topics`);
+  if (!res?.success) return;
+  const topic = res.data.find(t => t._id === id);
+  if (!topic) return;
+
+  showModal('编辑专题', `
+    <form id="topic-form">
+      <div class="form-group">
+        <label>专题名称 *</label>
+        <input type="text" class="form-control" name="name" value="${topic.name}" required>
+      </div>
+      <div class="form-group">
+        <label>上级专题</label>
+        <select class="form-select" name="parentId" id="topic-parent-select">
+          <option value="">无（一级专题）</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>排序</label>
+        <input type="number" class="form-control" name="order" value="${topic.order || 0}">
+      </div>
+      <button type="submit" class="btn btn-primary" style="width: 100%">提交</button>
+    </form>
+  `);
+
+  const parentSelect = document.getElementById('topic-parent-select');
+  parentSelect.innerHTML = '<option value="">无（一级专题）</option>' +
+    res.data.filter(t => t._id !== id).map(t => `<option value="${t._id}">${t.name}</option>`).join('');
+  if (topic.parentId) parentSelect.value = String(topic.parentId);
+
+  document.getElementById('topic-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+    if (!data.parentId) data.parentId = null;
+
+    const updateRes = await apiRequest(`${API_BASE}/admin/topics/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(data)
+    });
+    if (updateRes?.success) {
+      showToast('专题更新成功', 'success');
+      closeModal();
+      loadTopics();
+    }
+  });
+}
+
+async function deleteTopic(id) {
+  if (!confirm('确定要删除该专题吗？')) return;
+  const res = await apiRequest(`${API_BASE}/admin/topics/${id}`, { method: 'DELETE' });
+  if (res?.success) {
+    showToast('专题已删除', 'success');
+    loadTopics();
+  }
+}
+
+// ==================== 真题管理 ====================
+async function loadPaperFilters() {
+  const res = await apiRequest(`${API_BASE}/exams`);
+  if (!res?.success) return;
+  const options = res.data.map(exam =>
+    `<option value="${exam._id}">${exam.name}</option>`
+  ).join('');
+  const select = document.getElementById('paper-exam-filter');
+  if (select) {
+    select.innerHTML = `<option value="">全部科目</option>${options}`;
+  }
+}
+
+async function loadPapers() {
+  const examId = document.getElementById('paper-exam-filter')?.value || '';
+  const [papersRes, examsRes] = await Promise.all([
+    apiRequest(`${API_BASE}/admin/papers${examId ? `?examId=${examId}` : ''}`),
+    apiRequest(`${API_BASE}/exams`)
+  ]);
+  if (!papersRes?.success || !examsRes?.success) return;
+
+  const examMap = new Map(examsRes.data.map(e => [e._id, e.name]));
+  const papers = papersRes.data || [];
+  const tbody = document.getElementById('papers-table-body');
+  if (!tbody) return;
+
+  tbody.innerHTML = papers.map(p => `
+    <tr>
+      <td>${p.title}</td>
+      <td>${p.year}</td>
+      <td>${examMap.get(String(p.examId)) || '-'}</td>
+      <td>${p.order || 0}</td>
+      <td>
+        <div class="action-buttons">
+          <button class="btn btn-sm btn-outline" onclick="editPaper('${p._id}')">编辑</button>
+          <button class="btn btn-sm btn-danger" onclick="deletePaper('${p._id}')">删除</button>
+        </div>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function showAddPaperModal() {
+  showModal('添加真题', `
+    <form id="paper-form">
+      <div class="form-group">
+        <label>科目 *</label>
+        <select class="form-select" name="examId" required id="paper-exam-select">
+          <option value="">请选择科目</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>真题名称 *</label>
+        <input type="text" class="form-control" name="title" required>
+      </div>
+      <div class="form-group">
+        <label>年份 *</label>
+        <input type="number" class="form-control" name="year" required>
+      </div>
+      <div class="form-group">
+        <label>排序</label>
+        <input type="number" class="form-control" name="order" value="0">
+      </div>
+      <button type="submit" class="btn btn-primary" style="width: 100%">提交</button>
+    </form>
+  `);
+
+  apiRequest(`${API_BASE}/exams`).then(res => {
+    if (res?.success) {
+      const select = document.getElementById('paper-exam-select');
+      select.innerHTML = '<option value="">请选择科目</option>' +
+        res.data.map(e => `<option value="${e._id}">${e.name}</option>`).join('');
+    }
+  });
+
+  document.getElementById('paper-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+
+    const res = await apiRequest(`${API_BASE}/admin/papers`, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    });
+    if (res?.success) {
+      showToast('真题创建成功', 'success');
+      closeModal();
+      loadPapers();
+    }
+  });
+}
+
+async function editPaper(id) {
+  const res = await apiRequest(`${API_BASE}/admin/papers`);
+  if (!res?.success) return;
+  const paper = res.data.find(p => p._id === id);
+  if (!paper) return;
+
+  showModal('编辑真题', `
+    <form id="paper-form">
+      <div class="form-group">
+        <label>真题名称 *</label>
+        <input type="text" class="form-control" name="title" value="${paper.title}" required>
+      </div>
+      <div class="form-group">
+        <label>年份 *</label>
+        <input type="number" class="form-control" name="year" value="${paper.year}" required>
+      </div>
+      <div class="form-group">
+        <label>排序</label>
+        <input type="number" class="form-control" name="order" value="${paper.order || 0}">
+      </div>
+      <button type="submit" class="btn btn-primary" style="width: 100%">提交</button>
+    </form>
+  `);
+
+  document.getElementById('paper-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+
+    const updateRes = await apiRequest(`${API_BASE}/admin/papers/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(data)
+    });
+    if (updateRes?.success) {
+      showToast('真题更新成功', 'success');
+      closeModal();
+      loadPapers();
+    }
+  });
+}
+
+async function deletePaper(id) {
+  if (!confirm('确定要删除该真题吗？')) return;
+  const res = await apiRequest(`${API_BASE}/admin/papers/${id}`, { method: 'DELETE' });
+  if (res?.success) {
+    showToast('真题已删除', 'success');
+    loadPapers();
+  }
+}
+
+// ==================== 导入任务 ====================
+async function loadImportTasks() {
+  const res = await apiRequest(`${API_BASE}/admin/import/tasks`);
+  if (!res?.success) return;
+
+  const examsRes = await apiRequest(`${API_BASE}/exams`);
+  const examMap = new Map((examsRes?.data || []).map(e => [e._id, e.name]));
+
+  const tbody = document.getElementById('imports-table-body');
+  if (!tbody) return;
+  tbody.innerHTML = (res.data || []).map(t => `
+    <tr>
+      <td><code>${t._id}</code></td>
+      <td>${examMap.get(String(t.examId)) || '-'}</td>
+      <td>${t.status || '-'}</td>
+      <td>${t.createdAt ? new Date(t.createdAt).toLocaleString('zh-CN') : '-'}</td>
+      <td>
+        <div class="action-buttons">
+          <button class="btn btn-sm btn-outline" onclick="viewImportTask('${t._id}')">查看</button>
+        </div>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function showCreateImportTaskModal() {
+  showModal('创建导入任务', `
+    <form id="import-task-form">
+      <div class="form-group">
+        <label>科目</label>
+        <select class="form-select" name="examId" id="import-task-exam-select">
+          <option value="">请选择科目</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>原始文本（可选）</label>
+        <textarea class="form-control" name="rawText" rows="6"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width: 100%">提交</button>
+    </form>
+  `);
+
+  apiRequest(`${API_BASE}/exams`).then(res => {
+    if (res?.success) {
+      const select = document.getElementById('import-task-exam-select');
+      select.innerHTML = '<option value="">请选择科目</option>' +
+        res.data.map(e => `<option value="${e._id}">${e.name}</option>`).join('');
+    }
+  });
+
+  document.getElementById('import-task-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+    const payload = { examId: data.examId || undefined, rawText: data.rawText || '' };
+
+    const res = await apiRequest(`${API_BASE}/admin/import/upload`, {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    });
+    if (res?.success) {
+      showToast('导入任务已创建', 'success');
+      closeModal();
+      loadImportTasks();
+    }
+  });
+}
+
+async function viewImportTask(id) {
+  const res = await apiRequest(`${API_BASE}/admin/import/tasks/${id}`);
+  if (!res?.success) return;
+  const task = res.data;
+  showModal('导入任务详情', `
+    <div style="font-size: 13px;">
+      <p><strong>任务ID：</strong>${task._id}</p>
+      <p><strong>状态：</strong>${task.status}</p>
+      <p><strong>科目：</strong>${task.examId || '-'}</p>
+      <p><strong>创建时间：</strong>${task.createdAt ? new Date(task.createdAt).toLocaleString('zh-CN') : '-'}</p>
+      <pre style="white-space: pre-wrap; background: #f7f7f7; padding: 12px; border-radius: 6px;">${JSON.stringify(task.result || task.validation || {}, null, 2)}</pre>
+    </div>
+  `);
 }
 
 // ==================== 激活码管理 ====================

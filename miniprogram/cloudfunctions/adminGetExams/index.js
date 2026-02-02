@@ -1,4 +1,4 @@
-// 云函数入口文件
+// 浜戝嚱鏁板叆鍙ｆ枃浠?
 const cloud = require('wx-server-sdk');
 
 cloud.init({
@@ -7,12 +7,12 @@ cloud.init({
 
 const db = cloud.database();
 
-// 云函数入口函数
+// 浜戝嚱鏁板叆鍙ｅ嚱鏁?
 exports.main = async (event, context) => {
   const { token } = event;
 
   try {
-    // 验证token
+    // 楠岃瘉token
     const tokenResult = await db.collection('admin_tokens')
       .where({ token: token })
       .get();
@@ -36,13 +36,13 @@ exports.main = async (event, context) => {
       }
     }
 
-    // 获取所有科目
+    // 鑾峰彇鎵€鏈夌鐩?
     const result = await db.collection('exams')
       .orderBy('sortOrder', 'asc')
       .orderBy('createdAt', 'desc')
       .get();
 
-    // 为每个科目统计题目数量
+    // 涓烘瘡涓鐩粺璁￠鐩暟閲?
     const exams = await Promise.all(result.data.map(async (exam) => {
       const questionCount = await db.collection('questions')
         .where({ examId: exam._id })
@@ -59,10 +59,10 @@ exports.main = async (event, context) => {
       data: exams
     };
   } catch (error) {
-    console.error('获取科目列表失败:', error);
+    console.error('鑾峰彇绉戠洰鍒楄〃澶辫触:', error);
     return {
       success: false,
-      message: '获取科目列表失败',
+      message: '鑾峰彇绉戠洰鍒楄〃澶辫触',
       error: error.message
     };
   }

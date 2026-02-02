@@ -1,5 +1,4 @@
-// 云函数入口文件
-const cloud = require('wx-server-sdk');
+// 浜戝嚱鏁板叆鍙ｆ枃浠?const cloud = require('wx-server-sdk');
 
 cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
@@ -8,14 +7,13 @@ cloud.init({
 const db = cloud.database();
 const _ = db.command;
 
-// 云函数入口函数
-exports.main = async (event, context) => {
+// 浜戝嚱鏁板叆鍙ｅ嚱鏁?exports.main = async (event, context) => {
   const { userId, examId } = event;
 
   if (!userId || !examId) {
     return {
       success: false,
-      message: '缺少必要参数'
+      message: '缂哄皯蹇呰鍙傛暟'
     };
   }
 
@@ -31,14 +29,13 @@ exports.main = async (event, context) => {
       return {
         success: false,
         hasPermission: false,
-        message: '无权限'
+        message: '鏃犳潈闄?
       };
     }
 
     const permission = result.data[0];
 
-    // 检查权限是否有效
-    const isValid = permission.isPermanent ||
+    // 妫€鏌ユ潈闄愭槸鍚︽湁鏁?    const isValid = permission.isPermanent ||
                     (permission.expiresAt && new Date(permission.expiresAt) > new Date());
 
     return {
@@ -47,10 +44,10 @@ exports.main = async (event, context) => {
       data: permission
     };
   } catch (error) {
-    console.error('检查权限失败:', error);
+    console.error('妫€鏌ユ潈闄愬け璐?', error);
     return {
       success: false,
-      message: '检查权限失败',
+      message: '妫€鏌ユ潈闄愬け璐?,
       error: error.message
     };
   }

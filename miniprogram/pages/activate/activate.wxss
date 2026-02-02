@@ -1,6 +1,6 @@
 /* pages/activate/activate.wxss */
 
-/* 科目信息卡片 */
+/* 绉戠洰淇℃伅鍗＄墖 */
 .exam-info-card {
   background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
   margin: 24rpx;
@@ -21,7 +21,7 @@
   color: #fff;
 }
 
-/* 激活卡片 */
+/* 婵€娲诲崱鐗?*/
 .activate-card {
   background: #fff;
   margin: 0 24rpx 32rpx;
@@ -43,7 +43,7 @@
   margin-bottom: 32rpx;
 }
 
-/* 激活码输入 */
+/* 婵€娲荤爜杈撳叆 */
 .code-input-wrapper {
   position: relative;
   margin-bottom: 20rpx;
@@ -87,7 +87,7 @@
   font-size: 28rpx;
 }
 
-/* 激活按钮 */
+/* 婵€娲绘寜閽?*/
 .activate-btn {
   margin: 0 24rpx 32rpx;
   height: 96rpx;
@@ -107,7 +107,7 @@
   color: #999;
 }
 
-/* 已激活列表 */
+/* 宸叉縺娲诲垪琛?*/
 .activated-list {
   margin: 0 24rpx;
 }

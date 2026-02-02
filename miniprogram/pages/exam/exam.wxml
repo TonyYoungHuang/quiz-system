@@ -1,119 +1,246 @@
 <!--pages/exam/exam.wxml-->
 <wxs module="exam">
-  // 判断选项是否被选中
+  var isArray = function(val) {
+    return Object.prototype.toString.call(val) === '[object Array]';
+  };
+
   var isSelected = function(userAnswer, optionKey, questionType) {
     if (!userAnswer) return false;
     if (questionType === 'MULTI') {
-      // 多选题：userAnswer是数组
       return userAnswer.indexOf(optionKey) >= 0;
-    } else {
-      // 单选/判断：userAnswer是字符串
-      return userAnswer === optionKey;
     }
+    return userAnswer === optionKey;
   };
 
-  // 判断是否答错
   var isWrong = function(userAnswer, optionKey, questionType, answer, showResult) {
     if (!showResult) return false;
-    if (answer === optionKey) return false; // 正确的不会是错的
     if (questionType === 'MULTI') {
+      if (isArray(answer) && answer.indexOf(optionKey) >= 0) return false;
       return userAnswer && userAnswer.indexOf(optionKey) >= 0;
-    } else {
-      return userAnswer === optionKey;
     }
+    if (answer === optionKey) return false;
+    return userAnswer === optionKey;
+  };
+
+  var isAnswered = function(userAnswer, questionType) {
+    if (!userAnswer) return false;
+    if (questionType === 'MULTI') return userAnswer.length > 0;
+    if (questionType === 'BLANK') {
+      if (!userAnswer.length) return false;
+      for (var i = 0; i < userAnswer.length; i++) {
+        if (userAnswer[i] && userAnswer[i].trim && userAnswer[i].trim()) return true;
+      }
+      return false;
+    }
+    if (questionType === 'SHORT' || questionType === 'CALC') {
+      return userAnswer.trim && userAnswer.trim().length > 0;
+    }
+    return true;
+  };
+
+  var isCorrect = function(answer, optionKey, questionType) {
+    if (questionType === 'MULTI') {
+      if (isArray(answer)) return answer.indexOf(optionKey) >= 0;
+      return false;
+    }
+    return answer === optionKey;
   };
 
   module.exports = {
     isSelected: isSelected,
-    isWrong: isWrong
+    isWrong: isWrong,
+    isAnswered: isAnswered,
+    isCorrect: isCorrect
   };
 </wxs>
 
 <view class="container">
-  <!-- 顶部信息栏 -->
   <view class="header">
     <view class="header-left" bindtap="onBack">
-      <text class="back-icon">‹</text>
+      <text class="back-icon">返回</text>
     </view>
     <view class="header-center">
       <view class="exam-title">{{examName}}</view>
-      <view class="exam-progress">第 {{currentIndex + 1}}/{{questions.length}} 题</view>
+      <view class="exam-progress">第{{currentIndex + 1}}/{{questions.length}}题</view>
     </view>
     <view class="header-right" bindtap="onShowAnswerSheet">
-      <text class="sheet-icon">📋</text>
+      <text class="sheet-icon">目录</text>
     </view>
   </view>
 
-  <!-- 进度条 -->
   <view class="progress-bar">
     <view class="progress-fill" style="width: {{(currentIndex + 1) / questions.length * 100}}%"></view>
   </view>
 
-  <!-- 题目卡片 -->
-  <swiper
-    class="question-swiper"
-    current="{{currentIndex}}"
-    bindchange="onSwiperChange"
-    circular="{{false}}"
-  >
+  <swiper class="question-swiper" current="{{currentIndex}}" bindchange="onSwiperChange" circular="{{false}}">
     <swiper-item wx:for="{{questions}}" wx:key="_id">
       <view class="question-card">
-        <!-- 题型标签 -->
         <view class="question-type" style="background: {{item.typeColor}};">
           {{item.typeName}}
         </view>
 
-        <!-- 题目内容 -->
-        <view class="question-content">
-          <text class="question-index">{{index + 1}}.</text>
-          <text class="question-text">{{item.content}}</text>
-        </view>
-
-        <!-- 题目图片（如果有） -->
-        <image wx:if="{{item.mediaUrl}}" class="question-image" src="{{item.mediaUrl}}" mode="widthFix"></image>
-
-        <!-- 选项列表 -->
-        <view class="options-list">
-          <view
-            wx:for="{{item.options}}"
-            wx:for-item="option"
-            wx:for-index="optIndex"
-            wx:key="key"
-            class="option-item {{exam.isSelected(userAnswers[item._id], option.key, item.type) ? 'selected' : ''}} {{showResult && item.answer === option.key ? 'correct' : ''}} {{exam.isWrong(userAnswers[item._id], option.key, item.type, item.answer, showResult) ? 'wrong' : ''}}"
-            bindtap="onSelectOption"
-            data-question-id="{{item._id}}"
-            data-option="{{option.key}}"
-          >
-            <view class="option-key">{{option.key}}</view>
-            <view class="option-value">{{option.value}}</view>
-            <view wx:if="{{showResult}}" class="option-result">
-              <text wx:if="{{item.answer === option.key}}" class="result-icon correct">✓</text>
-              <text wx:elif="{{exam.isWrong(userAnswers[item._id], option.key, item.type, item.answer, showResult)}}" class="result-icon wrong">✗</text>
+        <view wx:if="{{item.type === 'CASE'}}" class="case-material">
+          <view class="question-content">
+            <text class="question-index">{{index + 1}}.</text>
+            <view class="blocks">
+              <block wx:for="{{item.stem}}" wx:for-item="block" wx:key="index">
+                <text wx:if="{{block.type === 'text'}}" class="block-text">{{block.content.zh}}</text>
+                <image wx:elif="{{block.type === 'image'}}" class="block-image" src="{{block.url}}" mode="widthFix"></image>
+                <view wx:elif="{{block.type === 'formula'}}" class="block-formula">
+                  <rich-text wx:if="{{block.html}}" nodes="{{block.html}}"></rich-text>
+                  <text wx:else>{{block.latex}}</text>
+                </view>
+                <view wx:elif="{{block.type === 'table'}}" class="block-table">
+                  <view wx:for="{{block.rows}}" wx:for-item="row" wx:key="index" class="table-row">
+                    <text wx:for="{{row}}" wx:for-item="cell" wx:key="index" class="table-cell">{{cell}}</text>
+                  </view>
+                </view>
+              </block>
             </view>
           </view>
         </view>
 
-        <!-- 答案解析 -->
-        <view wx:if="{{showResult}}" class="answer-analysis">
-          <view class="analysis-title">📖 答案解析</view>
-          <view class="analysis-content">{{item.explanation}}</view>
-          <view class="correct-answer">
-            正确答案：<text class="answer-text">{{item.answer}}</text>
+        <view wx:if="{{item.type !== 'CASE'}}" class="question-content">
+          <text class="question-index">{{index + 1}}.</text>
+          <view class="blocks">
+            <block wx:for="{{item.stem}}" wx:for-item="block" wx:key="index">
+              <text wx:if="{{block.type === 'text'}}" class="block-text">{{block.content.zh}}</text>
+              <image wx:elif="{{block.type === 'image'}}" class="block-image" src="{{block.url}}" mode="widthFix"></image>
+              <view wx:elif="{{block.type === 'formula'}}" class="block-formula">
+                <rich-text wx:if="{{block.html}}" nodes="{{block.html}}"></rich-text>
+                <text wx:else>{{block.latex}}</text>
+              </view>
+              <view wx:elif="{{block.type === 'table'}}" class="block-table">
+                <view wx:for="{{block.rows}}" wx:for-item="row" wx:key="index" class="table-row">
+                  <text wx:for="{{row}}" wx:for-item="cell" wx:key="index" class="table-cell">{{cell}}</text>
+                </view>
+              </view>
+            </block>
           </view>
         </view>
 
-        <!-- 底部按钮 -->
+        <view wx:if="{{item.media && item.media.length}}">
+          <image wx:for="{{item.media}}" wx:for-item="m" wx:key="index" class="question-image" src="{{m.url}}" mode="widthFix"></image>
+        </view>
+
+        <view wx:if="{{item.type === 'CASE'}}" class="case-children">
+          <view wx:for="{{item.children}}" wx:for-item="child" wx:for-index="childIndex" wx:key="_id" class="case-child">
+            <view class="question-content">
+              <text class="question-index">{{index + 1}}.{{childIndex + 1}}</text>
+              <view class="blocks">
+                <block wx:for="{{child.stem}}" wx:for-item="block" wx:key="index">
+                  <text wx:if="{{block.type === 'text'}}" class="block-text">{{block.content.zh}}</text>
+                  <image wx:elif="{{block.type === 'image'}}" class="block-image" src="{{block.url}}" mode="widthFix"></image>
+                  <view wx:elif="{{block.type === 'formula'}}" class="block-formula">
+                    <rich-text wx:if="{{block.html}}" nodes="{{block.html}}"></rich-text>
+                    <text wx:else>{{block.latex}}</text>
+                  </view>
+                  <view wx:elif="{{block.type === 'table'}}" class="block-table">
+                    <view wx:for="{{block.rows}}" wx:for-item="row" wx:key="index" class="table-row">
+                      <text wx:for="{{row}}" wx:for-item="cell" wx:key="index" class="table-cell">{{cell}}</text>
+                    </view>
+                  </view>
+                </block>
+              </view>
+            </view>
+
+            <view wx:if="{{child.type === 'SINGLE' || child.type === 'MULTI' || child.type === 'JUDGE'}}" class="options-list">
+              <view wx:for="{{child.options}}" wx:for-item="option" wx:key="key"
+                class="option-item {{exam.isSelected(userAnswers[child._id], option.key, child.type) ? 'selected' : ''}} {{showResult && exam.isCorrect(child.answer, option.key, child.type) ? 'correct' : ''}} {{exam.isWrong(userAnswers[child._id], option.key, child.type, child.answer, showResult) ? 'wrong' : ''}}"
+                bindtap="onSelectOption"
+                data-question-id="{{child._id}}"
+                data-option="{{option.key}}">
+                <view class="option-key">{{option.key}}</view>
+                <view class="option-value">
+                  <block wx:for="{{option.content}}" wx:for-item="block" wx:key="index">
+                    <text wx:if="{{block.type === 'text'}}" class="block-text">{{block.content.zh}}</text>
+                    <image wx:elif="{{block.type === 'image'}}" class="block-image" src="{{block.url}}" mode="widthFix"></image>
+                    <view wx:elif="{{block.type === 'formula'}}" class="block-formula">
+                      <rich-text wx:if="{{block.html}}" nodes="{{block.html}}"></rich-text>
+                      <text wx:else>{{block.latex}}</text>
+                    </view>
+                  </block>
+                </view>
+              </view>
+            </view>
+
+            <view wx:if="{{child.type === 'BLANK'}}" class="blank-list">
+              <input wx:for="{{child.blankCountArray}}" wx:for-item="b" wx:key="index" class="blank-input" placeholder="填空" bindinput="onBlankInput" data-question-id="{{child._id}}" data-blank-index="{{index}}" />
+            </view>
+
+            <view wx:if="{{child.type === 'SHORT' || child.type === 'CALC'}}" class="short-input">
+              <textarea class="short-textarea" placeholder="请输入答案" bindinput="onTextAnswerInput" data-question-id="{{child._id}}"></textarea>
+            </view>
+
+            <view wx:if="{{showResult}}" class="answer-analysis">
+              <view class="analysis-title">答案解析</view>
+              <view class="analysis-content">
+                <block wx:for="{{child.analysis}}" wx:for-item="block" wx:key="index">
+                  <text wx:if="{{block.type === 'text'}}" class="block-text">{{block.content.zh}}</text>
+                  <view wx:elif="{{block.type === 'formula'}}" class="block-formula">
+                    <rich-text wx:if="{{block.html}}" nodes="{{block.html}}"></rich-text>
+                    <text wx:else>{{block.latex}}</text>
+                  </view>
+                </block>
+              </view>
+              <view class="correct-answer">正确答案：<text class="answer-text">{{child.answer}}</text></view>
+            </view>
+          </view>
+        </view>
+
+        <view wx:if="{{item.type === 'SINGLE' || item.type === 'MULTI' || item.type === 'JUDGE'}}" class="options-list">
+          <view wx:for="{{item.options}}" wx:for-item="option" wx:key="key"
+            class="option-item {{exam.isSelected(userAnswers[item._id], option.key, item.type) ? 'selected' : ''}} {{showResult && exam.isCorrect(item.answer, option.key, item.type) ? 'correct' : ''}} {{exam.isWrong(userAnswers[item._id], option.key, item.type, item.answer, showResult) ? 'wrong' : ''}}"
+            bindtap="onSelectOption"
+            data-question-id="{{item._id}}"
+            data-option="{{option.key}}">
+            <view class="option-key">{{option.key}}</view>
+            <view class="option-value">
+              <block wx:for="{{option.content}}" wx:for-item="block" wx:key="index">
+                <text wx:if="{{block.type === 'text'}}" class="block-text">{{block.content.zh}}</text>
+                <image wx:elif="{{block.type === 'image'}}" class="block-image" src="{{block.url}}" mode="widthFix"></image>
+                <view wx:elif="{{block.type === 'formula'}}" class="block-formula">
+                  <rich-text wx:if="{{block.html}}" nodes="{{block.html}}"></rich-text>
+                  <text wx:else>{{block.latex}}</text>
+                </view>
+              </block>
+            </view>
+            <view wx:if="{{showResult}}" class="option-result">
+              <text wx:if="{{exam.isCorrect(item.answer, option.key, item.type)}}" class="result-icon correct">OK</text>
+              <text wx:elif="{{exam.isWrong(userAnswers[item._id], option.key, item.type, item.answer, showResult)}}" class="result-icon wrong">X</text>
+            </view>
+          </view>
+        </view>
+
+        <view wx:if="{{item.type === 'BLANK'}}" class="blank-list">
+          <input wx:for="{{item.blankCountArray}}" wx:for-item="b" wx:key="index" class="blank-input" placeholder="填空" bindinput="onBlankInput" data-question-id="{{item._id}}" data-blank-index="{{index}}" />
+        </view>
+
+        <view wx:if="{{item.type === 'SHORT' || item.type === 'CALC'}}" class="short-input">
+          <textarea class="short-textarea" placeholder="请输入答案" bindinput="onTextAnswerInput" data-question-id="{{item._id}}"></textarea>
+        </view>
+
+        <view wx:if="{{showResult}}" class="answer-analysis">
+          <view class="analysis-title">答案解析</view>
+          <view class="analysis-content">
+            <block wx:for="{{item.analysis}}" wx:for-item="block" wx:key="index">
+              <text wx:if="{{block.type === 'text'}}" class="block-text">{{block.content.zh}}</text>
+              <view wx:elif="{{block.type === 'formula'}}" class="block-formula">
+                <rich-text wx:if="{{block.html}}" nodes="{{block.html}}"></rich-text>
+                <text wx:else>{{block.latex}}</text>
+              </view>
+            </block>
+          </view>
+          <view class="correct-answer">正确答案：<text class="answer-text">{{item.answer}}</text></view>
+        </view>
+
         <view class="footer-buttons">
-          <button wx:if="{{!showResult}}" class="btn-submit" bindtap="onSubmitAnswer" disabled="{{!userAnswers[item._id]}}">
+          <button wx:if="{{!showResult}}" class="btn-submit" bindtap="onSubmitAnswer" disabled="{{!exam.isAnswered(userAnswers[item._id], item.type)}}">
             提交答案
           </button>
           <view wx:else class="result-buttons">
-            <button wx:if="{{index < questions.length - 1}}" class="btn-next" bindtap="onNextQuestion">
-              下一题
-            </button>
-            <button wx:else class="btn-finish" bindtap="onFinishExam">
-              查看结果
-            </button>
+            <button wx:if="{{index < questions.length - 1}}" class="btn-next" bindtap="onNextQuestion">下一题</button>
+            <button wx:else class="btn-finish" bindtap="onFinishExam">查看结果</button>
           </view>
         </view>
       </view>
@@ -121,13 +248,12 @@
   </swiper>
 </view>
 
-<!-- 答题卡弹窗 -->
 <view class="answer-sheet-mask" wx:if="{{showSheet}}" bindtap="onHideAnswerSheet">
   <view class="answer-sheet" catchtap="onStopPropagation">
     <view class="sheet-header">
       <view class="sheet-title">答题卡</view>
       <view class="sheet-close" bindtap="onHideAnswerSheet">
-        <text>✕</text>
+        <text>?</text>
       </view>
     </view>
 
@@ -143,13 +269,10 @@
     </view>
 
     <view class="sheet-grid">
-      <view
-        wx:for="{{questions}}"
-        wx:key="_id"
+      <view wx:for="{{questions}}" wx:key="_id"
         class="sheet-item {{userAnswers[item._id] ? 'answered' : ''}} {{currentIndex === index ? 'current' : ''}}"
         bindtap="onJumpToQuestion"
-        data-index="{{index}}"
-      >
+        data-index="{{index}}">
         {{index + 1}}
       </view>
     </view>

@@ -1,7 +1,7 @@
 {
   "name": "adminGetQuestions",
   "version": "1.0.0",
-  "description": "获取题目列表云函数（管理版）",
+  "description": "鑾峰彇棰樼洰鍒楄〃浜戝嚱鏁帮紙绠＄悊鐗堬級",
   "main": "index.js",
   "dependencies": {
     "wx-server-sdk": "~2.6.3"

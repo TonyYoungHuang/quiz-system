@@ -1,4 +1,4 @@
-// 云函数入口文件
+// 浜戝嚱鏁板叆鍙ｆ枃浠?
 const cloud = require('wx-server-sdk');
 
 cloud.init({
@@ -7,12 +7,12 @@ cloud.init({
 
 const db = cloud.database();
 
-// 云函数入口函数
+// 浜戝嚱鏁板叆鍙ｅ嚱鏁?
 exports.main = async (event, context) => {
   const { token, examId, limit = 100, offset = 0 } = event;
 
   try {
-    // 验证token
+    // 楠岃瘉token
     const tokenResult = await db.collection('admin_tokens')
       .where({ token: token })
       .get();
@@ -36,24 +36,24 @@ exports.main = async (event, context) => {
       }
     }
 
-    // 构建查询条件
+    // 鏋勫缓鏌ヨ鏉′欢
     let query = db.collection('activation_codes');
 
     if (examId) {
       query = query.where({ examId: examId });
     }
 
-    // 获取总数
+    // 鑾峰彇鎬绘暟
     const countResult = await query.count();
 
-    // 获取列表
+    // 鑾峰彇鍒楄〃
     const result = await query
       .orderBy('createdAt', 'desc')
       .skip(offset)
       .limit(limit)
       .get();
 
-    // 获取关联的科目信息
+    // 鑾峰彇鍏宠仈鐨勭鐩俊鎭?
     const codes = await Promise.all(result.data.map(async (code) => {
       const exam = await db.collection('exams')
         .doc(code.examId)
@@ -61,7 +61,7 @@ exports.main = async (event, context) => {
 
       return {
         ...code,
-        examName: exam.data ? exam.data.name : '未知科目'
+        examName: exam.data ? exam.data.name : '鏈煡绉戠洰'
       };
     }));
 
@@ -73,10 +73,10 @@ exports.main = async (event, context) => {
       }
     };
   } catch (error) {
-    console.error('获取激活码列表失败:', error);
+    console.error('鑾峰彇婵€娲荤爜鍒楄〃澶辫触:', error);
     return {
       success: false,
-      message: '获取激活码列表失败',
+      message: '鑾峰彇婵€娲荤爜鍒楄〃澶辫触',
       error: error.message
     };
   }

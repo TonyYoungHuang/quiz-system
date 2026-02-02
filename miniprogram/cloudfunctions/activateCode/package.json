@@ -1,7 +1,7 @@
 {
   "name": "activateCode",
   "version": "1.0.0",
-  "description": "激活码激活云函数",
+  "description": "婵€娲荤爜婵€娲讳簯鍑芥暟",
   "main": "index.js",
   "dependencies": {
     "wx-server-sdk": "~2.6.3"
