@@ -1,74 +1,85 @@
-// 浜戝嚱鏁板叆鍙ｆ枃浠?const cloud = require('wx-server-sdk');
+const cloud = require('wx-server-sdk');
 
 cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
 });
 
 const db = cloud.database();
-const _ = db.command;
 
-// 浜戝嚱鏁板叆鍙ｅ嚱鏁?exports.main = async (event, context) => {
-  const { password } = event;
+async function ensureDefaultAdminPassword() {
+  const configResult = await db.collection('config')
+    .where({ key: 'admin_password' })
+    .get();
+
+  if (configResult.data.length > 0) {
+    return String(configResult.data[0].value || 'admin123');
+  }
+
+  await db.collection('config').add({
+    data: {
+      key: 'admin_password',
+      value: 'admin123',
+      updatedAt: new Date()
+    }
+  });
+
+  return 'admin123';
+}
+
+async function clearExpiredTokens() {
+  const now = Date.now();
+  const tokenResult = await db.collection('admin_tokens').get();
+
+  for (const item of tokenResult.data) {
+    const expiresAt = new Date(item.expiresAt).getTime();
+    if (!Number.isNaN(expiresAt) && expiresAt <= now) {
+      await db.collection('admin_tokens').doc(item._id).remove();
+    }
+  }
+}
+
+exports.main = async (event = {}) => {
+  const password = String(event.password || '').trim();
 
   if (!password) {
     return {
       success: false,
-      message: '璇疯緭鍏ュ瘑鐮?
+      message: '请输入管理员密码'
     };
   }
 
   try {
-    // 浠庨厤缃泦鍚堣幏鍙栫鐞嗗憳瀵嗙爜
-    const configResult = await db.collection('config')
-      .where({
-        key: 'admin_password'
-      })
-      .get();
+    await clearExpiredTokens();
 
-    if (configResult.data.length === 0) {
-      // 棣栨浣跨敤锛屽垱寤洪粯璁ゅ瘑鐮侊細admin123
-      await db.collection('config').add({
-        data: {
-          key: 'admin_password',
-          value: 'admin123',
-          updatedAt: new Date()
-        }
-      });
-    }
-
-    const storedPassword = configResult.data.length > 0
-      ? configResult.data[0].value
-      : 'admin123';
-
-    if (password === storedPassword) {
-      // 鐢熸垚鐧诲綍token锛堜娇鐢ㄦ椂闂存埑锛?      const token = 'admin_' + Date.now();
-
-      // 瀛樺偍token鍒版暟鎹簱锛屾湁鏁堟湡2灏忔椂
-      await db.collection('admin_tokens').add({
-        data: {
-          token: token,
-          createdAt: new Date(),
-          expiresAt: new Date(Date.now() + 2 * 60 * 60 * 1000) // 2灏忔椂鍚庤繃鏈?        }
-      });
-
-      return {
-        success: true,
-        message: '鐧诲綍鎴愬姛',
-        data: {
-          token: token
-        }
-      };
-    } else {
+    const storedPassword = await ensureDefaultAdminPassword();
+    if (password !== storedPassword) {
       return {
         success: false,
-        message: '瀵嗙爜閿欒'
+        message: '密码错误'
       };
     }
+
+    const token = `admin_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
+    await db.collection('admin_tokens').add({
+      data: {
+        token,
+        createdAt: new Date(),
+        expiresAt: new Date(Date.now() + 2 * 60 * 60 * 1000)
+      }
+    });
+
+    return {
+      success: true,
+      message: '登录成功',
+      data: {
+        token
+      }
+    };
   } catch (error) {
-    console.error('鐧诲綍澶辫触:', error);
+    console.error('[adminLogin] error', error);
     return {
       success: false,
-      message: '鐧诲綍澶辫触',
+      message: '登录失败',
       error: error.message
     };
   }

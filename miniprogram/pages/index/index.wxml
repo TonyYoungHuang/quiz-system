@@ -1,16 +1,26 @@
-﻿<!--pages/index/index.wxml-->
+<!--pages/index/index.wxml-->
 <view class="container">
   <view class="search-bar">
     <view class="search-input">
-      <text class="search-icon">搜</text>
-      <input placeholder="搜索科目名称" value="{{searchText}}" bindinput="onSearchInput" />
+      <text class="search-icon">{{ui.searchIcon}}</text>
+      <input placeholder="{{ui.searchPlaceholder}}" value="{{searchText}}" bindinput="onSearchInput" />
+    </view>
+  </view>
+
+  <view class="entry-grid">
+    <view class="entry-item" wx:for="{{entries}}" wx:key="key" bindtap="onEntryTap" data-url="{{item.url}}">
+      <view class="entry-icon">{{item.icon}}</view>
+      <view class="entry-text">
+        <text class="entry-title">{{item.title}}</text>
+        <text class="entry-subtitle">{{item.subtitle}}</text>
+      </view>
     </view>
   </view>
 
   <scroll-view class="category-scroll" scroll-x enhanced show-scrollbar="{{false}}">
     <view class="category-list">
       <view class="category-item {{selectedCategory === '' ? 'active' : ''}}" bindtap="onCategoryChange" data-category="">
-        全部
+        {{ui.allCategory}}
       </view>
       <view wx:for="{{categories}}" wx:key="index" class="category-item {{selectedCategory === item ? 'active' : ''}}" bindtap="onCategoryChange" data-category="{{item}}">
         {{item}}
@@ -19,34 +29,47 @@
   </scroll-view>
 
   <view class="exam-list">
-    <view wx:for="{{filteredExams}}" wx:key="_id" class="exam-card" bindtap="onExamTap" data-exam="{{item}}">
-      <view class="exam-icon">
-        <image class="exam-icon-img" src="/images/book.png" mode="aspectFit"></image>
-      </view>
+    <block wx:for="{{examGroups}}" wx:key="key">
+      <view class="exam-group">
+        <view class="group-header">
+          <text class="group-title">{{item.title}}</text>
+          <text wx:if="{{item.hint}}" class="group-hint">{{item.hint}}</text>
+        </view>
 
-      <view class="exam-info">
-        <view class="exam-name">{{item.name}}</view>
-        <view class="exam-meta">
-          <text class="exam-category">{{item.category}}</text>
-          <text class="exam-count">{{item.questionCount}} 道题</text>
-        </view>
-      </view>
+        <view wx:for="{{item.exams}}" wx:key="_id" class="exam-card {{item.isActivated ? 'activated-card' : 'locked-card'}}" bindtap="onExamTap" data-exam="{{item}}">
+          <view class="exam-icon">
+            <image class="exam-icon-img" src="/images/book.png" mode="aspectFit"></image>
+          </view>
 
-      <view class="exam-status">
-        <view wx:if="{{item.isActivated}}" class="status-badge activated">
-          <text class="status-icon">✓</text>
-          已激活
-        </view>
-        <view wx:else class="status-badge locked">
-          <text class="status-icon">锁</text>
-          待激活
+          <view class="exam-info">
+            <view class="exam-name-row">
+              <view class="exam-name">{{item.name}}</view>
+              <text wx:if="{{item.isActivated}}" class="exam-pill">{{ui.myExamsGroup}}</text>
+            </view>
+            <view class="exam-meta">
+              <text class="exam-category">{{item.category}}</text>
+              <text class="exam-count">{{item.questionCount || 0}} {{ui.questionUnit}}</text>
+              <text wx:if="{{item.isActivated && item.remainingQuestionCount !== item.questionCount}}" class="exam-remaining">{{ui.remainingPrefix}}{{item.remainingQuestionCount || 0}}{{ui.questionUnit}}</text>
+            </view>
+          </view>
+
+          <view class="exam-status">
+            <view wx:if="{{item.isActivated}}" class="status-badge activated">
+              <text class="status-icon">{{ui.activatedIcon}}</text>
+              {{ui.statusActivated}}
+            </view>
+            <view wx:else class="status-badge locked">
+              <text class="status-icon">{{ui.lockedIcon}}</text>
+              {{ui.statusPending}}
+            </view>
+          </view>
         </view>
       </view>
-    </view>
+    </block>
 
     <view wx:if="{{filteredExams.length === 0}}" class="empty-state">
-      <text class="empty-icon">空</text>
-      <text class="empty-text">暂无题库</text>
+      <text class="empty-icon">{{ui.emptyIcon}}</text>
+      <text class="empty-text">{{ui.emptyText}}</text>
     </view>
   </view>
 </view>

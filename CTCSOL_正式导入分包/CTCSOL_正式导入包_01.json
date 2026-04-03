@@ -1,0 +1,1826 @@
+{
+  "meta": {
+    "sourcePdf": "C:\\Users\\Administrator\\Desktop\\历年CTCSOL笔试真题集（2014-2025年）2025.2.1.pdf",
+    "generatedAt": "2026-04-01T12:31:28",
+    "packageIndex": 1,
+    "packageCount": 11,
+    "questionCount": 100,
+    "sortOrderStart": 1,
+    "sortOrderEnd": 100,
+    "importModeSuggestion": "覆盖导入"
+  },
+  "questions": [
+    {
+      "type": "SINGLE",
+      "content": "上图中带问号的 4 个字是什么字体? （ ）",
+      "options": {
+        "A": "小篆",
+        "B": "隶书",
+        "C": "行书",
+        "D": "草书"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 3,
+      "sourceQuestionNo": 5,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "needsMediaReview": true,
+      "mediaReviewReason": "题干提到图片或图示，正式使用前请在后台补图。",
+      "sortOrder": 1
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个词中“洋”的义项与其他的不一样?（ ）",
+      "options": {
+        "A": "洋泾浜",
+        "B": "小洋楼",
+        "C": "洋洋洒洒",
+        "D": "崇洋媚外"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 3,
+      "sourceQuestionNo": 6,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 2
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项的“下”是动词?（ ）",
+      "options": {
+        "A": "一下子",
+        "B": "快下车",
+        "C": "下个月",
+        "D": "敲了几下"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 3,
+      "sourceQuestionNo": 7,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 3
+    },
+    {
+      "type": "SINGLE",
+      "content": "从结构上来说，“牛”属于（ ）",
+      "options": {
+        "A": "独体结构",
+        "B": "上下结构",
+        "C": "上中下结构",
+        "D": "半包围结构"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 3,
+      "sourceQuestionNo": 8,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 4
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列成语中的“休”是别字的是（ ）",
+      "options": {
+        "A": "休戚相关",
+        "B": "休养生息",
+        "C": "无尽无休",
+        "D": "休心养性 第 10-15 题 请选出下列每组词所对应的词汇学术语类型，在 A-",
+        "G": "中进行选择， 其中有一个多余选项。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 3,
+      "sourceQuestionNo": 9,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 5
+    },
+    {
+      "type": "SINGLE",
+      "content": "生一死 真一假 升一降 胖一瘦",
+      "options": {
+        "A": "象形字",
+        "B": "会意字",
+        "C": "指事字",
+        "D": "假借字",
+        "E": "形声字",
+        "F": "转注字"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 3,
+      "sourceQuestionNo": 15,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 6
+    },
+    {
+      "type": "SINGLE",
+      "content": "句(1)中“地道”的发音和意思分别是 （ ）",
+      "options": {
+        "A": "dìdào 标准",
+        "B": "dìdao 正宗",
+        "C": "dìdào 正宗",
+        "D": "dìdao 标准"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 5,
+      "sourceQuestionNo": 22,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 7
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个选项与句(2)中“是”的意义和用法相同? （ ）",
+      "options": {
+        "A": "他是老师",
+        "B": "他是属龙的",
+        "C": "她是挺漂亮的",
+        "D": "他是北大毕业的"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 5,
+      "sourceQuestionNo": 23,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 8
+    },
+    {
+      "type": "SINGLE",
+      "content": "“听说”和“据说”的主要区别是（ ）",
+      "options": {
+        "A": "前者词语前面可以使用主语成分，后者不能",
+        "B": "后者词语前面可以使用主语成分，前者不能",
+        "C": "前者词语中间可以插入名词性成分，后者不能",
+        "D": "后者词语中间可以插入名词性成分，前者不能"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 5,
+      "sourceQuestionNo": 24,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 9
+    },
+    {
+      "type": "SINGLE",
+      "content": "句(3)里出现的句式，用哪种方法学习最合适?（ ）",
+      "options": {
+        "A": "提供语境并让学生完成对话",
+        "B": "给出例句并让学生自由造句",
+        "C": "给出英文例句并让学生翻译成中文",
+        "D": "用英文解释意义并让学生自由造句"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 5,
+      "sourceQuestionNo": 25,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 10
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个选项与句 (4) 中“都”的意义和用法相同? （ ）",
+      "options": {
+        "A": "我们都想去长城",
+        "B": "他都已经五十岁了",
+        "C": "你们办公室都有谁",
+        "D": "他问都不问我就决定了"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 5,
+      "sourceQuestionNo": 26,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 11
+    },
+    {
+      "type": "SINGLE",
+      "content": "句 (5) 中“主意”在语流中正确的发音是（ ）",
+      "options": {
+        "A": "zhúyi",
+        "B": "zhúyì",
+        "C": "zhǔyi",
+        "D": "zhǔyì"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 5,
+      "sourceQuestionNo": 27,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 12
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于“更”的意义和用法，下列哪项正确?（ ）",
+      "options": {
+        "A": "只能用在形容词前面",
+        "B": "只能用于比较句的肯定形式中",
+        "C": "表义上与“比……X 多了”相同",
+        "D": "具有预设义，即比较项都已达到某种程度 第 29-32 题 小林：麦克， (1)你看起来有点儿郁闷，有什么烦心事吗? 麦克：嗨，这不是快过春节了吗?我那个未来的丈母娘，说今年春节让我去他们家过年。 小林：好啊，这说明他们喜欢你啊。 麦克：(2)好是好，可我听说老北京特别讲究，所以我正愁帶什么礼物去呢! 小林：这有什么,不就是准备个礼物吗? 麦克：(3)你真是站着说话不腰疼，上次我去他们家，就因为送礼物闹了笑话。 小林：这怎么讲?麦克：以前，我参加中国朋友的婚礼，看见来宾都送红包，我就学会了。于是上 次去女朋友家，我也准备了一个。在饭桌上，我当着全家的面送出了我的惊喜，还来了一句“这是一 点儿小意思”。本以为女朋友的爸妈会夸我懂事，没想到全家都哈哈大笑了起来。 小林：哎呀，在中国，除了婚礼上送给新郎和新娘以外，红包通常都是长輩给晚輩，比如过年的 时候给小孩子压岁钱。 麦克：是啊，那时候我哪儿知道啊，当时別提有多尷尬了。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 5,
+      "sourceQuestionNo": 28,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 13
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个句子中的“起来”与句(1)中的意义和用法相近?（ ）",
+      "options": {
+        "A": "全家都哈哈大笑起来",
+        "B": "下课了，把书收起来吧",
+        "C": "那个声音听起来很熟悉",
+        "D": "她站起来走到教室门口"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 6,
+      "sourceQuestionNo": 29,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 14
+    },
+    {
+      "type": "SINGLE",
+      "content": "句 (2) 所蕴含的语义关系是（ ）",
+      "options": {
+        "A": "判断",
+        "B": "转 折",
+        "C": "假设",
+        "D": "让步"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 6,
+      "sourceQuestionNo": 30,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 15
+    },
+    {
+      "type": "SINGLE",
+      "content": "在向学生解释句(3)这句俗语时，需要重点解释的是（ ）",
+      "options": {
+        "A": "每个词的意思",
+        "B": "语法结构与来历",
+        "C": "同义句式有哪些",
+        "D": "含义和使用语境"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 6,
+      "sourceQuestionNo": 31,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 16
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项采用的是语素教学法?（ ）",
+      "options": {
+        "A": "从“客气”延伸到“不客气”",
+        "B": "从“讲”延伸到“说”“谈”“议”",
+        "C": "从“尴尬”延伸到“从容”“自然”",
+        "D": "从“礼物”延伸到“衣物”“食物” 第 33-38 题 麦 克：你知道中国人喜欢什么数字吗? 爱德华：不知道。 麦 克：(1)你怎么连这么简单的问题也不知道? 爱德华：你知道? 麦 克：当然了。世界上的事我知道一半，中国的事我没有不知道的。 爱德华：是吗? 麦 克：你难道没听见大家都叫我什么吗? 爱德华：叫你什么? 麦 克：“中国通”。 爱德华：(2)你才学了三个半月的汉语，怎么就成“中国通”了? 麦 克：这不是说相声吗?你怎么连这个都不懂啊? 爱德华：谁说我不懂?相声是笑的艺术，(3)“笑一笑，十年少”嘛。 麦 克：对呀。谁听了我们的相声，谁就会笑起来，谁就会变年轻，今年二十， 明年十岁。 爱德华：什么? 麦 克：你不是说“笑一笑，十年少”吗? 爱德华：別开玩笑了。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 6,
+      "sourceQuestionNo": 32,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 17
+    },
+    {
+      "type": "SINGLE",
+      "content": "本课学习的重点语法是（ ）",
+      "options": {
+        "A": "反问句",
+        "B": "疑问代词",
+        "C": "“的”字短语",
+        "D": "结构助词“了”"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 6,
+      "sourceQuestionNo": 33,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 18
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个句子在结构和语义上与句(1)同属一类?（ ）",
+      "options": {
+        "A": "连警察都敢打",
+        "B": "连老师也回答不上来",
+        "C": "这么大的苹果连看也没看过",
+        "D": "连“你好”“再见”也不会说"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 7,
+      "sourceQuestionNo": 34,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 19
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪句话中的“才”与句(2)的“才”意思相同?（ ）",
+      "options": {
+        "A": "他 40 岁才找到工作",
+        "B": "正因为我不会才问你的",
+        "C": "他才看了两页书就困了",
+        "D": "那儿太冷了，我才不去呢"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 7,
+      "sourceQuestionNo": 35,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 20
+    },
+    {
+      "type": "SINGLE",
+      "content": "句(3)中的“嘛”所隐含的意思是（ ）",
+      "options": {
+        "A": "表示惊讶",
+        "B": "表示赞叹",
+        "C": "引出一个大家都认可的理由",
+        "D": "总结出一个大家都接受的结论"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 7,
+      "sourceQuestionNo": 36,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 21
+    },
+    {
+      "type": "SINGLE",
+      "content": "“笑一笑，十年少”中“少”的词性和读音分别是（ ）",
+      "options": {
+        "A": "动词 shào",
+        "B": "动词 shǎo",
+        "C": "形容词 shào",
+        "D": "形容词 shǎo"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 7,
+      "sourceQuestionNo": 37,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 22
+    },
+    {
+      "type": "SINGLE",
+      "content": "你认为适合本课的拓展话题是（ ）",
+      "options": {
+        "A": "关于养生",
+        "B": "关于学习汉语",
+        "C": "关于相声的历史",
+        "D": "关于数字的文化 第 39-41 题"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 7,
+      "sourceQuestionNo": 38,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 23
+    },
+    {
+      "type": "SINGLE",
+      "content": "学生作文中“他进步的很快”这句话存在的主要偏误是（ ）",
+      "options": {
+        "A": "动补结构的偏误",
+        "B": "定中结构的偏误",
+        "C": "状中结构的偏误",
+        "D": "动宾结构的偏误"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 8,
+      "sourceQuestionNo": 39,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 24
+    },
+    {
+      "type": "SINGLE",
+      "content": "学生作文中第 3 段有两处比较明显的偏误，这主要涉及到哪个语法点?（ ）",
+      "options": {
+        "A": "兼语句",
+        "B": "动词短语",
+        "C": "介词短语",
+        "D": "主谓谓语"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 8,
+      "sourceQuestionNo": 40,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 25
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据作文，请分析这个学生在写汉字时容易出现哪方面的问题?（ ）",
+      "options": {
+        "A": "增减笔画",
+        "B": "写错偏旁部首",
+        "C": "丢失笔画和同音字误用",
+        "D": "添加笔画和同音字误用 第 42-46 题"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 8,
+      "sourceQuestionNo": 41,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 26
+    },
+    {
+      "type": "SINGLE",
+      "content": "上图属于克拉申“语言监控模式”中的哪一假说?（ ）",
+      "options": {
+        "A": "输入假说",
+        "B": "语言监控假说",
+        "C": "情感过滤假说",
+        "D": "自然习得顺序假说"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 8,
+      "sourceQuestionNo": 42,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "needsMediaReview": true,
+      "mediaReviewReason": "题干提到图片或图示，正式使用前请在后台补图。",
+      "sortOrder": 27
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据“情感过滤假说”,下列哪项不是影响学习者习得的情感因素?（ ）",
+      "options": {
+        "A": "态度",
+        "B": "动机",
+        "C": "自信",
+        "D": "语言学习能力"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 8,
+      "sourceQuestionNo": 43,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 28
+    },
+    {
+      "type": "SINGLE",
+      "content": "在“语言监控模式”中有 “i+1” 理论，其中 i 代表学习者的（ ）",
+      "options": {
+        "A": "学习目标",
+        "B": "现有语言水平",
+        "C": "学习其他语言的经历",
+        "D": "对目的语的热爱程度"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 8,
+      "sourceQuestionNo": 44,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 29
+    },
+    {
+      "type": "SINGLE",
+      "content": "人们用母语表达时会脱口而出，但是用第二语言表达时，经常会不自觉地留意自己的语言是否正 确。根据“监控假说”，学习者的监控会发生在（ ）",
+      "options": {
+        "A": "语言输出之前",
+        "B": "语言输出期间",
+        "C": "语言输出之后",
+        "D": "以上三个阶段皆可能"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 8,
+      "sourceQuestionNo": 45,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 30
+    },
+    {
+      "type": "SINGLE",
+      "content": "“自然顺序”是指儿童在习得母语规则和语言项目时遵循一种相似的习得顺序。“自然习得顺序假说” 认为成人第二语言学习者（ ）",
+      "options": {
+        "A": "不存在自然习得顺序",
+        "B": "同样存在自然习得顺序",
+        "C": "有时存在自然习得顺序，有时不存在",
+        "D": "是否存在要根据成人的具体年龄而定"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 8,
+      "sourceQuestionNo": 46,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 31
+    },
+    {
+      "type": "SINGLE",
+      "content": "这一层次需求分析理论是 ( ) 提出来的。",
+      "options": {
+        "A": "马斯洛",
+        "B": "皮亚杰",
+        "C": "韦特默",
+        "D": "巴甫洛夫"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 9,
+      "sourceQuestionNo": 47,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 32
+    },
+    {
+      "type": "SINGLE",
+      "content": "图中的 (1) 应是 ( ) 的需求。",
+      "options": {
+        "A": "自我认可",
+        "B": "自我实现",
+        "C": "自我超越",
+        "D": "自我欣赏"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 9,
+      "sourceQuestionNo": 48,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "needsMediaReview": true,
+      "mediaReviewReason": "题干提到图片或图示，正式使用前请在后台补图。",
+      "sortOrder": 33
+    },
+    {
+      "type": "SINGLE",
+      "content": "图中的 (2) 应是 ( ) 需求。",
+      "options": {
+        "A": "社交",
+        "B": "温饱",
+        "C": "存在",
+        "D": "生理"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 9,
+      "sourceQuestionNo": 49,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "needsMediaReview": true,
+      "mediaReviewReason": "题干提到图片或图示，正式使用前请在后台补图。",
+      "sortOrder": 34
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪种观点最符合该需求分析理论? ( )",
+      "options": {
+        "A": "应该严格要求学生",
+        "B": "良好的习惯有助于学习",
+        "C": "给学生的作业不能太多",
+        "D": "在学习中要经常鼓励学生"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 9,
+      "sourceQuestionNo": 50,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 35
+    },
+    {
+      "type": "SINGLE",
+      "content": "“害怕”表示遇到困难、危险时心中不安发慌的状态， “可怕”表示让人害怕。 第 61-65 题 请排列下列“比较句”基本句型的教学步骤。",
+      "options": {
+        "A": "老师给出两个人的资料(包括年龄、身高、成绩、爱好、居住地等信息)，让学生分组找出两人之间 的差别，并用“比较句”说出来，看哪个小组找出的差异最多。",
+        "B": "利用图片、实物、数字、情景描述等方式练习。 如：哥哥的个子比我高。",
+        "C": "利用巩固练习部分的图片以及实物等练习否定形式。 如：我的个子没有哥哥高。",
+        "D": "利用图片、实物、数字、情景描述等方法，对两个人或两种事物进行对比。 如：在黑板上展示哥哥和弟弟的年龄，然后问：“哥哥和弟弟谁大?” 学生：哥哥大。 教师：谁知道用“比”怎么说? 引导学生说出例句并板书，然后指出比较句的基本结构"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 10,
+      "sourceQuestionNo": 60,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 36
+    },
+    {
+      "type": "SINGLE",
+      "content": "第五步：",
+      "options": {
+        "A": "分班测试",
+        "B": "成绩测试",
+        "C": "学能测试",
+        "D": "水平测试",
+        "E": "诊断性测试"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 10,
+      "sourceQuestionNo": 65,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 37
+    },
+    {
+      "type": "SINGLE",
+      "content": "课堂活动一般由三个环节组成，上表中的活动计划 3 应该是 ( )",
+      "options": {
+        "A": "成绩测试",
+        "B": "布置作业",
+        "C": "学习成果评估",
+        "D": "撰写总结报告"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 11,
+      "sourceQuestionNo": 66,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 38
+    },
+    {
+      "type": "SINGLE",
+      "content": "上表中的活动计划最适合哪一类汉语学习者? ( )",
+      "options": {
+        "A": "少儿初级水平",
+        "B": "少儿中级水平",
+        "C": "大学生初级水平",
+        "D": "大学生中级水平"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 11,
+      "sourceQuestionNo": 67,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 39
+    },
+    {
+      "type": "SINGLE",
+      "content": "上表中的活动计划 2 里的“问候”适合哪一种互动模式? ( )",
+      "options": {
+        "A": "全班活动 (lockstep)",
+        "B": "同伴活动 (pair work)",
+        "C": "小组活动 (group work)",
+        "D": "个人活动 (individual work)"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 11,
+      "sourceQuestionNo": 68,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 40
+    },
+    {
+      "type": "SINGLE",
+      "content": "如果学生在课堂教学过程中出现交头接耳的不良行为，对课堂影响最小的处理方式是 ( )",
+      "options": {
+        "A": "反复提示",
+        "B": "表扬其他学生",
+        "C": "改变学生座位",
+        "D": "走到学生旁边 第 70-76 题 A：加油！快上来!他们已经爬上去了。咱们也快要到山顶了。 B：别着急。我觉得有点儿累，咱们就坐下来休息一会儿吧。先喝点儿水再往上爬。 A：这儿的景色多美啊!长城好像一条龙。看，下边都是山，火车从山里开出来了。我要多拍些照 片寄回家去。 B：你来过这儿吗? A：来过。是秋天来的。那时候长城的景色跟现在很不一样。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 11,
+      "sourceQuestionNo": 69,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 41
+    },
+    {
+      "type": "SINGLE",
+      "content": "本课需要重点讲练的语言点是 ( )",
+      "options": {
+        "A": "要……了",
+        "B": "V 上来/上去……",
+        "C": "“是……的”句",
+        "D": "跟……一样/不一样"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 11,
+      "sourceQuestionNo": 70,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 42
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项语法点适合编排在本课之前? ( )",
+      "options": {
+        "A": "了",
+        "B": "“把”字句",
+        "C": "“被”字句",
+        "D": "V 得完 V 不完"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 12,
+      "sourceQuestionNo": 71,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 43
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据本课课文的难度，教师不必抽出来进行注释的是 ( )",
+      "options": {
+        "A": "加油",
+        "B": "山顶",
+        "C": "出来",
+        "D": "照片"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 12,
+      "sourceQuestionNo": 72,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 44
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据本课课文内容，教师应当将此阶段的学习策略培养目标设定为 ( )",
+      "options": {
+        "A": "养成预习和复习习惯",
+        "B": "将孤立的字词组成句子",
+        "C": "对所学内容进行归纳和整理",
+        "D": "将视觉形式信息转化成语言形式信息"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 12,
+      "sourceQuestionNo": 73,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 45
+    },
+    {
+      "type": "SINGLE",
+      "content": "对外汉语课堂教学的教学目标，包括语言知识、语言技能、学习策略和 ( )",
+      "options": {
+        "A": "文化意识",
+        "B": "交际意识",
+        "C": "文化知识",
+        "D": "国际视野"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 12,
+      "sourceQuestionNo": 74,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 46
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师在进行语言点展示时，最理想的位置是 ( )",
+      "options": {
+        "A": "为增加互动，前后不停地走动",
+        "B": "为控制多媒体，固定在讲台周围",
+        "C": "为集中学生注意力，在教室正前方",
+        "D": "为兼顾左右，在教室前方横向走动"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 12,
+      "sourceQuestionNo": 75,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 47
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师安排了以下教学活动，其中体现“交际法”理念的是 ( )",
+      "options": {
+        "A": "生词替换",
+        "B": "看照片完成句子",
+        "C": "听指令做动作说句子",
+        "D": "根据指定情境角色扮演 第 77-82 题"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 12,
+      "sourceQuestionNo": 76,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 48
+    },
+    {
+      "type": "SINGLE",
+      "content": "该作文出现了两处“了”冗余的错误，这是由于“过度泛化”产生的偏误，下列最可能属于同类原因的 是 ( )",
+      "options": {
+        "A": "我回去学校",
+        "B": "他在看看电视",
+        "C": "我下午要见面他",
+        "D": "他睡觉一个小时"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 13,
+      "sourceQuestionNo": 77,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 49
+    },
+    {
+      "type": "SINGLE",
+      "content": "分项评分是作文评分的常用方式，下表是某考试最高分的评分细则，空格处最可能的描述是 ( )",
+      "options": {
+        "A": "有创造性",
+        "B": "描述准确",
+        "C": "无语法错误",
+        "D": "表达连贯自然"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 13,
+      "sourceQuestionNo": 78,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 50
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列写作课老师的做法属于控制法的是 ( )",
+      "options": {
+        "A": "布置命题作文“我的中国朋友”",
+        "B": "设定情景，要求学生写一封应聘信",
+        "C": "规定一定的词汇、语法点和篇章结构，要求学生就特定的话题写作文",
+        "D": "将学生分组，小组共同构思、写提纲、讨论初稿等，教师全程指导"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 13,
+      "sourceQuestionNo": 79,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 51
+    },
+    {
+      "type": "SINGLE",
+      "content": "下面这段对话属于第二语言习得理论中哪种类型的纠错性反馈? ( ) 学生：因为他不小心，钱包没有了，他应该。 老师：应该?应该什么? 学生：他应该……哦，他活该。",
+      "options": {
+        "A": "引导",
+        "B": "澄清",
+        "C": "显形纠错",
+        "D": "元语言反馈"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 13,
+      "sourceQuestionNo": 80,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 52
+    },
+    {
+      "type": "SINGLE",
+      "content": "除了写作，下列哪种练习方式最适合训练学生的成段表达能力? ( )",
+      "options": {
+        "A": "将下列词语扩展为一句话：杯子打碎了",
+        "B": "将下列词语组成正确的句子：好了他自行车把修",
+        "C": "完成会话 男：我的自行车呢?你看见了吗? 女：__________________",
+        "D": "按正确顺序排列下列句子 ①虽然累了点儿 ②你看，这就是我家 ③但是我觉得很有成就感 ④这完全是我自己设计的 第 83-88 题"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 13,
+      "sourceQuestionNo": 81,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 53
+    },
+    {
+      "type": "SINGLE",
+      "content": "从对语言点的练习角度看，上述活动属于 ( )",
+      "options": {
+        "A": "交际性练习",
+        "B": "重复性练习",
+        "C": "机械性练习",
+        "D": "记忆性练习"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 13,
+      "sourceQuestionNo": 82,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 54
+    },
+    {
+      "type": "SINGLE",
+      "content": "在进行上述活动时，教师不必对以下哪项进行控制? ( )",
+      "options": {
+        "A": "活动进程",
+        "B": "表演道具",
+        "C": "分组人数",
+        "D": "语言要素"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 13,
+      "sourceQuestionNo": 83,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 55
+    },
+    {
+      "type": "SINGLE",
+      "content": "上述课堂活动属于哪种活动类型? ( )",
+      "options": {
+        "A": "学生依赖一教师主导",
+        "B": "学生参与一教师引导",
+        "C": "学生主导一教师促进",
+        "D": "学生自导一教师服务"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 13,
+      "sourceQuestionNo": 84,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 56
+    },
+    {
+      "type": "SINGLE",
+      "content": "上述活动设计体现了教师的何种角色? ( )",
+      "options": {
+        "A": "设计者",
+        "B": "信息源",
+        "C": "讲授者",
+        "D": "研究者"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 14,
+      "sourceQuestionNo": 85,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 57
+    },
+    {
+      "type": "SINGLE",
+      "content": "在角色扮演过程中，老师发现学生出现了语法方面的偏误，但是没有马上纠错，而是在表演完以 后才进行，这种做法属于 ( )",
+      "options": {
+        "A": "听说法",
+        "B": "交际法",
+        "C": "直接法",
+        "D": "全身反应法"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 14,
+      "sourceQuestionNo": 87,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 58
+    },
+    {
+      "type": "SINGLE",
+      "content": "在课堂中，由于小组人数多，每个学生投入程度有差异，教师可以通过什么方法进行控制? ( )",
+      "options": {
+        "A": "按座位分配任务",
+        "B": "全班固定分为两大组",
+        "C": "给每个小组成员分配一项任务",
+        "D": "指定一个学生担当组织者的角色 第 89-93 题"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 14,
+      "sourceQuestionNo": 88,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 59
+    },
+    {
+      "type": "SINGLE",
+      "content": "语言测试可以从不同角度进行分类和命名。分班测试也叫安置性测试，是根据什么命名的? ( )",
+      "options": {
+        "A": "测试的用途功能",
+        "B": "测试的命题方式",
+        "C": "测试的评分方法",
+        "D": "测试的制作要求 第 94-100 题 王老师以前在中国的大学教英语，现在在美国的中学教中文，他发现在授课过程中很难控制课堂， 也很难引起学生注意，面对这种情况，王老师认真分析目前遇到的问题，给自己列出这样一张对照表： 学习者：大学生一中学生； 学习动机：工具动机一（1); 教学者：大学老师一中学老师； 教学内容：英语一汉语： 教学方法：灌输式一（2)。 随后王老师想做出一些调整，希望学生能对自己所讲内容感兴趣。接下来王老师要讲的课文是《中 国菜真好吃》，王老师准备设计一些任务让学生提前完成。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 15,
+      "sourceQuestionNo": 93,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 60
+    },
+    {
+      "type": "SINGLE",
+      "content": "在(1)处最适合出现的是 ( )",
+      "options": {
+        "A": "兴趣动机",
+        "B": "生存动机",
+        "C": "升学动机",
+        "D": "研究动机"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 16,
+      "sourceQuestionNo": 94,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 61
+    },
+    {
+      "type": "SINGLE",
+      "content": "在(2)处最不适合出现的是 ( )",
+      "options": {
+        "A": "交际法",
+        "B": "视听法",
+        "C": "对比法",
+        "D": "语法翻译法"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 16,
+      "sourceQuestionNo": 95,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 62
+    },
+    {
+      "type": "SINGLE",
+      "content": "为了增加学习兴趣，鼓励学生积极参与，王老师应该设计什么主题让学生提前准备或预习? ( )",
+      "options": {
+        "A": "对比美中日常菜品",
+        "B": "介绍中国的餐饮礼仪",
+        "C": "介绍自己的拿手菜",
+        "D": "介绍中国的八大菜系"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 16,
+      "sourceQuestionNo": 96,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 63
+    },
+    {
+      "type": "SINGLE",
+      "content": "对于自己感兴趣的内容，同学们总是忍不住在课堂上随便说话，影响教学的顺利进行，王老师应 该怎么控制课堂? ( )",
+      "options": {
+        "A": "直接提问说话人",
+        "B": "让说话的学生出去",
+        "C": "提问说话人旁边的同学",
+        "D": "停顿下来，等大家安静后再继续"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 16,
+      "sourceQuestionNo": 97,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 64
+    },
+    {
+      "type": "SINGLE",
+      "content": "如果王老师想带一些与中国菜有关的道具，你觉得最能体现中国饮食文化的 道具是什么? ( )",
+      "options": {
+        "A": "筷子",
+        "B": "砂锅",
+        "C": "勺子",
+        "D": "茶杯"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 16,
+      "sourceQuestionNo": 98,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 65
+    },
+    {
+      "type": "SINGLE",
+      "content": "王老师想使用 PPT 辅助教学，但过度依赖 PPT 也会带来很多问题，其中最主要的问题是 ( )",
+      "options": {
+        "A": "占用课堂时间太多",
+        "B": "修改起来比较麻烦",
+        "C": "缺乏与学生的人际交流",
+        "D": "缺少动态演示，比较单调"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 16,
+      "sourceQuestionNo": 99,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 66
+    },
+    {
+      "type": "SINGLE",
+      "content": "《诗经》是我国第一部诗歌总集，相传成书于哪一时期? ( )",
+      "options": {
+        "A": "西周到春秋",
+        "B": "春秋到战国",
+        "C": "秦汉",
+        "D": "南北朝"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 18,
+      "sourceQuestionNo": 111,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 67
+    },
+    {
+      "type": "SINGLE",
+      "content": "相传《诗经》是由谁所辑? ( )",
+      "options": {
+        "A": "孔子",
+        "B": "老子",
+        "C": "孟子",
+        "D": "左丘明"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 18,
+      "sourceQuestionNo": 112,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 68
+    },
+    {
+      "type": "SINGLE",
+      "content": "贾政所言“古文”指的是 ( )",
+      "options": {
+        "A": "唐宋诗词",
+        "B": "商晚期的甲骨文",
+        "C": "起源于南北朝的骈文",
+        "D": "先秦两汉及唐宋八大家的散文"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 18,
+      "sourceQuestionNo": 113,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 69
+    },
+    {
+      "type": "SINGLE",
+      "content": "贾政所言“虚应故事”的“事”的读音是 ( )",
+      "options": {
+        "A": "sì",
+        "B": "si",
+        "C": "shì",
+        "D": "shi"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 18,
+      "sourceQuestionNo": 114,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 70
+    },
+    {
+      "type": "SINGLE",
+      "content": "贾政所言《四书》指的是 ( )",
+      "options": {
+        "A": "《诗经》《易经》《春秋》《礼记》",
+        "B": "《论语》《孟子》《大学》《中庸》",
+        "C": "《论语》《孟子》《大学》《诗经》",
+        "D": "《论语》《孟子》《大学》《周礼》"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 18,
+      "sourceQuestionNo": 115,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 71
+    },
+    {
+      "type": "SINGLE",
+      "content": "“掩耳盗铃”的故事最早出自 ( )",
+      "options": {
+        "A": "《论语》",
+        "B": "《列子》",
+        "C": "《战国策》",
+        "D": "《吕氏春秋》"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 18,
+      "sourceQuestionNo": 116,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 72
+    },
+    {
+      "type": "SINGLE",
+      "content": "《春秋》是我国编年体史书之祖，书中体现的“春秋笔法”对后人产生了很大影响。“春秋笔法”指的 是 ( )",
+      "options": {
+        "A": "寓褒贬于记事",
+        "B": "以年代为纲记叙",
+        "C": "客观记录历史事件",
+        "D": "记录事件同时记录人物心理"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 18,
+      "sourceQuestionNo": 117,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 73
+    },
+    {
+      "type": "SINGLE",
+      "content": "李贵见贾政之后要打千儿请安，在中国古代礼仪中有很多种请安问候方式，下列说法正确的是 ( )",
+      "options": {
+        "A": "打千儿这种请安方式起源于蒙古族",
+        "B": "正式和庄重的场合一般要行长揖礼",
+        "C": "屈单膝请安起源于军礼，因为穿盔甲不便下跪",
+        "D": "行拱手礼时，男子应该用右手抱左手，为“吉拜”"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 18,
+      "sourceQuestionNo": 118,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 74
+    },
+    {
+      "type": "SINGLE",
+      "content": "最适合体验此项活动的人是 ( )",
+      "options": {
+        "A": "喜欢看热闹的孩子",
+        "B": "对汉语感兴趣的退休人士",
+        "C": "刚进入汉语专业学习的大学生",
+        "D": "对中国文化感兴趣的当地民众"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 20,
+      "sourceQuestionNo": 119,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 75
+    },
+    {
+      "type": "SINGLE",
+      "content": "在当地组织这样的汉语文化活动时，最应该避免的是 ( )",
+      "options": {
+        "A": "在网络上宣传",
+        "B": "对比并批评当地文化",
+        "C": "要求学生和家人一起参加",
+        "D": "同时使用汉语和英语介绍"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 20,
+      "sourceQuestionNo": 120,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 76
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于京剧脸谱的起源，有一种说法是为了歌颂一位英雄的战功和美德，这位英雄是 ( )",
+      "options": {
+        "A": "曹操",
+        "B": "关羽",
+        "C": "兰陵王",
+        "D": "诸葛亮"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 20,
+      "sourceQuestionNo": 121,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 77
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项不是脸谱的特点 ( )",
+      "options": {
+        "A": "根据剧情而变化",
+        "B": "图案是程式化的",
+        "C": "美与丑的矛盾统一",
+        "D": "与角色的性格关系密切"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 20,
+      "sourceQuestionNo": 122,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 78
+    },
+    {
+      "type": "SINGLE",
+      "content": "邀请函上印的是关羽的脸谱，这个脸谱的颜色和象征意义应是 ( )",
+      "options": {
+        "A": "红色忠义",
+        "B": "黄色严肃",
+        "C": "黑色刚直",
+        "D": "蓝色勇猛 第 124-126 题 子在齐闻韶，三月不知肉味。曰：“不图为乐之至于斯也。” 子谓《韶》：“尽美矣，又尽善也。”谓《武》：“尽美矣，未尽善也。” 《论语 · 述而第七》"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 20,
+      "sourceQuestionNo": 123,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 79
+    },
+    {
+      "type": "SINGLE",
+      "content": "“子在齐闻韶，三月不知廨味”的意思是 ( )",
+      "options": {
+        "A": "孔子在齐国欣赏韶乐后，三个月吃不到美味的食物",
+        "B": "孔子在齐国欣赏韶乐后，很长时间无法品味出肉之美味",
+        "C": "孔子到齐国的韶地，风景宜人，三个月无法品味到肉之美味",
+        "D": "孔子到齐国的韶地，风景宜人，很长时间无法品味到肉之美味"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 20,
+      "sourceQuestionNo": 124,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 80
+    },
+    {
+      "type": "SINGLE",
+      "content": "《韶》与《武》分别与哪位历史人物有关? ( )",
+      "options": {
+        "A": "虞舜 汉武帝",
+        "B": "唐尧 周武王",
+        "C": "虞舜 周武王",
+        "D": "大禹 汉武帝"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 20,
+      "sourceQuestionNo": 125,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 81
+    },
+    {
+      "type": "SINGLE",
+      "content": "上文主要介绍了我国的科举制度，科举考试中殿试的第三名被尊称为 ( )",
+      "options": {
+        "A": "进士",
+        "B": "举人",
+        "C": "榜眼",
+        "D": "探花"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 21,
+      "sourceQuestionNo": 127,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 82
+    },
+    {
+      "type": "SINGLE",
+      "content": "文中隋炀帝的“炀帝”是其 ( )",
+      "options": {
+        "A": "庙号",
+        "B": "谥号",
+        "C": "尊号",
+        "D": "年号"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 21,
+      "sourceQuestionNo": 128,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 83
+    },
+    {
+      "type": "SINGLE",
+      "content": "除了科举制度，隋朝还开创了 ( )",
+      "options": {
+        "A": "摊丁入亩",
+        "B": "一条鞭法",
+        "C": "九品中正制",
+        "D": "三省六部制"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 21,
+      "sourceQuestionNo": 129,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 84
+    },
+    {
+      "type": "SINGLE",
+      "content": "深刻抨击了科举制度的文学作品是 ( )",
+      "options": {
+        "A": "《儒林外史》",
+        "B": "《醒世恒言》",
+        "C": "《 隋唐演义》",
+        "D": "《 孔雀东南飞》 第 131-136 题 这是一幅马王堆 3 号汉墓出土的 T 型帛画。T 型帛画是国内已知画面最大、 保存最完整、艺术性最强的汉代彩绘帛画。 这幅帛画内容丰富，包括神话故事中女娲、伏羲、烛龙等形象，把神话、想 象和现实生活完美统一，它无处不体现了古人对天国的想象和追求永生的幻想。常画的内容层次分明， 线条流畅，天上、人间、地狱三部分的承接转合浑然天成，动与静的图案结合自然。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 21,
+      "sourceQuestionNo": 130,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 85
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项与神话故事中的伏羲有关? ( )",
+      "options": {
+        "A": "尝遍百草",
+        "B": "驯养禽畜",
+        "C": "建造舟车",
+        "D": "构木为巢"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 21,
+      "sourceQuestionNo": 132,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 86
+    },
+    {
+      "type": "SINGLE",
+      "content": "龙在中国作为一种图腾崇拜物要追溯至距今 6000 多年前的 ( )",
+      "options": {
+        "A": "仰韶文化时期",
+        "B": "龙山文化时期",
+        "C": "马家浜文化时期",
+        "D": "河姆渡文化时期"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 21,
+      "sourceQuestionNo": 133,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 87
+    },
+    {
+      "type": "SINGLE",
+      "content": "马王堆汉墓出土了大量帛书，其中包括《周易》。关于《周易》,下列说法正确的是 ( )",
+      "options": {
+        "A": "是古代道教的书籍",
+        "B": "分为经和传两部分",
+        "C": "成书于春秋战国时期",
+        "D": "体现了“知行合一”的思想"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 21,
+      "sourceQuestionNo": 134,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 88
+    },
+    {
+      "type": "SINGLE",
+      "content": "马王堆汉墓属于西汉时期，其中的帛书最可能是用哪种字体抄写的? ( )",
+      "options": {
+        "A": "楷书",
+        "B": "篆书",
+        "C": "草书",
+        "D": "行书"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 21,
+      "sourceQuestionNo": 135,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 89
+    },
+    {
+      "type": "SINGLE",
+      "content": "马王堆汉墓遗址位于 ( )",
+      "options": {
+        "A": "陕西",
+        "B": "河南",
+        "C": "湖北",
+        "D": "湖南 第 137-142 题 袁老师是一位入职不久的国际汉语教师，她十分希望能将自己培养成一位出色的汉语教师和课堂 管理者，为此袁老师准备从以下方面入手来提高自己 ： (1) 丰富自己的知识储备 (2) 培养与教学相关的多种能力 (3) 做好上课的心理准备 (4) 认真准备并上好第一节课 (5) 尽快建立自己独特的教学风格 (6) 及时对自己的教学进行评估"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 22,
+      "sourceQuestionNo": 136,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 90
+    },
+    {
+      "type": "SINGLE",
+      "content": "国际汉语教师应当具备足够的知识储备，与国际汉语教育相关的跨学科的基础知识不包括 ( )",
+      "options": {
+        "A": "心理学相关知识",
+        "B": "教育学相关知识",
+        "C": "自然科学相关知识",
+        "D": "第二语言习得相关知识"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 22,
+      "sourceQuestionNo": 137,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 91
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师在走上讲台之前，都会存在一定程度的紧张心理，以下哪种做法有助于教师做好心理准备? ( )",
+      "options": {
+        "A": "做好学期考试计划",
+        "B": "提前做好学期整体计划",
+        "C": "课前写出详细教案并反复操练",
+        "D": "主动要求担任多种工作以缓解紧张情绪"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 22,
+      "sourceQuestionNo": 139,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 92
+    },
+    {
+      "type": "SINGLE",
+      "content": "接下来为有效地在班级开展活动，袁老师应该重点了解学生的哪方面信息? ( )",
+      "options": {
+        "A": "家庭背景",
+        "B": "健康状况",
+        "C": "个人爱好",
+        "D": "学习风格"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 22,
+      "sourceQuestionNo": 140,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 93
+    },
+    {
+      "type": "SINGLE",
+      "content": "面对新学生的第一堂汉语课，可以从多个思路来设计课堂教学，下面哪种不适合零起点的儿童? ( )",
+      "options": {
+        "A": "大家轮流自我介绍，减少师生之间和学生之间的陌生感",
+        "B": "展示几个有趣、好学的象形字，让学生体会汉字的魅力",
+        "C": "让学生认识一些重要的中国元素，激发学生了解中国的兴趣",
+        "D": "教会学生用拼音或汉字书写名字，让学生制作名片，进行交换并问好"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 22,
+      "sourceQuestionNo": 141,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 94
+    },
+    {
+      "type": "SINGLE",
+      "content": "如果不懂学生的母语，学生的名字通常非常难记，会经常出现教师想不起来学生叫什么或叫错学 生名字的尴尬。这样的问题该如何解决? ( )",
+      "options": {
+        "A": "给学生一律起中文名字",
+        "B": "记学生名字的简称或昵称",
+        "C": "制作学生名牌并摆在桌上",
+        "D": "在课堂上反复看学生的名单 第 143-146 题 中华民族具有五千多年连绵不断的文明历史，创造了博大精深的中华文化，为人类文明进步做出 了不可磨灭的贡献。中华文化强调“民惟邦本”“天 人合一”“和而不同”；强调“天下兴亡，匹夫有责”，主"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 22,
+      "sourceQuestionNo": 142,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 95
+    },
+    {
+      "type": "SINGLE",
+      "content": "“民惟邦本，本固邦宁”这句话出自 ( )",
+      "options": {
+        "A": "《尚书》",
+        "B": "《左传》",
+        "C": "《传习录》",
+        "D": "《日知录》"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 23,
+      "sourceQuestionNo": 143,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 96
+    },
+    {
+      "type": "SINGLE",
+      "content": "“君子坦荡荡”的后一句是 ( )",
+      "options": {
+        "A": "小人长戚戚",
+        "B": "小人长闷闷",
+        "C": "小人长昭昭",
+        "D": "小人长察察"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 23,
+      "sourceQuestionNo": 144,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 97
+    },
+    {
+      "type": "SINGLE",
+      "content": "“老吾老以及人之老，幼吾幼以及人之幼”代表了儒家的哪种治国理想? ( )",
+      "options": {
+        "A": "理想国",
+        "B": "乌托邦",
+        "C": "大同社会",
+        "D": "小康社会"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 23,
+      "sourceQuestionNo": 145,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 98
+    },
+    {
+      "type": "SINGLE",
+      "content": "“己欲立而立人，己欲达而达人”“己所不欲，勿施于人”代表的儒家思想是 ( )",
+      "options": {
+        "A": "仁义",
+        "B": "忠恕",
+        "C": "忠信",
+        "D": "孝悌 第 147-150 题 王安石与司马光，不仅性格迥异，政治主张也大相径庭。庙堂之上，两人皆认为对方的执政方针 荒谬至极。当王安石大权在握时，皇帝询问他对司马光的看法，王安石大加赞赏，称之为“国之栋梁”， 对其人品、能力及文学造诣给予很高评价。当王安石强力推动改革，触动皇室利益遭弹劾罢官后，司 马光被重新任命为宰相。皇帝征求司马光的意见，准备治罪王安石。司马光认为王安石嫉恶如仇，胸 怀坦荡，有君子风范。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 23,
+      "sourceQuestionNo": 146,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 99
+    },
+    {
+      "type": "SINGLE",
+      "content": "以下哪句话最能表现王安石和司马光对待政敌的态度? ( )",
+      "options": {
+        "A": "君子之交淡如水",
+        "B": "君子怀德，小人怀土",
+        "C": "君子和而不同，小人同而不和",
+        "D": "君子周而不比，小人比而不周"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 23,
+      "sourceQuestionNo": 147,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 100
+    }
+  ]
+}

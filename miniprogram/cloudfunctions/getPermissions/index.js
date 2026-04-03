@@ -1,49 +1,65 @@
-// 浜戝嚱鏁板叆鍙ｆ枃浠?const cloud = require('wx-server-sdk');
+const cloud = require('wx-server-sdk');
 
 cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
 });
 
 const db = cloud.database();
-const _ = db.command;
 
-// 浜戝嚱鏁板叆鍙ｅ嚱鏁?exports.main = async (event, context) => {
-  const { userId } = event;
+function getCurrentUserId(event = {}) {
+  const wxContext = cloud.getWXContext();
+  return wxContext.OPENID || event.userId || '';
+}
+
+async function getAllPermissions(userId) {
+  const pageSize = 100;
+  let skip = 0;
+  let list = [];
+
+  while (true) {
+    const result = await db.collection('user_permissions')
+      .where({ userId })
+      .skip(skip)
+      .limit(pageSize)
+      .get();
+
+    list = list.concat(result.data);
+    if (result.data.length < pageSize) break;
+    skip += result.data.length;
+  }
+
+  return list;
+}
+
+exports.main = async (event = {}) => {
+  const userId = getCurrentUserId(event);
 
   if (!userId) {
     return {
       success: false,
-      message: '缂哄皯userId鍙傛暟'
+      message: '未获取到用户身份'
     };
   }
 
   try {
-    const permissionsResult = await db.collection('user_permissions')
-      .where({
-        userId: userId
-      })
-      .get();
-
-    const permissions = permissionsResult.data;
-
-    // 鑾峰彇鏈夋晥鐨勬潈闄?    const validPermissions = [];
+    const permissions = await getAllPermissions(userId);
+    const validPermissions = [];
 
     for (const permission of permissions) {
-      // 妫€鏌ユ潈闄愭槸鍚︽湁鏁?      const isValid = permission.isPermanent ||
-                      (permission.expiresAt && new Date(permission.expiresAt) > new Date());
+      const isValid = permission.isPermanent ||
+        (permission.expiresAt && new Date(permission.expiresAt) > new Date());
 
-      if (isValid) {
-        // 鑾峰彇鍏宠仈鐨勮€冭瘯绉戠洰淇℃伅
-        const examResult = await db.collection('exams')
-          .doc(permission.examId)
-          .get();
+      if (!isValid) continue;
 
-        if (examResult.data) {
-          validPermissions.push({
-            ...permission,
-            examId: examResult.data
-          });
-        }
+      const examResult = await db.collection('exams')
+        .doc(permission.examId)
+        .get();
+
+      if (examResult.data) {
+        validPermissions.push({
+          ...permission,
+          examId: examResult.data
+        });
       }
     }
 
@@ -52,10 +68,10 @@ const _ = db.command;
       data: validPermissions
     };
   } catch (error) {
-    console.error('鑾峰彇鏉冮檺鍒楄〃澶辫触:', error);
+    console.error('[getPermissions] error', error);
     return {
       success: false,
-      message: '鑾峰彇鏉冮檺鍒楄〃澶辫触',
+      message: '获取权限列表失败',
       error: error.message
     };
   }

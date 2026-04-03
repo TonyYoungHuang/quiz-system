@@ -1,94 +1,116 @@
-// 浜戝嚱鏁板叆鍙ｆ枃浠?const cloud = require('wx-server-sdk');
+const cloud = require('wx-server-sdk');
 
 cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
 });
 
 const db = cloud.database();
-const _ = db.command;
 
-// 浜戝嚱鏁板叆鍙ｅ嚱鏁?exports.main = async (event, context) => {
-  const { code, userId, examId } = event;
+function getCurrentUserId(event = {}) {
+  const wxContext = cloud.getWXContext();
+  return wxContext.OPENID || event.userId || '';
+}
 
-  if (!code || !userId || !examId) {
+async function getExamById(examId) {
+  if (!examId) return null;
+
+  try {
+    const result = await db.collection('exams').doc(examId).get();
+    return result.data || null;
+  } catch (error) {
+    console.error('[activateCode] getExamById error', error);
+    return null;
+  }
+}
+
+exports.main = async (event = {}) => {
+  const code = typeof event.code === 'string' ? event.code.trim().toUpperCase() : '';
+  const requestedExamId = typeof event.examId === 'string' ? event.examId.trim() : '';
+  const userId = getCurrentUserId(event);
+
+  if (!code || !userId) {
     return {
       success: false,
-      message: '缂哄皯蹇呰鍙傛暟'
+      message: '缺少必要参数'
     };
   }
 
   try {
-    // 1. 鏌ユ壘婵€娲荤爜
     const codeResult = await db.collection('activation_codes')
-      .where({
-        code: code.toUpperCase()
-      })
+      .where({ code })
+      .limit(1)
       .get();
 
     if (codeResult.data.length === 0) {
       return {
         success: false,
-        message: '婵€娲荤爜涓嶅瓨鍦?
+        message: '激活码不存在'
       };
     }
 
     const activationCode = codeResult.data[0];
+    const actualExamId = activationCode.examId;
 
-    // 2. 妫€鏌ユ縺娲荤爜鏄惁宸茶浣跨敤
+    if (!actualExamId) {
+      return {
+        success: false,
+        message: '该激活码未绑定科目，请联系管理员处理'
+      };
+    }
+
     if (activationCode.isUsed) {
       return {
         success: false,
-        message: '婵€娲荤爜宸茶浣跨敤'
+        message: '激活码已被使用'
       };
     }
 
-    // 3. 妫€鏌ユ縺娲荤爜鏄惁瀵瑰簲姝ｇ‘鐨勮€冭瘯绉戠洰
-    if (activationCode.examId !== examId) {
+    if (requestedExamId && requestedExamId !== actualExamId) {
       return {
         success: false,
-        message: '婵€娲荤爜涓庡綋鍓嶇鐩笉鍖归厤'
+        message: '激活码与当前科目不匹配'
       };
     }
 
-    // 4. 妫€鏌ョ敤鎴锋槸鍚﹀凡鏈夎绉戠洰鐨勬潈闄?    const existingPermission = await db.collection('user_permissions')
+    const existingPermission = await db.collection('user_permissions')
       .where({
-        userId: userId,
-        examId: examId
+        userId,
+        examId: actualExamId
       })
+      .limit(1)
       .get();
 
     if (existingPermission.data.length > 0) {
       const permission = existingPermission.data[0];
-      // 妫€鏌ユ潈闄愭槸鍚﹀凡杩囨湡
-      if (permission.isPermanent || (permission.expiresAt && new Date(permission.expiresAt) > new Date())) {
+      const isValid = permission.isPermanent ||
+        (permission.expiresAt && new Date(permission.expiresAt) > new Date());
+
+      if (isValid) {
         return {
           success: false,
-          message: '鎮ㄥ凡鎷ユ湁璇ョ鐩殑鏉冮檺'
+          message: '您已拥有该科目的权限'
         };
       }
     }
 
-    // 5. 浣跨敤浜嬪姟锛氭縺娲荤爜鏍囪涓哄凡浣跨敤 + 鍒涘缓鐢ㄦ埛鏉冮檺
     const transaction = await db.startTransaction();
 
     try {
-      // 鏍囪婵€娲荤爜涓哄凡浣跨敤
       await transaction.collection('activation_codes')
         .doc(activationCode._id)
         .update({
           data: {
             isUsed: true,
-            userId: userId,
+            userId,
             usedAt: new Date()
           }
         });
 
-      // 鍒涘缓鐢ㄦ埛鏉冮檺
       await transaction.collection('user_permissions')
         .add({
           data: {
-            userId: userId,
-            examId: examId,
+            userId,
+            examId: actualExamId,
             isPermanent: true,
             createdAt: new Date()
           }
@@ -96,19 +118,27 @@ const _ = db.command;
 
       await transaction.commit();
 
+      const exam = await getExamById(actualExamId);
+
       return {
         success: true,
-        message: '婵€娲绘垚鍔?
+        message: '激活成功',
+        data: {
+          userId,
+          examId: actualExamId,
+          examName: exam ? exam.name || '' : '',
+          exam
+        }
       };
     } catch (transactionError) {
       await transaction.rollback();
       throw transactionError;
     }
   } catch (error) {
-    console.error('婵€娲诲け璐?', error);
+    console.error('[activateCode] error', error);
     return {
       success: false,
-      message: '婵€娲诲け璐?,
+      message: '激活失败，请稍后重试',
       error: error.message
     };
   }

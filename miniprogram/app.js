@@ -1,53 +1,125 @@
 // app.js
+const runtime = require('./utils/runtime');
+
 App({
   globalData: {
     userInfo: null,
     userId: null,
+    openId: '',
+    legacyUserId: '',
+    identityReady: false,
     activatedExams: [],
-    pendingActivateExam: null
+    pendingActivateExam: null,
+    cloudEnvId: runtime.DEFAULT_RUNTIME.cloudEnvId,
+    useHttpApi: false,
+    baseUrl: ''
   },
 
   onLaunch() {
     console.log('[app] onLaunch');
 
+    const runtimeConfig = runtime.getRuntimeConfig();
+    this.globalData.cloudEnvId = runtimeConfig.cloudEnvId;
+    this.globalData.useHttpApi = runtimeConfig.enableHttpApi;
+    this.globalData.baseUrl = runtimeConfig.httpApiBaseUrl;
+
     if (!wx.cloud) {
       console.error('[app] wx.cloud not available');
     } else {
       wx.cloud.init({
-        env: 'cloud1-0g8twq2fde2fa6f0',
+        env: this.globalData.cloudEnvId,
         traceUser: true
       });
     }
 
-    const userId = wx.getStorageSync('userId') || this.generateTempUserId();
-    this.globalData.userId = userId;
-    wx.setStorageSync('userId', userId);
+    if (this.globalData.useHttpApi && this.globalData.baseUrl) {
+      console.warn('[app] HTTP API mode enabled:', this.globalData.baseUrl);
+    } else {
+      console.log('[app] Cloud function mode enabled:', this.globalData.cloudEnvId);
+    }
 
-    this.getActivatedExams();
+    this.identityReadyPromise = this.bootstrapUserIdentity();
+  },
+
+  async bootstrapUserIdentity() {
+    const legacyUserId = wx.getStorageSync('userId') || '';
+    const storedOpenId = wx.getStorageSync('openId') || '';
+
+    try {
+      const api = require('./utils/api');
+      const res = await api.getCurrentUserIdentity(legacyUserId);
+      const openId = (res.data && res.data.openId) || storedOpenId || '';
+      const userId = openId || legacyUserId || this.generateTempUserId();
+
+      this.applyUserIdentity({
+        openId,
+        userId,
+        legacyUserId: legacyUserId && legacyUserId !== userId ? legacyUserId : ''
+      });
+    } catch (error) {
+      console.error('[app] bootstrapUserIdentity error', error);
+      const userId = storedOpenId || legacyUserId || this.generateTempUserId();
+
+      this.applyUserIdentity({
+        openId: storedOpenId || '',
+        userId,
+        legacyUserId: legacyUserId && legacyUserId !== userId ? legacyUserId : ''
+      });
+    } finally {
+      this.globalData.identityReady = true;
+    }
+
+    if (this.globalData.userId) {
+      await this.fetchActivatedExams(this.globalData.userId);
+    }
+
+    return this.globalData.userId;
+  },
+
+  applyUserIdentity({ openId = '', userId, legacyUserId = '' }) {
+    this.globalData.openId = openId;
+    this.globalData.userId = userId;
+    this.globalData.legacyUserId = legacyUserId;
+
+    wx.setStorageSync('userId', userId);
+    if (openId) {
+      wx.setStorageSync('openId', openId);
+    }
+  },
+
+  async ensureUserIdentity() {
+    if (this.identityReadyPromise) {
+      await this.identityReadyPromise;
+    }
+    return this.globalData.userId;
   },
 
   generateTempUserId() {
     return 'temp_user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
   },
 
-  getActivatedExams() {
-    const userId = this.globalData.userId;
-    if (!userId || !wx.cloud) return;
+  async fetchActivatedExams(userId) {
+    try {
+      const api = require('./utils/api');
+      const res = await api.getUserPermissions(userId);
+      this.globalData.activatedExams = res.data || [];
+      return this.globalData.activatedExams;
+    } catch (err) {
+      console.error('[app] fetchActivatedExams error', err);
+      return [];
+    }
+  },
 
-    wx.cloud.callFunction({
-      name: 'getPermissions',
-      data: { userId }
-    }).then(res => {
-      if (res.result && res.result.success) {
-        this.globalData.activatedExams = res.result.data || [];
-      }
-    }).catch(err => {
-      console.error('[app] getActivatedExams error', err);
-    });
+  async getActivatedExams() {
+    const userId = await this.ensureUserIdentity();
+    if (!userId) return [];
+    return this.fetchActivatedExams(userId);
   },
 
   hasExamPermission(examId) {
-    const activatedIds = (this.globalData.activatedExams || []).map(p => p.examId && p.examId._id).filter(Boolean);
+    const activatedIds = (this.globalData.activatedExams || [])
+      .map(p => p.examId && p.examId._id)
+      .filter(Boolean);
     return activatedIds.includes(examId);
   }
 });

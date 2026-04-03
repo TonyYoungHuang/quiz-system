@@ -1,0 +1,114 @@
+/* pages/topic/topic.wxss */
+.container {
+  min-height: 100vh;
+  background: #F6F7FB;
+}
+
+.exam-tabs {
+  background: #fff;
+  border-bottom: 1rpx solid #F0F0F0;
+}
+
+.exam-tab-list {
+  display: inline-flex;
+  padding: 16rpx 24rpx;
+  gap: 16rpx;
+}
+
+.exam-tab {
+  padding: 12rpx 28rpx;
+  background: #F2F4F7;
+  border-radius: 32rpx;
+  font-size: 26rpx;
+  color: #4A90E2;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.exam-tab.active {
+  background: #4A90E2;
+  color: #fff;
+}
+
+.topic-list {
+  padding: 20rpx 24rpx 40rpx;
+}
+
+.topic-card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  margin-bottom: 16rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.06);
+}
+
+.topic-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.topic-header-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.topic-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #2B2B2B;
+}
+
+.topic-count {
+  font-size: 22rpx;
+  color: #8A8F9C;
+}
+
+.topic-start {
+  background: #4A90E2;
+  color: #fff;
+  border-radius: 28rpx;
+  padding: 6rpx 20rpx;
+  font-size: 24rpx;
+}
+
+.topic-children {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 16rpx;
+}
+
+.topic-child {
+  background: #F2F6FF;
+  color: #3B82F6;
+  padding: 10rpx 18rpx;
+  border-radius: 24rpx;
+  font-size: 24rpx;
+  display: inline-flex;
+  align-items: center;
+  gap: 10rpx;
+}
+
+.topic-child-count {
+  color: #7C8DB5;
+  font-size: 20rpx;
+}
+
+.empty-state {
+  padding: 80rpx 24rpx;
+  text-align: center;
+  color: #999;
+}
+
+.empty-title {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.empty-desc {
+  font-size: 24rpx;
+}

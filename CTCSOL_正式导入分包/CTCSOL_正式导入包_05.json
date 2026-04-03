@@ -1,0 +1,1816 @@
+{
+  "meta": {
+    "sourcePdf": "C:\\Users\\Administrator\\Desktop\\历年CTCSOL笔试真题集（2014-2025年）2025.2.1.pdf",
+    "generatedAt": "2026-04-01T12:31:28",
+    "packageIndex": 5,
+    "packageCount": 11,
+    "questionCount": 100,
+    "sortOrderStart": 401,
+    "sortOrderEnd": 500,
+    "importModeSuggestion": "追加导入"
+  },
+  "questions": [
+    {
+      "type": "SINGLE",
+      "content": "组织这样的活动最应避免的是 ( )。",
+      "options": {
+        "A": "同时在网络加以宣传",
+        "B": "同时用汉英双语介绍",
+        "C": "要求学生及亲友参加",
+        "D": "对比并评判各国传统音乐的优劣"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 105,
+      "sourceQuestionNo": 65,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 401
+    },
+    {
+      "type": "SINGLE",
+      "content": "除了海报中邀请的人群，最适合体验此项活动的人是 ( )。",
+      "options": {
+        "A": "对学汉语感兴趣的工作人士",
+        "B": "喜欢热闹的孩子",
+        "C": "音乐领域的专家",
+        "D": "对中国文化感兴趣的当地民众"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 105,
+      "sourceQuestionNo": 66,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 402
+    },
+    {
+      "type": "SINGLE",
+      "content": "有一个关于音乐的成语比喻知音知己，也比喻乐曲高妙，其同时是一首著名曲目，它的演奏乐器 是 ( )。",
+      "options": {
+        "A": "琵琶",
+        "B": "扬琴",
+        "C": "二胡",
+        "D": "古琴"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 105,
+      "sourceQuestionNo": 67,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 403
+    },
+    {
+      "type": "SINGLE",
+      "content": "本课需要重点讲练的语法点是 ( )。",
+      "options": {
+        "A": "“比”字句",
+        "B": "反问句",
+        "C": "否定句",
+        "D": "存现句"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 106,
+      "sourceQuestionNo": 70,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 404
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项语法点适合编排在本课之前? ( )",
+      "options": {
+        "A": "“把“字句",
+        "B": "“被”字句",
+        "C": "“连”字句",
+        "D": "连动句"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 106,
+      "sourceQuestionNo": 71,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 405
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据本课课文的难度，不必进行注释的是 ( )。",
+      "options": {
+        "A": "懒觉",
+        "B": "便宜",
+        "C": "离",
+        "D": "费用"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 106,
+      "sourceQuestionNo": 72,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 406
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据课文内容，教师应当将本课的培养目标设定为 ( )。",
+      "options": {
+        "A": "养成预习和复习习惯",
+        "B": "同时谈论两种类似事物的能力",
+        "C": "将所学的内容应用到实际的能力",
+        "D": "能与其他人进行对话的能力"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 106,
+      "sourceQuestionNo": 73,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 407
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据课文中的“比”字句，下列哪个选项最可能是以英语为母语的留学生受母语负迁移影响而出现的 偏误? ( )",
+      "options": {
+        "A": "他买书比我多。",
+        "B": "冬天比这儿很冷。",
+        "C": "她不瘦比我。",
+        "D": "昨天比这儿一样冷。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 106,
+      "sourceQuestionNo": 74,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 408
+    },
+    {
+      "type": "SINGLE",
+      "content": "在“最近在忙什么呢”这句话中，声母属于舌面、不送气、清、塞擦音的是 ( )。",
+      "options": {
+        "A": "近",
+        "B": "在",
+        "C": "忙",
+        "D": "什"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 106,
+      "sourceQuestionNo": 75,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 409
+    },
+    {
+      "type": "SINGLE",
+      "content": "最适合“比”字句的教学方法为 ( )。",
+      "options": {
+        "A": "对比法",
+        "B": "情景法",
+        "C": "生成式教学",
+        "D": "以旧代新法 第 77-82 题 请在 A~",
+        "F": "选项中选出第 77～82 题所对应的纠错类型"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 106,
+      "sourceQuestionNo": 76,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 410
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师的课堂提问是 ( )。",
+      "options": {
+        "A": "事实型问题",
+        "B": "推理型问题",
+        "C": "开放型问题",
+        "D": "社交型问题"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 107,
+      "sourceQuestionNo": 83,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 411
+    },
+    {
+      "type": "SINGLE",
+      "content": "以下关于教师提问方式的叙述，正确的是 ( )。",
+      "options": {
+        "A": "首要的原则是与学生生活密切相关，让课堂更加贴近生活",
+        "B": "开放性的问题越多越好，让学生充分发挥",
+        "C": "提问后，为了尊重学生， 一定要等待学生自己说出答案",
+        "D": "教师的提问要引导学生多说汉语"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 107,
+      "sourceQuestionNo": 84,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 412
+    },
+    {
+      "type": "SINGLE",
+      "content": "下面哪项不是教师设计课堂活动内容应当遵循的基本原则? ( )",
+      "options": {
+        "A": "针对性原则",
+        "B": "民主平等原则",
+        "C": "可操作性原则",
+        "D": "难易适度原则 第 86-88 题 由于对外汉语课堂教学对象的特殊性，即师生之间语言背景和文化背景的差异问题，对外汉语教 师在课堂教学中 经常会碰到一些难以预料的偶发事件。下面是 3 名国际中文教师志愿者在教学过程中 遇到的部分情况和经验型应对策略。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 107,
+      "sourceQuestionNo": 85,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 413
+    },
+    {
+      "type": "SINGLE",
+      "content": "王老师的这种状态属于 ( )。",
+      "options": {
+        "A": "焦躁",
+        "B": "抑郁",
+        "C": "紧张",
+        "D": "嫉妒"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 108,
+      "sourceQuestionNo": 89,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 414
+    },
+    {
+      "type": "SINGLE",
+      "content": "现代情绪心理学认为，情绪产生的关键因素是 ( )。",
+      "options": {
+        "A": "环境事件",
+        "B": "生理状态",
+        "C": "认知过程",
+        "D": "智慧技能"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 108,
+      "sourceQuestionNo": 90,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 415
+    },
+    {
+      "type": "SINGLE",
+      "content": "对于这种问题，王老师应采取哪种应对策略? ( )",
+      "options": {
+        "A": "转移法",
+        "B": "宣泄法",
+        "C": "换位法",
+        "D": "自我暗示法 第 92-94 题 课文学习： ① 利用课后练习“根据课文回答问题”检测课文预习并回顾课文内容。回答时要求语言规范、流畅。 ② 用本课学到的说法从课后练习中“你们公司举办了一次新产品展示会，在展示会上，你向与会者 介绍你们的新产品”和“你向客户介绍你方最具有竞争力的产品”中任选一个题目进行分角色练习，然后 按小组轮流上台给大家展示。 ③ 要求大家认真观看，与台上同学互动，及时提问指出优点和不足， ④ 当堂完成课后练习并订正其中的错误。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 108,
+      "sourceQuestionNo": 91,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 416
+    },
+    {
+      "type": "SINGLE",
+      "content": "课文学习②③部分的教学属于 ( )。",
+      "options": {
+        "A": "听说法",
+        "B": "交际法",
+        "C": "直接法",
+        "D": "全身反应法"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 108,
+      "sourceQuestionNo": 92,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 417
+    },
+    {
+      "type": "SINGLE",
+      "content": "进行上述课堂活动时，教师需要对下列哪项进行控制? ( )",
+      "options": {
+        "A": "语言要素",
+        "B": "情感态度",
+        "C": "话语技巧",
+        "D": "活动进程"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 108,
+      "sourceQuestionNo": 93,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 418
+    },
+    {
+      "type": "SINGLE",
+      "content": "学生在会话过程中，回答含混啰嗦，这违反了会话原则中的 ( )。",
+      "options": {
+        "A": "方式准则",
+        "B": "质量准则",
+        "C": "关联准则",
+        "D": "数量准则 第 95-98 题 大卫：老师，北京秋天的天气怎么样? 老师：不冷不热，很舒服，是最好的季节。 大卫：冬天呢?听说北京的冬天很冷，是吗? 老师：对，北京的冬天比较冷。最冷差不多零下十五度。 大卫：常常下雪吗? 老师：不常下雪。大卫，你最喜欢哪个季节? 大卫：我喜欢夏天，我喜欢游泳。老师，您呢? 老师：我喜欢春天。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 108,
+      "sourceQuestionNo": 94,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 419
+    },
+    {
+      "type": "SINGLE",
+      "content": "本课的重点可能是（ ）。",
+      "options": {
+        "A": "程度补语",
+        "B": "不 adj.＋不 adj.",
+        "C": "程度副词",
+        "D": "疑问代词"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 108,
+      "sourceQuestionNo": 95,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 420
+    },
+    {
+      "type": "SINGLE",
+      "content": "上完课文后，教师让学生以第三人称口述该课文。这属于哪类口语表达练习? ( )",
+      "options": {
+        "A": "评述",
+        "B": "论述",
+        "C": "转述",
+        "D": "复述"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 109,
+      "sourceQuestionNo": 96,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 421
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师在处理“常常”一词时，以下教学步骤正确的序列是 ( )。 ① 认读“常常”，熟悉读音、写法、词性。 ② 提问“你最喜欢的运动是什么?运动的频率高吗?”等，请学生使用“常常”表达。 ③ 展示例句，引出“常常”的搭配特点和其他用法。",
+      "options": {
+        "A": "③②①",
+        "B": "①③②",
+        "C": "③①②",
+        "D": "②①③"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 109,
+      "sourceQuestionNo": 97,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 422
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师在课堂上提问时应注意其方式，以下叙述正确的是 ( )。",
+      "options": {
+        "A": "应当先指定回答对象，然后进行提问",
+        "B": "为保证课堂节奏，提问后立刻指定学生回答",
+        "C": "教师应当在提问后给予一定的准备时间",
+        "D": "反复向内向的、不爱回答问题的学生提问 第 99-100 题 以下是某位教师讲练“非……不可”的部分教案，请据此回答问题。 非……不可： 出示腿上打石膏的图片，提示：她的腿上打着石膏，生活不方便，父母又不在身边，怎么办啊? 老师一定要让她住到自己家里，不住不行，这个句子可以说： (先出)林老师非要我住到她家去不可。 (再出)非……不可： 一定……才可以，不然不行。 同学们不想明天交作文，可是老师一定要让大家明天交，不交不行，这个句子用“非……不可”怎么 说? 老师非让大家明天交作文不可。 接着问学生问题，要求回答的时候用上“非……不可”。 假设现在你们是老师，我是学生，我问：老师，星期五的庆祝活动我们不参加可以吗?出示 PPT。 A: 老师，星期五的庆祝活动我们不参加可以吗? B: 不行，星期五的活动你们非参加不可。 问：宋永优，对你来说，期末考试通不过也没关系吧?出示 PPT。 A: 对你来说，期末考试通不过也没关系吧? B: 谁说的?我非通过期末考试不可。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 109,
+      "sourceQuestionNo": 98,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 423
+    },
+    {
+      "type": "SINGLE",
+      "content": "在讲解该语法点时，教师板书： A+ 非 + V + 不可 我 非 通过考试 不可 你 非 去 不可 他 非 娶 她 不可 这种讲解方法属于下列哪一种? ( )",
+      "options": {
+        "A": "演示法",
+        "B": "替换法",
+        "C": "情景法",
+        "D": "形象法"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 109,
+      "sourceQuestionNo": 99,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 424
+    },
+    {
+      "type": "SINGLE",
+      "content": "该教案讲解“非……不可”用得最多的方法是（ ）。",
+      "options": {
+        "A": "发现法",
+        "B": "情景法",
+        "C": "替换法",
+        "D": "类推法"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 109,
+      "sourceQuestionNo": 100,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 425
+    },
+    {
+      "type": "SINGLE",
+      "content": "\"最近\"的词性是（ ）",
+      "options": {
+        "A": "副词",
+        "B": "名词",
+        "C": "形容词",
+        "D": "连词"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 117,
+      "sourceQuestionNo": 1,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 426
+    },
+    {
+      "type": "SINGLE",
+      "content": "\"我最近在学书法\"的正确拼音是（ ）",
+      "options": {
+        "A": "Wǒ zuìjìng zài xué shūfǎ",
+        "B": "Wǒ zuìjìn zài xué shūfǎ",
+        "C": "Wǒ zuìjìn zài xuéshūfǎ",
+        "D": "Wǒ zuìjìng zài xué shūfǎ"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 117,
+      "sourceQuestionNo": 2,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 427
+    },
+    {
+      "type": "SINGLE",
+      "content": "\"怎么说呢\"属于句子中的什么成分？（ ）",
+      "options": {
+        "A": "主语",
+        "B": "状语",
+        "C": "补语",
+        "D": "插入语"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 117,
+      "sourceQuestionNo": 3,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 428
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项采用的是语素教学法？( )",
+      "options": {
+        "A": "从\"书法\"延伸到\"枪法\"\"兵法\"",
+        "B": "从\"难\"延伸到\"不难\"",
+        "C": "从\"毅力\"延伸到\"耐力\"\"恒心\"",
+        "D": "从\"坚持\"延伸到\"放弃\"\"让步\""
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 117,
+      "sourceQuestionNo": 4,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 429
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个句子中的\"就\"与画线句中的\"就\"意义和用法相同？（ ）",
+      "options": {
+        "A": "没办法，就这么干吧！",
+        "B": "你不让我干，我就要干！",
+        "C": "不努力学习，就找不到好工作。",
+        "D": "书就在桌子上，你自己去拿。 第 6-10 题 请选出下列每组短语所对应的短语类型，在"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 117,
+      "sourceQuestionNo": 5,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 430
+    },
+    {
+      "type": "SINGLE",
+      "content": "\"好一朵美丽的茉莉花！\"拼写正确的是（ ）",
+      "options": {
+        "A": "Hǎo yī duǒ měilì de mòlìhuā !",
+        "B": "hǎo yī duǒ měilì de mòlì huā !",
+        "C": "Hǎo yī duǒ měi lì de mò lì huā !",
+        "D": "Hǎo yīduǒ měilì de mòlì huā !"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 118,
+      "sourceQuestionNo": 11,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 431
+    },
+    {
+      "type": "SINGLE",
+      "content": "\"香\"( xiāng ）这个音节由（ ）个音素构成。",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 118,
+      "sourceQuestionNo": 12,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 432
+    },
+    {
+      "type": "SINGLE",
+      "content": "\"园\"的韵母是 （ ）",
+      "options": {
+        "A": "üan",
+        "B": "uan",
+        "C": "ian",
+        "D": "yan"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 118,
+      "sourceQuestionNo": 13,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 433
+    },
+    {
+      "type": "SINGLE",
+      "content": "\"摘\"的笔画数是 ( )",
+      "options": {
+        "A": "13",
+        "B": "14",
+        "C": "15",
+        "D": "16"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 118,
+      "sourceQuestionNo": 14,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 434
+    },
+    {
+      "type": "SINGLE",
+      "content": "\"下\"字属于（ ）",
+      "options": {
+        "A": "象形字",
+        "B": "指事字",
+        "C": "会意字",
+        "D": "形声字"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 118,
+      "sourceQuestionNo": 15,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 435
+    },
+    {
+      "type": "SINGLE",
+      "content": "\"戴\"的第十笔是（ ）",
+      "options": {
+        "A": "横折",
+        "B": "横",
+        "C": "竖",
+        "D": "点"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 118,
+      "sourceQuestionNo": 16,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 436
+    },
+    {
+      "type": "SINGLE",
+      "content": "\"茉莉\"是（ ）",
+      "options": {
+        "A": "双声词",
+        "B": "叠韵词",
+        "C": "外来词",
+        "D": "非双声叠韵词"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 118,
+      "sourceQuestionNo": 17,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 437
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项是补充式合成词？（ )",
+      "options": {
+        "A": "摘下",
+        "B": "美丽",
+        "C": "花朵",
+        "D": "发芽"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 118,
+      "sourceQuestionNo": 18,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 438
+    },
+    {
+      "type": "SINGLE",
+      "content": "从结构上来说，“有”属于（ ）",
+      "options": {
+        "A": "上下结构",
+        "B": "上中下结构",
+        "C": "独体结构",
+        "D": "半包围结构"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 118,
+      "sourceQuestionNo": 19,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 439
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列各项中的“来”与“让我来将你摘下”的“来”用法相同的是（ ）",
+      "options": {
+        "A": "由他来做这件事",
+        "B": "说来话长",
+        "C": "又怕来年不发芽",
+        "D": "数百年来 第 21-24 题 请从 A～",
+        "F": "中选出与空白处对应的一项，其中有两个多余选项。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 118,
+      "sourceQuestionNo": 20,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 440
+    },
+    {
+      "type": "SINGLE",
+      "content": "“李美安”的拼音应该写为（ )",
+      "options": {
+        "A": "lǐměiān",
+        "B": "Lǐměiān",
+        "C": "Lǐměr' ān",
+        "D": "Li Měi’ ān"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 119,
+      "sourceQuestionNo": 25,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 441
+    },
+    {
+      "type": "SINGLE",
+      "content": "句(1)中的两个“的”功能是否相同？（ )",
+      "options": {
+        "A": "相同，构成“的”字短语",
+        "B": "相同，充当定语标志",
+        "C": "不同，前者充当定语标志，后者构成“的”字短语",
+        "D": "不同，前者构成“的”字短语，后者充当定语标志"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 119,
+      "sourceQuestionNo": 26,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 442
+    },
+    {
+      "type": "SINGLE",
+      "content": "和汉字“有”结构相同的字是（ ）",
+      "options": {
+        "A": "能",
+        "B": "们",
+        "C": "事",
+        "D": "这"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 119,
+      "sourceQuestionNo": 27,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 443
+    },
+    {
+      "type": "SINGLE",
+      "content": "句(2)中所包含的“吧”字句的作用是（ ）",
+      "options": {
+        "A": "表示建议",
+        "B": "表示同意",
+        "C": "表示请求",
+        "D": "表示命令"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 119,
+      "sourceQuestionNo": 28,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 444
+    },
+    {
+      "type": "SINGLE",
+      "content": "句(3)中的两个“一”分别读为 （ )",
+      "options": {
+        "A": "阴平轻声",
+        "B": "阳平轻声",
+        "C": "阴平阳平",
+        "D": "阳平阴平"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 119,
+      "sourceQuestionNo": 29,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 445
+    },
+    {
+      "type": "SINGLE",
+      "content": "对于课文中语法点的讲解，不适合采用的教学法是 ( )",
+      "options": {
+        "A": "演绎法",
+        "B": "引导性的发现法",
+        "C": "归纳法",
+        "D": "语法翻译法"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 119,
+      "sourceQuestionNo": 30,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 446
+    },
+    {
+      "type": "SINGLE",
+      "content": "“草木皆兵”中“皆”的四呼类型是（ ）",
+      "options": {
+        "A": "开口呼",
+        "B": "齐齿呼",
+        "C": "合口呼",
+        "D": "撮口呼"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 120,
+      "sourceQuestionNo": 33,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 447
+    },
+    {
+      "type": "SINGLE",
+      "content": "“今朝有酒”中“酒”的韵母中包含（ ）",
+      "options": {
+        "A": "韵头、韵尾",
+        "B": "韵腹、韵尾",
+        "C": "韵头、韵腹",
+        "D": "韵头、韵腹、韵尾"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 120,
+      "sourceQuestionNo": 34,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 448
+    },
+    {
+      "type": "SINGLE",
+      "content": "在“唯利是图”和“唯你是问”中“是”所属词类是（ ）",
+      "options": {
+        "A": "代词",
+        "B": "介词",
+        "C": "副词",
+        "D": "谓词"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 120,
+      "sourceQuestionNo": 35,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 449
+    },
+    {
+      "type": "SINGLE",
+      "content": "“请君入瓮”和“解甲归田”两个成语的结构分别是（ ）",
+      "options": {
+        "A": "兼语；主谓",
+        "B": "述宾；连谓",
+        "C": "兼语；联合",
+        "D": "兼语；连谓 第 37-40 题 美国心理学家斯金纳在 20 世纪初用白鼠实验研究行为。他将白鼠放进“斯金纳箱”，白鼠在箱中偶 然按压了杠杆，得到了食物；食物强化了白鼠压杠杆的行为，它最终学会了主动压杠杆，得到了食物。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 120,
+      "sourceQuestionNo": 36,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 450
+    },
+    {
+      "type": "SINGLE",
+      "content": "这个实验，体现了斯金纳的什么学习理论？（ )",
+      "options": {
+        "A": "顿悟-完形说",
+        "B": "尝试-错误学习理论",
+        "C": "操作学习理论",
+        "D": "认知-发现说"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 120,
+      "sourceQuestionNo": 37,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 451
+    },
+    {
+      "type": "SINGLE",
+      "content": "该学习理论属于哪一流派? ( )",
+      "options": {
+        "A": "行为主义学习理论",
+        "B": "人本主义学习理论",
+        "C": "认知学习理论",
+        "D": "认知-行为主义学习理论"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 120,
+      "sourceQuestionNo": 38,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 452
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于该学习理论的描述，下列哪项正确？（ ）",
+      "options": {
+        "A": "强调个体作用于环境",
+        "B": "认为学习是突变，着重研究内部心理过秸",
+        "C": "认为学习是顿悟和理解的过程",
+        "D": "把学习看作是渐进的过程，着重研究外显的行为"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 120,
+      "sourceQuestionNo": 39,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 453
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪种做法显示了该学习理论？（ )",
+      "options": {
+        "A": "给学生创造轻松和谐的课堂气氛，尽量少纠正学习者的错误",
+        "B": "让学生用游戏、谈话、即兴表演等活动进行解决问题的学习",
+        "C": "反复操练，用模仿、重复、记忆的方法形成习惯",
+        "D": "用演绎法讲授词法、句法，让学习者理解并掌握语言规则 第 41-45 题 20 世纪 40 年代后，语言学家逐步将对比分析应用于第二语言教学中来，在结构主义语言学和行 为主义心理学及迁移理论的影响下，之后普拉克特提出了“难度等级模式”: 零级：两种语言中相同的成分； 一级：在第一语言中相同的成分，目的语中合成一项； 二级：第一语言中有而第二语言中没有的语言项目； 三级：第一、第二语言中都有，但形式、分布和使用有不同的项目； 四级：目的语中的某个项目，在第一语言中没有相对应的项目； 五级：第一语言中的语言项目在第二语言中分成两个或两个以上的项目。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 121,
+      "sourceQuestionNo": 40,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 454
+    },
+    {
+      "type": "SINGLE",
+      "content": "对于第一语言为英语的汉语学习者，下列哪一项属于三级难度? ( )",
+      "options": {
+        "A": "学习现代汉语的声调",
+        "B": "学习汉字",
+        "C": "学习无标记被动句",
+        "D": "学习有标记被动句"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 121,
+      "sourceQuestionNo": 41,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 455
+    },
+    {
+      "type": "SINGLE",
+      "content": "对于第一语言为英语的汉语学习者，下列哪一项属于五级难度？（ )",
+      "options": {
+        "A": "学习“把”字句",
+        "B": "学习“参观、访问、拜访”",
+        "C": "学习“他、她、它”的语音",
+        "D": "学习“是……的”"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 121,
+      "sourceQuestionNo": 42,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 456
+    },
+    {
+      "type": "SINGLE",
+      "content": "留学生在学习汉语遇到较高级难度等级的语法项目时，可能并不一定需要的一种语言学能是 ( )",
+      "options": {
+        "A": "编码解码能力",
+        "B": "语法敏感性",
+        "C": "强记能力",
+        "D": "归纳能力"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 121,
+      "sourceQuestionNo": 43,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 457
+    },
+    {
+      "type": "SINGLE",
+      "content": "哪项属于第二语言习得的特点？（ )",
+      "options": {
+        "A": "学习的动机是培养交际能力，是一种生存发展的需要",
+        "B": "在习得第二语言的同时一定也可以掌握语言文化知识",
+        "C": "需要掌握语音、词汇、语法以及语用规则",
+        "D": "习得环境者都是具有“i+1”式的照顾语言"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 121,
+      "sourceQuestionNo": 44,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 458
+    },
+    {
+      "type": "SINGLE",
+      "content": "对比分析的步骤是（ ） ① 选择 ② 对比 ③ 描写 ④ 预测",
+      "options": {
+        "A": "①③②④",
+        "B": "③①②④",
+        "C": "③②①④",
+        "D": "④①③② 第 46-50 题 美国心理学家加涅曾提出八类学习： (1) 信号学习 (2) 刺激-反应学习 (3) 连锁学习 (4) _______"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 121,
+      "sourceQuestionNo": 45,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 459
+    },
+    {
+      "type": "SINGLE",
+      "content": "第(4)项是（ ）",
+      "options": {
+        "A": "言语强化学习",
+        "B": "言语联想学习",
+        "C": "操作性学习",
+        "D": "策略学习"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 122,
+      "sourceQuestionNo": 46,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 460
+    },
+    {
+      "type": "SINGLE",
+      "content": "概念学习中，概念可分为定义性概念和 ( )",
+      "options": {
+        "A": "固定性概念",
+        "B": "具体概念",
+        "C": "抽象概念",
+        "D": "描述性概念"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 122,
+      "sourceQuestionNo": 47,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 461
+    },
+    {
+      "type": "SINGLE",
+      "content": "刺激-反应学习是建立在( )操作条件反射基础上的学习，如白鼠按杠杆而得到食物。",
+      "options": {
+        "A": "华生",
+        "B": "桑代克",
+        "C": "斯金纳",
+        "D": "布鲁纳"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 122,
+      "sourceQuestionNo": 48,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 462
+    },
+    {
+      "type": "SINGLE",
+      "content": "“将学习到的知识运用于与最初的学习时不同的情境或范围中去”，这是加涅学习过程的 ( ) 阶段。",
+      "options": {
+        "A": "概括",
+        "B": "回忆",
+        "C": "获得",
+        "D": "保持"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 122,
+      "sourceQuestionNo": 49,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 463
+    },
+    {
+      "type": "SINGLE",
+      "content": "加涅还曾提出 5 种学习结果分类，包括言语信息、智慧技能、( )、态度和动作技能。",
+      "options": {
+        "A": "信息领会",
+        "B": "综合分析",
+        "C": "认知策略",
+        "D": "心因动作"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 122,
+      "sourceQuestionNo": 50,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 464
+    },
+    {
+      "type": "SINGLE",
+      "content": "国际中文教师最应该具备哪种能力？（ )",
+      "options": {
+        "A": "良好的汉语听、说、读、写能力",
+        "B": "具备基本的外语听、说、读、写、译等综合能力",
+        "C": "跨文化交际能力",
+        "D": "组织课堂、加工教学内容的能力"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 123,
+      "sourceQuestionNo": 57,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 465
+    },
+    {
+      "type": "SINGLE",
+      "content": "2012 版《标准》第(3)条应该是下列哪个选项？（ )",
+      "options": {
+        "A": "跨学科知识",
+        "B": "第二语言习得理论与学习策略",
+        "C": "教学组织与课堂管理",
+        "D": "特殊事件处理能力"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 123,
+      "sourceQuestionNo": 58,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 466
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪一项不是 2007 版模块(4)的标准 ( )",
+      "options": {
+        "A": "汉语教学法",
+        "B": "测试与评估",
+        "C": "现代教育技术与运用",
+        "D": "文化教学法"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 123,
+      "sourceQuestionNo": 59,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 467
+    },
+    {
+      "type": "SINGLE",
+      "content": "为了更加有针对性地帮助学生学习，教师应该重点了解学生的哪方面信息?（ )",
+      "options": {
+        "A": "学习风格",
+        "B": "家庭情况",
+        "C": "年龄大小",
+        "D": "个人爱好"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 123,
+      "sourceQuestionNo": 60,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 468
+    },
+    {
+      "type": "SINGLE",
+      "content": "国际中文教师在进入新的教学环境上课之前，如果有紧张的情绪应该如何缓解？（ )",
+      "options": {
+        "A": "与同事和学生提前认识一下",
+        "B": "预先到新的学校去了解一下教学情况",
+        "C": "课前写出详细教案并反复操练",
+        "D": "做好学期计划"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 123,
+      "sourceQuestionNo": 61,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 469
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于新旧版的标准(5)，下列说法不正确的是（ ）",
+      "options": {
+        "A": "新版模块(5)是旧版模块(5)的具体表述",
+        "B": "相较于新版，旧版没有对职业发展能力进行描述",
+        "C": "新版包括要具备良好的心理素质",
+        "D": "新版包括要具备教育研究能力和专业发展意识 第 63-67 题 请排列下列“着”字语法点的教学顺序。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 124,
+      "sourceQuestionNo": 62,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 470
+    },
+    {
+      "type": "SINGLE",
+      "content": "这节课所采用的教学方法为（ ）",
+      "options": {
+        "A": "听说法",
+        "B": "交际法",
+        "C": "全身反应法",
+        "D": "视听法"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 124,
+      "sourceQuestionNo": 68,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 471
+    },
+    {
+      "type": "SINGLE",
+      "content": "这种教学方法更适用于下列哪种教育？（ )",
+      "options": {
+        "A": "美国海军汉语培训课程",
+        "B": "美国移民儿童的英语教育",
+        "C": "美国移民青少年的英语教育",
+        "D": "美国移民中青年的英语教育"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 124,
+      "sourceQuestionNo": 69,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 472
+    },
+    {
+      "type": "SINGLE",
+      "content": "这种教学法属于下列哪种教学法流派？（ ）",
+      "options": {
+        "A": "认知派",
+        "B": "经验派",
+        "C": "功能派",
+        "D": "人本派"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 124,
+      "sourceQuestionNo": 70,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 473
+    },
+    {
+      "type": "SINGLE",
+      "content": "和上述教学方法属于同一派别的教学法是（ ）",
+      "options": {
+        "A": "自觉对比法",
+        "B": "视听法",
+        "C": "默教法",
+        "D": "交际法"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 124,
+      "sourceQuestionNo": 71,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 474
+    },
+    {
+      "type": "SINGLE",
+      "content": "(1)处应为（ )",
+      "options": {
+        "A": "单句",
+        "B": "词组",
+        "C": "词语",
+        "D": "文段"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 125,
+      "sourceQuestionNo": 73,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 475
+    },
+    {
+      "type": "SINGLE",
+      "content": "(2)处应为 ( )",
+      "options": {
+        "A": "训练目标",
+        "B": "训练步骤",
+        "C": "训练反馈",
+        "D": "训练方式"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 125,
+      "sourceQuestionNo": 74,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 476
+    },
+    {
+      "type": "SINGLE",
+      "content": "对外汉语课堂教学目标，包括语言知识、语言技能、学习策略和（ )",
+      "options": {
+        "A": "文化意识",
+        "B": "交际意识",
+        "C": "文化知识",
+        "D": "国际视野"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 125,
+      "sourceQuestionNo": 75,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 477
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师在进行口语语言点展示的时候，理想位置是 ( )",
+      "options": {
+        "A": "固定在讲台周围便于控制电脑",
+        "B": "前后不停走动以增加互动",
+        "C": "在教室正前方以集中学生注意力",
+        "D": "在教室前方横向移动以兼顾左右 第 77-81 题 以下是学习任务和相应的学习类型，请匹配。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 125,
+      "sourceQuestionNo": 76,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 478
+    },
+    {
+      "type": "SINGLE",
+      "content": "在上述两个案例中，正确的做法是（ )",
+      "options": {
+        "A": "案例一",
+        "B": "案例二",
+        "C": "均正确",
+        "D": "均不正确"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 126,
+      "sourceQuestionNo": 82,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 479
+    },
+    {
+      "type": "SINGLE",
+      "content": "(1)(2)(3)(4)四句中，哪项的设计显然不合适?（ ）",
+      "options": {
+        "A": "(1)",
+        "B": "(2)",
+        "C": "(3)",
+        "D": "(4)"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 126,
+      "sourceQuestionNo": 83,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 480
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列关于“一时”和“一下子”的描述，正确的是 ( )",
+      "options": {
+        "A": "“一时”强调动作或状态的变化快",
+        "B": "“一下子”强调动作或状态的变化快",
+        "C": "“一下子”只能放在动词前",
+        "D": "“一时”和“一下子”都表示短时间内的一种情况"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 126,
+      "sourceQuestionNo": 84,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 481
+    },
+    {
+      "type": "SINGLE",
+      "content": "以下生词适合重点讲解的是（ )",
+      "options": {
+        "A": "提高",
+        "B": "教练",
+        "C": "比赛",
+        "D": "记者"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 127,
+      "sourceQuestionNo": 90,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 482
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师对本课进行教案编写时，教案的重点应放在（ )",
+      "options": {
+        "A": "教学环节",
+        "B": "教学目标",
+        "C": "教学重点",
+        "D": "课堂游戏"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 128,
+      "sourceQuestionNo": 91,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 483
+    },
+    {
+      "type": "SINGLE",
+      "content": "请你推测一下，下列哪个语言点学生在本课前已习得（ )",
+      "options": {
+        "A": "“是……的”强调句",
+        "B": "“比”实句",
+        "C": "“把”字句",
+        "D": "“了”的用法"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 128,
+      "sourceQuestionNo": 92,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 484
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据“他是去年从国家队下来的”这句中的“下来”，教师设计的例句合理的是（ )",
+      "options": {
+        "A": "三年下来，她成熟了很多。",
+        "B": "我就在你家楼下，快下来。",
+        "C": "他上个月从总部下来到咱们分公司。",
+        "D": "生活节奏渐渐慢下来，他开始学种花养草。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 128,
+      "sourceQuestionNo": 93,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 485
+    },
+    {
+      "type": "SINGLE",
+      "content": "在学习“比”字句时，教师准备两个苹果，让学生一边观察比较大小，一边听句子，这种方法属于 （ )",
+      "options": {
+        "A": "暗示法",
+        "B": "实物法",
+        "C": "情景法",
+        "D": "全身反应法 第 95-97 题 “五月五，是端阳；门插艾，香满堂。吃粽子，撒白糖；龙船下水喜洋洋”。（2017 年）5 月 30 日，“中国体彩杯” 第十三届中国·东盟国际龙舟邀请赛在广西南宁南湖公园水域举行。来自泰国、印度 尼西亚等国家和地区的龙舟队与中国 60 余支民间龙舟队同场竞渡，共同感受中华端午文化。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 128,
+      "sourceQuestionNo": 94,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 486
+    },
+    {
+      "type": "SINGLE",
+      "content": "五月初五端午节这一天，南北方都有吃粽子的习俗，粽子古时又叫（ )",
+      "options": {
+        "A": "米角",
+        "B": "米包",
+        "C": "角黍",
+        "D": "米黍"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 128,
+      "sourceQuestionNo": 95,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 487
+    },
+    {
+      "type": "SINGLE",
+      "content": "以下不属于端午节传统民俗活动的是（ )",
+      "options": {
+        "A": "画额",
+        "B": "赠扇",
+        "C": "拴五色线",
+        "D": "踩高跷"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 128,
+      "sourceQuestionNo": 96,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 488
+    },
+    {
+      "type": "SINGLE",
+      "content": "屈原诗作中体现的家国情怀与清正高洁的人格魅力，时隔千年，依然能够引起今人的共鸣。以下 诗词中哪句不是屈原的诗作? ( )",
+      "options": {
+        "A": "遂古之初，谁传道之?上下未形，何由考之?",
+        "B": "善禁者，先禁其身而后人。",
+        "C": "长太息以掩涕兮，哀民生之多艰。",
+        "D": "诚既勇兮又以武，终刚强兮不可凌。 第 98-100 题 继《舌尖上的中国》掀起中国文化热后，又一部规格高、分量重、内容丰富的文化纪录大片《中 国文房四宝》登陆荧屏。该片共分《博采》《造化》《匠心》《时风》《传播》《遗产》六集，以文 房四宝的物质属性为基础，从历史、情感、文化、现实四个维度，反映了文房四宝演进的历史脉络、 蕴含的丰富情感、 厚载的文化传统和纷呈的现实生态。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 128,
+      "sourceQuestionNo": 97,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 489
+    },
+    {
+      "type": "SINGLE",
+      "content": "四大名砚中唯一非石质类砚是（ ）",
+      "options": {
+        "A": "广东的端砚",
+        "B": "安徽的歙砚",
+        "C": "山西的澄泥砚",
+        "D": "甘肃洮砚"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 128,
+      "sourceQuestionNo": 98,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 490
+    },
+    {
+      "type": "SINGLE",
+      "content": "文房四宝中的墨，是用什么做的？( )",
+      "options": {
+        "A": "细微的烟雾颗粒",
+        "B": "石青",
+        "C": "黑色的矿石",
+        "D": "丹青"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 128,
+      "sourceQuestionNo": 99,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 491
+    },
+    {
+      "type": "SINGLE",
+      "content": "文房四宝的发明和演进，体现出一个民族在文化认知方面的独特创造，也成就了独树一帜的中国 书画艺术。纪录片《中国文房四宝》创作的关键不在于（ )",
+      "options": {
+        "A": "文房四宝背后的文化内涵",
+        "B": "中国人独特的审美理想和高超的创造能力",
+        "C": "中国人的愿望追求和精神情怀",
+        "D": "中国社会漫长的变迁过程"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 128,
+      "sourceQuestionNo": 100,
+      "sourceSetIndex": 7,
+      "sourceYear": "2020",
+      "sourceSetTitle": "134 第六套：2020 年 9 月 CTCSOL 笔试（参考答案） 001-020 BBDAC BCADE ACABB CDCDA 021-040 ADBED",
+      "sortOrder": 492
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项的句型与“我每天都去图书馆写作业”一致? （ )",
+      "options": {
+        "A": "明天不下雨去公园吧。",
+        "B": "他常常在网吧打游戏。",
+        "C": "晚上我请朋友吃饺子。",
+        "D": "她每周末都去农贸市场买菜。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 137,
+      "sourceQuestionNo": 1,
+      "sourceSetIndex": 8,
+      "sourceYear": "",
+      "sourceSetTitle": "149 97. 针对教师乙提到的学生，教师应采取哪种方式进行引导?（ ) A. 提醒他注意扩大词汇量 B. 鼓励他使用双语词典掌握词义 C. 建议他考试时尽量不",
+      "sortOrder": 493
+    },
+    {
+      "type": "SINGLE",
+      "content": "第③题完整的句子中有几个语素几个词?（ )",
+      "options": {
+        "A": "6 个语素 5 个词",
+        "B": "7 个语素 6 个词",
+        "C": "7 个语素 7 个词",
+        "D": "9 个语素 6 个词"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 137,
+      "sourceQuestionNo": 2,
+      "sourceSetIndex": 8,
+      "sourceYear": "",
+      "sourceSetTitle": "149 97. 针对教师乙提到的学生，教师应采取哪种方式进行引导?（ ) A. 提醒他注意扩大词汇量 B. 鼓励他使用双语词典掌握词义 C. 建议他考试时尽量不",
+      "sortOrder": 494
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪组词的构词方式分别与“喜欢” “熬夜”一致?（ )",
+      "options": {
+        "A": "鞠躬 整形",
+        "B": "图书 摧毁",
+        "C": "帮助 海啸",
+        "D": "走狗 建筑"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 137,
+      "sourceQuestionNo": 3,
+      "sourceSetIndex": 8,
+      "sourceYear": "",
+      "sourceSetTitle": "149 97. 针对教师乙提到的学生，教师应采取哪种方式进行引导?（ ) A. 提醒他注意扩大词汇量 B. 鼓励他使用双语词典掌握词义 C. 建议他考试时尽量不",
+      "sortOrder": 495
+    },
+    {
+      "type": "SINGLE",
+      "content": "与第⑤题中补语类型一致的一项是（ )",
+      "options": {
+        "A": "他字写得不错。",
+        "B": "他答不上来了。",
+        "C": "这个会我参加不了。",
+        "D": "把教室打扫干净了。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 137,
+      "sourceQuestionNo": 4,
+      "sourceSetIndex": 8,
+      "sourceYear": "",
+      "sourceSetTitle": "149 97. 针对教师乙提到的学生，教师应采取哪种方式进行引导?（ ) A. 提醒他注意扩大词汇量 B. 鼓励他使用双语词典掌握词义 C. 建议他考试时尽量不",
+      "sortOrder": 496
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中“正”的用法与第⑥题中“正”的用法一致?（ )",
+      "options": {
+        "A": "风华正茂",
+        "B": "歪打正着",
+        "C": "明媒正娶",
+        "D": "正中下怀 第 6-12 题 下面是一名学生汉字标调题的作答结果。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 137,
+      "sourceQuestionNo": 5,
+      "sourceSetIndex": 8,
+      "sourceYear": "",
+      "sourceSetTitle": "149 97. 针对教师乙提到的学生，教师应采取哪种方式进行引导?（ ) A. 提醒他注意扩大词汇量 B. 鼓励他使用双语词典掌握词义 C. 建议他考试时尽量不",
+      "sortOrder": 497
+    },
+    {
+      "type": "SINGLE",
+      "content": "学生的答卷中有几处标调错误?（ )",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 137,
+      "sourceQuestionNo": 6,
+      "sourceSetIndex": 8,
+      "sourceYear": "",
+      "sourceSetTitle": "149 97. 针对教师乙提到的学生，教师应采取哪种方式进行引导?（ ) A. 提醒他注意扩大词汇量 B. 鼓励他使用双语词典掌握词义 C. 建议他考试时尽量不",
+      "sortOrder": 498
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项词语中的“一”或“不”应读本调?（ )",
+      "options": {
+        "A": "一般",
+        "B": "一把手",
+        "C": "不翼而飞",
+        "D": "不胫而走"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 138,
+      "sourceQuestionNo": 7,
+      "sourceSetIndex": 8,
+      "sourceYear": "",
+      "sourceSetTitle": "149 97. 针对教师乙提到的学生，教师应采取哪种方式进行引导?（ ) A. 提醒他注意扩大词汇量 B. 鼓励他使用双语词典掌握词义 C. 建议他考试时尽量不",
+      "sortOrder": 499
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪组音节的韵头和韵腹分别与“xiu”和 “yuan”的韵头和韵腹相同?（ )",
+      "options": {
+        "A": "diu zuan",
+        "B": "hou juan",
+        "C": "you quan",
+        "D": "xiong huan"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 138,
+      "sourceQuestionNo": 8,
+      "sourceSetIndex": 8,
+      "sourceYear": "",
+      "sourceSetTitle": "149 97. 针对教师乙提到的学生，教师应采取哪种方式进行引导?（ ) A. 提醒他注意扩大词汇量 B. 鼓励他使用双语词典掌握词义 C. 建议他考试时尽量不",
+      "sortOrder": 500
+    }
+  ]
+}

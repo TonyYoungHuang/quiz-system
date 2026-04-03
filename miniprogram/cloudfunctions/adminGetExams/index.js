@@ -1,4 +1,3 @@
-// 浜戝嚱鏁板叆鍙ｆ枃浠?
 const cloud = require('wx-server-sdk');
 
 cloud.init({
@@ -7,50 +6,74 @@ cloud.init({
 
 const db = cloud.database();
 
-// 浜戝嚱鏁板叆鍙ｅ嚱鏁?
-exports.main = async (event, context) => {
-  const { token } = event;
+async function validateAdminToken(token) {
+  const tokenResult = await db.collection('admin_tokens')
+    .where({ token })
+    .get();
 
+  if (tokenResult.data.length === 0) {
+    return {
+      valid: false,
+      message: '登录状态无效，请重新登录'
+    };
+  }
+
+  const tokenData = tokenResult.data[0];
+  if (tokenData.expiresAt) {
+    const expiresAt = new Date(tokenData.expiresAt).getTime();
+    if (!Number.isNaN(expiresAt) && expiresAt <= Date.now()) {
+      await db.collection('admin_tokens').doc(tokenData._id).remove();
+      return {
+        valid: false,
+        message: '登录已过期，请重新登录'
+      };
+    }
+  }
+
+  return {
+    valid: true,
+    tokenData
+  };
+}
+
+function formatDateTime(value) {
+  if (!value) return '';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return '';
+  return date.toISOString();
+}
+
+exports.main = async (event = {}) => {
   try {
-    // 楠岃瘉token
-    const tokenResult = await db.collection('admin_tokens')
-      .where({ token: token })
-      .get();
-
-    if (tokenResult.data.length === 0) {
+    const auth = await validateAdminToken(event.token);
+    if (!auth.valid) {
       return {
         success: false,
-        message: '???????????'
+        message: auth.message
       };
     }
 
-    const tokenData = tokenResult.data[0];
-    if (tokenData.expiresAt) {
-      const exp = new Date(tokenData.expiresAt).getTime();
-      if (!Number.isNaN(exp) && exp <= Date.now()) {
-        await db.collection('admin_tokens').doc(tokenData._id).remove();
-        return {
-          success: false,
-          message: '???????????'
-        };
-      }
-    }
-
-    // 鑾峰彇鎵€鏈夌鐩?
     const result = await db.collection('exams')
       .orderBy('sortOrder', 'asc')
       .orderBy('createdAt', 'desc')
       .get();
 
-    // 涓烘瘡涓鐩粺璁￠鐩暟閲?
     const exams = await Promise.all(result.data.map(async (exam) => {
-      const questionCount = await db.collection('questions')
-        .where({ examId: exam._id })
-        .count();
+      const [questionCount, codeCount, permissionCount] = await Promise.all([
+        db.collection('questions').where({ examId: exam._id }).count(),
+        db.collection('activation_codes').where({ examId: exam._id }).count(),
+        db.collection('user_permissions').where({ examId: exam._id }).count()
+      ]);
 
       return {
         ...exam,
-        questionCount: questionCount.total || 0
+        isActive: exam.isActive !== false,
+        statusText: exam.isActive === false ? '已停用' : '已启用',
+        questionCount: questionCount.total || 0,
+        codeCount: codeCount.total || 0,
+        permissionCount: permissionCount.total || 0,
+        createdAtText: formatDateTime(exam.createdAt),
+        updatedAtText: formatDateTime(exam.updatedAt)
       };
     }));
 
@@ -59,10 +82,10 @@ exports.main = async (event, context) => {
       data: exams
     };
   } catch (error) {
-    console.error('鑾峰彇绉戠洰鍒楄〃澶辫触:', error);
+    console.error('[adminGetExams] error', error);
     return {
       success: false,
-      message: '鑾峰彇绉戠洰鍒楄〃澶辫触',
+      message: '获取科目列表失败',
       error: error.message
     };
   }

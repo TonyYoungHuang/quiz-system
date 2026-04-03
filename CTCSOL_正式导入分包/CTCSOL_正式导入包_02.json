@@ -1,0 +1,1818 @@
+{
+  "meta": {
+    "sourcePdf": "C:\\Users\\Administrator\\Desktop\\历年CTCSOL笔试真题集（2014-2025年）2025.2.1.pdf",
+    "generatedAt": "2026-04-01T12:31:28",
+    "packageIndex": 2,
+    "packageCount": 11,
+    "questionCount": 100,
+    "sortOrderStart": 101,
+    "sortOrderEnd": 200,
+    "importModeSuggestion": "追加导入"
+  },
+  "questions": [
+    {
+      "type": "SINGLE",
+      "content": "与他们同时代的散文大家还有哪些? ( )",
+      "options": {
+        "A": "欧阳修、苏洵、苏轼、苏辙、曾巩",
+        "B": "韩愈、欧阳修、苏洵、苏轼、苏辙",
+        "C": "柳宗元、曾巩、苏洵、苏轼、苏辙",
+        "D": "苏洵、苏轼、苏辙、柳宗元、欧阳修"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 23,
+      "sourceQuestionNo": 148,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 101
+    },
+    {
+      "type": "SINGLE",
+      "content": "司马光主持编撰了中国第一部编年体通史，这部史书名为 ( )",
+      "options": {
+        "A": "《史记》",
+        "B": "《三国志》",
+        "C": "《资治通鉴》",
+        "D": "《中国通史》"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 23,
+      "sourceQuestionNo": 149,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 102
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于王安石变法，下列哪项正确? ( )",
+      "options": {
+        "A": "在宋徽宗年间进行改革",
+        "B": "得到了司马光等官员的支持",
+        "C": "将租庸调及各种名目的杂税归为两税，确定了统一的税制",
+        "D": "以“因天下之力以生天下之财，取天下之财以供天下之费”为原则"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 23,
+      "sourceQuestionNo": 150,
+      "sourceSetIndex": 2,
+      "sourceYear": "2014",
+      "sourceSetTitle": "22 第一套：2014 年 CTCSOL 笔试（参考答案） 001-020 BACEA CBADE DAGFC BDGFA 021-040 CBCAA DADC",
+      "sortOrder": 103
+    },
+    {
+      "type": "SINGLE",
+      "content": "语法点“着”在文中共出现了几种用法? （ ）",
+      "options": {
+        "A": "1 种",
+        "B": "2 种",
+        "C": "3 种",
+        "D": "4 种"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 25,
+      "sourceQuestionNo": 6,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 104
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项与句①的句法形式完全一致? ( )",
+      "options": {
+        "A": "玛丽听着音乐看书。",
+        "B": "他看着电视睡着了。",
+        "C": "老师站着讲汉语课。",
+        "D": "他们隔着桌子拥抱。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 25,
+      "sourceQuestionNo": 7,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 105
+    },
+    {
+      "type": "SINGLE",
+      "content": "现代汉语中，“着”除了“zhe” 这个音以外，还有几种发音? （ )",
+      "options": {
+        "A": "1 种",
+        "B": "2 种",
+        "C": "3 种",
+        "D": "4 种 第 9-15 题"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 25,
+      "sourceQuestionNo": 8,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 106
+    },
+    {
+      "type": "SINGLE",
+      "content": "上图中带问号的字是什么字体? （ ）",
+      "options": {
+        "A": "金文",
+        "B": "小篆",
+        "C": "隶书",
+        "D": "行书"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 26,
+      "sourceQuestionNo": 13,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "needsMediaReview": true,
+      "mediaReviewReason": "题干提到图片或图示，正式使用前请在后台补图。",
+      "sortOrder": 107
+    },
+    {
+      "type": "SINGLE",
+      "content": "下面哪个词中“登”的义项与其他的不一样? （ ）",
+      "options": {
+        "A": "登峰造极",
+        "B": "登堂入室",
+        "C": "五谷丰登",
+        "D": "粉墨登场"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 26,
+      "sourceQuestionNo": 14,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 108
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项词语读音正确? （ )",
+      "options": {
+        "A": "干细胞 gānxìbāo",
+        "B": "外强中干 wàiqiáng-zhōnggàn",
+        "C": "按压止血 ànyā zhǐxiě",
+        "D": "一针见血 yìzhēn-jiànxiě 第 16-22 题 只要稍微留神一下，你就会发现，在江南的田野上，鸟儿都是按时“起床”的：东方欲晓，公鸡就一 跃而起，首先“引吭高歌”；接着，鸭群苏醒了，争先恐后地发出“嘎嘎”声 …… ①动物不光知道钟点，还知道日程呢！燕子每年都要进行一次“长途旅行”。冬天，燕子南飞，到南 洋群岛、印度和澳大利亚等地“避寒”；春暖花开的时节，它们又成群结队地北上。早春 2 月，它们飞到 中国的广东，3 月② 间到达福建、浙江及长江下游，4 月初就可以在秦皇岛看到它们的踪迹。 在墨西哥的下加利福尼亚半岛沿海， 一年一度总有一群来自北冰洋的远方客人——灰鲸前来“拜访”。 北半球漫长的冬天开始后，③成百头灰鲸告别北冰洋，以每小时"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 26,
+      "sourceQuestionNo": 15,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 109
+    },
+    {
+      "type": "SINGLE",
+      "content": "句①这句话蕴含的语义关系是（ ）",
+      "options": {
+        "A": "递进",
+        "B": "让步",
+        "C": "假设",
+        "D": "转折"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 26,
+      "sourceQuestionNo": 16,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 110
+    },
+    {
+      "type": "SINGLE",
+      "content": "下面哪句话的“呢”与句①的“呢”所表达的功能相同? （ ）",
+      "options": {
+        "A": "这件事问谁呢?",
+        "B": "我明天回北京，你呢?",
+        "C": "你打电话的时候，我上课呢。",
+        "D": "我倒没什么,你们才辛苦呢。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 26,
+      "sourceQuestionNo": 17,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 111
+    },
+    {
+      "type": "SINGLE",
+      "content": "②处“间”的词性是（ ）",
+      "options": {
+        "A": "名词",
+        "B": "量词",
+        "C": "副词",
+        "D": "介词"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 26,
+      "sourceQuestionNo": 18,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 112
+    },
+    {
+      "type": "SINGLE",
+      "content": "③处“成”表达的意思是（ ）",
+      "options": {
+        "A": "十分之一",
+        "B": "成为、变为",
+        "C": "已定的、现成的",
+        "D": "表示达到一个单位"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 26,
+      "sourceQuestionNo": 19,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 113
+    },
+    {
+      "type": "SINGLE",
+      "content": "最后一段中三个问句属于（ ）",
+      "options": {
+        "A": "设问句",
+        "B": "反问句",
+        "C": "选择问句",
+        "D": "是非问句"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 27,
+      "sourceQuestionNo": 20,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 114
+    },
+    {
+      "type": "SINGLE",
+      "content": "文中跟“传宗接代”整体结构和成分结构相同的四字格是（ ）",
+      "options": {
+        "A": "争先恐后",
+        "B": "引吭高歌",
+        "C": "春暖花开",
+        "D": "引人注目"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 27,
+      "sourceQuestionNo": 21,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 115
+    },
+    {
+      "type": "SINGLE",
+      "content": "本篇故事采用了什么样的修辞手法? （ ）",
+      "options": {
+        "A": "借喻",
+        "B": "拟人",
+        "C": "拟物",
+        "D": "借代 第 23-27 题 小云：①告诉你一个好消息!我有博客了! 丽丽：这么巧，我也有博客，以后咱们可以在博客上交流了。 小云：好主意!我以后会经常在博客上写点儿东西。 丽丽：对，博客是个写东西的好地方。人们可以自由地表达自己的想法，所以很多人喜欢博客， 小云：写博客的时候，我觉得自己好像是一个作家，朋友们也夸我写得不错呢。 丽丽：②写博客既能提高写作能力，又能交新朋友。你知道吗?我假期还和新朋友去西藏旅游了。 小云：是吗?博客上一定有照片吧? 丽丽：没错，拍得很漂亮，你上去看看吧。 大卫：现在，每个人都有自己的爱好，有的人喜欢打太极拳，有的人喜欢玩儿电脑游戏，还有的 人喜欢看京剧，这就是人们常说的：萝卜青菜，各有所爱。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 27,
+      "sourceQuestionNo": 22,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 116
+    },
+    {
+      "type": "SINGLE",
+      "content": "下面对句①的句型描述正确的是（ ）",
+      "options": {
+        "A": "双宾句",
+        "B": "连动句",
+        "C": "非主谓句",
+        "D": "数量宾语句"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 27,
+      "sourceQuestionNo": 23,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 117
+    },
+    {
+      "type": "SINGLE",
+      "content": "句②蕴含的语义关系是（ ）",
+      "options": {
+        "A": "递进",
+        "B": "并列",
+        "C": "假设",
+        "D": "条件"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 27,
+      "sourceQuestionNo": 24,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 118
+    },
+    {
+      "type": "SINGLE",
+      "content": "你认为最适合做本课拓展话题的是（ ）",
+      "options": {
+        "A": "交通工具",
+        "B": "名胜古迹",
+        "C": "业余爱好",
+        "D": "假期安排"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 27,
+      "sourceQuestionNo": 25,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 119
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列外来词的借入方式与“博客”相同的是：（ ）",
+      "options": {
+        "A": "巧克力 引擎 盎司",
+        "B": "华尔兹 剑桥 火车",
+        "C": "麦克风 西瓜 火柴",
+        "D": "新西兰 电梯 的士"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 27,
+      "sourceQuestionNo": 26,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 120
+    },
+    {
+      "type": "SINGLE",
+      "content": "与“萝卜青菜，各有所爱”意思相近的成语是（ ）",
+      "options": {
+        "A": "乐山乐水",
+        "B": "众说纷纭",
+        "C": "爱屋及乌",
+        "D": "叶公好龙 第 28-32 题 记者：你学了几年汉语了? 罗兰：学了一年了。 记者：来中国多长时间了? 罗兰：两个多月了。 记者：对这儿的生活习惯了吧? 罗兰：差不多已经习惯了，不过有的地方还不太习惯。 记者：什么地方不习惯?"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 27,
+      "sourceQuestionNo": 27,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 121
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项与句①中“就”的意义和用法相同? （ ）",
+      "options": {
+        "A": "看见你就高兴。",
+        "B": "这事就她不知道。",
+        "C": "老师就讲了 10 分钟。",
+        "D": "老李 15 岁就参加工作了。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 28,
+      "sourceQuestionNo": 28,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 122
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪组词的构词方式一致? （ ）",
+      "options": {
+        "A": "习惯 锻炼",
+        "B": "复习 采访",
+        "C": "体育 游泳",
+        "D": "汉语 运动"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 28,
+      "sourceQuestionNo": 29,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 123
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项与“不一定”中的“不”在语流中的发音一致? （ ）",
+      "options": {
+        "A": "了不起",
+        "B": "不习惯",
+        "C": "差不多",
+        "D": "不客气"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 28,
+      "sourceQuestionNo": 30,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 124
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项与句③中“都”的意义和用法相同? （ ）",
+      "options": {
+        "A": "你都去过哪儿?",
+        "B": "你们班都有谁?",
+        "C": "她每年都要回老家探亲。",
+        "D": "都是你一句话把他惹恼了。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 28,
+      "sourceQuestionNo": 31,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 125
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于句④的句型，描述正确的是：（ ）",
+      "options": {
+        "A": "主谓谓语句",
+        "B": "动词谓语句",
+        "C": "名词谓语句",
+        "D": "形容词谓语句 第 33-38 题 我刚到北京时，听过一个相声，说北京人的口头语是“吃了吗”。后来我发 现，其实北京人最爱说 的一句话是“回头再说”。 我从香港来北京时，邻座的中国人用地道的英语问我：“你是去北京吗?” 我们就这样愉快地聊了一 路。临下飞机，他还给了我一张名片，①邀请我有空儿到他家去玩儿。到北京后的第二个周末，我给 这位先生打电话。他在电话里热情地说：“有时间来家里玩儿吧。”②我马上高兴起来，说：“太好了， 我什么时候去?”他停了一会儿说：③“这一段工作太忙，回头再说吧。”可是，几乎每次打电话他都在邀 请我去他家的同时，带上一句“回头再说”。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 28,
+      "sourceQuestionNo": 32,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 126
+    },
+    {
+      "type": "SINGLE",
+      "content": "下面对句①的句型描述正确的是 （ ）",
+      "options": {
+        "A": "主谓句",
+        "B": "兼语句",
+        "C": "连动句",
+        "D": "存在句"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 29,
+      "sourceQuestionNo": 33,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 127
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中的“起来”与句②中的“起来”意义和用法相近? （ ）",
+      "options": {
+        "A": "五星红旗升起来了。",
+        "B": "他看起来有 60 多岁。",
+        "C": "天气渐渐暖和起来。",
+        "D": "上课了，把门关起来吧。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 29,
+      "sourceQuestionNo": 34,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 128
+    },
+    {
+      "type": "SINGLE",
+      "content": "句③“回头再说”属于下列哪种常用的委婉表达修辞策略? ( )",
+      "options": {
+        "A": "谦言",
+        "B": "托辞",
+        "C": "曲言",
+        "D": "借说"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 29,
+      "sourceQuestionNo": 35,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 129
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中的“了”与句④中的“了”意义相同?（ ）",
+      "options": {
+        "A": "没完没了",
+        "B": "了如指掌",
+        "C": "一目了然",
+        "D": "了无踪迹"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 29,
+      "sourceQuestionNo": 36,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 130
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项与句⑤中“是”的意义和用法相同?（ ）",
+      "options": {
+        "A": "他是从美国来的。",
+        "B": "麦克是不会来的。",
+        "C": "他爸爸是做生意的。",
+        "D": "他是昨天抵达中国的。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 29,
+      "sourceQuestionNo": 37,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 131
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项包含必须轻声的音节? （ ）",
+      "options": {
+        "A": "相声",
+        "B": "口头",
+        "C": "名片",
+        "D": "至于 第 39-41 题 英国语言学家 Larry Sclinker 1969 年在“语言迁移” (Language Transfer) 中首先提出“中介语” 这一术语。1972 年他又发表了题为“中介语”的论文，正式提出并阐述了“中介语”这一概念，确立了中介 语在第二语言习得研究中的地位。石化现象 (fossilization) 是指第二语言学习者在学习过程中出现的停 滞状态或错误反复出现的状况，是中介语的一个重要特征。Sclinker 根据研究发现，95%的外语学习 者在学习过程中会出现石化现象。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 29,
+      "sourceQuestionNo": 38,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 132
+    },
+    {
+      "type": "SINGLE",
+      "content": "当学习者认为用第二语言交际能达到一定的有效性以后，中介语就不再发展，错误的形式从而固 定下来，形成石化。这是从什么角度探讨石化的成因? （ ）",
+      "options": {
+        "A": "心理",
+        "B": "认知",
+        "C": "社会文化",
+        "D": "母语迁移"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 29,
+      "sourceQuestionNo": 39,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 133
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项是石化形成的外在因素? （ ）",
+      "options": {
+        "A": "个性",
+        "B": "认知特点",
+        "C": "交际压力",
+        "D": "对目的语的认同"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 29,
+      "sourceQuestionNo": 40,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 134
+    },
+    {
+      "type": "SINGLE",
+      "content": "从人和生物生长的角度解释语言石化现象的理论是 （ ）",
+      "options": {
+        "A": "临界期假说",
+        "B": "文化迁移模式",
+        "C": "社会认同理论",
+        "D": "洋泾浜英语假说 第 42-46 题 自 20 世纪 80 年代起，越来越多的研究者致力于研究输入、互动与第二语言习得的关系。互动假 说(Interaction Hypothesis)成为学者们广泛关注和争论的焦点，并对第二语言教学产生了一定的影响。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 29,
+      "sourceQuestionNo": 41,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 135
+    },
+    {
+      "type": "SINGLE",
+      "content": "互动假说的核心思想是 （ ）",
+      "options": {
+        "A": "意义协商",
+        "B": "形式协商",
+        "C": "强制输出",
+        "D": "可理解性输入"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 29,
+      "sourceQuestionNo": 42,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 136
+    },
+    {
+      "type": "SINGLE",
+      "content": "提出互动假说的学者是（ ）",
+      "options": {
+        "A": "Swain",
+        "B": "Krashen",
+        "C": "Rod Ellis",
+        "D": "Michael Long"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 30,
+      "sourceQuestionNo": 43,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 137
+    },
+    {
+      "type": "SINGLE",
+      "content": "互动假说的研究是从哪项研究开始的? （ ）",
+      "options": {
+        "A": "中介语",
+        "B": "教师语言",
+        "C": "外国式语言",
+        "D": "保姆式语言"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 30,
+      "sourceQuestionNo": 44,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 138
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据互动假说理论，互动环境与语言习得的接口是（ ）",
+      "options": {
+        "A": "反馈",
+        "B": "输出",
+        "C": "大量输入",
+        "D": "选择性注意"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 30,
+      "sourceQuestionNo": 45,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 139
+    },
+    {
+      "type": "SINGLE",
+      "content": "哪一个教学法直接受到互动假说的影响?（ ）",
+      "options": {
+        "A": "听说法",
+        "B": "任务教学法",
+        "C": "体验教学法",
+        "D": "全身反应法 第 47-50 题 声调教学在语音教学中占有重要地位。因为每个声调出现的频率都要比任何一个声母或韵母高得 多，而声调又是汉语语音中最敏感的部分，学生出现洋腔洋调最主要的原因是在于声调。在教学中， 我们首先应该让学生明白汉语的声调是什么，它有什么作用。 学习汉语声调，掌握每个声调的调型特征非常重要，第三声在图一和图二中存在一定的差别，图 一表示为（ 47 ）调，图二为（ 48 ）调。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 30,
+      "sourceQuestionNo": 46,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 140
+    },
+    {
+      "type": "SINGLE",
+      "content": "跟图二相比，图一在每个调型的__方面的显示更明确。（ ）",
+      "options": {
+        "A": "音高",
+        "B": "音长",
+        "C": "音色",
+        "D": "音强"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 30,
+      "sourceQuestionNo": 49,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 141
+    },
+    {
+      "type": "SINGLE",
+      "content": "轻声不是四声之外的第五种声调，原因是：（ ）",
+      "options": {
+        "A": "有些轻声音节(如语气词)是非轻不可的",
+        "B": "轻声在一般情况下不具有区别意义的作用",
+        "C": "其读音不独立存在，只体现在词语和句子中",
+        "D": "它通常是读音比较短、也比较轻的一种调子"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 30,
+      "sourceQuestionNo": 50,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 142
+    },
+    {
+      "type": "SINGLE",
+      "content": "案例中的这段课文的结构是（ ） ① 基本情况； ② 话题、时间、地点； ③ 目的；",
+      "options": {
+        "A": "①②③",
+        "B": "③②①",
+        "C": "②①③",
+        "D": "①③②"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 31,
+      "sourceQuestionNo": 51,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 143
+    },
+    {
+      "type": "SINGLE",
+      "content": "语言课让学生复述课文是常用的方法，案例中的这段课文最不适合的复述方式是（ ）",
+      "options": {
+        "A": "改变结构",
+        "B": "改变话题",
+        "C": "改变角色",
+        "D": "改变时间"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 31,
+      "sourceQuestionNo": 52,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 144
+    },
+    {
+      "type": "SINGLE",
+      "content": "老师给出的两个结构相同的例子，一个是一段话，另一个是一张表。这体现了什么原则? （ ）",
+      "options": {
+        "A": "由易到难，循序渐进",
+        "C": "语言浅显，通俗易懂",
+        "B": "精讲多练，因材施教",
+        "D": "感性直观，启发思维"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 31,
+      "sourceQuestionNo": 53,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 145
+    },
+    {
+      "type": "SINGLE",
+      "content": "这位老师布置的作业，最可能是 （ ）",
+      "options": {
+        "A": "抄写一遍课文，并用生词造句",
+        "B": "背诵课文，并准备下节课听写",
+        "C": "把课上补充的练习用书面语体写出来",
+        "D": "看电影《飞越老人院》，写一篇 400 字的观后感"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 31,
+      "sourceQuestionNo": 54,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 146
+    },
+    {
+      "type": "SINGLE",
+      "content": "案例叙述最可能是哪种课型的课堂教学? （ ）",
+      "options": {
+        "A": "听力课",
+        "B": "口语课",
+        "C": "写作课",
+        "D": "精读课 第 56-61 题 下面是一节课的具体教学安排，请阅读后回答问题 ①PPT 展示选词填空练习。 听清楚 看懂 写完"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 31,
+      "sourceQuestionNo": 55,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 147
+    },
+    {
+      "type": "SINGLE",
+      "content": "从本节课的教学安排看，这位老师的教学步骤①属于什么教学环节? （ ）",
+      "options": {
+        "A": "复习旧知",
+        "B": "导入新课",
+        "C": "展示讲解",
+        "D": "练习巩固"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 32,
+      "sourceQuestionNo": 56,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 148
+    },
+    {
+      "type": "SINGLE",
+      "content": "由这种教学安排可知，本节课的教学重点是 （ ）",
+      "options": {
+        "A": "时量补语",
+        "B": "结果补语",
+        "C": "可能补语",
+        "D": "程度补语"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 32,
+      "sourceQuestionNo": 57,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 149
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪种教学安排最适合上面的步骤⑤? （ ）",
+      "options": {
+        "A": "让学生根据结构格式造句",
+        "B": "引导学生看图片回答问题",
+        "C": "教学生练习写“得”这个汉字",
+        "D": "让学生抄写步骤②中板书的句子"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 32,
+      "sourceQuestionNo": 58,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 150
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列句子是学生常见的一些偏误，哪种偏误和本课的重点语言点有关?（ ）",
+      "options": {
+        "A": "昨天我睡觉了六个小时。",
+        "B": "昨天的作业我不写完了。",
+        "C": "这么多东西，我一个人一定拿得不动。",
+        "D": "为了减肥，她每天吃饭得少，吃水果得多。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 32,
+      "sourceQuestionNo": 59,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 151
+    },
+    {
+      "type": "SINGLE",
+      "content": "以下哪项是本课处理语言点的顺序? （ ）",
+      "options": {
+        "A": "展示一练习一解释一归纳",
+        "B": "展示一解释一归纳一练习",
+        "C": "解释一展示一归纳一练习",
+        "D": "解释一归纳一展示一练习"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 32,
+      "sourceQuestionNo": 60,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 152
+    },
+    {
+      "type": "SINGLE",
+      "content": "教学活动能够体现不同的语言教学理念，以下体现了“任务法”理念的活动是（ ）",
+      "options": {
+        "A": "一对一分小组进行问答练习",
+        "B": "要求学生分组排练一个小品",
+        "C": "进行替换练习以掌握语法结构",
+        "D": "要求学生讲述看过的一部电影 第 62-65 题 齐老师在美国一所高中教汉语。班里有 10 个学生。他设计了如下课堂活动。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 32,
+      "sourceQuestionNo": 61,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 153
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据课堂活动设计要求，表中①应该是（ ）",
+      "options": {
+        "A": "活动基础",
+        "B": "活动计划",
+        "C": "活动规见",
+        "D": "活动目标"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 33,
+      "sourceQuestionNo": 62,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 154
+    },
+    {
+      "type": "SINGLE",
+      "content": "活动开始前要复习相关词汇，下列方法中最不合适的是（ ）",
+      "options": {
+        "A": "比赛回忆学习过的相关词汇",
+        "B": "为相关词汇的汉字注上拼音",
+        "C": "根据教师展示的图解词卡说出词语",
+        "D": "用拼音标记出图片中人物的外貌、衣着等"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 33,
+      "sourceQuestionNo": 63,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 155
+    },
+    {
+      "type": "SINGLE",
+      "content": "张老师也组织了一次类似的活动，只是学生是面对面进行问答的，结果活动效果不佳，最主要的 原因是（ ）",
+      "options": {
+        "A": "活动难度太高",
+        "B": "学生感觉尴尬",
+        "C": "没有利用信息差",
+        "D": "学生不善于观察"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 33,
+      "sourceQuestionNo": 64,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 156
+    },
+    {
+      "type": "SINGLE",
+      "content": "有个学生特别害羞，不愿意开口，下列哪种方式最能够帮助他?（ ）",
+      "options": {
+        "A": "替他参加活动，安排他在旁观看",
+        "B": "允许他不参加活动，自行复习相关词汇",
+        "C": "悄悄提示他一些语句，鼓励他重复这些话， 参与活动",
+        "D": "给他安排一个友好的搭档，鼓励他参与活动，并适时表扬他 第 66-70 题 活动准备：模仿下表在黑板上画一个拼音密码表。 活动步骤： ① 带领学生一起朗读表中的拼音，提示学生注意每个拼音的数字编码。 ② 教师在黑板空白处写一个编码，让学生根据密码表读出该编码所指示的拼音。 如老师写 21， 学生应读出 cī。 ③ 第一轮读得又快又准的同学可以到黑板前写编码，其他学生根据编码读拼音。 ④ 老师再从该轮读得好的同学中选一人到黑板上写编码，活动以此类推。注意公平性，最好让每 个学生都有机会到黑板前写编码。 ⑤ 对于那些消极被动的学生，教师也可指定他们根据编码读拼音，敦促他们参与练习。 ⑥ 教师视情况或时间而定，可随时结束活动"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 33,
+      "sourceQuestionNo": 65,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 157
+    },
+    {
+      "type": "SINGLE",
+      "content": "以上活动主要训练的是（ ）",
+      "options": {
+        "A": "听音节",
+        "B": "听声调",
+        "C": "对比辨音",
+        "D": "认读音节"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 33,
+      "sourceQuestionNo": 66,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 158
+    },
+    {
+      "type": "SINGLE",
+      "content": "上述活动最适合什么类型的汉语学习者?（ ）",
+      "options": {
+        "A": "中学生",
+        "B": "幼儿园学生",
+        "C": "中文专业大四学生",
+        "D": "高级商务汉语学习者"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 33,
+      "sourceQuestionNo": 67,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 159
+    },
+    {
+      "type": "SINGLE",
+      "content": "在这个活动中，如果学生出现了发音错误，最合适的做法是（ ）",
+      "options": {
+        "A": "忽略错误，不做任何反应",
+        "B": "立即纠正，并请所有人跟读",
+        "C": "让其他同学指出错误并纠正",
+        "D": "等待学生自己意识到错误并改正"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 33,
+      "sourceQuestionNo": 68,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 160
+    },
+    {
+      "type": "SINGLE",
+      "content": "在这个活动中，学生最容易出现哪种发音错误? （ ）",
+      "options": {
+        "A": "平翘舌不分",
+        "B": "鼻音边音不分",
+        "C": "混淆圆唇与非圆唇",
+        "D": "混淆送气音与不送气音"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 34,
+      "sourceQuestionNo": 69,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 161
+    },
+    {
+      "type": "SINGLE",
+      "content": "下课铃响了，这时有一个学生举手说：“老师，我还没有参加活动。”下列哪种回应最恰当?（ ）",
+      "options": {
+        "A": "现在下课了，你怎么不早说呢?",
+        "B": "真抱歉，下课了，我们的活动结束了。",
+        "C": "那我们晚下课一会儿，请你来参加这个活动。",
+        "D": "活动结束了，下次你第一个参加活动，好吗? 第 71-75 题 陈老师是美国一所中学的汉语教师，刚入职不久，为了让自己尽快适应工作 要求，并快速成为一 名优秀教师，他总结了一些让自己困惑的问题，发到了微博 上，他期待大家的讨论能对他以后的教学 有所启发和帮功。 ① 上课能不能说外语? ② 如何制订教学目标? ③ 需不需要课堂规范?怎么制订课堂规范? ④ 怎么选择合适的教材? ⑤ 需不需要给学生布置作业?"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 34,
+      "sourceQuestionNo": 70,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 162
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项说法正确?（ ）",
+      "options": {
+        "A": "教师应将自行制订的课堂规范张贴在教室中",
+        "B": "选择教材时应首要考虑教材编者、教学目标、教材的知名度",
+        "C": "遵循汉语优先的原则，在汉语无法有效完成沟通时适度使用外语",
+        "D": "制订教学目标时，应从听力、口语、阅读、书写、翻译几方面准备"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 34,
+      "sourceQuestionNo": 71,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 163
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项不适合在学生面前谈论?（ ）",
+      "options": {
+        "A": "学校的规章制度",
+        "B": "某学生的家庭情况",
+        "C": "中国文化体验活动计划",
+        "D": "某学生汉语比赛的获奖情况"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 34,
+      "sourceQuestionNo": 72,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 164
+    },
+    {
+      "type": "SINGLE",
+      "content": "对于个别学生偶尔不完成作业的现象，最合适的做法是（ ）",
+      "options": {
+        "A": "向班主任反应，请他警告学生",
+        "B": "在课堂上公开批评没有完成作业的学生",
+        "C": "课下跟学生谈话，了解未完成作业的原因",
+        "D": "向学生家长反映，要求家长督促学生完成"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 34,
+      "sourceQuestionNo": 73,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 165
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪种做法最有助于国际汉语教师反思能力的发展及自我成长? （ ）",
+      "options": {
+        "A": "询问家长对学生学习的期望，把家长的期望融入教学安排",
+        "B": "学习学校相关管理文件，使自己的教学符合学校的整体要求",
+        "C": "坚持撰写教学日志，积极参与同行讨论，主动学习专业知识",
+        "D": "经常询问学生对教学的意见，并随时根据学生的意见调整教学"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 34,
+      "sourceQuestionNo": 74,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 166
+    },
+    {
+      "type": "SINGLE",
+      "content": "一位学生在课间休息时，指着自己笔记本上写的汉字“笨蛋”,跟陈老师说：“老师，我可以说‘笨鸡蛋’ 吗?”学生的这种中介文化行为属于（ ）",
+      "options": {
+        "A": "文化迁移",
+        "B": "文化过滤",
+        "C": "母语迁移",
+        "D": "目的语泛化 第 76-79 题 例题： 准时非常重要，因为迟到就是浪费他人的时间和生命，是对他人的不尊重。 有时候，迟到会使约 会失败，会错过重要的机会，甚至会让别人不再信任自己。 ★ 这段话主要谈的是"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 35,
+      "sourceQuestionNo": 75,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 167
+    },
+    {
+      "type": "SINGLE",
+      "content": "案例中的例题主要考查的是 （ ）",
+      "options": {
+        "A": "按要求查找信息",
+        "B": "语段理解与概括",
+        "C": "词语理解与运用",
+        "D": "推断作者的态度"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 35,
+      "sourceQuestionNo": 76,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 168
+    },
+    {
+      "type": "SINGLE",
+      "content": "在测试内容的轻重比例安排上，要重“使用”轻“知识”，而这一思想是由题量的多少和权重的大小来 体现的。下列说法不正确的是 （ ）",
+      "options": {
+        "A": "被试的水平越高，对产出性技能的考查比重越大",
+        "B": "考查汉语知识的题量应该少于考查汉语使用技能的题量",
+        "C": "考查汉语使用技能的题目权重应该大于考查汉语知识的题目权重",
+        "D": "测试内容的安排顺序要反映出自高到低的能力层次的衔接发展与过渡"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 35,
+      "sourceQuestionNo": 77,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 169
+    },
+    {
+      "type": "SINGLE",
+      "content": "上面的双向细目表中，横向列出的各项是要考查的能力，即在认知行为上要达到的水平，通常采 用识记、理解、应用、分析、综合、评价 6 个等级。这是按照____的教育目标分类划分的。（ ）",
+      "options": {
+        "A": "加涅 (Gagnè)",
+        "B": "海姆斯 (Hymes)",
+        "C": "布鲁姆 (Bloom)",
+        "D": "巴赫曼 (Bachman)"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 35,
+      "sourceQuestionNo": 78,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 170
+    },
+    {
+      "type": "SINGLE",
+      "content": "该作文出现了一处介词冗余的错误，下列出现了同样错误的句子是 （ ）",
+      "options": {
+        "A": "我父亲是很热爱事业。",
+        "B": "听说在学校附近有银行。",
+        "C": "我经常惹起我母亲生气。",
+        "D": "本人十分可以满足公司的要求。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 36,
+      "sourceQuestionNo": 80,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 171
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项是中级阶段写作的训练目标? （ ）",
+      "options": {
+        "A": "掌握正确的汉语语序",
+        "B": "能够得体地运用语言",
+        "C": "谋句成段和谋段成章",
+        "D": "掌握某类文体的写作方法"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 36,
+      "sourceQuestionNo": 81,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 172
+    },
+    {
+      "type": "SINGLE",
+      "content": "基于该生的写作表现，为提高他的写作能力，掌握句子间的承接关系，最适合的课后写作练习是 （ ）",
+      "options": {
+        "A": "记一件难忘的事",
+        "B": "写一个会议通知",
+        "C": "表达对某一观点的看法",
+        "D": "将直接引语改为间接引语"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 36,
+      "sourceQuestionNo": 82,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 173
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪种要求属于限制模仿型写作训练? （ ）",
+      "options": {
+        "A": "教师鼓励学生套用学过的范文的开头、结尾和结构",
+        "B": "教师要求学生写一篇作文，并对内容给予一定的提示",
+        "C": "教师通过列表法帮助学生总结书面表达常用的标点符号",
+        "D": "教师批改作文时，对不同阶段的学生确定不同的修改重点"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 37,
+      "sourceQuestionNo": 83,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 174
+    },
+    {
+      "type": "SINGLE",
+      "content": "连词成句是写作训练初级阶段的常用方法，以下哪个训练材料适合训练时点、时段等时间范畴的 表达方式? （ ）",
+      "options": {
+        "A": "蓝的 是 毛衣 还是 你 红 的 周末 买的",
+        "B": "是 他 从 来 的 留学生 欧 洲 三月",
+        "C": "已经 作 业 我 老 师 把 交 给 了 上周",
+        "D": "个 睡 八 觉 晚 上 我 小时 昨天 了 第 85-88 题"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 37,
+      "sourceQuestionNo": 84,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 175
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列人物都与“丝绸之路”相关，与其他三人不属于同一时期的是 （ ）",
+      "options": {
+        "A": "张骞",
+        "B": "班超",
+        "C": "玄奘",
+        "D": "甘英"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 37,
+      "sourceQuestionNo": 85,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 176
+    },
+    {
+      "type": "SINGLE",
+      "content": "当时从中国运往中亚及欧洲的有 （ )",
+      "options": {
+        "A": "丝绸 刺绣 陶瓷 漆器",
+        "B": "丝绸 茶叶 蚕种 陶瓷",
+        "C": "丝绸 宝石 茶叶 纸张",
+        "D": "丝绸 茶叶 陶瓷 玻璃制品"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 37,
+      "sourceQuestionNo": 86,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 177
+    },
+    {
+      "type": "SINGLE",
+      "content": "联合国教科文组织认定的海上丝绸之路的起点是 （ ）",
+      "options": {
+        "A": "宁波",
+        "B": "北海",
+        "C": "广州",
+        "D": "泉州"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 37,
+      "sourceQuestionNo": 87,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 178
+    },
+    {
+      "type": "SINGLE",
+      "content": "“一带一路”战略在非洲的唯一支点是（ ）",
+      "options": {
+        "A": "埃及",
+        "B": ".南非",
+        "C": "肯尼亚",
+        "D": "坦桑尼亚"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 37,
+      "sourceQuestionNo": 88,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 179
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个节日与“中秋节”的文化意义相似? （ ）",
+      "options": {
+        "A": "复活节",
+        "B": "感恩节",
+        "C": "万圣节",
+        "D": "圣瓦伦丁节"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 39,
+      "sourceQuestionNo": 98,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 180
+    },
+    {
+      "type": "SINGLE",
+      "content": "如果为本次文化体验活动选择背景音乐，最适合的是 （ ）",
+      "options": {
+        "A": "渔舟唱晚 汉宫秋月",
+        "B": "高山流水 梅花三弄",
+        "C": "十面理伏 阳春白雪",
+        "D": "春江花月夜 二泉映月"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 39,
+      "sourceQuestionNo": 99,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 181
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项乐器是从国外传入中国的? （ ）",
+      "options": {
+        "A": "瑟",
+        "B": "笛子",
+        "C": "唢呐",
+        "D": "古筝"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 39,
+      "sourceQuestionNo": 100,
+      "sourceSetIndex": 3,
+      "sourceYear": "2015",
+      "sourceSetTitle": "46 第二套：2015 年 CTCSOL 笔试（参考答案） 001-020 EGABD CACBA ECBCD ADADA 021-040 ABABC AADB",
+      "sortOrder": 182
+    },
+    {
+      "type": "SINGLE",
+      "content": "材料中有四个问句，类型不同于其他三个的是：（ )",
+      "options": {
+        "A": "哪方面?",
+        "B": "你担心什么呢?",
+        "C": "怎么还不睡呀?",
+        "D": "愿意陪我聊一会儿吗?"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 49,
+      "sourceQuestionNo": 1,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 183
+    },
+    {
+      "type": "SINGLE",
+      "content": "句①是：（ ）",
+      "options": {
+        "A": "兼语句",
+        "B": "连动句",
+        "C": "双宾语句",
+        "D": "主谓谓语句"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 49,
+      "sourceQuestionNo": 2,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 184
+    },
+    {
+      "type": "SINGLE",
+      "content": "在教授句②的补语时，下列哪项适合作典型例句? （ )",
+      "options": {
+        "A": "他晕过去了。",
+        "B": "树叶落下来了。",
+        "C": "衣服收起来吧。",
+        "D": "你一定要坚持下去呀!"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 49,
+      "sourceQuestionNo": 3,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 185
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中的“什么”与句③中“什么”的意义和用法相同? ( )",
+      "options": {
+        "A": "看什么看，走开!",
+        "B": "你在写什么?让我看看。",
+        "C": "你急什么!我马上就到。",
+        "D": "吃什么不重要，健康就好。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 49,
+      "sourceQuestionNo": 4,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 186
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪种补语类型没有在材料中出现? （ )",
+      "options": {
+        "A": "结果补语",
+        "B": "可能补语",
+        "C": "时量补语",
+        "D": "趋向补语 第 6-9 题 陈静的一本书里有一片红叶，她说那是男朋友送给她的生日礼物。这可真有意思，把红叶当作生 日礼物送给女朋友，我以前从来没有听说过。 陈静的生日是 10 月 15 号，那时候北京香山上的红叶还很少。陈静和男朋友认识快两年了，今年 是她男朋友第一次给她过生日，送给她的礼物只有这片红叶。①这也是男朋友送给她的唯一的生日礼 物。陈静说，那天他们在香山，男朋友捧着自己摘来的红叶，②像捧着自己的心，请她收下。③她感 动得差点儿流下了眼泪。 有人笑话陈静，说她男朋友太小气了，舍不得花钱买礼物，可是陈静自己不这么想。她觉得爱情 是不能用钱来表达的，重要的是男朋友爱不爱她。 ④香山的红叶红红的，圆圆的，看上去有点儿像一颗心。难怪陈静那么爱惜，生怕把它弄丢了。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 49,
+      "sourceQuestionNo": 5,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 187
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列句子中的定语结构和句①完全一致的是：（ ）",
+      "options": {
+        "A": "这是我朋友的丈夫的亲姐姐。",
+        "B": "这是开大会用的新的无线麦克风。",
+        "C": "这是妈妈买给他的黑色的裤子。",
+        "D": "这是公司刚配的崭新的会议桌。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 49,
+      "sourceQuestionNo": 6,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 188
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项的修辞格与句②的修辞格相同? （ )",
+      "options": {
+        "A": "你应该像他一样努力。",
+        "B": "一群“红领巾”跑了过来。",
+        "C": "青少年是早上升起的太阳。",
+        "D": "矮小而年高的垂柳站在那里。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 50,
+      "sourceQuestionNo": 7,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 189
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中的“差点儿没”与句③的“差点儿”语义一致? （ )",
+      "options": {
+        "A": "他差点儿没摔倒。",
+        "B": "他差点儿没考上大学。",
+        "C": "他差点儿没赶上火车。",
+        "D": "他差点儿没买到那本书。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 50,
+      "sourceQuestionNo": 8,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 190
+    },
+    {
+      "type": "SINGLE",
+      "content": "在操练句④的语法点时，学生完成练习“根据图片说句子”后，接下来最适合的练习是：( )",
+      "options": {
+        "A": "介绍一份生日礼物",
+        "B": "介绍一个旅游景点",
+        "C": "介绍自己的出行方式",
+        "D": "介绍自己买东西的经历 第 10-12 题 王悦：好，灵山到了! 玛丽：车还上得去吗? 王悦：上不去了，请下车吧!你们先往山上走，我把车停好，马上就来。 麦克：这儿空气真好。 王悦：山很高，你们爬得上去吗? 玛丽：没问题。我们一步一步地往上爬吧! 王悦：你们可能不知道，灵山是北京最高的地方。有位在西藏工作了 18 年的女科学家发现，这儿 的自然环境跟青藏高原差不多。 玛丽：好啊，今天我们就可以欣赏一下高原的景色了。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 50,
+      "sourceQuestionNo": 9,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "needsMediaReview": true,
+      "mediaReviewReason": "题干提到图片或图示，正式使用前请在后台补图。",
+      "sortOrder": 191
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最适合作为讲解画线句中“一步一步”的例句? （ )",
+      "options": {
+        "A": "老师一遍一遍地叫我们念课文。",
+        "B": "铁锤一下一下准确地落在钉子上。",
+        "C": "一场一场的比赛，搞得他筋疲力尽。",
+        "D": "孩子们排着队，两个两个地走进教室。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 50,
+      "sourceQuestionNo": 10,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 192
+    },
+    {
+      "type": "SINGLE",
+      "content": "在操练本课重点语法时，教师安排了下列三种练习，请指出正确的操练顺序： （ ） ①完成句子： 他说得太快了，我______。 这种词典很常见，每个书店都______。 ②句型替换： 他看得懂这篇文章吗? 他看得懂/他看不懂。 ③ 两人一组， 一个学生提问，另一个学生给出肯定或否定的回答。如“你听得懂京剧吗?”“你吃得完一 个大西瓜吗?”，然后两人互换角色。",
+      "options": {
+        "A": "①②③",
+        "B": "①③②",
+        "C": "②①③",
+        "D": "②③①"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 50,
+      "sourceQuestionNo": 11,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 193
+    },
+    {
+      "type": "SINGLE",
+      "content": "汉字的形体总是携带着一些可供分析的意义信息，这也是汉字区别于其他拼音文字的重要特征。 下列哪个汉字在讲解时最适合根据字形对其进行释义? （ )",
+      "options": {
+        "A": "藏",
+        "B": "欣",
+        "C": "多",
+        "D": "科"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 50,
+      "sourceQuestionNo": 12,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 194
+    },
+    {
+      "type": "SINGLE",
+      "content": "材料中涂黄字的造字法依次是：（ )",
+      "options": {
+        "A": "会意 象形 象形",
+        "B": "象形 会意 象形",
+        "C": "象形 象形 会意",
+        "D": "会意 象形 会意"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 51,
+      "sourceQuestionNo": 13,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 195
+    },
+    {
+      "type": "SINGLE",
+      "content": "讲解“毛衣”一词最合适的教学方法是：（ )",
+      "options": {
+        "A": "语素释义",
+        "B": "直接对译",
+        "C": "近义词释义",
+        "D": "实物/图片展示"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 51,
+      "sourceQuestionNo": 14,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 196
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师在讲解了“这件毛衣的颜色有点儿深”之后，学生说出了“这件毛衣有点儿好看”的句子，该偏误 的原因是 （ ）",
+      "options": {
+        "A": "母语负迁移",
+        "B": "元认知策略",
+        "C": "目的语规则泛化",
+        "D": "交际策略的影响"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 51,
+      "sourceQuestionNo": 15,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 197
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中“呢”的用法与画线句中“呢”的用法相同? （ )",
+      "options": {
+        "A": "汉字可难学呢!",
+        "B": "我怎么会忘了你呢?",
+        "C": "我喜欢吃四川菜，你呢?",
+        "D": "他怎么还不回来，去哪儿了呢? 第 17-20 题"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 51,
+      "sourceQuestionNo": 16,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 198
+    },
+    {
+      "type": "SINGLE",
+      "content": "材料中有一处明显的语法偏误，涉及什么词的使用规则? （ )",
+      "options": {
+        "A": "动词",
+        "B": "名词",
+        "C": "离合词",
+        "D": "助动词"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 51,
+      "sourceQuestionNo": 17,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 199
+    },
+    {
+      "type": "SINGLE",
+      "content": "材料第二段中副词“真”的用法有误，下列哪项规则最适合解释该错误? （ )",
+      "options": {
+        "A": "“真”不能修饰形容词",
+        "B": "“真+形容词”不能作定语",
+        "C": "“真+形容词”不能加后附成分",
+        "D": "“真”与“形容词”中间缺少助词“的”"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 51,
+      "sourceQuestionNo": 18,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 200
+    }
+  ]
+}

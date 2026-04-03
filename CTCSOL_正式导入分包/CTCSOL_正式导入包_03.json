@@ -1,0 +1,1816 @@
+{
+  "meta": {
+    "sourcePdf": "C:\\Users\\Administrator\\Desktop\\历年CTCSOL笔试真题集（2014-2025年）2025.2.1.pdf",
+    "generatedAt": "2026-04-01T12:31:28",
+    "packageIndex": 3,
+    "packageCount": 11,
+    "questionCount": 100,
+    "sortOrderStart": 201,
+    "sortOrderEnd": 300,
+    "importModeSuggestion": "追加导入"
+  },
+  "questions": [
+    {
+      "type": "SINGLE",
+      "content": "材料中一共有几个错别字? ( )",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 52,
+      "sourceQuestionNo": 19,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 201
+    },
+    {
+      "type": "SINGLE",
+      "content": "“博览会”和“香港”的正确拼音是：（ )",
+      "options": {
+        "A": "bólǎnhuì xiānggǎng",
+        "B": "Bó lǎn huì Xiānggǎng",
+        "C": "bó lǎnhuì Xiānggǎng",
+        "D": "bólǎnhuì Xiānggǎng 第 21-25 题 算来我在英国留学已经半年了。因为在国内读的是师范大学，又曾辅导过外 国人学汉语，我打算 试着找个教汉语的差事。一天下课后，我兴致勃勃地跑到大 学的语言中心毛遂自荐，秘书小姐客气地 打发我道：“我们这儿已经有了汉语讲师——英国著名汉学家布莱恩·霍顿。”泄气之余我也牢牢地记住 了这位“抢走饭碗”的洋先生的名字。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 52,
+      "sourceQuestionNo": 20,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 202
+    },
+    {
+      "type": "SINGLE",
+      "content": "案例中的画线句有几个多音字? ( )",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 52,
+      "sourceQuestionNo": 21,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 203
+    },
+    {
+      "type": "SINGLE",
+      "content": "最适合教授成语“兴致勃勃”的方法是 ( )",
+      "options": {
+        "A": "用情境展示成语的用法",
+        "B": "用视频展示成语的来源",
+        "C": "用动作表现成语的含义",
+        "D": "用近义成语对比成语间的异同"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 52,
+      "sourceQuestionNo": 22,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 204
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个成语与“毛遂自荐”的结构不同? （ )",
+      "options": {
+        "A": "草船借箭",
+        "B": "塞翁失马",
+        "C": "狼狈为奸",
+        "D": "愚公移山"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 52,
+      "sourceQuestionNo": 23,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 205
+    },
+    {
+      "type": "SINGLE",
+      "content": "“记住”的构词法是： ( )",
+      "options": {
+        "A": "偏正",
+        "B": "述宾",
+        "C": "述补",
+        "D": "联合"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 52,
+      "sourceQuestionNo": 24,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 206
+    },
+    {
+      "type": "SINGLE",
+      "content": "“抢走饭碗”的比喻类型是： （ )",
+      "options": {
+        "A": "明喻",
+        "B": "暗喻",
+        "C": "借喻",
+        "D": "博喻 第 26-29 题 小爱：大山，从晚饭以后到现在，你一直在厨房里忙，忙什么呢! 大山：我在准备礼物呢。 小爱：准备礼物? 大山：对明天是我朋友的生月，我要做一个蛋糕送给她 小爱：你自己做? 大山：对，自己做的比较特别， 小爱：你对你朋友真是太好了! 大山：哪里哪里，我做得还很不够。 小爱：你的朋友是男生还是女生? 大山：女生。 小爱：那再送一束花也挺不错的。 大山：这个主意不错"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 52,
+      "sourceQuestionNo": 25,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 207
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据课文的难度，下列哪个词不适合作为本课的教学重点? ( )",
+      "options": {
+        "A": "做",
+        "B": "挺",
+        "C": "一 直",
+        "D": "特 别"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 52,
+      "sourceQuestionNo": 26,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 208
+    },
+    {
+      "type": "SINGLE",
+      "content": "文中加粗的字笔画相同的是 （ )",
+      "options": {
+        "A": "“里”的第五笔和“物”的第二笔",
+        "B": "“里”的第五笔和“物”的第三笔",
+        "C": "“物”的第三笔和“较”的第四笔",
+        "D": "“物”的第四笔和“较”的第三笔"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 53,
+      "sourceQuestionNo": 27,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 209
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列句子中“再”的语义与画线句相同的是： （ )",
+      "options": {
+        "A": "明天再学下一课。",
+        "B": "妈妈挥手说：“再见!”",
+        "C": "请您再说一遍，好吗?",
+        "D": "你去买瓶水，再买两支笔。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 53,
+      "sourceQuestionNo": 28,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 210
+    },
+    {
+      "type": "SINGLE",
+      "content": "学习这段材料时，教师还给学生介绍了中国人过生日的习俗，学生们都感到很新奇。由此可以判 断，学生们正处于跨文化交际过程中的哪个阶段? ( )",
+      "options": {
+        "A": "适应阶段",
+        "B": "蜜月阶段",
+        "C": "调整阶段",
+        "D": "挫折阶段 第 30-33 题 一位汉语教师为了帮助学生练习发音，编写了以下练习： ①péngyou piàoliang gàosu ②hétong wěiqu liángshi ③zǎocān zìcóng cúnzài zūncóng ④qíjì qiújiù qīngjìng jīngqí ⑤xiàoyuán xìngfú lùnwén quèshi"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 53,
+      "sourceQuestionNo": 29,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 211
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个教学环节不以纠音为教学重点? ( )",
+      "options": {
+        "A": "语音教学环节",
+        "B": "词汇教学环节",
+        "C": "语法教学环节",
+        "D": "课文朗读环节"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 53,
+      "sourceQuestionNo": 30,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 212
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于发音模仿，下列哪项说法正确? ( )",
+      "options": {
+        "A": "初级班老师不要模仿学生的错音，防止造成混乱",
+        "B": "个别模仿容易让学生产生抵触心理，所以不要采用",
+        "C": "模仿练习不适合学习两种语言中差别较大的音，要采用其他方法",
+        "D": "教师发现学生无法模仿正确发音时， 一定要反复纠正，直到准确模仿"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 53,
+      "sourceQuestionNo": 31,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 213
+    },
+    {
+      "type": "SINGLE",
+      "content": "对于第三组练习中的声母，最适合采用的练习方法是 （ )",
+      "options": {
+        "A": "咬舌法",
+        "B": "带音法",
+        "C": "翘舌法",
+        "D": "吹纸法"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 53,
+      "sourceQuestionNo": 32,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 214
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于每组练习，下列说法正确的是（ )",
+      "options": {
+        "A": "都有鼻音韵母",
+        "B": "都有合口呼韵母",
+        "C": "都有开口呼韵母",
+        "D": "都有撮口呼韵母 第 34-37 题 第二语言习得研究中有各种理论和假说，用来解释和说明语言习得的过程和 方法。兰道尔夫 (Lantolf) 就将维果茨基 (Lev Vygotsky) 的理论应用于第二语 言习得的研究中，提出了不同于以往 研究的新观点。研究也证明了在其学说指导 下的教学方法的确可以促进学习者习得的进程。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 53,
+      "sourceQuestionNo": 33,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 215
+    },
+    {
+      "type": "SINGLE",
+      "content": "兰道尔夫的“调节论”(mediation) 提出的儿童认知发展经历的三个阶段是（ )",
+      "options": {
+        "A": "他人调控——客观调控——自我调控",
+        "B": "他人调控——自我调控——客观调控",
+        "C": "客观调控——他人调控——自我调控",
+        "D": "客观调控——自我调控——他人调控"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 53,
+      "sourceQuestionNo": 34,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 216
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项是由兰道尔夫引入第二语言习得的理论?（ )",
+      "options": {
+        "A": "情感过滤假说",
+        "B": "社会文化理论",
+        "C": "多元发展模式",
+        "D": "文化适应模式"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 54,
+      "sourceQuestionNo": 35,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 217
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据维果茨基的理论，处于最近发展区的知识最容易被习得，在此基础上产生的教学法是（ )",
+      "options": {
+        "A": "自然法",
+        "B": "全身反应法",
+        "C": "任务教学法",
+        "D": "“支架”式教学法"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 54,
+      "sourceQuestionNo": 36,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 218
+    },
+    {
+      "type": "SINGLE",
+      "content": "“活动”在兰道尔夫的学说中是一个非常重要的概念，“活动”最为关键的要素是（ )",
+      "options": {
+        "A": "活动的主体",
+        "B": "行动的操作手段",
+        "C": "达到目标的行动",
+        "D": "活动的目标和动机 第 38-41 题 李老师想对留学生习得汉语的过程进行研究，因此，他收集了一位叫 Georg 的美国学生的材料。如： ① George 喜欢学习汉语 ， 课堂表现非常活跃 ， 很喜欢表达 。 刚开始学习汉语时候，因为 汉语水平有限，他在课堂上说出的话常常有各种各样的错误。 ② George 喜欢通过跟中国人聊天儿的方式学习汉语，所以来中国以后很快就交了很多中国朋友。 ③ (课堂上) George：我喜欢爬(bá)山 老 师：爬(bá)山? George：(笑)爬(pá)山。我喜欢爬(pá)山。 ④ George 现在遇到了问题。因为一直忽略汉字的学习，他的阅读水平慢慢落在了别的同学后面， 他的发音也有一些问题，他觉得自己的汉语水平已经停滞不前，这让他很着急，也让他在课堂上以及 跟中国朋友聊天儿的时候慢慢失去了自信。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 54,
+      "sourceQuestionNo": 37,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 219
+    },
+    {
+      "type": "SINGLE",
+      "content": "从 George 的表现看，他倾向于下列哪种学习风格? （ ）",
+      "options": {
+        "A": "审慎型",
+        "B": "冲动型",
+        "C": "场独立型",
+        "D": "场依存型"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 54,
+      "sourceQuestionNo": 38,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 220
+    },
+    {
+      "type": "SINGLE",
+      "content": "George 在学习过程中，常常在心里或者口头反复模仿老师或者其他中国人说的话，这种学习策略 是：（ ）",
+      "options": {
+        "A": "关联策略",
+        "B": "认知策略",
+        "C": "情感策略",
+        "D": "元认知策略"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 54,
+      "sourceQuestionNo": 39,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 221
+    },
+    {
+      "type": "SINGLE",
+      "content": "从 George 目前的情况来看，他处于下列哪种状态?（ ）",
+      "options": {
+        "A": "语言焦虑",
+        "B": "文化休克",
+        "C": "文化过滤",
+        "D": "语言僵化"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 54,
+      "sourceQuestionNo": 40,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 222
+    },
+    {
+      "type": "SINGLE",
+      "content": "李老师针对 George 习得汉语的情况写了研究论文，这种研究方法属于（ )",
+      "options": {
+        "A": "个案研究",
+        "B": "实验研究",
+        "C": "行动研究",
+        "D": "调查研究 第 42-45 题 请从 A-",
+        "E": "中选出与下面关于教学和编写教材的想法契合的假说，其中有一个多余选项。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 54,
+      "sourceQuestionNo": 41,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 223
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个话题不适合作为刘老师的教学内容? （ )",
+      "options": {
+        "A": "谈爱好",
+        "B": "聊天气",
+        "C": "谈信仰",
+        "D": "介绍家人"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 56,
+      "sourceQuestionNo": 51,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 224
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对上述材料提供的信息，刘老师应该 （ ）",
+      "options": {
+        "A": "设置相对较低的汉语课教学目标",
+        "B": "增加测试的频率，督促学生复习",
+        "C": "采用单一主题的教学活动，以免分散学生精力",
+        "D": "加快教学节奏，在短时间内强化学生的汉语水平"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 56,
+      "sourceQuestionNo": 52,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 225
+    },
+    {
+      "type": "SINGLE",
+      "content": "将材料中①-⑤按教学流程的先后顺序进行排序，哪种排序正确? （ ）",
+      "options": {
+        "A": "②③①⑤④",
+        "B": "③⑤①②④",
+        "C": "⑤②①③④",
+        "D": "⑤③②①④ 第 54-56 题 下面是“动物住在哪里”主题单元的教学目标，王老师据此设置了导入、讲解、应用、总结等教学环 节，并给学生布置了一篇作文—《我最喜欢的动物》。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 56,
+      "sourceQuestionNo": 53,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 226
+    },
+    {
+      "type": "SINGLE",
+      "content": "材料中的主题单元教学最适合哪类汉语学习者? （ )",
+      "options": {
+        "A": "3—5 岁",
+        "B": "8—10 岁",
+        "C": "13—15 岁",
+        "D": "18 岁以上"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 56,
+      "sourceQuestionNo": 54,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 227
+    },
+    {
+      "type": "SINGLE",
+      "content": "王老师在设计主题单元目标时，最重视培养学生的哪种策略? ( )",
+      "options": {
+        "A": "情感策略",
+        "B": "交际策略",
+        "C": "资源策略",
+        "D": "跨学科策略"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 56,
+      "sourceQuestionNo": 55,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 228
+    },
+    {
+      "type": "SINGLE",
+      "content": "王老师布置的作业最可能发展学生的哪种智能? ( )",
+      "options": {
+        "A": "内省智能",
+        "B": "空间智能",
+        "C": "逻辑数学智能",
+        "D": "人际关系智能"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 56,
+      "sourceQuestionNo": 56,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 229
+    },
+    {
+      "type": "SINGLE",
+      "content": "为更好地了解参与人员的汉语水平，适合填在文中横线处的考试类型是 ( )",
+      "options": {
+        "A": "HSK",
+        "B": "BCT",
+        "C": "YCT",
+        "D": "HSKK"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 57,
+      "sourceQuestionNo": 57,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 230
+    },
+    {
+      "type": "SINGLE",
+      "content": "为开发学生的多元智能，该活动计划将中华文化体验与数学课结合起来，下 列活动设计不合理的是（ )",
+      "options": {
+        "A": "用毛笔写数字",
+        "B": "用剪刀剪图形",
+        "C": "用算盘学计算",
+        "D": "踢毽子学计数"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 57,
+      "sourceQuestionNo": 58,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 231
+    },
+    {
+      "type": "SINGLE",
+      "content": "在中国民族舞蹈体验活动中，举办方计划教学生跳民族舞，下列音乐与舞蹈 搭配正确的是：（ ）",
+      "options": {
+        "A": "《 嘎达梅林》 藏族舞",
+        "B": "《 月光下的凤尾竹》 傣族舞",
+        "C": "《 在那遥远的地方》 蒙古族舞",
+        "D": "《 跑马溜溜的山上》 维吾尔族舞 第 60-63 题 安 娜：阿里，阿里! 阿 里：安娜! 安 娜：你一进门我就看见你了。来接人? 阿 里：是啊!我来接我妹妹。她坐下午的飞机来北京。你呢? 安 娜：我刚送我父母回国。 阿 里：你父母来北京了? 安 娜：对，他们在北京玩儿了一个星期，今天回国。你妹妹的航班几点到? 阿 里：应该是三点。奇怪，时间都过了，怎么飞机还没到?我去问问。 阿 里：(问服务员)请问，从泰国来的飞机到了吗? 服务员：我查一下，还没到。这趟航班晚点了半个小时。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 57,
+      "sourceQuestionNo": 59,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 232
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最适合作为讲解画线句中语法项的例句? （ )",
+      "options": {
+        "A": "我一下课就回宿舍了。",
+        "B": "老师一说我就明白了。",
+        "C": "他们一毕业就结婚了。",
+        "D": "我一喝咖啡就睡不着觉。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 57,
+      "sourceQuestionNo": 60,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 233
+    },
+    {
+      "type": "SINGLE",
+      "content": "如果想训练学生成段表达的能力，下列哪种操练方法最合适? （ )",
+      "options": {
+        "A": "根据课文填空",
+        "B": "自编情景对话",
+        "C": "分角色表演课文",
+        "D": "变换角色复述课文"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 57,
+      "sourceQuestionNo": 61,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 234
+    },
+    {
+      "type": "SINGLE",
+      "content": "教学生写汉字“航”时，最恰当的教学方法是（ ）",
+      "options": {
+        "A": "带领学生反复书写，熟能生巧",
+        "B": "介绍“航”的古义，加深学生印象",
+        "C": "先拆分“航”的笔画笔顺，再练习整字",
+        "D": "先分析“航”的结构，练习部件，再练习整字"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 58,
+      "sourceQuestionNo": 62,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 235
+    },
+    {
+      "type": "SINGLE",
+      "content": "在课文串讲环节，教师会针对课文提出一些展示性问题，如“阿里为什么去机场?”“阿里在飞机场看 到了谁?”等等，这种提问方式与下列哪项不同? （ )",
+      "options": {
+        "A": "阿里和安娜是什么关系?",
+        "B": "阿里为什么还没接到妹妹?",
+        "C": "安娜的父母在北京待了多长时间?",
+        "D": "阿里的妹妹搭乘的航班可能几点到? 第 64-68 题 八达岭长城是北京最著名的长城，也是开放最早的一段长城，它位于北京延庆县。八达岭长城城 墙全长 3741 米，高大坚固(firm)，随着山峰高低起伏，十分雄伟(grand)。 去八达岭长城游览，最便宜的方式是先乘坐地铁或者公交车到德胜门下车，再换乘 919 路公交车， 直达八达岭长城脚下。快车每人 10 元，普通车每人 5 元(也走高速路)，两种车都是 5 分钟发一辆。 如果你是早上六点出发，下午一两点当你从长城回来时，可能会看到早上九 点出发的旅游车还在 去往八达岭的高速公路上跑呢。 注意：去八达岭长城方向有很多车，建议你到德胜门门楼下的停车场上车。这里是 919 路的起点 站，在这里上车，一定有座位。 根据课文填空 ①八达岭长城的城墙一共___米 。 ②去八达岭长城的快车___元 。 ③去八达岭长城的车发车间隔时间是___分钟 。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 58,
+      "sourceQuestionNo": 63,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 236
+    },
+    {
+      "type": "SINGLE",
+      "content": "在阅读课上，“直达”这类生词最好的讲解方法是（ ）",
+      "options": {
+        "A": "设置情境解释语义",
+        "B": "利用学生母语进行翻译",
+        "C": "让学生根据语素推测词义",
+        "D": "利用形象展示的方式进行讲解"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 58,
+      "sourceQuestionNo": 64,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 237
+    },
+    {
+      "type": "SINGLE",
+      "content": "上述材料最适合哪种阅读训练方式? （ ）",
+      "options": {
+        "A": "细读",
+        "B": "查读",
+        "C": "通读",
+        "D": "略读"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 58,
+      "sourceQuestionNo": 65,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 238
+    },
+    {
+      "type": "SINGLE",
+      "content": "在阅读课文之前，教师问学生“大家去过长城吗?”“提到长城会想到哪些词语?”，这样做的目的是： （ ）",
+      "options": {
+        "A": "引导学生展开讨论",
+        "B": "学习本课相关生词",
+        "C": "复习以前学过的生词",
+        "D": "帮助学生建立相关图式"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 58,
+      "sourceQuestionNo": 66,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 239
+    },
+    {
+      "type": "SINGLE",
+      "content": "在进行阅读的过程中，有的学生喜欢先了解字词的含义，进而了解句子和文章的内容，这种阅读 模式属于（ ）",
+      "options": {
+        "A": "交互式阅读模式",
+        "B": "分析型阅读模式",
+        "C": "自上而下的阅读模式",
+        "D": "自下而上的阅读模式"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 58,
+      "sourceQuestionNo": 67,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 240
+    },
+    {
+      "type": "SINGLE",
+      "content": "上述材料中的填空题主要考查学生的什么能力? （ ）",
+      "options": {
+        "A": "关注细节",
+        "B": "总结概括",
+        "C": "辨别相似信息",
+        "D": "根据上下文推测词义 第 69-72 题 李老师去海外的一所小学教汉语。她了解到学生之前学过一个月汉语。第一堂课，李老师先利用 一个有趣的视频让学生观看中国者名的景点，如万里长城、 天安门等，之后让学生交流一下对中国的 印象 。 接下来李老师开始自我介绍，借助 PPT 和图片来展示自己的名字及爱好。 然后李老师将事先准 备好的学生名字和兴趣标签分别贴到黑板上，对学生进行分组，组内成员通过询问“你叫什么名字?”“你 的爱好是什么?”来找出各自的答案。再让小组间互相询问，得出答案。最后用事先制作好的贴有学生 名字和兴趣标签的魔方来检验学生的学习效果。学生们玩儿得很高兴。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 59,
+      "sourceQuestionNo": 68,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 241
+    },
+    {
+      "type": "SINGLE",
+      "content": "在检验学生的学习效果后，李老师最可能做的是什么? （ ）",
+      "options": {
+        "A": "课堂小结",
+        "B": "布置作业",
+        "C": "活动评价",
+        "D": "复习巩固"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 59,
+      "sourceQuestionNo": 69,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 242
+    },
+    {
+      "type": "SINGLE",
+      "content": "李老师想要在活动中纠正学生的语音偏误，最可能采用下列哪种方式? （ ）",
+      "options": {
+        "A": "重复法",
+        "B": "重述法",
+        "C": "明确纠正法",
+        "D": "元语言提示法"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 59,
+      "sourceQuestionNo": 70,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 243
+    },
+    {
+      "type": "SINGLE",
+      "content": "在活动过程中，有一组学生提前完成了任务便开始聊天儿，这时李老师最好的做法是（ ）",
+      "options": {
+        "A": "倾听学生聊什么，并适时加入",
+        "B": "让学生两人一组互相检查汉语错误",
+        "C": "制止学生聊天儿，让他们倾听其他组的交流",
+        "D": "给学生布置难度高一些的任务，使其重新投入活动"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 59,
+      "sourceQuestionNo": 71,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 244
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项不是李老师这堂汉语课的任务? （ ）",
+      "options": {
+        "A": "增进师生之间的了解和沟通",
+        "B": "减少学生学习汉语的畏难情绪",
+        "C": "增强学生对中国和中国文化的亲近感",
+        "D": "以“你好”为例，教授三声变调的规则 第 73-75 题 下面是几个操练相近词语的课堂活动，请从 A-",
+        "E": "中选出每个活动对应的操练内容，其中有两个多 余选项。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 59,
+      "sourceQuestionNo": 72,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 245
+    },
+    {
+      "type": "SINGLE",
+      "content": "上述课堂活动应在学生学习该语法点的哪个阶段实施?（ ）",
+      "options": {
+        "A": "模仿",
+        "B": "理解",
+        "C": "记忆",
+        "D": "活用"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 60,
+      "sourceQuestionNo": 76,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 246
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项不是实施本次活动的关键因素?（ ）",
+      "options": {
+        "A": "班额",
+        "B": "年龄",
+        "C": "文化背景",
+        "D": "汉语水平"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 60,
+      "sourceQuestionNo": 77,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 247
+    },
+    {
+      "type": "SINGLE",
+      "content": "“我明天买回来一斤苹果”中的趋向补语使用有误，下列哪项解释正确?（ ）",
+      "options": {
+        "A": "复合趋向补语“回来”一般只用作中宾式，不用作后宾式",
+        "B": "动词+复合趋向补语+受事宾语，一般只表示已经发生的情况",
+        "C": "复合趋向补语“回来”后的宾语必须是有定的，不能是无定的",
+        "D": "从语义上来看，能与“回来”共现的动词应是位移动词，而“买”不是位移动词 第 79-81 题 小王老师是某高校的一名新手教师，这个学期负责教中级班的口语课和初级班的听力课。上课之 前，有经验的教师提醒他，技能课最重要的是课型突出。下面是小王老师为突出课型特点所做的努力 及遇到的问题，请从 A-"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 60,
+      "sourceQuestionNo": 78,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 248
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据学生作业与范文的对比，该生最应该弥补哪方面的知识? （ ）",
+      "options": {
+        "A": "“了”的用法",
+        "B": "写作的文体知识",
+        "C": "篇章的结构安排",
+        "D": "篇章中代词的省略"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 61,
+      "sourceQuestionNo": 82,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 249
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列关于写作教学反馈的观点不正确的是（ ）",
+      "options": {
+        "A": "可以挑出典型性偏误，让大家共同修改",
+        "B": "因为是写作课，不应该修改学生的语法偏误",
+        "C": "为及时向学生反馈，教师应在课堂上完成批改",
+        "D": "通过合作学习的方式，让学生互相修改作文后再交给教师"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 61,
+      "sourceQuestionNo": 83,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 250
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪句中的“了”与材料二画线句句尾的“了”用法一致?（ ）",
+      "options": {
+        "A": "我已经吃完了。",
+        "B": "我等她 3 个小时了。",
+        "C": "大卫越来越瘦了。",
+        "D": "我在北京只住了半个月。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 61,
+      "sourceQuestionNo": 84,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 251
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪种做法属于任务型写作?（ ）",
+      "options": {
+        "A": "给学生布置命题作文《介绍我自己》",
+        "B": "要求学生按照准备、起草、修改三个阶段进行写作",
+        "C": "为学生提供句型和篇章结构，要求学生写自我介绍",
+        "D": "让学生分组讨论写作思路，汇报讨论结果并进行写作 第 86-88 题 白老师和于老师同在韩国一所外语高中担任初级汉语课教师，所教初级"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 61,
+      "sourceQuestionNo": 85,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 252
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据测试的目的，材料中进行的测试属于下列哪种类型?（ ）",
+      "options": {
+        "A": "学能测试",
+        "B": "水平测试",
+        "C": "成绩测试",
+        "D": "分级测试"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 62,
+      "sourceQuestionNo": 86,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 253
+    },
+    {
+      "type": "SINGLE",
+      "content": "材料中命制的试卷题型，下列哪项排序最为合理?（ ）",
+      "options": {
+        "A": "⑤③④②①",
+        "B": "④⑤②①③",
+        "C": "⑤④②③①",
+        "D": "④⑤③①②"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 62,
+      "sourceQuestionNo": 87,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 254
+    },
+    {
+      "type": "SINGLE",
+      "content": "为比较两个班学生的总体水平和教学效果，在进行成绩分析时，使用下列哪个参数最能体现两个 班的差距? （ ）",
+      "options": {
+        "A": "众数",
+        "B": "全距",
+        "C": "中位数",
+        "D": "平均数 第 89-92 题 张老师是海外某大学的新手教师，下面是他为期末考试命制的一套试题。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 62,
+      "sourceQuestionNo": 88,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 255
+    },
+    {
+      "type": "SINGLE",
+      "content": "该试卷第三部分“反义词连线”的题目存在什么问题? （ ）",
+      "options": {
+        "A": "答案不具唯一性",
+        "B": "题目要求不明确",
+        "C": "违背了从易到难的原则",
+        "D": "部分内容与题干要求不符"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 62,
+      "sourceQuestionNo": 89,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 256
+    },
+    {
+      "type": "SINGLE",
+      "content": "如何完善“四、完形填空”的命题? （ ）",
+      "options": {
+        "A": "增加段落字数",
+        "B": "分散考点的位置",
+        "C": "丰富考查的语言点",
+        "D": "增强选项的迷惑性"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 62,
+      "sourceQuestionNo": 90,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 257
+    },
+    {
+      "type": "SINGLE",
+      "content": "学生在作文《中文课，你可以更好!》中普遍提到“希望课堂上有更多的交流互动”。张老师打算用行 动研究的方法来解决这个问题。根据行动研究的一般流程，他应该（ ）",
+      "options": {
+        "A": "录制教学视频并分析—与示范课进行对比一改善教学—撰写论文",
+        "B": "学生座谈—同行听课—请教专家—制订教学方案并试行—撰写论文",
+        "C": "明确问题—阅读文献—制订方案并试行—修正方案并实施—写报告总结",
+        "D": "阅读文献一问卷调查—数据分析—设计新教学方案并实施—写报告总结"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 63,
+      "sourceQuestionNo": 91,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 258
+    },
+    {
+      "type": "SINGLE",
+      "content": "考完后，有一个学生找到张老师，他认为自己的分数不应该比另一个同学低，希望查看两人的试 卷，张老师应（ ）",
+      "options": {
+        "A": "同意其要求并说明评分依据",
+        "B": "拒绝把试卷给学生看并解释原因",
+        "C": "把试卷、评分标准和答案给他看",
+        "D": "询问教学主管后再决定是否给他看 第 93-96 题 张军：爬山可真累啊! 马克：可不是！这山有多高啊? 张军：小伙子，你是第一次爬泰山吧，泰山有 1500 多米高呢！ 马克：这么高！中国的高山真多啊！ 张军：我们搭伴儿一起爬吧！你在哪儿工作? 马克：我还在读书呢。 张军：来中国多久了? 马克：差不多快两年了。 张军：结婚了吗? 马克：先生，您累不累?我又热又累，咱们歇一会儿，喝点儿水吧。 张军：好吧，差不多爬了一半了，休息一下。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 63,
+      "sourceQuestionNo": 92,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 259
+    },
+    {
+      "type": "SINGLE",
+      "content": "画线句在文中的作用是（ ）",
+      "options": {
+        "A": "嘘寒问暖",
+        "B": "表示关心",
+        "C": "转移话题",
+        "D": "相互对比"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 63,
+      "sourceQuestionNo": 93,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 260
+    },
+    {
+      "type": "SINGLE",
+      "content": "下面哪项描写的是课文中提到的山?（ ）",
+      "options": {
+        "A": "谁将倚天剑，削出倚天峰。",
+        "B": "会当凌绝顶， 一览众山小。",
+        "C": "更有峭壁悬空寺，千古一绝传九州。",
+        "D": "书院古柏武帝封，少林禅院少林功。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 63,
+      "sourceQuestionNo": 94,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 261
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最适合做这篇课文的口语拓展练习?（ ）",
+      "options": {
+        "A": "谈工作和生活",
+        "B": "介绍中国名山",
+        "C": "介绍一个朋友",
+        "D": "介绍旅游经历"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 63,
+      "sourceQuestionNo": 95,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 262
+    },
+    {
+      "type": "SINGLE",
+      "content": "如果针对这篇课文设计文化教学拓展训练，下列哪种方式最合适?（ ）",
+      "options": {
+        "A": "请学生对比分析中外婚姻习俗的不同",
+        "B": "讨论登山的方式，并组织学生户外登山活动",
+        "C": "以“风景区开发 VS 保护环境”为题组织课堂辩论",
+        "D": "用 PPT 介绍中国的名山并让学生介绍自己国家的名山"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 63,
+      "sourceQuestionNo": 96,
+      "sourceSetIndex": 4,
+      "sourceYear": "",
+      "sourceSetTitle": "70 面对这种情况，如果你是文同兴，请你给出最为合适的选择： A. 既然是负责人提出的要求，自己必须坚决执行。 B. 向领导提出自己的担心，建议先完成主要岗位的",
+      "sortOrder": 263
+    },
+    {
+      "type": "SINGLE",
+      "content": "句①属于：（ ）",
+      "options": {
+        "A": "陈述句",
+        "B": "祈使句",
+        "C": "反问句",
+        "D": "特殊疑问句"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 73,
+      "sourceQuestionNo": 1,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 264
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个问题不能引导学生练习主谓谓语句? （ ）",
+      "options": {
+        "A": "昆明天气怎么样?",
+        "B": "你朋友个子高吗?",
+        "C": "他的篮球打得怎么样?",
+        "D": "这个大学留学生多不多?"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 73,
+      "sourceQuestionNo": 2,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 265
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于“我学了 3 年汉语”与句②的语义区别，下列哪种说法正确?（ ）",
+      "options": {
+        "A": "前者的意思是“我”学过 3 年汉语。后者的意思是“我”学了 3 年汉语，现在还在学。",
+        "B": "前者的意思是“我”学过 3 年汉语。后者的意思是“我”学了 3 年汉语，以后不学了。",
+        "C": "前者的意思是“我”学过 3 年汉语，现在还在学。后者的意思是“我”学过 3 年汉语，现在不学了。",
+        "D": "前者的意思是“我”学过 3 年汉语，以后还想学。后者的意思是“我”学了 3 年汉语，现在还想学。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 73,
+      "sourceQuestionNo": 3,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 266
+    },
+    {
+      "type": "SINGLE",
+      "content": "“模样”一词拼音的正确写法是（ ）",
+      "options": {
+        "A": "móyàng",
+        "B": "móyang",
+        "C": "múyàng",
+        "D": "muóyang"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 73,
+      "sourceQuestionNo": 4,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 267
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项活动最适合用于练习句③中的“的”字结构?（ ）",
+      "options": {
+        "A": "“采访”：学生采访同班同学，了解个人信息",
+        "B": "“做计划”：学生分组制订旅行计划，小组代表做班级汇报",
+        "C": "“画图”：老师描述一种物品，要求学生在纸上画下来，看谁画得对",
+        "D": "“猜词”：学生通过问物品的用途或类属，猜测老师手中图片上的物品 第 6-9 题"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 73,
+      "sourceQuestionNo": 5,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 268
+    },
+    {
+      "type": "SINGLE",
+      "content": "从汉字发展演变的过程来看，第二个汉字属于（ ）",
+      "options": {
+        "A": "甲骨文",
+        "B": "金文",
+        "C": "小篆",
+        "D": "隶书"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 73,
+      "sourceQuestionNo": 6,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 269
+    },
+    {
+      "type": "SINGLE",
+      "content": "“身修而后家齐，家齐而后国治，国治而后天下平”出自中国哪部古代经典?（ ）",
+      "options": {
+        "A": "《中庸》",
+        "B": "《论语》",
+        "C": "《孟子》",
+        "D": "《 大学》"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 73,
+      "sourceQuestionNo": 7,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 270
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项有错别字?（ ）",
+      "options": {
+        "A": "家徙四壁",
+        "B": "家喻户晓",
+        "C": "机杼一家",
+        "D": "罢黜百家"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 73,
+      "sourceQuestionNo": 8,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 271
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪组字分别与“明”和“时”的造字法一致?（ ）",
+      "options": {
+        "A": "行 腾",
+        "B": "衣 切",
+        "C": "肌 洒",
+        "D": "取 背"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 74,
+      "sourceQuestionNo": 10,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 272
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪组词分别与“青天”和“宫阙”的词语内部结构关系一致?（ ）",
+      "options": {
+        "A": "车辆 云海",
+        "B": "雪亮 本末",
+        "C": "胭脂 马虎",
+        "D": "黑手 游子"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 74,
+      "sourceQuestionNo": 11,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 273
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列短语中的“把”与“把酒问青天”中的“把”词性一致的是（ ）",
+      "options": {
+        "A": "拉他一把",
+        "B": "把衣服洗洗",
+        "C": "把大门的师傅",
+        "D": "拜把子的关系"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 74,
+      "sourceQuestionNo": 12,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 274
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪句诗词与中秋节有关? ( )",
+      "options": {
+        "A": "满月飞明镜，归心折大刀。",
+        "B": "薄雾浓云愁永昼，瑞脑消金兽。",
+        "C": "千门万户瞳疃日，总把新桃换旧符。",
+        "D": "谁家见月能闲坐? 何处闻灯不看来? 第 14-16 题 杨经理：您早上一般几点起床? 袁老师：①我每天五点多就起来了。 杨经理：为什么起这么早呢?冬天的时候五点多天还没亮呢， 袁老师：因为早上我打太极拳要打一个多小时。打完太极拳，还要去市场买菜 杨经理：您每天都打太极拳吗?打了多长时间了? 袁老师：②我每天早上都打一个多小时太极拳，已经坚持好几年了。 杨经理：您觉得效果怎么样? 袁老师：挺好的!打太极拳坚持才有效果，不能“三天打鱼，两天晒网”。③快和我一起练起来吧! 杨经理：好嘞!"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 74,
+      "sourceQuestionNo": 13,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 275
+    },
+    {
+      "type": "SINGLE",
+      "content": "本课的重点语法最可能是（ ）",
+      "options": {
+        "A": "离合词",
+        "B": "时量补语",
+        "C": "副词“已经”",
+        "D": "时点表示法"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 75,
+      "sourceQuestionNo": 14,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 276
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于句①和句③中的“起来”,下列说法正确的是（ ）",
+      "options": {
+        "A": "所充当的句子成分、读音和意义都不相同",
+        "B": "所充当的句子成分和读音不同，意义相同",
+        "C": "所充当的句子成分相同，读音和意义不同",
+        "D": "所充当的句子成分不同，读音和意义相同"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 75,
+      "sourceQuestionNo": 15,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 277
+    },
+    {
+      "type": "SINGLE",
+      "content": "讲练句②时，下列哪项最适合作为例句?（ ）",
+      "options": {
+        "A": "我来中国一年多了，会说一些汉语了。",
+        "B": "她逛了一下午商店，最后什么也没买。",
+        "C": "我们在门口等了你十多分钟，你也没来。",
+        "D": "那个问题他们讨论两个多小时了，还没结果。 第 17-20 题 张 华：喂，阿姨好!我是张华。小艳回来了吗? 于阿姨：还没有。她今天加班。 张 华：怪不得刚才我给她打电话没打通。 于阿姨：她可能在开会。你找她有事? 张 华：她回来以后，麻烦您转告她一下，辅导老师我帮她找好了. 于阿姨：好的，谢谢你! 张 华：对了，我换手机了，新的号码是 18607933258。 于阿姨：对不起，没听清楚，你说慢点儿。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 75,
+      "sourceQuestionNo": 16,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 278
+    },
+    {
+      "type": "SINGLE",
+      "content": "这篇课文的重点语法是（ ）",
+      "options": {
+        "A": "结果补语",
+        "B": "“是”字句",
+        "C": "介词结构作状语",
+        "D": "助词“的”的用法"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 75,
+      "sourceQuestionNo": 17,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 279
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列词语中，学生最可能混淆的是（ ）",
+      "options": {
+        "A": "“刚才”与“刚”",
+        "B": "“慢”与“缓慢”",
+        "C": "“可能”与“或许”",
+        "D": "“清楚”与“清晰”"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 75,
+      "sourceQuestionNo": 18,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 280
+    },
+    {
+      "type": "SINGLE",
+      "content": "这篇课文中包含几个离合词?（ ）",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 75,
+      "sourceQuestionNo": 19,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 281
+    },
+    {
+      "type": "SINGLE",
+      "content": "这篇课文最适合的教学对象是掌握多少常用词的学生?（ ）",
+      "options": {
+        "A": "300 个左右",
+        "B": "800 个左右",
+        "C": "1500 个左右",
+        "D": "2000 个以上 第 21-24 题 下面是一篇口语课的练习材料。 《绿茶》是一部根据小说改编的电影。电影的导演是张元，男女主角分别是著名影星姜文和赵薇。 有的观众觉得这部电影一点儿也不吸引人，有的观众却觉得看这部电影好像品尝一杯绿茶，越品越有 味道。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 75,
+      "sourceQuestionNo": 20,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 282
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪组词需重点讲练?（ ）",
+      "options": {
+        "A": "根据 却 好像",
+        "B": "改编 却 品尝",
+        "C": "分别 著名 观众",
+        "D": "主角 吸引 味道"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 75,
+      "sourceQuestionNo": 21,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 283
+    },
+    {
+      "type": "SINGLE",
+      "content": "文中的“好像”是什么词性?（ ）",
+      "options": {
+        "A": "副词",
+        "B": "动词",
+        "C": "介词",
+        "D": "形容词"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 76,
+      "sourceQuestionNo": 22,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 284
+    },
+    {
+      "type": "SINGLE",
+      "content": "文中的“品尝”与“品”的差异主要体现在哪方面?（ ）",
+      "options": {
+        "A": "语体",
+        "B": "词性",
+        "C": "情感色彩",
+        "D": "搭配对象"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 76,
+      "sourceQuestionNo": 23,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 285
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最适合作为这段材料的交际性练习?（ ）",
+      "options": {
+        "A": "用本课生词进行口头造句",
+        "B": "模仿课文结构，介绍一部电影",
+        "C": "课后看《绿茶》并写一篇观后感",
+        "D": "查阅文中导演与演员的信息并介绍给大家 第 25-30 题 下面是《中国地方菜》一课的课后词语辨析题。 ①中国菜是由各个地区( )具特色的菜系组成的。(颇 很) ②她是四川人，饮食上( )辣。(好 太) ③淮扬菜( )刀工闻名。(以 于) ④沪菜( )上海菜。(既 即) ⑤川菜起源( )中国古代的巴国和蜀国。(在 于)"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 76,
+      "sourceQuestionNo": 24,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 286
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中的“好”与第②题中的“好辣”语义一致?（ ）",
+      "options": {
+        "A": "好久",
+        "B": "好看",
+        "C": "好香",
+        "D": "好胜"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 76,
+      "sourceQuestionNo": 25,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 287
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中的“以”与第③题中的“以”意义一致?（ ）",
+      "options": {
+        "A": "物以类聚",
+        "B": "以人废言",
+        "C": "以少胜多",
+        "D": "三十以内"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 76,
+      "sourceQuestionNo": 26,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 288
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列词语的拼音中，没有介音(韵头)的是（ ）",
+      "options": {
+        "A": "出名",
+        "B": "淮阳",
+        "C": "川菜",
+        "D": "起源"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 76,
+      "sourceQuestionNo": 27,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 289
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于“即”和“既”的读音和用法，下列哪项正确?（ ）",
+      "options": {
+        "A": "非此既彼(既 jì)",
+        "B": "一触即发(即 jí)",
+        "C": "即往不咎(即 jì)",
+        "D": "既景生情(既 jí)"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 76,
+      "sourceQuestionNo": 28,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 290
+    },
+    {
+      "type": "SINGLE",
+      "content": "中国饮食文化中传统的“四大菜系”，通常是指（ ）",
+      "options": {
+        "A": "鲁菜、粤菜、川菜、湘菜",
+        "B": "鲁菜、粤菜、晋菜、闽菜",
+        "C": "鲁菜、粤菜、川菜、淮扬菜",
+        "D": "川菜、浙菜、徽菜、淮扬菜"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 76,
+      "sourceQuestionNo": 29,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 291
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对上述练习中的“于”,下列哪项教学内容不恰当?（ ）",
+      "options": {
+        "A": "分析介词“于”的使用条件",
+        "B": "将“于”和“於”进行对比探源",
+        "C": "将“于”和“在”进行对比分析",
+        "D": "讲清介词“于”使用的语体特征 第 31-37 题 杨老师在美国的一所中学教汉语，她班里有十五六个学生。以下是她设计的 《认识十二生肖》这 节课的主要教学过程。 第一环节 趣味导入 通过“你家养了什么动物?”“你最喜欢什么动物?”“你为什么喜欢它?”等问题引起学生对动物主题的 兴趣，接着引出问题：“你知道中国的十二生肖吗?”"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 76,
+      "sourceQuestionNo": 30,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 292
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中的两个字属于同一种造字法，并且都可以作为汉字部首?（ ）",
+      "options": {
+        "A": "兔 牛",
+        "B": "鼠 兔",
+        "C": "鼠 虎",
+        "D": "虎 蛇"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 77,
+      "sourceQuestionNo": 31,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 293
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪组字的声母发音成阻方法相同?（ ）",
+      "options": {
+        "A": "鼠 猴",
+        "B": "马 龙",
+        "C": "虎 兔",
+        "D": "蛇 猪"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 77,
+      "sourceQuestionNo": 32,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 294
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项与“属相”属于同类音变现象?（ ）",
+      "options": {
+        "A": "花儿",
+        "B": "不去",
+        "C": "客气",
+        "D": "老虎"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 77,
+      "sourceQuestionNo": 33,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 295
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列各句中的“属”与“属相”中的“属”读音相同的是：（ ）",
+      "options": {
+        "A": "属予作文以记之。 —《岳阳楼记》",
+        "B": "亡国破家相随属。 —《史记·屈原贾生列传》",
+        "C": "项王渡淮，骑能属者百余人耳。 —《史记·项羽本纪》",
+        "D": "土地平旷，屋舍俨然，有良田美池桑竹之属。 —《桃花源记》"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 77,
+      "sourceQuestionNo": 34,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 296
+    },
+    {
+      "type": "SINGLE",
+      "content": "如果本节课为 50 分钟，第四环节多长时间比较适宜?（ ）",
+      "options": {
+        "A": "3—5 分钟",
+        "B": "6—10 分钟",
+        "C": "11—15 分钟",
+        "D": "20—25 分钟"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 77,
+      "sourceQuestionNo": 35,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 297
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最适合作为本课的作业?（ ）",
+      "options": {
+        "A": "参观动物园",
+        "B": "制作动物玩偶",
+        "C": "介绍自己的宠物",
+        "D": "调查家人、朋友的生肖"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 77,
+      "sourceQuestionNo": 36,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 298
+    },
+    {
+      "type": "SINGLE",
+      "content": "杨老师组织了多种活动和游戏来辅助教学，下列哪项说法正确?（ ）",
+      "options": {
+        "A": "每项活动都要求所有学生参加，保证公平性",
+        "B": "主要通过示范法来展示活动规则，演示具体步骤",
+        "C": "为提高学生的学习热情和兴趣，课堂活动多多益善",
+        "D": "为使学生快速进入活动，节省时间，不必经常更新课堂活动 第 38-42 题 李老师在研究汉语口语课的课堂互动时，分别对王老师、吕老师进行了访谈，下面是访谈内容片段： 片段一 李老师：对你来说，上好口语课最难的是什么? 王老师：学生的开口率问题。怎样找到一个问题，让他们愿意说。比如说最开始的时候，为了练"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 77,
+      "sourceQuestionNo": 37,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 299
+    },
+    {
+      "type": "SINGLE",
+      "content": "片段一中提到的课堂活动运用了下列哪种教学方法?（ ）",
+      "options": {
+        "A": "情景教学法",
+        "B": "交际教学法",
+        "C": "合作学习法",
+        "D": "任务教学法"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 78,
+      "sourceQuestionNo": 38,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 300
+    }
+  ]
+}

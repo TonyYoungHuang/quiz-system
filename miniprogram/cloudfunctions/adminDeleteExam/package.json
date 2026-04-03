@@ -1,7 +1,6 @@
 {
   "name": "adminDeleteExam",
   "version": "1.0.0",
-  "description": "鍒犻櫎绉戠洰浜戝嚱鏁?,
   "main": "index.js",
   "dependencies": {
     "wx-server-sdk": "~2.6.3"

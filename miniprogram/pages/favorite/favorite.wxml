@@ -1,0 +1,56 @@
+<view class="container">
+  <view wx:if="{{favorites.length === 0}}" class="empty-state">
+    <text class="empty-title">{{ui.emptyTitle}}</text>
+    <text class="empty-desc">{{ui.emptyDesc}}</text>
+  </view>
+
+  <view wx:else class="favorite-list">
+    <view
+      wx:for="{{favorites}}"
+      wx:key="_id"
+      wx:for-item="exam"
+      class="favorite-card"
+      bindtap="onStartFavorite"
+      data-exam-id="{{exam._id}}"
+      data-exam-name="{{exam.name}}"
+    >
+      <view class="favorite-main">
+        <view class="favorite-name">{{exam.name}}</view>
+        <view class="favorite-meta">{{exam.category}}</view>
+      </view>
+      <view class="favorite-side">
+        <view class="favorite-count">{{exam.favoriteCount}}{{ui.countSuffix}}</view>
+        <view class="favorite-action">{{ui.start}}</view>
+      </view>
+
+      <view class="favorite-questions">
+        <view class="favorite-question-title">{{ui.questionTitle}}</view>
+        <view
+          wx:for="{{exam.favoriteQuestions}}"
+          wx:key="questionId"
+          wx:for-item="question"
+          wx:for-index="questionIndex"
+          class="favorite-question-row"
+        >
+          <view
+            class="favorite-question-item"
+            bindtap="onOpenFavoriteQuestion"
+            data-exam-id="{{exam._id}}"
+            data-exam-name="{{exam.name}}"
+            data-question-id="{{question.questionId}}"
+          >
+            {{questionIndex + 1}}. {{question.content}}
+          </view>
+          <view
+            class="favorite-remove"
+            catchtap="onRemoveFavorite"
+            data-exam-id="{{exam._id}}"
+            data-question-id="{{question.questionId}}"
+          >
+            {{ui.remove}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

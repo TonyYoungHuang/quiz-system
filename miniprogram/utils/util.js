@@ -29,17 +29,17 @@ function throttle(fn, delay = 300) {
 }
 
 const questionTypeMap = {
-  'SINGLE': '???',
-  'MULTI': '???',
-  'JUDGE': '???',
-  'BLANK': '???',
-  'SHORT': '???',
-  'CASE': '???',
-  'CALC': '???'
+  'SINGLE': '\u5355\u9009\u9898',
+  'MULTI': '\u591a\u9009\u9898',
+  'JUDGE': '\u5224\u65ad\u9898',
+  'BLANK': '\u586b\u7a7a\u9898',
+  'SHORT': '\u7b80\u7b54\u9898',
+  'CASE': '\u6750\u6599\u9898',
+  'CALC': '\u8ba1\u7b97\u9898'
 };
 
 function getQuestionTypeName(type) {
-  return questionTypeMap[type] || '????';
+  return questionTypeMap[type] || '\u672a\u77e5\u9898\u578b';
 }
 
 function getQuestionTypeColor(type) {
@@ -55,7 +55,7 @@ function getQuestionTypeColor(type) {
   return colorMap[type] || '#999';
 }
 
-function showLoading(title = '???...') {
+function showLoading(title = '\u52a0\u8f7d\u4e2d...') {
   wx.showLoading({ title, mask: true });
 }
 
@@ -71,7 +71,7 @@ function showError(title, duration = 2000) {
   wx.showToast({ title, icon: 'none', duration });
 }
 
-function showConfirm(content, title = '??') {
+function showConfirm(content, title = '\u63d0\u793a') {
   return new Promise(resolve => {
     wx.showModal({
       title,

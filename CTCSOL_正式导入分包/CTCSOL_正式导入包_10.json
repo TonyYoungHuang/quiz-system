@@ -1,0 +1,1813 @@
+{
+  "meta": {
+    "sourcePdf": "C:\\Users\\Administrator\\Desktop\\历年CTCSOL笔试真题集（2014-2025年）2025.2.1.pdf",
+    "generatedAt": "2026-04-01T12:31:28",
+    "packageIndex": 10,
+    "packageCount": 11,
+    "questionCount": 100,
+    "sortOrderStart": 901,
+    "sortOrderEnd": 1000,
+    "importModeSuggestion": "追加导入"
+  },
+  "questions": [
+    {
+      "type": "SINGLE",
+      "content": "第三题的题型最适合考察哪类语言点？（ ）",
+      "options": {
+        "A": "实词功能",
+        "B": "虚词语序",
+        "C": "语义范畴",
+        "D": "语法结构。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 250,
+      "sourceQuestionNo": 86,
+      "sourceSetIndex": 13,
+      "sourceYear": "",
+      "sourceSetTitle": "250 98. 下列哪项最有可能是标准化阅读测试中“找到主旨”类测试题的题干？（ ） A. 那个人发现了什么？ B.下列哪项说法正确？ C. 作者支持下列哪种观",
+      "sortOrder": 901
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项是第四题的测试点（ ）",
+      "options": {
+        "A": "词语衔接",
+        "B": "句际衔接",
+        "C": "复句类型",
+        "D": "语篇结构 第 88-90 题 王老师在韩国某大学教中文。开学初，她想测试一下初级班学生的识字水平。她在网上没有找到 合适的中文二语识字量测试工具。于是就采用了面向中文母语儿童的识字量测试工具，她觉得儿童和 留学生的识字量差不多，儿童识字量测试也可以用于留学生。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 250,
+      "sourceQuestionNo": 87,
+      "sourceSetIndex": 13,
+      "sourceYear": "",
+      "sourceSetTitle": "250 98. 下列哪项最有可能是标准化阅读测试中“找到主旨”类测试题的题干？（ ） A. 那个人发现了什么？ B.下列哪项说法正确？ C. 作者支持下列哪种观",
+      "sortOrder": 902
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个国家的老师最可能和王老师面临相似问题（ ）",
+      "options": {
+        "A": "日本",
+        "B": "泰国",
+        "C": "印度尼西亚",
+        "D": "马来西亚"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 250,
+      "sourceQuestionNo": 88,
+      "sourceSetIndex": 13,
+      "sourceYear": "",
+      "sourceSetTitle": "250 98. 下列哪项最有可能是标准化阅读测试中“找到主旨”类测试题的题干？（ ） A. 那个人发现了什么？ B.下列哪项说法正确？ C. 作者支持下列哪种观",
+      "sortOrder": 903
+    },
+    {
+      "type": "SINGLE",
+      "content": "在测试韩国中文学习者的识字量时，应特别注意什么（ ）",
+      "options": {
+        "A": "中韩语言中的同形字",
+        "B": "中韩汉字的语法功能",
+        "C": "中韩汉字的语音差异",
+        "D": "中韩汉字的结构差异"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 250,
+      "sourceQuestionNo": 89,
+      "sourceSetIndex": 13,
+      "sourceYear": "",
+      "sourceSetTitle": "250 98. 下列哪项最有可能是标准化阅读测试中“找到主旨”类测试题的题干？（ ） A. 那个人发现了什么？ B.下列哪项说法正确？ C. 作者支持下列哪种观",
+      "sortOrder": 904
+    },
+    {
+      "type": "SINGLE",
+      "content": "将儿童识字量测试用于留学生，最可能会违反下列哪项测试原则？（ ）",
+      "options": {
+        "A": "时效性",
+        "B": "公平性",
+        "C": "有效性",
+        "D": "可行性 第 91-93 题 李老师在国外一所大学任教，主课老师让他带领学生做句型练习。但课上只能使用目的语，不能 使用新词语和语法，也不能使用学生母语。这让李老师很困惑，他觉得课上可以适当引入新词语和语 法讲解，适当使用学生母语也可以提高教学效率，学校的要求不太符合他之前学习到的专业理论。但 是在比较国内教学实习、培训经验与目前教学实际之后，李老师发现，二者在教学安排、学生需求等 方面都存在较大差异，直接将所学理论和以往经验照搬到现在的教学中不太可行，所以打算按照主课 老师的要求尝试一下。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 250,
+      "sourceQuestionNo": 90,
+      "sourceSetIndex": 13,
+      "sourceYear": "",
+      "sourceSetTitle": "250 98. 下列哪项最有可能是标准化阅读测试中“找到主旨”类测试题的题干？（ ） A. 那个人发现了什么？ B.下列哪项说法正确？ C. 作者支持下列哪种观",
+      "sortOrder": 905
+    },
+    {
+      "type": "SINGLE",
+      "content": "李老师觉得课上可以适当使用新词汇和语法，这主要基于克拉申语言习得假说的哪个观点（ ）",
+      "options": {
+        "A": "自然顺序假说",
+        "B": "情感过滤假说",
+        "C": "输入假说",
+        "D": "监控假说"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 251,
+      "sourceQuestionNo": 91,
+      "sourceSetIndex": 13,
+      "sourceYear": "",
+      "sourceSetTitle": "250 98. 下列哪项最有可能是标准化阅读测试中“找到主旨”类测试题的题干？（ ） A. 那个人发现了什么？ B.下列哪项说法正确？ C. 作者支持下列哪种观",
+      "sortOrder": 906
+    },
+    {
+      "type": "SINGLE",
+      "content": "李老师认为课上适量使用学生母语可以提高教学效率，节省教学时间，这主要基于哪种基础理论 （ ）",
+      "options": {
+        "A": "社会文化",
+        "B": "构建主义",
+        "C": "行为主义心理学",
+        "D": "认知心理学"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 251,
+      "sourceQuestionNo": 92,
+      "sourceSetIndex": 13,
+      "sourceYear": "",
+      "sourceSetTitle": "250 98. 下列哪项最有可能是标准化阅读测试中“找到主旨”类测试题的题干？（ ） A. 那个人发现了什么？ B.下列哪项说法正确？ C. 作者支持下列哪种观",
+      "sortOrder": 907
+    },
+    {
+      "type": "SINGLE",
+      "content": "李老师的反思主要体现了哪方面的能力（ ）",
+      "options": {
+        "A": "专业发展规划能力",
+        "B": "认知与实践整合能力",
+        "C": "教学质量监控能力",
+        "D": "跨文化交际能力 第 94-97 题 下面是某新手老师的教学反思节选。 这节课我比较顺利地完成了教学任务。不过，我还有不少地方需要改进。比如，解释“吧”和“吗”的 区别时，我用学生的母语向他们解释“吧”表示推测和揣测，“吗”表示疑问或反问。虽然学生们都理解了， 但其实我可以提供更多的语境帮助学生理解并掌握二者的区别。在教学过程中还要注意依旧带新，比 如，讲解生词“您”的时候，可以先用之前学过的“你”来导入。 另外，在今后的教学中，我还要更加关注学生的特点和学习需求，引导学生多输出中文，加强互 动。让学生在真实语境中运用所学知识进行交流和表达，激发学生的学习兴趣。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 251,
+      "sourceQuestionNo": 93,
+      "sourceSetIndex": 13,
+      "sourceYear": "",
+      "sourceSetTitle": "250 98. 下列哪项最有可能是标准化阅读测试中“找到主旨”类测试题的题干？（ ） A. 那个人发现了什么？ B.下列哪项说法正确？ C. 作者支持下列哪种观",
+      "sortOrder": 908
+    },
+    {
+      "type": "SINGLE",
+      "content": "这位教师对课堂教学的反思，主要是通过（ )",
+      "options": {
+        "A": "调查问卷",
+        "B": "看录音录像",
+        "C": "课堂观察",
+        "D": "教学日志"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 251,
+      "sourceQuestionNo": 94,
+      "sourceSetIndex": 13,
+      "sourceYear": "",
+      "sourceSetTitle": "250 98. 下列哪项最有可能是标准化阅读测试中“找到主旨”类测试题的题干？（ ） A. 那个人发现了什么？ B.下列哪项说法正确？ C. 作者支持下列哪种观",
+      "sortOrder": 909
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据教学反思，这位教师在教学中做得比较好的是（ ）",
+      "options": {
+        "A": "注重精讲多练",
+        "B": "教学循序渐进",
+        "C": "讲解易懂",
+        "D": "互动性强"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 251,
+      "sourceQuestionNo": 95,
+      "sourceSetIndex": 13,
+      "sourceYear": "",
+      "sourceSetTitle": "250 98. 下列哪项最有可能是标准化阅读测试中“找到主旨”类测试题的题干？（ ） A. 那个人发现了什么？ B.下列哪项说法正确？ C. 作者支持下列哪种观",
+      "sortOrder": 910
+    },
+    {
+      "type": "SINGLE",
+      "content": "这位老师的讲授方式主要体现了那种教学法的理念？（ ）",
+      "options": {
+        "A": "情景法",
+        "B": "直接法",
+        "C": "语法翻译法",
+        "D": "交际法"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 251,
+      "sourceQuestionNo": 96,
+      "sourceSetIndex": 13,
+      "sourceYear": "",
+      "sourceSetTitle": "250 98. 下列哪项最有可能是标准化阅读测试中“找到主旨”类测试题的题干？（ ） A. 那个人发现了什么？ B.下列哪项说法正确？ C. 作者支持下列哪种观",
+      "sortOrder": 911
+    },
+    {
+      "type": "SINGLE",
+      "content": "这位老师应加强哪方面的学习（ ）",
+      "options": {
+        "A": "专业发展",
+        "B": "专业技能",
+        "C": "专业知识",
+        "D": "专业理念 第 98-100 题 内容就是理解，2020 年的一项研究表明了阅读技能教学与内容知识教学之间的关系。小学教师每 天都会花上几个小时培养学生的理解能力与阅读策略，比如“找到主旨”或“推断”，以提高他们在标准化 阅读测试中的分数及他们的阅读能力。这项研究认为，阅读是一种独立，可训练的能力，可以在跨内 容领域无缝迁移。课时学生却没有获得“额外的阅读收益”。理解策略是有用的，不过只有当有限的数量 和特定的内容相联系时才会发挥作用。认知科学已经表明，能否理解所读内容的首要因素在于是否拥 有相关的背景知识和词汇。 内容知识和阅读技能互相作用。拥有更多背景知识的学生有更好的机会理解他们遇到的任何文本。 他们能够从长时记忆中提取更多关于这个话题的信息，在学习记忆中留下更多的理解空间。没有背景 知识，即便是熟练的读者也难以理解一个主题。不过，这项研究对于许多悬而未决的问题仍未做出有 效回答。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 251,
+      "sourceQuestionNo": 97,
+      "sourceSetIndex": 13,
+      "sourceYear": "",
+      "sourceSetTitle": "250 98. 下列哪项最有可能是标准化阅读测试中“找到主旨”类测试题的题干？（ ） A. 那个人发现了什么？ B.下列哪项说法正确？ C. 作者支持下列哪种观",
+      "sortOrder": 912
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最适合作为本课文化教学的内容？（ ）",
+      "options": {
+        "A": "国画大师卫天霖",
+        "B": "尊师重教的传统理念",
+        "C": "中国古代文学的代表作品",
+        "D": "天花的历史 第 22-27 题 下面是一位学生的写作（材料模糊不清，仅记录关键句，学生的身份是美国人）"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 261,
+      "sourceQuestionNo": 21,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 913
+    },
+    {
+      "type": "SINGLE",
+      "content": "句①中的“夏假”（夏假是进行自己研究的最好时间）应该为“暑假”，与之类似的偏误是（ ）",
+      "options": {
+        "A": "黑茶（红茶）",
+        "B": "搜发（沙发）",
+        "C": "老鼠（鼠标）",
+        "D": "经验（经历）"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 261,
+      "sourceQuestionNo": 22,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 914
+    },
+    {
+      "type": "SINGLE",
+      "content": "句②（我比其他研究生晚得很）错误的原因在于 （ ）",
+      "options": {
+        "A": "将“adj.+得+很”用于差比句",
+        "B": "差比句的比较标准不恒一",
+        "C": "在“比”字句中使用了结果补语",
+        "D": "比”字句的语序有误"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 261,
+      "sourceQuestionNo": 23,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 915
+    },
+    {
+      "type": "SINGLE",
+      "content": "句③（你也应该看中国以外的地方）中的“看”最好改为“看看”，下列哪项解释最恰当（ ）",
+      "options": {
+        "A": "中国以外还有很多地方，用“看看”表示看多个地方",
+        "B": "“看”重叠后表示“短暂”的意思，这里指“短时间”",
+        "C": "“看”重叠后有“尝试”义，可以舒缓语气",
+        "D": "情态动词“应该”后要用动词重叠式"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 262,
+      "sourceQuestionNo": 24,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 916
+    },
+    {
+      "type": "SINGLE",
+      "content": "学生问句④（我们俩吃了一干二净）为什么不对，下列哪项解释最恰当（ ）",
+      "options": {
+        "A": "“了”应该出现在“动词+结果补语”的后面",
+        "B": "“动词+了+形容词”一般用于过去发生或经常发生的动作行为",
+        "C": "“一干二净”表示吃后的状态，状态补语和中心语之间要用助词“得”",
+        "D": "“了”表示已经出现的某种情况，应该在句尾"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 262,
+      "sourceQuestionNo": 25,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 917
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对这篇习作的问题，教师最应该指导学生（ ）（注：原文稿时间线描述混乱）",
+      "options": {
+        "A": "梳理人物关系",
+        "B": "厘清时间线索",
+        "C": "补充细节描写",
+        "D": "修改行文风格"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 262,
+      "sourceQuestionNo": 26,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 918
+    },
+    {
+      "type": "SINGLE",
+      "content": "如果这是学生的初稿，根据过程式写作模式，接下来最合适的教学环节是（ ）",
+      "options": {
+        "A": "教师点评",
+        "B": "小组互评",
+        "C": "习作朗读",
+        "D": "全班讨论 第 28-30 题 医生：您好！请坐，您哪里不舒服？ 患者：我肚子疼得厉害，从昨天晚上八九点开始，一直疼到现在。 医生：您指一下哪儿疼。 患者：一开始是这儿疼，后来是右下腹疼，疼得弯不了腰。 医生：躺着会好一些吗？ 患者：躺着也疼，疼得睡不着，刚吃完饭的时候，觉得肚子有点儿胀，不太疼。回家以后，越来 越疼，只好来医院了。 医生：昨天晚上吃什么了？喝酒了吗？ 患者：跟朋友出去吃了顿自助餐，喝了两瓶啤酒。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 262,
+      "sourceQuestionNo": 27,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 919
+    },
+    {
+      "type": "SINGLE",
+      "content": "课文中出现的补语类型有（ ） ①结果补语②趋向补语③程度补语④状态补语⑤可能补语",
+      "options": {
+        "A": "①③④⑤",
+        "B": "①②③④",
+        "C": "②③④⑤",
+        "D": "①②③⑤"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 262,
+      "sourceQuestionNo": 28,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 920
+    },
+    {
+      "type": "SINGLE",
+      "content": "对“腰、腹、肚、胀”等汉字进行教学时，最恰当的方法是（ ）",
+      "options": {
+        "A": "依形旁释义",
+        "B": "依发音释义",
+        "C": "依图释义",
+        "D": "依形释义"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 262,
+      "sourceQuestionNo": 29,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 921
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项活动最适合课后的拓展练习（ ）",
+      "options": {
+        "A": "使用重点语法自编对话，分小组进行角色扮演",
+        "B": "续写课文，完成对患者的问诊和检查",
+        "C": "复述课文中患者的症状",
+        "D": "根据课文内容书写患者病历 第 31-34 题 淄博，古称临淄，在春秋战国时期是齐国都城。齐桓公在位期间，拜管仲为相，推行改革，齐国 逐渐强盛。《晏子春秋》中记载：“齐之临淄三百闾，张袂成阴，挥汗成雨，比肩继踵而在......”当时齐 国的盛况可见一斑。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 262,
+      "sourceQuestionNo": 30,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 922
+    },
+    {
+      "type": "SINGLE",
+      "content": "历史上，齐桓公因出色的政治才能被尊为“________”之一 ( )",
+      "options": {
+        "A": "战国四公子",
+        "B": "春秋五霸",
+        "C": "春秋三杰",
+        "D": "战国七雄"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 263,
+      "sourceQuestionNo": 31,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 923
+    },
+    {
+      "type": "SINGLE",
+      "content": "《齐民要术》的作者是 ( )",
+      "options": {
+        "A": "王祯",
+        "B": "徐光启",
+        "C": "宋应星",
+        "D": "贾思勰"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 263,
+      "sourceQuestionNo": 32,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 924
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪种中国传统的烹调方式与当今的烧烤最相似？ ( )",
+      "options": {
+        "A": "炙",
+        "B": "熏",
+        "C": "炝",
+        "D": "焗"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 263,
+      "sourceQuestionNo": 33,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 925
+    },
+    {
+      "type": "SINGLE",
+      "content": "唐诗“有色同寒冰，无物隔纤玉。象筵看不见，堪将对玉人。”是用来形容什么的？ ( )",
+      "options": {
+        "A": "玉器",
+        "B": "瓷器",
+        "C": "琉璃",
+        "D": "牙雕 第 35-41 题 下面是《论语·前进》中记录的一段孔子与学生们的对话 子路问：“闻斯行诸？” 子曰：“有父兄在，①如之何其闻斯行之？” 冉有问：“闻斯行诸？” 子曰：“闻斯行之。” 公西华曰：“由也问闻斯行诸，子曰，‘有父兄在’；求也问闻斯行诸，子曰，‘闻斯行之’。赤也惑， 敢问。” 子曰：“求也退，故进之；②由也兼人，故退之。”"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 263,
+      "sourceQuestionNo": 34,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 926
+    },
+    {
+      "type": "SINGLE",
+      "content": "上述对话最能体现哪种教育理念？ （ ）",
+      "options": {
+        "A": "因材施教",
+        "B": "有教无类",
+        "C": "温故知新",
+        "D": "言传身教"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 263,
+      "sourceQuestionNo": 35,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 927
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于句①中的“之”，下列哪项正确（ ）",
+      "options": {
+        "A": "前一个是助词，后一个是动词",
+        "B": "前一个是名词，后一个是代词",
+        "C": "两个都是助词",
+        "D": "两个都是代词"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 263,
+      "sourceQuestionNo": 36,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 928
+    },
+    {
+      "type": "SINGLE",
+      "content": "句②中的“兼人”是什么意思？（ ）",
+      "options": {
+        "A": "“兼”通“谦”，谦虚的人",
+        "B": "好勇过人",
+        "C": "由己及人",
+        "D": "刚柔并济"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 263,
+      "sourceQuestionNo": 37,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 929
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项不是反问句 （ ）",
+      "options": {
+        "A": "有父兄在，如之何其闻斯行之？",
+        "B": "本是同根生，相煎何太急？",
+        "C": "蛇固无足，子安能为之足？",
+        "D": "闻斯行诸？"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 263,
+      "sourceQuestionNo": 38,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 930
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列那句话出自论语（ ）",
+      "options": {
+        "A": "锲而不舍，金石可镂",
+        "B": "尽信书，则不如无书",
+        "C": "君子不怨天，不尤人",
+        "D": "工欲善其事，必先利其器"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 263,
+      "sourceQuestionNo": 39,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 931
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于《论语》，下列哪项是错误的（ ）",
+      "options": {
+        "A": "在宋代被列入“四书”之一",
+        "B": "是一部以记言为主的语录体散文集",
+        "C": "由孔子及其弟子合编而成",
+        "D": "在编排上没有严格的编纂体例"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 263,
+      "sourceQuestionNo": 40,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 932
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据活动内容，下列哪项最可能是该课活动的教学目标？（ ）",
+      "options": {
+        "A": "了解世界地理历史等知识",
+        "B": "学习并练习“最”的用法",
+        "C": "理解并巩固判断句的用法",
+        "D": "增强课堂教学的趣味性"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 267,
+      "sourceQuestionNo": 61,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 933
+    },
+    {
+      "type": "SINGLE",
+      "content": "该教师在设计活动时，列出了下列注意事项，其中不恰当的是（ ）",
+      "options": {
+        "A": "所选问题的难度应适中，避免过易或过难",
+        "B": "卡片的样式应符合学生的年龄特征，色彩尽量丰富",
+        "C": "设置的问题要符合学生的认知水平",
+        "D": "学生多次答错后，应注意学生情绪变化"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 267,
+      "sourceQuestionNo": 62,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 934
+    },
+    {
+      "type": "SINGLE",
+      "content": "游戏结束后，获胜的学生提出希望获得奖励，下列哪项奖励方式最合适？（ ） ①全班学生一起为获胜的学生鼓掌庆贺 ②给予获胜的学生下次活动优先选择权 ③给获胜的学生计两分，算入期末成绩 ④给获胜的学生分发具有中国特色的礼物",
+      "options": {
+        "A": "①③",
+        "B": "②④",
+        "C": "③④",
+        "D": "①②"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 267,
+      "sourceQuestionNo": 63,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 935
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于上述课堂活动，下列哪项评价最恰当？（ ）",
+      "options": {
+        "A": "活动聚焦语言结构操练，针对性强",
+        "B": "体现了循序渐进，精讲多练的教学策略",
+        "C": "适合在综合运用或文化拓展环节讲授",
+        "D": "活动目标明确，步骤详细，适合词语练习 第 65-69 题 下面是某教师为一节口语课设计的活动 一、教具准备：录像和实物 二、交际情景：问价格、买东西 三、语言内容：问价格、砍价、推销 四、语用功能：询问、介绍、陈述、说明、澄清 五、教学过程 步骤一：师生问答 如果回国，你最想买什么东西？为什么？ 步骤二：看录像，回答问题。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 267,
+      "sourceQuestionNo": 64,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 936
+    },
+    {
+      "type": "SINGLE",
+      "content": "步骤一最主要的教学目的是（ ）",
+      "options": {
+        "A": "培养语用意识",
+        "B": "活跃课堂气氛",
+        "C": "导入本课话题",
+        "D": "模拟交际情境"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 268,
+      "sourceQuestionNo": 65,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 937
+    },
+    {
+      "type": "SINGLE",
+      "content": "步骤二最主要的作用是（ ）",
+      "options": {
+        "A": "增强口语课的吸引力和趣味性",
+        "B": "输入活动需要的语言材料",
+        "C": "为产生信息差创造条件",
+        "D": "提供真实语境"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 268,
+      "sourceQuestionNo": 66,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 938
+    },
+    {
+      "type": "SINGLE",
+      "content": "该教学设计主要运用了哪种教学法（ ）",
+      "options": {
+        "A": "听说法",
+        "B": "语法翻译法",
+        "C": "团体学习法",
+        "D": "交际法"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 268,
+      "sourceQuestionNo": 67,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 939
+    },
+    {
+      "type": "SINGLE",
+      "content": "该教学设计最主要的缺点是（ ）",
+      "options": {
+        "A": "互动练习枯燥乏味不真实",
+        "B": "忽略语境在对话中的作用",
+        "C": "缺乏足够的语言形式讲练",
+        "D": "忽视学生的表达意愿"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 268,
+      "sourceQuestionNo": 68,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 940
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最适合作为延伸性扩展练习活动？（ ）",
+      "options": {
+        "A": "字词的读写练习",
+        "B": "词汇的搭配练习",
+        "C": "语段、语篇的练习",
+        "D": "声、韵、调的练习 第 70-72 题 下面是某教师为一次课堂活动设计的信息卡 项目 内容 活动主题 环保 活动内容 针对环境污染问题进行采访，讨论人们可以为环保做些什么事情。 活动方式 一位学生扮演电视台记者，采访另一位学生扮演的环境保护协会会长。 每组上台表演，时间五分钟，其他组评价该组的表演。 语言点 浪费 污染 影响 其实 尽量 治理 拯救 越来越...... 变得...... 一旦......就...... 就拿......来说 从......做起 从来不......"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 268,
+      "sourceQuestionNo": 69,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 941
+    },
+    {
+      "type": "SINGLE",
+      "content": "本次课堂活动中，教师扮演的角色是（ ）",
+      "options": {
+        "A": "控制者 反馈者",
+        "B": "参与者 观察者",
+        "C": "协调者 引导者",
+        "D": "讲授者 组织者"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 268,
+      "sourceQuestionNo": 70,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 942
+    },
+    {
+      "type": "SINGLE",
+      "content": "对该教学计划的评价，下列哪项最恰当（ ）",
+      "options": {
+        "A": "能根据教学主题设计教学活动，注意培养学生自主学习与合作学习的能力",
+        "B": "能根据教学目标、教学内容及学生特点，选择合适的教材、教辅材料",
+        "C": "运用了与学生水平相适应的评估方式，对学生的学习活动给于评价",
+        "D": "制订了符合学生年龄、文化背景、中文水平等因素的教学材料"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 269,
+      "sourceQuestionNo": 71,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 943
+    },
+    {
+      "type": "SINGLE",
+      "content": "在教学过程中，有学生不知道如何进行采访，教师最恰当的做法是？（ ）",
+      "options": {
+        "A": "进一步采访活动的具体步骤和要点",
+        "B": "给出采访活动中必须使用的词语和句式",
+        "C": "说明活动中表现优异的学生将获得奖励",
+        "D": "提供一段访谈类节目的视频让学生模仿 第 73-77 题 李老师教中文专业三年级本科留学生“跨文化交际”专业必修课，下面是李老师为讲解中国“孝”文化 而设计的教学安排。 步骤一：通过课堂讲解、问答等方式加强互动，为学生搭建概念框架。 步骤二：提供案例、视频资源、语料等支架"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 269,
+      "sourceQuestionNo": 72,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 944
+    },
+    {
+      "type": "SINGLE",
+      "content": "上述写作步骤教学的理论依据是（ ）",
+      "options": {
+        "A": "案例教学法",
+        "B": "内容型教学法",
+        "C": "产出导向教学法",
+        "D": "叙事教学法"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 269,
+      "sourceQuestionNo": 73,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 945
+    },
+    {
+      "type": "SINGLE",
+      "content": "实现步骤一时，为帮助学生搭建框架，教师可以从下列哪个问题引入？（ ）",
+      "options": {
+        "A": "中国传统社会的家庭结构是怎样的？",
+        "B": "你如何理解“可怜天下父母心”？",
+        "C": "人际关系的类型有那些？",
+        "D": "你怎么看待“百善孝为先”？"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 269,
+      "sourceQuestionNo": 74,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 946
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于步骤二中的“支架”，下列哪项理解不正确？（ ）",
+      "options": {
+        "A": "可采用讲解、提问、举例等形式",
+        "B": "应紧紧围绕写作技能说明和举例",
+        "C": "应控制在学生的“最近发展区”内",
+        "D": "是为了发挥学生的自主学习能力"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 269,
+      "sourceQuestionNo": 75,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 947
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最适合作为步骤五？（ ）",
+      "options": {
+        "A": "写作成绩公布于反思",
+        "B": "范文展示与互动讨论",
+        "C": "写作模式提炼与总结",
+        "D": "学生互评与相互修改"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 269,
+      "sourceQuestionNo": 76,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 948
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最不可能是上述写作训练的教学目标？（ ）",
+      "options": {
+        "A": "可以运用所学知识结合个人经验分析现实问题",
+        "B": "能够用中文清晰地表达自己研究思路与观点",
+        "C": "了解关于“孝”的广告、故事、诗词、俗语等",
+        "D": "学习并掌握中国传统价值观念的“孝”文化 第 78-81 题（81 题缺失） 下面是某教材“回顾与评价”部分的试题节选（图片不清晰，无法录入）"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 270,
+      "sourceQuestionNo": 77,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 949
+    },
+    {
+      "type": "SINGLE",
+      "content": "本课的话题功能最可能是（ ）（材料中出现了大量问询的词汇与短语、单句）",
+      "options": {
+        "A": "求助",
+        "B": "道歉",
+        "C": "感谢",
+        "D": "关心"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 270,
+      "sourceQuestionNo": 78,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 950
+    },
+    {
+      "type": "SINGLE",
+      "content": "本课生词中的重点和难点最可能是（ ）",
+      "options": {
+        "A": "走",
+        "B": "会",
+        "C": "站",
+        "D": "附近"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 270,
+      "sourceQuestionNo": 79,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 951
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪句中的“怎么”与本课中的“怎么”（去地铁站怎么走？）意义相同？（ ）",
+      "options": {
+        "A": "你怎么哭了？",
+        "B": "你打算怎么解决？",
+        "C": "怎么一个人都没有？",
+        "D": "她怎么能不来呢？ 第 82-86 题 下面是两段课堂对话，安娜和麦克都是美国的中文学习者。 对话一： 老师：安娜，你在中国学了多长时间中文？ 安娜：我在中国学了一个年中文。 老师：哦，你在中国学了一年中文。 安娜：一年，一个年，啊，一年，一年中文——对，我在中国学了一年中文。 对话二： 老师：麦克，你在中国学了多长时间中文？ 麦克：我在中国学了一个年中文。 老师：哦，你在中国学了一年中文。 麦克：对，老师，我在中国学了一个年中文。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 270,
+      "sourceQuestionNo": 80,
+      "sourceSetIndex": 14,
+      "sourceYear": "2024",
+      "sourceSetTitle": "272 第十三套：2024 年 9 月 CTCSOL 笔试（参考答案） 001-020 CAABA ADDAA BDDCA *DABA 021-040 BAAC",
+      "sortOrder": 952
+    },
+    {
+      "type": "SINGLE",
+      "content": "句①中的“利息少得可怜”是什么补语?（ ）",
+      "options": {
+        "A": "可能补语",
+        "B": "结果补语",
+        "C": "程度补语",
+        "D": "状态补语"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 275,
+      "sourceQuestionNo": 1,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 953
+    },
+    {
+      "type": "SINGLE",
+      "content": "句②中“最近”和“刚”的词性分别是（ ）",
+      "options": {
+        "A": "名词 副词",
+        "B": "副词 名词",
+        "C": "名词 名词",
+        "D": "副词 副词"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 275,
+      "sourceQuestionNo": 2,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 954
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中的“什么”与句③中的“什么”意义一致?（ ）",
+      "options": {
+        "A": "什么花儿呀草呀，种了一院子",
+        "B": "都这么晚了，还看什么电视呀!",
+        "C": "他们好像正在争论什么事情。",
+        "D": "他看起来对什么都不感兴趣。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 275,
+      "sourceQuestionNo": 3,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 955
+    },
+    {
+      "type": "SINGLE",
+      "content": "句③和句④中的“吧”分别表示什么语气?（ ）",
+      "options": {
+        "A": "建议 假设",
+        "B": "建议 推测",
+        "C": "让步 推测",
+        "D": "让步 疑问"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 275,
+      "sourceQuestionNo": 4,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 956
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于句⑤的说法，下列哪项是错误的?（ ）",
+      "options": {
+        "A": "“一下”是动量补语",
+        "B": "“那行”属于插入语。",
+        "C": "句子的主语是“我”",
+        "D": "“回头”是副词 第 6-9 题 下面是一篇初级综合课的课文。 王小云：艾丽，这个星期天你有时间吗? 艾 丽：你有什么事吗? 王小云：星期天是我朋友的生日。我们要为他办一个生日聚会，你来参加吗? 艾 丽：真不好意思。那天也是我哥哥的生日，他也有个生日聚会。 王小云：这么巧!你打算送你哥哥什么礼物? 艾 丽：我想送他一块手表。你送你朋友什么礼物? 王小云：两盒巧克力，你哥哥今年多大了? 艾 丽：他今年三十岁。 王小云：真的?我朋友也三十岁。他也是英国人。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 275,
+      "sourceQuestionNo": 5,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 957
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师在设计本课教案时应重点关注下列哪项语言点?（ ）",
+      "options": {
+        "A": "名词谓语句和兼语句",
+        "B": "主谓谓语句和双宾句",
+        "C": "主谓谓语句和兼语句",
+        "D": "名词谓语句和双宾句"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 276,
+      "sourceQuestionNo": 6,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 958
+    },
+    {
+      "type": "SINGLE",
+      "content": "在讲解画线句中的“就”时，下列哪项可以作为补充例句?（ ）",
+      "options": {
+        "A": "送他到机场后，我就回家了。",
+        "B": "他家不是很远，就在这条街上。",
+        "C": "他特别爱追剧，一看起来就没完。",
+        "D": "你要是没事，就在北京多住两天。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 276,
+      "sourceQuestionNo": 7,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 959
+    },
+    {
+      "type": "SINGLE",
+      "content": "课上，教师对学生说：“在中国，三十岁被称为‘而立之年’。”“三十而立”出自《论语》中的（ ）",
+      "options": {
+        "A": "《为政》",
+        "B": "《雍也》",
+        "C": "《学而》",
+        "D": "《述而》"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 276,
+      "sourceQuestionNo": 8,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 960
+    },
+    {
+      "type": "SINGLE",
+      "content": "学完这篇课文后，教师计划让学生下次课做课堂报告，下列哪项任务形式最合适?（ ）",
+      "options": {
+        "A": "让学生自由选题，用本课的语言点完成一篇叙事报告",
+        "B": "拟定一些题目，让每位学生自选一个，写一篇发言提纲",
+        "C": "以生日为题，让学生自行分组活动，完成一篇小组报告",
+        "D": "给学生分组，每组布置一个题目，各组分别准备发言材料 第 10-14 题 生活不总是充满阳光，地震、大火、水灾等往往不请自来，把毫无准备的人们推到危机的面前。 在万分紧急的情况下，如果人们具备处理危机的知识和生存技巧，就有可能保护自己，减少伤亡。 地震发生时，如果你住在高层，与其乘电梯逃生被困，不如留下来，找个安全的地方躲起来；也 不要跑楼梯，以免撞伤、摔伤。等首次强震过去后，再选择时机迅速离开。如果住在低层，也只有在 确保自己能第一时间跑到外面时，才可以往外跑。切记跑出来之后，千万别在楼房旁边停留，以免被 从高空落下的东西砸伤。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 276,
+      "sourceQuestionNo": 9,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 961
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列汉字的音节中都包含韵母α，其中哪项的国际音标标记为 [ a ]（ ）",
+      "options": {
+        "A": "面",
+        "B": "灾",
+        "C": "毫",
+        "D": "阳"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 276,
+      "sourceQuestionNo": 10,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 962
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列与“跑楼梯”的宾语语义类型完全相同的是（ ）",
+      "options": {
+        "A": "跑关系",
+        "B": "跑比赛",
+        "C": "跑全程",
+        "D": "跑码头"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 276,
+      "sourceQuestionNo": 11,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 963
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项是画线句中包含的复句类型?（ ）",
+      "options": {
+        "A": "假设复句 选择复句",
+        "B": "条件复句 目的复句",
+        "C": "转折复句 假设复句",
+        "D": "选择复句 条件复句"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 276,
+      "sourceQuestionNo": 12,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 964
+    },
+    {
+      "type": "SINGLE",
+      "content": "文中“地震”“撞伤”“安全”“外面”四个合成词的结构类型分别为（ ）",
+      "options": {
+        "A": "主谓 述补 联合 偏正",
+        "B": "述宾 述补 偏正 偏正",
+        "C": "偏正 述宾 联合 附加",
+        "D": "主谓 联合 偏正 附加"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 276,
+      "sourceQuestionNo": 13,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 965
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项任务最不适合在这篇课文的导入环节中使用（ ）",
+      "options": {
+        "A": "放映一部地震灾难片的片段",
+        "B": "让学生介绍自己了解的避险知识",
+        "C": "带学生阅读一篇灾害避险的补充材料",
+        "D": "让学生介绍自己国家频发的自然灾害"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 276,
+      "sourceQuestionNo": 14,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 966
+    },
+    {
+      "type": "SINGLE",
+      "content": "学生的作答中有几处拼音错误?（ ）",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 277,
+      "sourceQuestionNo": 15,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 967
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪组听写中出现的汉字的声母分别为“舌面前不送气清塞擦音”“舌面后送气清塞音”（ ）",
+      "options": {
+        "A": "解 看",
+        "B": "切 朵",
+        "C": "确 楚",
+        "D": "江 花"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 277,
+      "sourceQuestionNo": 17,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 968
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪组字的部件为左形右声（ ）",
+      "options": {
+        "A": "切 访",
+        "B": "到 江",
+        "C": "好 海",
+        "D": "约 刮"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 277,
+      "sourceQuestionNo": 18,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 969
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪种教学方法不适合用于帮助学生纠正 ang 的发音（ ）",
+      "options": {
+        "A": "吹纸法",
+        "B": "带音法",
+        "C": "对比听辩",
+        "D": "夸张法 第 20-24 题 北京奥运会让全世界认识了汉字“和”。“和”能组成一个个美好的词语如和谐、和美、和顺……有人 这样解释“和谐”：和，口中有禾也，意思是人人都有饭吃；谐，人皆可言也，意思是人人都能说话。做 到了这两点，才算是和谐社会。 农历八月十五日是中秋节，在“中秋”所包含的文化意蕴中，“和”是最重要的一方面，也是中国传统 文化的重要标志。八月十五月儿圆，中秋的月亮蕴藏着中国人浓浓的思乡之情。在人与自然的关系中， 中华民族把大自然的这一完美时刻作为自己的节日，把完满、和美作为人生的最高目标，也把它作为 亲人团圆的时刻。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 277,
+      "sourceQuestionNo": 19,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 970
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项与“和”字的造字法相同?（ ）",
+      "options": {
+        "A": "闷",
+        "B": "休",
+        "C": "本",
+        "D": "山"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 277,
+      "sourceQuestionNo": 20,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 971
+    },
+    {
+      "type": "SINGLE",
+      "content": "“八月十五月儿圆”的拼音书写正确的是（ ）",
+      "options": {
+        "A": "bāyuè shíwǔ yuèr yuán",
+        "B": "bāyuè shíwǔ yuè'er yuán",
+        "C": "bā yuè shíwǔ yuè'ér yuán",
+        "D": "bāyuè shí wǔ yuè er yuán"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 277,
+      "sourceQuestionNo": 21,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 972
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对第二段中标颜色的词语，下列哪项解释词义的方式最恰当?（ ）",
+      "options": {
+        "A": "文中“时刻”指“节日”，可看出“时刻”表示较长的时间",
+        "B": "从“思”和“乡”的语素义可推测出“思乡”的含义",
+        "C": "“自然”和“大自然”具有相同的语素，可以推断两个词的意义相同",
+        "D": "利用上下文语境可以猜测出“标志”的意思"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 277,
+      "sourceQuestionNo": 22,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 973
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪种方法可以帮助学生更好地理解画线句（ ）",
+      "options": {
+        "A": "讲解常见的修辞手法，让学生理解句子的深层含义",
+        "B": "举例说明“A，B，也 C”这一结构表达的意思不断升华",
+        "C": "分析句型“把……作为……”，梳理画线句的内容",
+        "D": "抽取句子主干，简化定语、状语、补语等修饰成分"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 278,
+      "sourceQuestionNo": 23,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 974
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最适合作为这段课文的题目（ ）",
+      "options": {
+        "A": "传统文化中的“和谐”",
+        "B": "月亮的文化意象",
+        "C": "中秋“和”美",
+        "D": "月是故乡明 第 25-29 题 今年春天，孩子们在房前空地上，斩草挖土，开辟出来了一个一丈见方的小花园。周围用竹竿扎 了一个篱笆，移来了一棵玉兰树，找上了几林月季花，又在竹篱下面随意种上了几棵扁豆和丝瓜。① 土壤并不肥沃，虽然铺上了一层河泥，但估计不会起很大的作用，大家不过是玩玩而已。 过了不久，丝瓜竟然长了出来，而且日益茁壮，这增加了我们的兴趣。②但是我们也并没有过高 的期望。我自己每天早晨工作疲倦了，常到屋旁的小土山上走一走，站一站，看看墙外马路上的车水 马龙和招展的彩旗。顾而乐之，只不过顺便看一看丝瓜罢了。 丝瓜是普通的植物，我并没有想到会有什么神奇之处。可是忽然有一天，我发现丝瓜秧爬出了篱 笆，爬上了楼墙。之后，丝瓜从一楼爬上二楼，又从二楼爬上三楼。丝瓜的秧不过细绳一般粗，这样 细的一根秧竟然能在一夜之间输送这样多的水分和养料，供应前方，使得上面的叶子长得又肥又绿， 爬在灰白色的墙上③一片浓绿，给土墙增添了无限活力与生机。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 278,
+      "sourceQuestionNo": 24,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 975
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于文中“一丈见方”的说法，下列哪项是正确的（ ）",
+      "options": {
+        "A": "丈是长度单位，一丈等于三尺",
+        "B": "“一丈见方”的意思是边长一丈的正方形",
+        "C": "“见方”中“见”的意思是看待",
+        "D": "“见方”一般用于书面语，用在表面积的数量词后"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 278,
+      "sourceQuestionNo": 25,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 976
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中的“并”与句①中“并”的意义和用法相同（ ）",
+      "options": {
+        "A": "这两件事是不能相提并论的。",
+        "B": "大家讨论并通过了这个计划。",
+        "C": "你说的这件事情，他并没告诉我。",
+        "D": "他前年毕业，并于同年留校工作。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 278,
+      "sourceQuestionNo": 26,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 977
+    },
+    {
+      "type": "SINGLE",
+      "content": "句②中“过”的词性是（ ）",
+      "options": {
+        "A": "动词",
+        "B": "助词",
+        "C": "副词",
+        "D": "形容词"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 278,
+      "sourceQuestionNo": 27,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 978
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中“上”的用法与其他三项不同（ ）ABC 中的“上”都是用在动词后面，表示完成的意思。",
+      "options": {
+        "A": "栽上",
+        "B": "铺上",
+        "C": "种上",
+        "D": "爬上"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 278,
+      "sourceQuestionNo": 28,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 979
+    },
+    {
+      "type": "SINGLE",
+      "content": "句③采用了哪种修辞手法（ ）",
+      "options": {
+        "A": "借代",
+        "B": "对比",
+        "C": "比喻",
+        "D": "夸张"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 278,
+      "sourceQuestionNo": 29,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 980
+    },
+    {
+      "type": "SINGLE",
+      "content": "画线句中的汉字书写存在哪种类型的偏误?（ ）",
+      "options": {
+        "A": "间架结构",
+        "B": "部件混淆",
+        "C": "笔画数目",
+        "D": "笔形关系"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 279,
+      "sourceQuestionNo": 30,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 981
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师用红笔逐一订正了学生的偏误，并让学生抄写一遍。有位学生提出意见，认为她的本子被画 得太乱。教师采取下列哪种处理方式最合适（ ）",
+      "options": {
+        "A": "向学生道歉，并表示以后会注意",
+        "B": "理解学生的想法，以后减少纠错的数量",
+        "C": "解释纠错的必要性，并调整自己的纠错方式",
+        "D": "坚持自己的做法，帮学生分析偏误多的原因"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 279,
+      "sourceQuestionNo": 31,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 982
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于该生作文中“了”的主要偏误，下列哪项解释最具针对性（ ）",
+      "options": {
+        "A": "宾语为谓词性词语时，谓语动词后不能用“了”",
+        "B": "连动句的第一个动词后一般不能用“了”",
+        "C": "否定词“没”后一般不可以用“了”",
+        "D": "在直接引语前的动词后不能用“了” 第 33-36 题 下面是学生口语作业的部分转录文字。 你好，我是 10 年前的你。①我说跟你现在最大的烦心事。 ②我现在正在中国留学中。确实很难。离开了父母和朋友，在外国生活感觉不那么痛快。我最近 一、两个月特别想家。有一天，我给妈妈打了个电话。“这是你的决定。”妈妈说：“一切都把握在你自 己的手里。” 想一想来中国的机会很难得，但是很想念父母、家人和朋友…...等。我在写信的时候，真的很复杂。 在完全陌生的环境中生活不太容易，但是留学生活对 10 年后的你一定很有帮助。我怎么能轻易放弃呢!? 为了 10 年后更好的自己，③现在我继续努力，不罢休!"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 279,
+      "sourceQuestionNo": 32,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 983
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对画线句①的偏误，下列哪项解释最恰当（ ）",
+      "options": {
+        "A": "“跟”指示与动作有关的对象，只和指人的名词组合",
+        "B": "“跟”不能表示某种行为的伴随状况或方式",
+        "C": "“跟”是动词，不能带双宾语",
+        "D": "“跟你”充当状语，放在动词之后违反了中文的语序原则"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 279,
+      "sourceQuestionNo": 33,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 984
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对画线句②，教师应如何帮助学生纠正偏误（ ）",
+      "options": {
+        "A": "删去“正”和“中”，让学生练习时间状语和地点状语的排序",
+        "B": "删去“在.....中”，让学生练习“正”表示“动作的进行”",
+        "C": "删去“正在”，让学生练习“......中”句式",
+        "D": "删去“中”，让学生练习用“正在”表示“动作的进行”"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 280,
+      "sourceQuestionNo": 34,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 985
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师将画线句③中的“不罢休”改为“不放弃”，学生询问修改原因，教师从下列哪个角度解释最恰当 （ ）",
+      "options": {
+        "A": "感情色彩差异",
+        "B": "语体色彩差异",
+        "C": "词义差异",
+        "D": "词性差异"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 280,
+      "sourceQuestionNo": 35,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 986
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于该生标点符号的运用，下列哪项说法是错误的（ ）",
+      "options": {
+        "A": "省略号与“等”不可同时使用，需要读出来的地方应用“等”“等等”",
+        "B": "表概数的地方通常不能用顿号，但表确数的地方须用顿号。",
+        "C": "在直接引语中间的“说”后，只能用句号不能用冒号",
+        "D": "同时使用问号和感叹号时，问号在前，感叹号在后 第 37-41 题 下面是一段课文复述的课堂实录。 黑板上展示句式：结婚仪式……。在……下，新娘的爸爸带着……走过……，把她交到……手里。 然后是司仪……。来宾们都听得…… 教 师：好，现在谁来用黑板上的这些句式复述一下这段课文。艾米丽! 艾米丽：结婚仪式开始了。在①音乐的……音乐的伴奏……在音乐的伴奏下，新娘的爸爸带着女 儿走过红地毯，②交她到了新郎的…... 教 师：把她…... 艾米丽：把她……③把她交到了? 教 师：把她交到了……。 艾米丽：把她交到了……新娘，④no,bridegroom 新郎的手里。然后是司仪……(停顿 5 秒钟)⑤司 仪说话。 教 师：司仪致辞。 艾米丽：对，是司仪致辞。来宾们都听得……非常认真。 请从 A—",
+        "F": "中选出上述画线部分所对应的语言交际策略，其中有一个多余选项。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 280,
+      "sourceQuestionNo": 36,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 987
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对画线句①的问题，应如何向学生讲解\"厉害\"的用法？（ ）",
+      "options": {
+        "A": "“X 得厉害”结构中的“X”只能是双音节词 ）",
+        "B": "“厉害”作补语时一般表达不如意或过分的情况",
+        "C": "“踢”是动作动词，“厉害”只能在心理动词后作补语",
+        "D": "“厉害”作补语时，表示的程度已经很高，不能再加\"很\""
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 280,
+      "sourceQuestionNo": 42,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 988
+    },
+    {
+      "type": "SINGLE",
+      "content": "画线句②中出现了几个错别字？（ ）",
+      "options": {
+        "A": "3 个",
+        "B": "4 个",
+        "C": "6 个",
+        "D": "5 个"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 281,
+      "sourceQuestionNo": 43,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 989
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对画线句③存在的偏误，下列哪项解释是正确的？（ ）",
+      "options": {
+        "A": "“了”表示已经出现的某种情况，应放在句尾",
+        "B": "“了”应该出现在\"动词＋结果补语\"后面",
+        "C": "“一干二净”表示吃的状态，状态补语和中心语之间常用助词“得”",
+        "D": "“动词＋了＋形容词”一般用于过去发生或经常性发生的动作行为 第 45-47 题 这个学期，张老师给某大学二年级的学生上中文试听说课，使用的教材是《家有儿女》。她尝试 采用翻转课堂的教学模式教授这门课。 试行一个月以后，张老师感觉自己在教学上花费了比以往更多的时间，但是教学成效不太显著。 特别是有的学生不能很好地完成课前任务，使得课堂教学效果也大打折扣，这让张老师感到非常苦恼。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 281,
+      "sourceQuestionNo": 44,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 990
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于翻转课堂这一教学模式，下列哪项说法是错误的（ ）",
+      "options": {
+        "A": "主张过程性评价，强调充分调动学生的主观能动",
+        "B": "强调课堂互动，特别注重课堂上的答疑与探讨",
+        "C": "核心思想是鼓励学生利用网络来学习新知识",
+        "D": "与混合式学习、探究性学习在概念上有交义"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 281,
+      "sourceQuestionNo": 45,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 991
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最不适合作为课前任务布置给学生（ ）",
+      "options": {
+        "A": "根据教师准备的重点生词和语法讲解的短视频进行自学",
+        "B": "观看教材中提供的《家有儿女》视频，记录要点和问题",
+        "C": "预习课文中的生词和语法，并通过线上自测检验预习效果",
+        "D": "以小组为单位进行视频配音练习，以便在课上表演"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 281,
+      "sourceQuestionNo": 46,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 992
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对画线句所叙述的问题，下列哪种做法最恰当（ ）",
+      "options": {
+        "A": "按照学生的学习习惯安排今后的教学，放慢教学进度",
+        "B": "查找学生未能很好地完成课前任务的原因，有针对性地解决"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 281,
+      "sourceQuestionNo": 47,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 993
+    },
+    {
+      "type": "SINGLE",
+      "content": "这本教材是以什么为纲编写的（ ）",
+      "options": {
+        "A": "功能一交际一任务",
+        "B": "结构一功能一文化",
+        "C": "话题一结构一情景",
+        "D": "话题—交际一文化"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 282,
+      "sourceQuestionNo": 48,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 994
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪中“口”字旁的含义与“喝”中的含义相同（ ）",
+      "options": {
+        "A": "听",
+        "B": "唯",
+        "C": "叫",
+        "D": "吧"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 282,
+      "sourceQuestionNo": 49,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 995
+    },
+    {
+      "type": "SINGLE",
+      "content": "介绍中国辞书时，教师讲到了中国最早的训诂学著作。下列哪项是中国第一部按义类编排的综合 性辞书（ ）",
+      "options": {
+        "A": "《尔雅》",
+        "B": "《广韵》",
+        "C": "《说文解字》",
+        "D": "《康熙字典》"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 282,
+      "sourceQuestionNo": 50,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 996
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于教学步骤②至⑧，最合理的顺序是（ ）",
+      "options": {
+        "A": "②⑥⑤④③",
+        "B": "③④⑥②⑤",
+        "C": "②③④⑥⑤",
+        "D": "④②⑥③⑤"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 283,
+      "sourceQuestionNo": 51,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 997
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于量词“副”和“双”的区别，下列哪项说法是正确的（ ）",
+      "options": {
+        "A": "由相同的两部分连在一起的单件物品不能用“副”，但可以用“双”",
+        "B": "按性别、正反等配合的两个人、动物或事物不能用“副”，要用“双”",
+        "C": "具有“整体结构、相互匹配”特征的多件物品应用“副”，不能用“双”",
+        "D": "成对使用的东西(多半是穿戴在肢体上的)多数情况下用“副”，不用“双”"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 283,
+      "sourceQuestionNo": 52,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 998
+    },
+    {
+      "type": "SINGLE",
+      "content": "在讲解“身”作量词的用法时，下列哪组例子可用于佐证“身”的用法（ ）",
+      "options": {
+        "A": "一群人 一张纸",
+        "B": "一脸汗 一手泥",
+        "C": "一把米 一碗饭",
+        "D": "一天假 一条路"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 283,
+      "sourceQuestionNo": 53,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 999
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最适合作为教学步骤⑧?（ ）",
+      "options": {
+        "A": "听写课文中的重要句子",
+        "B": "指导学生完成课后练习",
+        "C": "组织学生分组进行角色扮演",
+        "D": "总结本课的重点生词和语法 第 55-58 题 张老师在国外一所中学教中文，下面是他设计的关于十二生肖的教案。 教学单元 十二生肖 教学时长 45 分钟 教学对象： 初级水平的中学生 教学目标 a.了解十二生肖： b.能够介绍自己的属相 c.能运用恰当的句型询问别人的属相 d.具有小组合作意识，与他人协同完成任务； e.识记“龙、猴、鸡、狗”等生肖名字及发音。 教学内容 字：龙、猴、鸡、狗 词：生肖、属相 句子：我属……我的属相是…… 难点：“猴”字的书写 教学环节 前任务"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 283,
+      "sourceQuestionNo": 54,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1000
+    }
+  ]
+}

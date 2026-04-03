@@ -1,0 +1,848 @@
+{
+  "meta": {
+    "sourcePdf": "C:\\Users\\Administrator\\Desktop\\历年CTCSOL笔试真题集（2014-2025年）2025.2.1.pdf",
+    "generatedAt": "2026-04-01T12:31:28",
+    "packageIndex": 11,
+    "packageCount": 11,
+    "questionCount": 46,
+    "sortOrderStart": 1001,
+    "sortOrderEnd": 1046,
+    "importModeSuggestion": "追加导入"
+  },
+  "questions": [
+    {
+      "type": "SINGLE",
+      "content": "该课的哪项教学目标属于能力目标（ ）",
+      "options": {
+        "A": "d 和 e",
+        "B": "c 和 d",
+        "C": "b 和 c",
+        "D": "a 和 e"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 284,
+      "sourceQuestionNo": 55,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1001
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项与“猴”（形声）的造字法相同（ ）",
+      "options": {
+        "A": "鼠",
+        "B": "兔",
+        "C": "虎",
+        "D": "熊"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 284,
+      "sourceQuestionNo": 56,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1002
+    },
+    {
+      "type": "SINGLE",
+      "content": "前任务的第 2 个步骤体现了下列哪种教学法的理念（ ）",
+      "options": {
+        "A": "直接法",
+        "B": "体演法",
+        "C": "翻译法",
+        "D": "听说法"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 284,
+      "sourceQuestionNo": 57,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1003
+    },
+    {
+      "type": "SINGLE",
+      "content": "按照任务法的教学环节，画线处①应该是（ ）",
+      "options": {
+        "A": "综合练习",
+        "B": "语言焦点",
+        "C": "归纳小结",
+        "D": "文化拓展 第 59-62 题 下面是关于语言点“动词重叠(礼貌义)”的简易教案。 一、导入 教师：上次课我们学了动词重叠，还记得动词重叠表示的是什么意义吗? 学生：轻松、舒服。 教师：对。现在我们再来看看，动词重叠还有什么意义。 二、呈现例句 这个本子很漂亮，我可以看看吗? 三、讲解动词重叠的“礼貌义”"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 284,
+      "sourceQuestionNo": 58,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1004
+    },
+    {
+      "type": "SINGLE",
+      "content": "教师采用了哪种方法引入语言点（ ）",
+      "options": {
+        "A": "以旧带新",
+        "B": "归纳法",
+        "C": "情境导入",
+        "D": "演绎法"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 285,
+      "sourceQuestionNo": 59,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1005
+    },
+    {
+      "type": "SINGLE",
+      "content": "练习过程中，有学生造出了一个句子：“我可以尝尝你的巧克力吗?”这个句子包含了几个语素和词 （ ）",
+      "options": {
+        "A": "7 个语素 7 个词",
+        "B": "9 个语素 9 个词",
+        "C": "9 个语素 7 个词",
+        "D": "11 个语素 9 个词"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 285,
+      "sourceQuestionNo": 60,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1006
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于这一教案的评价，下列哪项更恰当（ ）",
+      "options": {
+        "A": "语言能力与交际能力并重",
+        "B": "教学各环节之间缺乏内在联系",
+        "C": "遵循了由无控制到控制的原则",
+        "D": "设计缺乏对学习者的分析"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 285,
+      "sourceQuestionNo": 61,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1007
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于教学活动的设计，下列哪项说法是正确的（ ）",
+      "options": {
+        "A": "解释生词时，使用图片等道具优于使用实物",
+        "B": "选择交际性强的语言活动，会扩大语言学习与应用间的距离",
+        "C": "教学活动的安排宜从具体经验入手，从具体到抽象",
+        "D": "活动形式越形象越美观，越有助于发展学生的认知能力 第 63-66 题 下面是一位教师听力课救案中的节选。 一、教学对象 中级班大学生 二、教学内容 《新中级汉语听力》第六课课文二《生物濒临灭绝》 三、教学目标 使学生深入理解听力材料，巩固语言知识，加深对听力理解策略和技巧的体会，并且能在听后阶 段开展口语训练。 四、教学活动步骤 ①复习上节课的内容，复述重点例句； ②请学生听第一遍课文录音，完成练习一“课文中他们谈话的目的是什么”并在听录音前提示学生注 意说话人的身份； ③听第二遍录音，完成练习二“考查理解课文细节的选择题”； ④完成练习三“跟读本课的六个重点句子”； ⑤完成练习四“听后回答问题，先听课文中重点片段的录音，听两遍后给学生五分钟的讨论时间， 然后请学生回答问题"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 285,
+      "sourceQuestionNo": 62,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1008
+    },
+    {
+      "type": "SINGLE",
+      "content": "进行步骤①时，有些学生不能完整重复个别句子，最恰当的办法是（ ）",
+      "options": {
+        "A": "提示有困难的学生课后朗读复习所练的内容",
+        "B": "将全班分成两批次，完成这些句子的复述",
+        "C": "调整教学计划，再次详细讲解这些句子",
+        "D": "请水平较好的学生逐句示范，其他学生跟读"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 286,
+      "sourceQuestionNo": 63,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1009
+    },
+    {
+      "type": "SINGLE",
+      "content": "进行步骤③时，下列哪种做法的教学效果最差（ ）",
+      "options": {
+        "A": "听完录音后请学生讨论以找到正确答案",
+        "B": "反复播放练习题所涉及的课文片段",
+        "C": "做练习前浏览选择题的题干和选项",
+        "D": "选择学生出错多的题目进行讲解"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 286,
+      "sourceQuestionNo": 64,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1010
+    },
+    {
+      "type": "SINGLE",
+      "content": "进行步骤⑤时，下列哪项操作最有助于学生理解所听内容（ ）",
+      "options": {
+        "A": "把听到的重要词语记录下来",
+        "B": "边听边把自己的思考写下来",
+        "C": "把听不懂的词句用拼音记下来",
+        "D": "尽可能完整地记下听到的内容"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 286,
+      "sourceQuestionNo": 65,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1011
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于本课教案设计的改进建议，下列哪项最合理（ ）",
+      "options": {
+        "A": "应该进一步突出课型特点",
+        "B": "需增加多样化的练习形式",
+        "C": "需引导学生进行合作式学习",
+        "D": "应遵循由易到难的教学原则 第 67-71 题 下面是丁老师设计的线上生词抢答游戏以及在游戏过程中发现的问题。 一、游戏规则"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 286,
+      "sourceQuestionNo": 66,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1012
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对问题①，教师应如何处理（ ）",
+      "options": {
+        "A": "判定抢答有效，继续进行下一轮抢答",
+        "B": "暂停游戏，先帮助该生进行纠音",
+        "C": "为保证公平，判定该生这次抢答无效",
+        "D": "增加语音规则，并从下一轮起执行"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 286,
+      "sourceQuestionNo": 67,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1013
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对问题②，下列哪种做法最恰当（ ）",
+      "options": {
+        "A": "承认这一事实，表示今后会丰富活动形式",
+        "B": "指出这是线上教学的通病，建议学生更换网络",
+        "C": "解释这是客观原因造成的，不是老师的问题",
+        "D": "为保证教学计划的完成，希望学生予以理解"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 286,
+      "sourceQuestionNo": 68,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1014
+    },
+    {
+      "type": "SINGLE",
+      "content": "问题③体现出词义具有什么特点（ ）",
+      "options": {
+        "A": "民族性",
+        "B": "客观性",
+        "C": "模糊性",
+        "D": "概括性"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 287,
+      "sourceQuestionNo": 69,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1015
+    },
+    {
+      "type": "SINGLE",
+      "content": "游戏结束后，获胜的学生提出合望获得奖励。下列哪项奖励方式最合适（ ） ①将积分计入学生的期末成绩 ②让全班学生为获胜者鼓掌祝贺 ③给获胜组学生邮寄一些小礼物 ④给予获胜者下次游戏优先选择权",
+      "options": {
+        "A": "①②",
+        "B": "②③",
+        "C": "③④",
+        "D": "②④"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 287,
+      "sourceQuestionNo": 70,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1016
+    },
+    {
+      "type": "SINGLE",
+      "content": "每次学生回答问题、做游戏、进行小组讨论等活动时，教师都会观察和记录学生的表现，并进行 评价，这属于（ ）",
+      "options": {
+        "A": "诊断性评价",
+        "B": "形成性评价",
+        "C": "终结性评价",
+        "D": "安置性评价 第 72-75 题 李老师本学期担任汉字课教师，由于采用线上教学形式，李老师设计了多款游戏以提高教学效果， 游戏主要包括以下四类： 游戏名称 实施过程 扫雷 将汉字和雷区用图片遮挡，学生轮流选择图片，若翻转后显示的是汉字，则 学生正确认读后加一分；若显示是雷区，则扣除一分。 汉字闪卡 在 PPT 上展现几个汉字，随后让它们消失，请学生说出消失的汉字，用时最 短者获胜，最后教师将汉字复现一次。 你画我猜 ①一名学生挑选汉字，并根据字义进行绘画： ②教师用 PT 展示该汉字及其笔顺： ③全班一起在电子白板上进行汉字描红： ④其他学生猜字； 笔画接力 将学生分组，教师在 PPT 上逐一展示当天所学的汉字。每组学生在电子白板 上按笔画轮流书写，直至完成整个汉字，写对一个字的笔画，小组加一分， 累计分数最高的小组获胜。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 287,
+      "sourceQuestionNo": 71,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1017
+    },
+    {
+      "type": "SINGLE",
+      "content": "李老师在设计“扫雷”游戏时，列出了下列注意事项，其中不恰当的是（ ）",
+      "options": {
+        "A": "注意分配好汉字和雷区的比例",
+        "B": "学生多次碰到雷区后，应注意学生情绪变化",
+        "C": "所选的图片应类型丰富，色彩多样",
+        "D": "所选汉字的难度应适中，避免过易或过难"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 287,
+      "sourceQuestionNo": 72,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1018
+    },
+    {
+      "type": "SINGLE",
+      "content": "“汉字闪卡”游戏适用于复习汉字的（ ）",
+      "options": {
+        "A": "发音和字形",
+        "B": "发音和意义",
+        "C": "字形和用法",
+        "D": "意义和用法"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 287,
+      "sourceQuestionNo": 73,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1019
+    },
+    {
+      "type": "SINGLE",
+      "content": "“你画我猜”游戏恰当的实施步骤是（ ）",
+      "options": {
+        "A": "②①④③",
+        "B": "①④②③",
+        "C": "②③①④",
+        "D": "①②③④"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 287,
+      "sourceQuestionNo": 74,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1020
+    },
+    {
+      "type": "SINGLE",
+      "content": "“笔画接力”游戏适合汉字教学的哪个环节（ ）",
+      "options": {
+        "A": "形近字辨析",
+        "B": "汉字组词",
+        "C": "汉字认读",
+        "D": "笔顺识记 第 76-79 题 王老师本学期讲授中级中文口语课。期末考试时，王老师根据课堂教学内容及教材命制了 10 套试 题。考试时，他要求学生随机抽取试题，然后到候考室准备 15 分钟，再进行正式考试。考试过程中， 王老师在自己准备的《考试评分表》中直接给出学生每一题的考试得分。 下面是其中一套考试试卷的部分内容。 一、朗读下列词语(2 分/词) 第一组 倒影 资产 展览 冰棍儿 玫瑰 ...... 二、朗读下列句子(5 分/句)"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 288,
+      "sourceQuestionNo": 75,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1021
+    },
+    {
+      "type": "SINGLE",
+      "content": "第一题所呈现例题的考点不包括下列哪项（ ）",
+      "options": {
+        "A": "轻声",
+        "B": "儿化韵",
+        "C": "半三声",
+        "D": "多音字）"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 288,
+      "sourceQuestionNo": 76,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1022
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列对第二题中的句子描述正确的是（ ）",
+      "options": {
+        "A": "“远门儿”的儿化起到了区分词性的作用",
+        "B": "“从来就没……”表示完全否定",
+        "C": "第一句中的“哪儿”表示疑问",
+        "D": "第二句中的“怎么”是疑问语气词"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 288,
+      "sourceQuestionNo": 77,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1023
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项应该作为试卷中第五题的评分标准（ ） ①语段表达是否连贯、自然 ②发音是否准确，语调是否自然 ③能否准确、合理运用相关词汇 ④能否使用多种修辞手段增强表达效果",
+      "options": {
+        "A": "①②④",
+        "B": "①②③",
+        "C": "②③④",
+        "D": "①③④"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 288,
+      "sourceQuestionNo": 78,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1024
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项对测试题目的评价是正确的（ ） ①客观题的比重不足，无法反映出学生的实际水平 ②注意对口语各维度进行考查，题型设计较为合理 ③考试以课程内容为依据，体现了成绩测试的特点 ④整套试题符合命题规律，呈从易到难的阶梯状分布",
+      "options": {
+        "A": "①②③",
+        "B": "①②④",
+        "C": "①③④",
+        "D": "②③④ 第 80-82 题 下面是一位教学主管的听课记录节选。 一、教学对象 某大学掌握 300~500 词的短期来华留学生 二、教学活动目标"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 289,
+      "sourceQuestionNo": 79,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1025
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于本次活动的评价，下列哪项最恰当（ ）",
+      "options": {
+        "A": "活动与课文关联性弱",
+        "B": "教具准备不够充分",
+        "C": "学习内容难度过高",
+        "D": "活动形式较为复杂"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 289,
+      "sourceQuestionNo": 80,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1026
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对活动效果②的问题，下列哪种改进方法最合适（ ）",
+      "options": {
+        "A": "活动前把词汇和语法卡发给学生",
+        "B": "明确小组成员的角色以及每个角色的任务",
+        "C": "强调可以模仿课文，但必须增加新的内容",
+        "D": "指出这两组学生学习策略的问题，要求其改进"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 289,
+      "sourceQuestionNo": 81,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1027
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于活动效果③的语音问题，下列哪项对正确发音的语音描写是正确的（ ）",
+      "options": {
+        "A": "舌尖后 浊 擦音",
+        "B": "舌尖后 清 擦音",
+        "C": "舌面后 清 擦音",
+        "D": "舌尖中 浊 边音 第 83-87 题 赵老师在意大利某高中教中文，下面是他的一篇教学日志。 今天主要学习了寓言故事《塞翁失马》。因为课文中有三句话都用了“反而”，我就先结合课文中的 场景和课后的语法释例给学生讲了“反而”的用法。但是讲了半天，学生都没能用“反而”说出正确的句子"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 289,
+      "sourceQuestionNo": 82,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1028
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项成语与“塞翁失马”的结构形式一致（ ）",
+      "options": {
+        "A": "杞人忧天",
+        "B": "草木皆兵",
+        "C": "精卫填海",
+        "D": "眼花缭乱"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 290,
+      "sourceQuestionNo": 83,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1029
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于日志中“反而”的教学问题，下列哪种解决方式效果会更好（ ）",
+      "options": {
+        "A": "鼓励学生自己查词典，通过例句加深理解",
+        "B": "以旧带新，用学过的“相反”引出“反而”",
+        "C": "明确上下文语境，分析各小句间的语义关系",
+        "D": "通过语言对比，分析学生产生偏误的原因"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 290,
+      "sourceQuestionNo": 84,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1030
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对画线部分①的问题，最恰当的解决方法是（ ）",
+      "options": {
+        "A": "课后分别对这两位学生进行批评教育",
+        "B": "课上暗示或轻声提醒他们注意课堂纪律",
+        "C": "观看视频后要求这两位学生回答问题",
+        "D": "今后努力学习意大利语，加强与学生的沟通"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 290,
+      "sourceQuestionNo": 85,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1031
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列最适合填入画线部分②的内容是（ ）",
+      "options": {
+        "A": "谈谈中国人的传统思维方式",
+        "B": "你认为塞翁和邻居谁更聪明",
+        "C": "对比中外寓言故事的异同",
+        "D": "讲讲你对这个寓言故事的看法"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 290,
+      "sourceQuestionNo": 86,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1032
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对画线部分③的问题，最合理的处理办法是（ ）",
+      "options": {
+        "A": "重新评估学生的能力，降低教学内容的难度",
+        "B": "调查学生喜欢的内容和方式，按照结果进行教学",
+        "C": "根据课堂实际灵活调整，以便顺利完成教学计划",
+        "D": "教案设计是课堂教学的依据，不应随意改变 第 88-91 题 下面是一篇阅读短文。 香格里拉隶属云南省迪庆藏族自治州，位于“三江并流”的腹地，平均海拔高达 3380 米。广袤的原 始森林，圣洁的雪山和冰湖，独特的高原植被，成就了香格里拉独一无二的美景。 独克宗古城是香格里拉的著名景点之一，古城位于香格里拉县，为唐代吐蕃王朝所建。古城依山 而建，是茶马古道上的重镇。香格里拉生活着汉、藏、白、回、苗、彝、满、纳西、傈僳等民族，他 们在服饰、民居建筑、生活方式以及婚俗礼仪等方面都保持了本民族的传统习俗，形成了各民族的独 特风情。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 290,
+      "sourceQuestionNo": 87,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1033
+    },
+    {
+      "type": "SINGLE",
+      "content": "唐代吐蕃王朝是由中国哪个民族建立的（ ）",
+      "options": {
+        "A": "白族",
+        "B": "藏族",
+        "C": "回族",
+        "D": "汉族"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 290,
+      "sourceQuestionNo": 88,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1034
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于“茶马古道”的描述，下列哪项正确（ ）",
+      "options": {
+        "A": "萌芽于唐宋，正式形成于明清",
+        "B": "起点是大理，终点是林芝",
+        "C": "主要干线为滇藏道和川疆道两条",
+        "D": "是古代西南茶马互市的主要通道"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 290,
+      "sourceQuestionNo": 89,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1035
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪组语言皆属于汉藏语系（ ）",
+      "options": {
+        "A": "满语 傈僳语",
+        "B": "彝语 纳西语",
+        "C": "白语 蒙古",
+        "D": "苗语 哈萨克语"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 291,
+      "sourceQuestionNo": 90,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1036
+    },
+    {
+      "type": "SINGLE",
+      "content": "学习完这篇课文后，下列哪项最不适合作为课外活动（ ）",
+      "options": {
+        "A": "试穿少数民族服饰",
+        "B": "体验少数民族的风俗",
+        "C": "参观香格里拉饭店",
+        "D": "观看香格里拉的视频 第 92-95 题 丁老师在越南一所大学工作。下面是她做的文化活动计划书。 活动时间：2 月 12 日（星期六）9:00—11:00 活动地点：多功能活动厅 活动背景：第 24 届冬奥会于 2 月 4 日在北京拉开帷幕 活动主题：从冬奥会开幕式看中国传统文化 活动步骤"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 291,
+      "sourceQuestionNo": 91,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1037
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于各国在北京冬奥会开幕式的出场顺序，下列哪项正确（ ）",
+      "options": {
+        "A": "最为东道主的中国代表团最先入场",
+        "B": "奥林匹克运动会发源地希腊的代表团第二个入场",
+        "C": "其他国家和地区代表团按简化汉字笔画顺序先后入场",
+        "D": "下届冬奥会举办过意大利的代表团最后入场"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 291,
+      "sourceQuestionNo": 92,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1038
+    },
+    {
+      "type": "SINGLE",
+      "content": "开幕式倒计时中出现的诗句与节气对应正确的一项是（ ）",
+      "options": {
+        "A": "昼晷已云极，宵漏自此长。——大暑",
+        "B": "天阶夜色凉如水，坐看牵牛织女星。——立秋",
+        "C": "落絮游丝三月候，风吹雨洗一城花。——清明",
+        "D": "桂轮开子夜，萤火照空时。——小满"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 291,
+      "sourceQuestionNo": 93,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1039
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于北京冬奥会开幕式上的文化元素，下列哪项是正确的（ ）",
+      "options": {
+        "A": "雪花引导牌的设计灵感来源于中国结的图案",
+        "B": "演员、运动员的服装上有蔚县剪纸元素",
+        "C": "会徽设计将篆刻艺术与冰运动完美结合",
+        "D": "引导员佩戴的礼帽源自湖北民间的虎头帽"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 291,
+      "sourceQuestionNo": 94,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1040
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项是北京冬奥精神的内涵（ ） ①胸怀大局 ②自信开放 ③迎难而上 ④追求卓越 ⑤共创未来 ⑥践行初心 ⑦团结一致 ⑧合作共赢",
+      "options": {
+        "A": "④⑤⑥⑦⑧",
+        "B": "①②③④⑤",
+        "C": "③①⑤⑥⑦",
+        "D": "②③④⑤⑥"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 291,
+      "sourceQuestionNo": 95,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1041
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于图中出现的名称，下列哪项读音不正确（ ）",
+      "options": {
+        "A": "龟兹 Qiūcí",
+        "B": "鄯善 Shànshàn",
+        "C": "大月氏 Dàyuèshī",
+        "D": "于阗 Yútián"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 292,
+      "sourceQuestionNo": 96,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "needsMediaReview": true,
+      "mediaReviewReason": "题干提到图片或图示，正式使用前请在后台补图。",
+      "sortOrder": 1042
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于张骞出使西域和丝绸之路的内容，下列哪项表述正确（ ）",
+      "options": {
+        "A": "河西走廊是汉代丝绸之路的咽喉，因在渭河以西而得名（应该是黄河以西）",
+        "B": "图中丝绸之路的路线就是张骞出使西域的路线（见图示）",
+        "C": "西域都护府是张骞设立的，它标志着西域正式纳入汉朝的版图（汉宣帝时期设置，约公元前 60 年）",
+        "D": "中、哈、吉三国联合申报陆上丝绸之路的东段为世界文化遗产"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 292,
+      "sourceQuestionNo": 97,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1043
+    },
+    {
+      "type": "SINGLE",
+      "content": "图中“安息国”的位置主要位于现在的哪个国家（ ）",
+      "options": {
+        "A": "哈萨克斯坦",
+        "B": "伊朗",
+        "C": "印度",
+        "D": "缅甸"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 292,
+      "sourceQuestionNo": 98,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "needsMediaReview": true,
+      "mediaReviewReason": "题干提到图片或图示，正式使用前请在后台补图。",
+      "sortOrder": 1044
+    },
+    {
+      "type": "SINGLE",
+      "content": "图中哪个位置是军事关隘和丝绸之路交通要道“阳关”？（ ）",
+      "options": {
+        "A": "④",
+        "B": "①",
+        "C": "②",
+        "D": "③"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 292,
+      "sourceQuestionNo": 99,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "needsMediaReview": true,
+      "mediaReviewReason": "题干提到图片或图示，正式使用前请在后台补图。",
+      "sortOrder": 1045
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列与“玉门关”有关的词句，哪项与其作者的搭配是错误的（ ）",
+      "options": {
+        "A": "玉门关城迥且孤，黄沙万里白草枯。(岑参)",
+        "B": "愿得此身长报国，何须生入玉门关。(高适)",
+        "C": "青海长云暗雪山，孤城遥望玉门关。(王昌龄)",
+        "D": "羌笛何须怨杨柳，春风不度玉门关。(王之涣)"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 292,
+      "sourceQuestionNo": 100,
+      "sourceSetIndex": 15,
+      "sourceYear": "2025",
+      "sourceSetTitle": "298 第十四套：2025 年 1 月 CTCSOL 笔试（参考答案） 001-020 CADBC DBACB BAACA DABAA 021-040 BBCC",
+      "sortOrder": 1046
+    }
+  ]
+}

@@ -1,42 +1,45 @@
-// 浜戝嚱鏁板叆鍙ｆ枃浠?const cloud = require('wx-server-sdk');
+const cloud = require('wx-server-sdk');
 
 cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
 });
 
 const db = cloud.database();
-const _ = db.command;
 
-// 浜戝嚱鏁板叆鍙ｅ嚱鏁?exports.main = async (event, context) => {
-  const { userId, examId } = event;
+function getCurrentUserId(event = {}) {
+  const wxContext = cloud.getWXContext();
+  return wxContext.OPENID || event.userId || '';
+}
+
+exports.main = async (event = {}) => {
+  const { examId } = event;
+  const userId = getCurrentUserId(event);
 
   if (!userId || !examId) {
     return {
       success: false,
-      message: '缂哄皯蹇呰鍙傛暟'
+      message: '缺少必要参数'
     };
   }
 
   try {
     const result = await db.collection('user_permissions')
       .where({
-        userId: userId,
-        examId: examId
+        userId,
+        examId
       })
       .get();
 
     if (result.data.length === 0) {
       return {
-        success: false,
-        hasPermission: false,
-        message: '鏃犳潈闄?
+        success: true,
+        hasPermission: false
       };
     }
 
     const permission = result.data[0];
-
-    // 妫€鏌ユ潈闄愭槸鍚︽湁鏁?    const isValid = permission.isPermanent ||
-                    (permission.expiresAt && new Date(permission.expiresAt) > new Date());
+    const isValid = permission.isPermanent ||
+      (permission.expiresAt && new Date(permission.expiresAt) > new Date());
 
     return {
       success: true,
@@ -44,10 +47,10 @@ const _ = db.command;
       data: permission
     };
   } catch (error) {
-    console.error('妫€鏌ユ潈闄愬け璐?', error);
+    console.error('[checkPermission] error', error);
     return {
       success: false,
-      message: '妫€鏌ユ潈闄愬け璐?,
+      message: '检查权限失败',
       error: error.message
     };
   }

@@ -1,33 +1,37 @@
-﻿<!--pages/result/result.wxml-->
 <view class="container">
   <view class="result-card">
-    <view class="score-circle">
-      <view class="score-inner">
-        <view class="score-value">{{score}}</view>
-        <view class="score-label">得分</view>
+    <view class="page-title">{{ui.title}}</view>
+    <view wx:if="{{title}}" class="exam-title">{{title}}</view>
+
+    <view class="score-row">
+      <view class="score-value">{{score}}</view>
+      <view class="score-meta">
+        <view class="score-label">{{ui.scoreLabel}}</view>
+        <view class="accuracy-line">{{ui.accuracyLabel}} {{accuracy}}%</view>
       </view>
     </view>
 
-    <view class="stats-info">
+    <view class="stats-grid">
       <view class="stat-item">
-        <view class="stat-value text-primary">{{total}}</view>
-        <view class="stat-label">总题数</view>
+        <view class="stat-value">{{total}}</view>
+        <view class="stat-label">{{ui.totalLabel}}</view>
       </view>
-      <view class="stat-divider"></view>
       <view class="stat-item">
-        <view class="stat-value text-success">{{correct}}</view>
-        <view class="stat-label">正确数</view>
+        <view class="stat-value">{{answered}}</view>
+        <view class="stat-label">{{ui.answeredLabel}}</view>
       </view>
-      <view class="stat-divider"></view>
-      <view class="stat-item">
-        <view class="stat-value text-danger">{{wrong}}</view>
-        <view class="stat-label">错误数</view>
+      <view class="stat-item success">
+        <view class="stat-value">{{correct}}</view>
+        <view class="stat-label">{{ui.correctLabel}}</view>
       </view>
-    </view>
-
-    <view class="accuracy-info">
-      <text class="accuracy-label">正确率</text>
-      <text class="accuracy-value text-primary">{{accuracy}}%</text>
+      <view class="stat-item danger">
+        <view class="stat-value">{{wrong}}</view>
+        <view class="stat-label">{{ui.wrongLabel}}</view>
+      </view>
+      <view class="stat-item warning">
+        <view class="stat-value">{{remaining}}</view>
+        <view class="stat-label">{{ui.remainingLabel}}</view>
+      </view>
     </view>
   </view>
 
@@ -37,7 +41,7 @@
   </view>
 
   <view class="action-buttons">
-    <button class="btn-secondary" bindtap="onBackHome">返回首页</button>
-    <button class="btn-primary" bindtap="onRetry">再做一次</button>
+    <button class="btn-secondary" bindtap="onBackHome">{{ui.backHome}}</button>
+    <button class="btn-primary" bindtap="onRetry">{{retryText}}</button>
   </view>
 </view>

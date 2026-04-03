@@ -1,7 +1,6 @@
 {
   "name": "adminImportQuestions",
   "version": "1.0.0",
-  "description": "鎵归噺瀵煎叆棰樼洰浜戝嚱鏁?,
   "main": "index.js",
   "dependencies": {
     "wx-server-sdk": "~2.6.3"

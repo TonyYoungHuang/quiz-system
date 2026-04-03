@@ -1,7 +1,6 @@
 {
   "name": "adminDeleteCode",
   "version": "1.0.0",
-  "description": "鍒犻櫎婵€娲荤爜浜戝嚱鏁?,
   "main": "index.js",
   "dependencies": {
     "wx-server-sdk": "~2.6.3"

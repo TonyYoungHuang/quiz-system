@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="hero-card">
+    <view class="hero-title">{{ui.title}}</view>
+    <view class="hero-desc">{{ui.desc}}</view>
+  </view>
+
+  <view wx:if="{{wrongExams.length}}" class="wrong-list">
+    <view wx:for="{{wrongExams}}" wx:key="_id" class="wrong-card">
+      <view class="wrong-info">
+        <view class="wrong-name">{{item.name}}</view>
+        <view class="wrong-meta">
+          <text>{{item.category || '默认分类'}}</text>
+          <text class="dot">·</text>
+          <text>{{item.wrongCount}}{{ui.countSuffix}}</text>
+        </view>
+      </view>
+      <button class="review-btn" bindtap="onReviewTap" data-id="{{item._id}}" data-name="{{item.name}}">{{ui.action}}</button>
+    </view>
+  </view>
+
+  <view wx:else class="empty-state">
+    <view class="empty-icon">错</view>
+    <view class="empty-title">{{ui.emptyTitle}}</view>
+    <view class="empty-desc">{{ui.emptyDesc}}</view>
+  </view>
+</view>

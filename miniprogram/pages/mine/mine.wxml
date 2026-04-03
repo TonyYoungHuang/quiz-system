@@ -1,54 +1,54 @@
-﻿<!--pages/mine/mine.wxml-->
+<!--pages/mine/mine.wxml-->
 <view class="container">
   <view class="user-card">
     <view class="user-avatar">
-      <text>用户</text>
+      <text>{{ui.userLabel}}</text>
     </view>
     <view class="user-info">
-      <view class="user-name">刷题用户</view>
-      <view class="user-id">ID: {{userId}}</view>
+      <view class="user-name">{{ui.userName}}</view>
+      <view class="user-id">{{ui.userIdPrefix}}{{userId}}</view>
     </view>
   </view>
 
   <view class="stats-card">
     <view class="stat-item">
       <view class="stat-value">{{activatedCount}}</view>
-      <view class="stat-label">已激活科目</view>
+      <view class="stat-label">{{ui.activatedLabel}}</view>
     </view>
     <view class="stat-divider"></view>
     <view class="stat-item">
       <view class="stat-value">{{totalQuestions}}</view>
-      <view class="stat-label">题目总数</view>
+      <view class="stat-label">{{ui.totalQuestionsLabel}}</view>
     </view>
   </view>
 
   <view class="menu-list">
     <view class="menu-item" bindtap="onMyExams">
       <view class="menu-left">
-        <text class="menu-icon">题</text>
-        <text class="menu-title">我的题库</text>
+        <text class="menu-icon">{{ui.userLabel}}</text>
+        <text class="menu-title">{{ui.myExams}}</text>
       </view>
       <text class="menu-arrow">></text>
     </view>
 
     <view class="menu-item" bindtap="onHistory">
       <view class="menu-left">
-        <text class="menu-icon">记</text>
-        <text class="menu-title">答题记录</text>
+        <text class="menu-icon">{{ui.userLabel}}</text>
+        <text class="menu-title">{{ui.history}}</text>
       </view>
       <text class="menu-arrow">></text>
     </view>
 
     <view class="menu-item" bindtap="onAbout">
       <view class="menu-left">
-        <text class="menu-icon">关于</text>
-        <text class="menu-title">关于我们</text>
+        <text class="menu-icon">{{ui.userLabel}}</text>
+        <text class="menu-title">{{ui.about}}</text>
       </view>
       <text class="menu-arrow">></text>
     </view>
   </view>
 
   <view class="version-info">
-    <text>版本 1.0.0</text>
+    <text>{{ui.version}}</text>
   </view>
 </view>

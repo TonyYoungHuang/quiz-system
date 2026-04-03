@@ -1,0 +1,34 @@
+<!--pages/topic/topic.wxml-->
+<view class="container">
+  <scroll-view class="exam-tabs" scroll-x enhanced show-scrollbar="{{false}}">
+    <view class="exam-tab-list">
+      <view wx:for="{{exams}}" wx:key="_id" class="exam-tab {{selectedExamId === item._id ? 'active' : ''}}" bindtap="onExamTap" data-exam-id="{{item._id}}" data-exam-name="{{item.name}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="topic-list">
+    <view wx:for="{{topicGroups}}" wx:key="_id" class="topic-card">
+      <view class="topic-header">
+        <view class="topic-header-main">
+          <text class="topic-name">{{item.name}}</text>
+          <text class="topic-count">{{item.questionCount || 0}}{{ui.countSuffix}}</text>
+        </view>
+        <button wx:if="{{!item.children || item.children.length === 0}}" class="topic-start" bindtap="onStartTopic" data-topic-id="{{item._id}}" data-topic-name="{{item.name}}" data-question-count="{{item.questionCount || 0}}">{{ui.start}}</button>
+      </view>
+
+      <view wx:if="{{item.children && item.children.length}}" class="topic-children">
+        <view wx:for="{{item.children}}" wx:key="_id" class="topic-child" bindtap="onStartTopic" data-topic-id="{{item._id}}" data-topic-name="{{item.name}}" data-question-count="{{item.questionCount || 0}}">
+          <text>{{item.name}}</text>
+          <text class="topic-child-count">{{item.questionCount || 0}}{{ui.countSuffix}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{topicGroups.length === 0}}" class="empty-state">
+      <text class="empty-title">{{ui.emptyTitle}}</text>
+      <text class="empty-desc">{{ui.emptyDesc}}</text>
+    </view>
+  </view>
+</view>

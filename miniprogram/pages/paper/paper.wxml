@@ -1,0 +1,25 @@
+<!--pages/paper/paper.wxml-->
+<view class="container">
+  <scroll-view class="exam-tabs" scroll-x enhanced show-scrollbar="{{false}}">
+    <view class="exam-tab-list">
+      <view wx:for="{{exams}}" wx:key="_id" class="exam-tab {{selectedExamId === item._id ? 'active' : ''}}" bindtap="onExamTap" data-exam-id="{{item._id}}" data-exam-name="{{item.name}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="paper-list">
+    <view wx:for="{{papers}}" wx:key="_id" class="paper-card" bindtap="onStartPaper" data-paper-id="{{item._id}}" data-paper-title="{{item.title}}" data-question-count="{{item.questionCount || 0}}">
+      <view class="paper-info">
+        <view class="paper-title">{{item.title}}</view>
+        <view class="paper-meta">{{item.year}} · {{item.questionCount || 0}}{{ui.countSuffix}}</view>
+      </view>
+      <view class="paper-action">{{ui.start}}</view>
+    </view>
+
+    <view wx:if="{{papers.length === 0}}" class="empty-state">
+      <text class="empty-title">{{ui.emptyTitle}}</text>
+      <text class="empty-desc">{{ui.emptyDesc}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,1816 @@
+{
+  "meta": {
+    "sourcePdf": "C:\\Users\\Administrator\\Desktop\\历年CTCSOL笔试真题集（2014-2025年）2025.2.1.pdf",
+    "generatedAt": "2026-04-01T12:31:28",
+    "packageIndex": 4,
+    "packageCount": 11,
+    "questionCount": 100,
+    "sortOrderStart": 301,
+    "sortOrderEnd": 400,
+    "importModeSuggestion": "追加导入"
+  },
+  "questions": [
+    {
+      "type": "SINGLE",
+      "content": "片段一中要学生“不怕丢脸”的做法，依据的是下列哪种假说?（ ）",
+      "options": {
+        "A": "互动假说",
+        "B": "输出假说",
+        "C": "可教性假说",
+        "D": "情感过滤假说"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 78,
+      "sourceQuestionNo": 39,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 301
+    },
+    {
+      "type": "SINGLE",
+      "content": "片段二中吕老师的想法符合下列哪种教学法的理念?（ ）",
+      "options": {
+        "A": "直接法",
+        "B": "情景法",
+        "C": "听说法",
+        "D": "暗示法"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 78,
+      "sourceQuestionNo": 40,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 302
+    },
+    {
+      "type": "SINGLE",
+      "content": "片段二中画线部分符合下列哪种学习理论的理念?（ ）",
+      "options": {
+        "A": "建构主义",
+        "B": "认知主义",
+        "C": "人本主义",
+        "D": "行为主义 第 42-46 题 标准化学习策略量表是调查学生学习方式和学习感受的测量工具，通过测量得到的数据可以更好 地帮助学生学习。下面是根据奥克斯福德的语言学习策略量表设计的几个问题一请从"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 78,
+      "sourceQuestionNo": 41,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 303
+    },
+    {
+      "type": "SINGLE",
+      "content": "画线句中“后悔”一词使用错误，“后悔”应属于（ ）",
+      "options": {
+        "A": "体宾动词",
+        "B": "双宾动词",
+        "C": "谓宾动词",
+        "D": "粘宾动词"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 79,
+      "sourceQuestionNo": 47,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 304
+    },
+    {
+      "type": "SINGLE",
+      "content": "从语段中代词的使用和句子之间的关联情况来看，该生应加强哪方面的训练?（ ）",
+      "options": {
+        "A": "替代衔接",
+        "B": "省略操作",
+        "C": "词汇衔接",
+        "D": "连接成分运用"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 79,
+      "sourceQuestionNo": 48,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 305
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据所给词语写短文，这种测试方式的主要出发点是（ ）",
+      "options": {
+        "A": "提高测试的难度",
+        "B": "变换测试的形式",
+        "C": "限定表达的情景",
+        "D": "保证评分的准确性"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 79,
+      "sourceQuestionNo": 49,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 306
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对该生写作中的问题，教师在写作教学中应强化什么方法和策略?（ ）",
+      "options": {
+        "A": "控制写作法和连贯策略",
+        "B": "自由写作法和语境策略",
+        "C": "过程写作法和宏观策略",
+        "D": "任务写作法和命题策略"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 79,
+      "sourceQuestionNo": 50,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 307
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项最适合做本案例的教学活动? ( )",
+      "options": {
+        "A": "交际互动，复习如何表达数量的减少",
+        "B": "模拟场景，使两组的不同因素明朗化",
+        "C": "图片导入，比较“少”与“多”的差异",
+        "D": "听说领先，仔细体验“少”的语气语调"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 80,
+      "sourceQuestionNo": 51,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 308
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于第①组的例句，下列哪项说法正确? ( )",
+      "options": {
+        "A": "说话人与听话人关系良好，语气和缓",
+        "B": "说话人与听话人互相猜疑戒备，语气舒缓",
+        "C": "说话人认同听话人正施行的行为，希望其继续",
+        "D": "听话人行为过少，说话人提醒其增加行为数量"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 80,
+      "sourceQuestionNo": 52,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 309
+    },
+    {
+      "type": "SINGLE",
+      "content": "案例中第②组的语用功能是 ( )",
+      "options": {
+        "A": "提醒",
+        "B": "警告",
+        "C": "强调",
+        "D": "劝告"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 80,
+      "sourceQuestionNo": 53,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 310
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对学生分辨不清表达式包含不同语用功能的情况，教师应采取哪种方法进行教学? ( )",
+      "options": {
+        "A": "寻找多个例句进行语法结构对比",
+        "B": "结合正反例句进行句式意义对比",
+        "C": "从词源词义角度进行挖掘性对比",
+        "D": "结合语境和交际进行多角度对比"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 80,
+      "sourceQuestionNo": 54,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 311
+    },
+    {
+      "type": "SINGLE",
+      "content": "最适合本案例的教学拓展活动是( )",
+      "options": {
+        "A": "两人一组对话练习",
+        "B": "请学生到家里做客",
+        "C": "上街观察中国人谈话",
+        "D": "看指定视频回答问题 第 56-60 题 下面是学生使用成语时出现的偏误句，请从 A—",
+        "G": "中选出对 应的主要偏误原因，其中有两个多余选项。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 80,
+      "sourceQuestionNo": 55,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 312
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项生词教学环节的安排不恰当? ( )",
+      "options": {
+        "A": "环节一：带领学生读生词",
+        "B": "环节二：讲练重点生词",
+        "C": "环节三：扩展重点生词",
+        "D": "环节四：学生轮流用生词 1—14 造句"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 81,
+      "sourceQuestionNo": 61,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 313
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项生词应重点讲练? ( )",
+      "options": {
+        "A": "模样 游览 居住 变迁 闻名",
+        "B": "不管 游览 值得 算是 闻名",
+        "C": "游览 灰 民俗 变迁 闻名",
+        "D": "胡同 游览 民俗 四合院 闻名"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 81,
+      "sourceQuestionNo": 62,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 314
+    },
+    {
+      "type": "SINGLE",
+      "content": "“游览一旅游”和“闻名—有名”两组近义词的差异分别体现在哪方面? ( )",
+      "options": {
+        "A": "是否及物和词性",
+        "B": "语体色彩和词语搭配",
+        "C": "情感色彩和语体色彩",
+        "D": "适用句式和词语搭配"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 81,
+      "sourceQuestionNo": 63,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 315
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于汉语词汇与词汇教学，下列哪项说法不正确? ( )",
+      "options": {
+        "A": "汉语词汇以双音节词为主",
+        "B": "词汇教学是汉语教学的基础",
+        "C": "在语言诸要素中，词汇与社会的联系最为紧密",
+        "D": "词汇教学涉及字形、语音、语义和语法四个方面 第 65-69 题 下面是课堂活动——“角色扮演”的教学设计。 教师：下面我们看看春节前公司要做什么准备。请同学们两个人一组， 一个人是老板， 一个人 是秘书，根据老师给的纸条，用“把”字句完成活动。练习两分钟后，我会请三组同学来表演。 给"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 81,
+      "sourceQuestionNo": 64,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 316
+    },
+    {
+      "type": "SINGLE",
+      "content": "案例中的活动最适合下列哪一课型? ( )",
+      "options": {
+        "A": "口语课",
+        "B": "听力课",
+        "C": "阅读课",
+        "D": "写作课"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 82,
+      "sourceQuestionNo": 65,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 317
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据“把”字句的分类，学生任务卡的画线处应填入哪一短语? ( )",
+      "options": {
+        "A": "准备好",
+        "B": "买回来",
+        "C": "寄给客户",
+        "D": "盖上我的印章"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 82,
+      "sourceQuestionNo": 66,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 318
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪种“把”字句的练习方式效果最差? ( )",
+      "options": {
+        "A": "看图，用“把”字造句",
+        "B": "用下列词语连成“把”字句",
+        "C": "把下列“把”字句改为“被”字句",
+        "D": "把下列“把”字句(肯定句)改为否定句"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 82,
+      "sourceQuestionNo": 67,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 319
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪句属于“把”字句的泛化偏误? ( )",
+      "options": {
+        "A": "休假以后，很难再把自己努力起来。",
+        "B": "朋友要来我家，我把房间干净打扫。",
+        "C": "这是朋友要的东西，我要把它寄在邮局。",
+        "D": "服务员态度很好，于是我把感谢信写了。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 82,
+      "sourceQuestionNo": 68,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 320
+    },
+    {
+      "type": "SINGLE",
+      "content": "学生表演环节中，下列教师的做法哪项不正确? ( )",
+      "options": {
+        "A": "认真记录学生表述中的问题",
+        "B": "随时打断并纠正学生的错误",
+        "C": "小组表演后做出总结和评价",
+        "D": "当学生表演遇到困难时加以引导 第 70-74 题 下面是听力教材中的一些练习题。 ① 男：您多大年纪啦? 女：七十。 问：女的今年多大了?"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 82,
+      "sourceQuestionNo": 69,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 321
+    },
+    {
+      "type": "SINGLE",
+      "content": "第①题中的对话内容还可以采用下面这种形式 ( ) 男：您今年贵庚了? 女：我今年已经到了古稀之年了。 与这组对话相比，教材中选取语料的原则是：",
+      "options": {
+        "A": "趣味性",
+        "B": "实用性",
+        "C": "规范性",
+        "D": "新颖性"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 83,
+      "sourceQuestionNo": 70,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 322
+    },
+    {
+      "type": "SINGLE",
+      "content": "第②题主要考查学生对下列哪项内容的识别能力? ( )",
+      "options": {
+        "A": "停顿",
+        "B": "重音",
+        "C": "语气",
+        "D": "节奏"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 83,
+      "sourceQuestionNo": 71,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 323
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对第③道题的语料，下列哪种提问方式最为恰当? ( )",
+      "options": {
+        "A": "明天哪个城市下雨?",
+        "B": "明天哪个城市的温差最大?",
+        "C": "这段话中介绍了几个城市的天气?",
+        "D": "北京的最高气温比上海的高几度?"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 83,
+      "sourceQuestionNo": 72,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 324
+    },
+    {
+      "type": "SINGLE",
+      "content": "汉语课堂普遍存在“学生只能听懂本班教师说话，听不懂其他人说话”的情况，教师采用哪种做法更 利于解决这一问题? ( )",
+      "options": {
+        "A": "提供素材，使学生接触并适应不同的口音和语速",
+        "B": "在顺利完成课堂教学内容的前提下，适当加快语速",
+        "C": "引入中文歌曲、动画片、相声，培养学生的学习兴趣",
+        "D": "为了让学生更关注听的内容，降低听力材料中的环境噪音"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 83,
+      "sourceQuestionNo": 73,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 325
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对听力课上学生出现的错音错调，教师应该( )",
+      "options": {
+        "A": "不放过每一个错误，教到能正确发音为止",
+        "B": "启发学生，使他们能自己发现并纠正错误",
+        "C": "经常重复学生的错音错调，让学生引以为戒",
+        "D": "不必理会，听力课的主要目标是训练听的能力 第 75-78 题 下面是初级阅读课的一道练习题。 右图是北京 337 路公交车站的一处站牌，请问： ① 这个站牌在哪个公交车站? ② 杰克想乘坐这辆公交车从前门回宾馆，他需 要在几点前赶到公交车站? ③ 从前门西站到五棵松桥东站有 13 公里，这段 路程的票价是多少?"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 83,
+      "sourceQuestionNo": 74,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 326
+    },
+    {
+      "type": "SINGLE",
+      "content": "这道练习题主要训练的阅读能力是（ ）",
+      "options": {
+        "A": "通读",
+        "B": "细读",
+        "C": "略读",
+        "D": "查阅"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 83,
+      "sourceQuestionNo": 75,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 327
+    },
+    {
+      "type": "SINGLE",
+      "content": "对出现的生词“加价”，教师最好采用下面哪种做法? ( )",
+      "options": {
+        "A": "让学生自己动手查词典",
+        "B": "让学生根据前面出现的词语“增加”猜测词义",
+        "C": "让学生将词语拆分成“加”与“价”猜测词义",
+        "D": "让学生根据含有相同语素的“涨价”等词语猜测词义"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 83,
+      "sourceQuestionNo": 76,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 328
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据案例，汉语课文的选材原则不包括 ( )",
+      "options": {
+        "A": "典雅性",
+        "B": "趣味性",
+        "C": "知识性",
+        "D": "实用性"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 84,
+      "sourceQuestionNo": 77,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 329
+    },
+    {
+      "type": "SINGLE",
+      "content": "针对案例，下列哪种做法对提高学生的阅读速度不利? ( )",
+      "options": {
+        "A": "抓住反复出现的关键词",
+        "B": "根据学生的水平，限定阅读的时间",
+        "C": "跳过无关紧要的生词，其余的查词典",
+        "D": "根据已学过的语言知识猜测句子的意思 第 79-81 题 下面是一篇学生完成的“看图写作”的作文。 今天上午妈妈跟小狗在公园散步。妈妈一边走一边吃香蕉。但是吃完的时候，她扔香蕉皮了。突 然小狗跑走了，把香蕉皮捡起来了。妈妈很吃情，她觉得很不好意思。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 84,
+      "sourceQuestionNo": 78,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 330
+    },
+    {
+      "type": "SINGLE",
+      "content": "在“看图写作”练习中，评价作文质量的标准至少应包含哪些方面? ( )",
+      "options": {
+        "A": "修辞 词汇 语法",
+        "B": "汉字 句长 内容",
+        "C": "人物 情节 文体",
+        "D": "语言 内容 衔接"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 84,
+      "sourceQuestionNo": 79,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "needsMediaReview": true,
+      "mediaReviewReason": "题干提到图片或图示，正式使用前请在后台补图。",
+      "sortOrder": 331
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项属于任务型写作的典型做法? ( )",
+      "options": {
+        "A": "大声朗读短文，写读后感",
+        "B": "阅读范文，获取撰写格式",
+        "C": "根据材料小组讨论，撰写写作提纲",
+        "D": "头脑风暴，列出写作时可用的词语"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 84,
+      "sourceQuestionNo": 80,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 332
+    },
+    {
+      "type": "SINGLE",
+      "content": "在写作教学中，下列哪种做法既能限定内容的逻辑性，又能训练写作技能?（ ）",
+      "options": {
+        "A": "按照指定的词序造句组段 朋友——困难——帮助——批评——良师益友",
+        "B": "使用恰当的关联词语填空 家__讲理的地方, 讲情的地方。____靠近对方，敞开心扉____能做到心无芥蒂。",
+        "C": "至少选用三个词语，接着开头的句子，续写一段话 有的……有的 …… 表演 鼓掌 难 忘 虽然……但是 …… 在新年联欢会上，同学们",
+        "D": "请把下面四个分句连成一段话 ①我们该如何选购呢 ② 一年一度的中秋节即将来临 ③人们把月饼当作吉祥、团圆的象征 ④面对商场里琳琅满目、包装精美的月饼 第 82-85 题 张老师是国内某大学的汉语教师，最近刚被派到挪威某大学任教。这学期他的教学任务是负责该 校中文专业的远程视频教学。远程教学班为汉语零起点班，学生是 6 名工作繁忙的成人。远程教学班 每周上 3 个小时的汉语课， 一共上 14 周。学校里的现实教学班也是零起点班，学生是 15 名大二的学 生，每周上 10 个小时的课， 一共上 10 周。两个班级使用同样的教辅用书。校方要求远程教学班的进 度要与现实教学班的进度平行，而且要达到相同的教学效果。张老师感觉教学压力很大，经常失眠。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 84,
+      "sourceQuestionNo": 81,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 333
+    },
+    {
+      "type": "SINGLE",
+      "content": "远程教学班的汉语语言环境相对更为缺乏。张老师应该从哪几个方面创设本 班的语言学习环境? （ ） ① 每周看一部中国电影 ② 以一首中国歌作为背景音乐 ③ 授课背景加入中国元素 ④ 完全用汉语授课 ⑤ 给学生起中文名字，并在课堂中使用",
+      "options": {
+        "A": "①②",
+        "B": "①③",
+        "C": "②④",
+        "D": "③⑤"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 85,
+      "sourceQuestionNo": 82,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 334
+    },
+    {
+      "type": "SINGLE",
+      "content": "学期过半，张老师打算做一个 10 分钟左右的微课视频来全面地展示一个知识点，下列哪个知识点 适合用这种形式呈现?（ ）",
+      "options": {
+        "A": "比较句 B“了”字句 C“把”字句",
+        "D": "形容词谓语句"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 85,
+      "sourceQuestionNo": 83,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 335
+    },
+    {
+      "type": "SINGLE",
+      "content": "一次远程视频课上，张老师在讲解重要的语言点时，麦克风出了问题，学生听不到他讲话了。为 了将影响降到最小，张老师应如何处理?（ ）",
+      "options": {
+        "A": "打电话叫同事送一个麦克风过来",
+        "B": "停下课程，马上检查线路，修理麦克风",
+        "C": "采用打字与手机录音相结合的方式继续上课",
+        "D": "打字告诉学生情况，暂停上课，换时间补课"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 85,
+      "sourceQuestionNo": 84,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 336
+    },
+    {
+      "type": "SINGLE",
+      "content": "张老师感到工作压力大，经常失眠，他应该如何处理这种情况（ ）",
+      "options": {
+        "A": "请病假，要求回国，以恢复健康",
+        "B": "业余时间跟同事和朋友交流，释放压力",
+        "C": "主动联系学生增加课时，进行课后辅导",
+        "D": "向领导说明，请求适当调整教学标准和要求 第 86-89 题 何老师在澳大利亚一所学校担任汉语教师。这所学校位于一座小岛上，学校没有提供专门的汉语 教室，她只能在学校图书馆大厅的一角上课。她担任两个班的汉语教学工作，学生年龄在 10 到 15 岁 之间，活泼好动。 一班的学生是零起点， 二班的学生已经学习了一个学期，词汇量在 50 个词左右。 她在小岛上的生活十分简单，课余时间她就通过网络和同行交流，了解如何上好汉语课。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 85,
+      "sourceQuestionNo": 85,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 337
+    },
+    {
+      "type": "SINGLE",
+      "content": "图书馆里人来人往，时常有路过的读者出现在课堂上，学生的注意力经常被吸引。何老师应该怎 样处理这种情况?（ ）",
+      "options": {
+        "A": "调整音量，讲课声音更大",
+        "B": "设计更多的游戏，寓教于乐",
+        "C": "努力创造一个相对独立的空间",
+        "D": "播放有趣的视频，丰富课程内容"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 85,
+      "sourceQuestionNo": 86,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 338
+    },
+    {
+      "type": "SINGLE",
+      "content": "何老师在二班进行存现句教学时，最适合在课堂上进行的拓展活动是（ ）",
+      "options": {
+        "A": "采访同学",
+        "B": "探索图书馆",
+        "C": "地理知识问答",
+        "D": "中国文化视频问答"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 85,
+      "sourceQuestionNo": 87,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 339
+    },
+    {
+      "type": "SINGLE",
+      "content": "期末时，何老师打算采用游戏法帮助一班的学生复习学过的词汇，下列哪种方法最合适?（ ）",
+      "options": {
+        "A": "传话游戏",
+        "B": "你说我画",
+        "C": "词语接龙游戏",
+        "D": "反义词拔河比赛"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 85,
+      "sourceQuestionNo": 88,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 340
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据案例，何老师处于汉语教师专业发展的哪个阶段?（ ）",
+      "options": {
+        "A": "虚拟关注",
+        "B": "任务关注",
+        "C": "生存关注",
+        "D": "自我更新"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 85,
+      "sourceQuestionNo": 89,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 341
+    },
+    {
+      "type": "SINGLE",
+      "content": "与画线句中“闹别扭”的“闹”义项相同的是（ ）",
+      "options": {
+        "A": "闹革命",
+        "B": "闹天宫",
+        "C": "闹笑话",
+        "D": "闹洞房"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 86,
+      "sourceQuestionNo": 90,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 342
+    },
+    {
+      "type": "SINGLE",
+      "content": "“夸父逐日”的典故出自（ ）",
+      "options": {
+        "A": "《 史记》",
+        "B": "《搜神记》",
+        "C": "《 山海经》",
+        "D": "《 吕氏春秋》"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 86,
+      "sourceQuestionNo": 91,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 343
+    },
+    {
+      "type": "SINGLE",
+      "content": "这是一篇中高级阶段的课文，中高级阶段汉语教材的选词原则不包括（ ）",
+      "options": {
+        "A": "适当增加新词语",
+        "B": "注重词语的口语化",
+        "C": "注重词语的实用性和重现率",
+        "D": "控制常用词和超纲词的比例"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 86,
+      "sourceQuestionNo": 92,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 344
+    },
+    {
+      "type": "SINGLE",
+      "content": "最适合做本课拓展练习的话题是（ ）",
+      "options": {
+        "A": "中国的起名文化",
+        "B": "笔名与作家的关系",
+        "C": "中国生肖的由来和内涵",
+        "D": "说说你们国家的起名文化"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 86,
+      "sourceQuestionNo": 93,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 345
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于中国人的姓名文化，下列哪项说法正确?（ ）",
+      "options": {
+        "A": "同辈之间一般称“字”",
+        "B": "孔明是诸葛亮的“号”",
+        "C": "先秦时期，男子称姓，女子称氏",
+        "D": "司徒、司马、司空等是以技艺为姓 第 95-100 题 下列四副对联是一位老师选择的文化教学内容。 ① 琴瑟永谐千岁乐，芝兰同介百年春。 ② 雪映梅花梅映雪，莺宜柳絮柳宜莺。 ③ 云对雨，雪对风。晚照对____。来鸿对去燕， _________。 三尺剑，六钧弓。岭北对江东。 _________，天上广寒宫。 ④ 沧海日、赤城霞、峨嵋雪、巫峡云、洞庭月、彭蠡烟、潇湘雨、武夷峰、庐山瀑布， 合宇宙奇观，绘吾斋壁。 少陵诗、摩诘画、左传文、司马史、薛涛笺、右军帖、南华经、相如赋、屈子离骚， 收古今绝艺，置我山窗。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 86,
+      "sourceQuestionNo": 94,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 346
+    },
+    {
+      "type": "SINGLE",
+      "content": "标准对联的“对仗”一般不包括（ ）",
+      "options": {
+        "A": "词性相对",
+        "B": "平仄相谐",
+        "C": "句法相同",
+        "D": "末字押韵"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 87,
+      "sourceQuestionNo": 95,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 347
+    },
+    {
+      "type": "SINGLE",
+      "content": "第一副对联适用于下列哪种情况?（ ）",
+      "options": {
+        "A": "春节",
+        "B": "婚礼",
+        "C": "祝寿",
+        "D": "祭奠"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 87,
+      "sourceQuestionNo": 96,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 348
+    },
+    {
+      "type": "SINGLE",
+      "content": "中国传统文化中，“琴棋书画”“琴瑟”中的“琴”一般专指（ ）",
+      "options": {
+        "A": "古琴",
+        "B": "古筝",
+        "C": "扬琴",
+        "D": "琵琶"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 87,
+      "sourceQuestionNo": 97,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 349
+    },
+    {
+      "type": "SINGLE",
+      "content": "第二副对联运用了哪种修辞格?（ ）",
+      "options": {
+        "A": "顶真",
+        "B": "回文",
+        "C": "双关",
+        "D": "飞白"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 87,
+      "sourceQuestionNo": 98,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 350
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据对联的特点，第三幅对联的空格处应填入（ ）",
+      "options": {
+        "A": "晴空 宿鸟对鸣虫 人间清暑殿",
+        "B": "黎明 佩剑对弯弓 池中濯足水",
+        "C": "清风 齿皓对唇红 半溪流水远",
+        "D": "朝阳 飞禽对走兽 一椽书社小"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 87,
+      "sourceQuestionNo": 99,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 351
+    },
+    {
+      "type": "SINGLE",
+      "content": "第四副对联中的“摩诘”、“南华经”分别是指（ ）",
+      "options": {
+        "A": "王维 《庄子》",
+        "B": "王勃 《韩非子》",
+        "C": "阎立本 《金刚经》",
+        "D": "吴道子 《道德经》"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 87,
+      "sourceQuestionNo": 100,
+      "sourceSetIndex": 5,
+      "sourceYear": "2017",
+      "sourceSetTitle": "94 第四套：2017 年 9 月 CTCSOL 笔试（参考答案） 001-020 CCACD CDACD BCABA BAABB 021-040 ABDDD ",
+      "sortOrder": 352
+    },
+    {
+      "type": "SINGLE",
+      "content": "从结构上来说，“喜”属于 ( )。",
+      "options": {
+        "A": "半包围结构",
+        "B": "上下结构",
+        "C": "框架结构",
+        "D": "独体字"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 97,
+      "sourceQuestionNo": 1,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 353
+    },
+    {
+      "type": "SINGLE",
+      "content": "“喜欢”和“喜爱”的区别主要在哪个方面? ( )",
+      "options": {
+        "A": "感情色彩",
+        "B": "词义轻重",
+        "C": "词类区别",
+        "D": "语体色彩"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 97,
+      "sourceQuestionNo": 2,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 354
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于“花费”与“开花”中的“花”，表述正确的是 ( )。",
+      "options": {
+        "A": "繁简关系",
+        "B": "单义词",
+        "C": "同音同形词",
+        "D": "多义词"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 97,
+      "sourceQuestionNo": 3,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 355
+    },
+    {
+      "type": "SINGLE",
+      "content": "“福”对应的造字法是 ( )。",
+      "options": {
+        "A": "形声字",
+        "B": "象形字",
+        "C": "指事字",
+        "D": "会意字"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 97,
+      "sourceQuestionNo": 4,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 356
+    },
+    {
+      "type": "SINGLE",
+      "content": "在教“福”字时，示范声母“f”通常使用的方法是 ( )。",
+      "options": {
+        "A": "气息感应法",
+        "B": "带音法",
+        "C": "手势法",
+        "D": "夸张口型法"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 97,
+      "sourceQuestionNo": 5,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 357
+    },
+    {
+      "type": "SINGLE",
+      "content": "现代汉语普通话中的“舌尖后、送气、清、塞擦音”写成汉语拼音是 ( )。",
+      "options": {
+        "A": "ch",
+        "B": "zh",
+        "C": "z",
+        "D": "c"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 97,
+      "sourceQuestionNo": 6,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 358
+    },
+    {
+      "type": "SINGLE",
+      "content": "在汉字形体演变史上，标志汉字古今演变分水岭的是 ( )。",
+      "options": {
+        "A": "甲骨文",
+        "B": "隶书",
+        "C": "楷书",
+        "D": "金文 第 8-11 题 我给一位自称头痛的老太太服下了两片①阿司匹林片，又②送了她一个钥匙，挂在布包着的头巾 下当首饰。她吞下去我③给的药片还不到五秒钟，就点点头表示头不再疼了，拉住我的手就往她的帐 篷走去。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 97,
+      "sourceQuestionNo": 7,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 359
+    },
+    {
+      "type": "SINGLE",
+      "content": "画线部分①包含几个语素，几个音节? ( )",
+      "options": {
+        "A": "2 个，5 个",
+        "B": "5 个，5 个",
+        "C": "5 个，2 个",
+        "D": "2 个，2 个"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 97,
+      "sourceQuestionNo": 8,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 360
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个词与“首饰”一词的构词类型相同? ( )",
+      "options": {
+        "A": "火红",
+        "B": "合成",
+        "C": "年轻",
+        "D": "治理"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 97,
+      "sourceQuestionNo": 9,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 361
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪一句和画线部分②的句型不一样? ( )",
+      "options": {
+        "A": "他教过我汉语",
+        "B": "谢谢你今天帮助我",
+        "C": "我借了他一百块钱",
+        "D": "阿姨告诉我们明天会停电"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 97,
+      "sourceQuestionNo": 10,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 362
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项中的“给”和画线部分③的意义和用法一样? ( )",
+      "options": {
+        "A": "她给我一本书和一本杂志",
+        "B": "请把这份材料给他送过去",
+        "C": "衣服我去送给他",
+        "D": "能给我复印 50 份试卷吗"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 97,
+      "sourceQuestionNo": 11,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 363
+    },
+    {
+      "type": "SINGLE",
+      "content": "句(1)中“规矩”的发音和意思分别是 ( )。",
+      "options": {
+        "A": "guīju 规则礼法",
+        "B": "guīju 言行正派",
+        "C": "guījǔ 规则礼法",
+        "D": "guījǔ 言行正派"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 98,
+      "sourceQuestionNo": 21,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 364
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个选项中的“都”与句(2)中“都”的意思和用法不同? ( )",
+      "options": {
+        "A": "功课学得都不错",
+        "B": "一动都不动",
+        "C": "愿天下有情人都成眷属",
+        "D": "你的话并不都对"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 98,
+      "sourceQuestionNo": 22,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 365
+    },
+    {
+      "type": "SINGLE",
+      "content": "（3）句和（5）句的句类分别是? ( )",
+      "options": {
+        "A": "选择问句；特指问句",
+        "B": "正反问句；特指问句",
+        "C": "正反问句；是非问句",
+        "D": "选择问句；是非问句"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 99,
+      "sourceQuestionNo": 23,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 366
+    },
+    {
+      "type": "SINGLE",
+      "content": "句(4)中的“怎么”和下列哪项中的“怎么”意思和用法相同?( )",
+      "options": {
+        "A": "他们怎么还不回来?",
+        "B": "怎么又是你!",
+        "C": "她怎么也不肯休息。",
+        "D": "他刚学，还不怎么熟练。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 99,
+      "sourceQuestionNo": 24,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 367
+    },
+    {
+      "type": "SINGLE",
+      "content": "句(6)中“当”的发音和意思分别是 ( )。",
+      "options": {
+        "A": "dāng 充任、担任",
+        "B": "dàng 姑且作为",
+        "C": "dāng 姑且作为",
+        "D": "dàng 充任、担任"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 99,
+      "sourceQuestionNo": 25,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 368
+    },
+    {
+      "type": "SINGLE",
+      "content": "“代替”和“替代”的区别在于? ( )",
+      "options": {
+        "A": "“代替”是暂时性的，主动性强于“替代”",
+        "B": "“替代”是暂时性的，主动性不如“代替”",
+        "C": "“代替”是永久性的，主动性不如“替代”",
+        "D": "“替代”是永久性的，主动性强于“代替” 第 27-31 题 阅读《北京人》片段，回答第 27～31 题： 曾文彩：你逼得爹连他老人家的寿木都要拿去卖，你逼得爹—— 曾 皓： (止住地)文彩! 曾思懿： (讥诮地)对了，是我逼他老人家，吃他老人家， (说着立起来)喝他老人家。成天在他老 人家家里吃闲饭，一住就是四年，还带着自己的姑爷—— 江 泰： (也冒了火)你放屁，我给了钱!"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 99,
+      "sourceQuestionNo": 26,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 369
+    },
+    {
+      "type": "SINGLE",
+      "content": "曾思懿的一段话违反了会话合作原则中的 ( )。",
+      "options": {
+        "A": "数量准则",
+        "B": "质量准则",
+        "C": "关联准则",
+        "D": "方式准则"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 99,
+      "sourceQuestionNo": 27,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 370
+    },
+    {
+      "type": "SINGLE",
+      "content": "会话合作原则是由 ( ) 提出的。",
+      "options": {
+        "A": "利奇",
+        "B": "海姆斯",
+        "C": "格赖斯",
+        "D": "奥斯汀"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 99,
+      "sourceQuestionNo": 28,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 371
+    },
+    {
+      "type": "SINGLE",
+      "content": "江泰的反应印证了言语具有( )之效。",
+      "options": {
+        "A": "言内",
+        "B": "言外",
+        "C": "言后",
+        "D": "言时"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 99,
+      "sourceQuestionNo": 29,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 372
+    },
+    {
+      "type": "SINGLE",
+      "content": "留学生学习汉语，不仅要学习语言知识，还要学习交际能力。下列哪一项不属于交际能力? ( )",
+      "options": {
+        "A": "应答能力",
+        "B": "社会语言能力",
+        "C": "交际策略能力",
+        "D": "话语能力"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 99,
+      "sourceQuestionNo": 30,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 373
+    },
+    {
+      "type": "SINGLE",
+      "content": "对外汉语教学中，除了需要教授语言文化因素中的语义文化、语用文化外，还有( )。",
+      "options": {
+        "A": "语法文化",
+        "B": "构词文化",
+        "C": "语构文化",
+        "D": "交际文化 第 32-35 题 以下是一位同学的写作练习： 学习光是为了成绩单吗? ...... 我们并不能把学习当成光为了跨考试的门槛利用的工具。所有的知识、见识、道德等都是积累起"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 99,
+      "sourceQuestionNo": 31,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 374
+    },
+    {
+      "type": "SINGLE",
+      "content": "文中画线句(1)是 ( )。",
+      "options": {
+        "A": "存现句",
+        "B": "名词谓语句",
+        "C": "动词谓语句",
+        "D": "主谓谓语句"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 100,
+      "sourceQuestionNo": 32,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 375
+    },
+    {
+      "type": "SINGLE",
+      "content": "(2) 处出现的偏误，来源最有可能是 ( )。",
+      "options": {
+        "A": "母语负迁移",
+        "B": "目的语泛化",
+        "C": "文化因素",
+        "D": "学习策略"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 100,
+      "sourceQuestionNo": 33,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 376
+    },
+    {
+      "type": "SINGLE",
+      "content": "(3) 处“把教育或学习接受为工具”，存在的主要偏误是 ( )。",
+      "options": {
+        "A": "语序错乱",
+        "B": ". 搭配不当",
+        "C": "成分遗漏",
+        "D": "成分冗余"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 100,
+      "sourceQuestionNo": 34,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 377
+    },
+    {
+      "type": "SINGLE",
+      "content": "从语义上看，下列哪个选项中“把”的宾语是动作的与事? ( )",
+      "options": {
+        "A": "你把这些文件整理整理。",
+        "B": "服务员不小心把茶杯打破了。",
+        "C": "小伙子一番话，把大娘乐得合不上嘴。",
+        "D": "我还没有把衣服钉上扣子呢。 第 36-40 题 关：我的护照找到了没有? 夏：没有，(1)我找了半天也没找着，你是不是放在办公室了? 关：护照我从来不往办公室放。 夏：昨天你办完护照放在什么地方了? 关：放在我的手提包里了。 夏：你的包呢? 关：(2)我一回家不就交给你了吗? 夏：对。(3)我再好好找找。啊，找到了! 关：是在包里找到的吗? 夏：不是。是在你的大衣口袋里找到的。 关：啊，我忘了，是我昨天晚上放在口袋里的。 夏：快点吧，飞机快要起飞了。"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 100,
+      "sourceQuestionNo": 35,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 378
+    },
+    {
+      "type": "SINGLE",
+      "content": "初级口语技能训练的重点是 ( )。",
+      "options": {
+        "A": "起承转合自然的语段",
+        "B": "复句、简短的语段",
+        "C": "比较连贯的语段",
+        "D": "阐述清晰的语篇"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 100,
+      "sourceQuestionNo": 36,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 379
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个句子和句(2)在结构上属于一类? ( )",
+      "options": {
+        "A": "弟弟一放学就往外面跑",
+        "B": "一到星期天，街上就挤满了人",
+        "C": "老师一上课他就想睡觉",
+        "D": "我一回家妈妈就开始做饭"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 100,
+      "sourceQuestionNo": 37,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 380
+    },
+    {
+      "type": "SINGLE",
+      "content": "句(3)“好好找找”中的“好好”读音是 ( )。",
+      "options": {
+        "A": "hǎohāo",
+        "B": "hǎohǎo",
+        "C": "háohǎo",
+        "D": "háoháo"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 100,
+      "sourceQuestionNo": 38,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 381
+    },
+    {
+      "type": "SINGLE",
+      "content": "和句(1)中的“了”表达的意义相同的一项是 ( )。",
+      "options": {
+        "A": "听过他的话才懂了这个道理",
+        "B": "墙上挂了两幅照片",
+        "C": "她哭红了眼睛",
+        "D": "等会儿吃了饭去找你"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 101,
+      "sourceQuestionNo": 39,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 382
+    },
+    {
+      "type": "SINGLE",
+      "content": "适合本课的拓展话题是 ( )。",
+      "options": {
+        "A": "存放东西",
+        "B": "旅游",
+        "C": "找东西",
+        "D": "购物 第 41-43 题 ①良庖岁更刀，割也；族庖月更刀，折也。今臣之刀十九年矣，所解数千牛矣，而刀刃若新发于 硎。②彼节者有间，而刀刃者无厚；以无厚入有间，恢恢乎其于游刃必有余地矣！③是以十九年而刀 刃若新发于硎。"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 101,
+      "sourceQuestionNo": 40,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 383
+    },
+    {
+      "type": "SINGLE",
+      "content": "①处的语气词“也”在表达上有什么作用? ( )",
+      "options": {
+        "A": "表示等同",
+        "B": "强调原因",
+        "C": "强调类型",
+        "D": "表示比喻"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 101,
+      "sourceQuestionNo": 41,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 384
+    },
+    {
+      "type": "SINGLE",
+      "content": "②处的“间”是什么意思? ( )",
+      "options": {
+        "A": "中间",
+        "B": "离间",
+        "C": "间隙",
+        "D": "偷偷地"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 101,
+      "sourceQuestionNo": 42,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 385
+    },
+    {
+      "type": "SINGLE",
+      "content": "关于③处的“是以”,下列哪个说法是不正确的? ( )",
+      "options": {
+        "A": "“是”是判断动词",
+        "B": "“以”是介词",
+        "C": "“是以”的意思是“因此”",
+        "D": "“是以”是宾语前置结构 第 44-45 题 俗话说“一日之计在于晨”，早上读书更容易记牢。大脑得到一夜的休息，前一天的疲劳已完全消失， 早晨很容易进入兴奋状态，这时背书就比较容易记住。"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 101,
+      "sourceQuestionNo": 43,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 386
+    },
+    {
+      "type": "SINGLE",
+      "content": "“—日之计在于晨”这句话属于熟语系统中的哪一类型? ( )",
+      "options": {
+        "A": "成语",
+        "B": "谚语",
+        "C": "惯用语",
+        "D": "歇后语"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 101,
+      "sourceQuestionNo": 44,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 387
+    },
+    {
+      "type": "SINGLE",
+      "content": "从心理学角度来看，早晨读书记忆效果更好的原因是什么? ( )",
+      "options": {
+        "A": "倒摄抑制弱",
+        "B": "前摄抑制弱",
+        "C": "超限抑制弱",
+        "D": "延缓抑制弱 第 46-50 题 那天早上，我走在上班的路上，突然下起雨来，而且下得挺大的。真后悔没听天气预报，带一把 雨伞。我赶紧跑到一个商店门口躲雨，希望过一会儿雨会变小一点。时间一分一秒地过去了，雨下得 还是那么大，(1)如果再等下去的话，非迟到不可。 一想到迟到后单位领导那难看的脸色，我就顾不得 雨的大小了，赶紧冲进了雨里。 我走了没几步，就看见路的另一边有一个骑自行车的小姑娘，连人带车一下子摔倒了。她疼得一 时站不起来了。 (2)我立刻跑过去把她扶起来，还好，她摔得不严重，只是手上擦破了一点皮。我帮她 把自行车扶起来，告诉她骑车要小心，然后，继续往前走。这时， 一位阿姨走到我身边，对我说：“跟 我一起打伞吧，我送送你。”(3)看到我一脸的惊讶，她笑了一下，很诚恳地说：“你刚刚帮助了那个小 姑娘，也让我帮帮你吧。”听了她的话，我非常感动。 在我们的生活中，很多人一方面抱怨这个社会越来越冷漠了， 一方面自己也用冷漠的态度对待这 个社会。其实如果每个人都献出一点儿爱，这个世界不是会变得更加美好吗?"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 101,
+      "sourceQuestionNo": 45,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 388
+    },
+    {
+      "type": "SINGLE",
+      "content": "“赶紧”和“连忙”的主要区别是 ( )。",
+      "options": {
+        "A": "前者常用于祈使句，后者只能用于陈述句",
+        "B": "前者只能用于陈述句，后者常用于祈使句",
+        "C": "前者是副词，后者是动词",
+        "D": "前者是动词，后者是副词"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 102,
+      "sourceQuestionNo": 46,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 389
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列关于句(2)的句式，说法正确的是 ( )。",
+      "options": {
+        "A": "是“把”字句",
+        "B": "是“把”字句和连动句的套用",
+        "C": "不能改成“被”字句",
+        "D": "能改成“被”字句，并且改动后句式不变"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 102,
+      "sourceQuestionNo": 47,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 390
+    },
+    {
+      "type": "SINGLE",
+      "content": "不属于本课重点学习的语法点或词语是 ( )。",
+      "options": {
+        "A": "趋向补语“下去”的基本用法",
+        "B": "非……不可",
+        "C": "赶紧",
+        "D": "立刻"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 102,
+      "sourceQuestionNo": 48,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 391
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪个选项中的加点字与句 ( 3 ) 中“一” 的意义相同 ? ( )",
+      "options": {
+        "A": "情人节的时候，小张送了一束花给女朋友。",
+        "B": "今天他只吃了一碗饭。",
+        "C": "运动过后，出了一身的汗。",
+        "D": "从我家到学校要开一小时的车。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 102,
+      "sourceQuestionNo": 49,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 392
+    },
+    {
+      "type": "SINGLE",
+      "content": "你认为适合本课的拓展提升练习是 ( )。",
+      "options": {
+        "A": "说明一种品格",
+        "B": "议论某一现象",
+        "C": "描写某一个人",
+        "D": "记叙某一件事"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 102,
+      "sourceQuestionNo": 50,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 393
+    },
+    {
+      "type": "SINGLE",
+      "content": "这堂课适用于什么阶段的学生? ( )",
+      "options": {
+        "A": "初级水平",
+        "B": "中级水平",
+        "C": "高级水平",
+        "D": "无法确定"
+      },
+      "answer": "A",
+      "explanation": "",
+      "sourcePage": 103,
+      "sourceQuestionNo": 51,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 394
+    },
+    {
+      "type": "SINGLE",
+      "content": "下列哪项语言点适合安排在本课之前? ( )",
+      "options": {
+        "A": "“被”字句",
+        "B": "“把”字句",
+        "C": "“了”字结构",
+        "D": "重动句"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 103,
+      "sourceQuestionNo": 52,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 395
+    },
+    {
+      "type": "SINGLE",
+      "content": "这 3 节课的教学设计属于 ( )。",
+      "options": {
+        "A": "3P 模式",
+        "B": "传统型教学模式",
+        "C": "改良型教学模式",
+        "D": "任务型教学模式"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 103,
+      "sourceQuestionNo": 53,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 396
+    },
+    {
+      "type": "SINGLE",
+      "content": "如果要去掉一个不必要的环节，应该是哪一个? ( )",
+      "options": {
+        "A": "(2)",
+        "B": "(3)",
+        "C": "(4)",
+        "D": "(5) 第 55-60 题 请选出下列语法点对应的教学方法，在 A~",
+        "G": "中进行选择，其中有一个多余选项。"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 103,
+      "sourceQuestionNo": 54,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 397
+    },
+    {
+      "type": "SINGLE",
+      "content": "口语课上，教师最恰当的讲练比例是 ( )。",
+      "options": {
+        "A": "1:2",
+        "B": "1:3",
+        "C": "4:6",
+        "D": "3:7"
+      },
+      "answer": "D",
+      "explanation": "",
+      "sourcePage": 104,
+      "sourceQuestionNo": 61,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 398
+    },
+    {
+      "type": "SINGLE",
+      "content": "上述教材属于哪种类型? ( )",
+      "options": {
+        "A": "话题型教材",
+        "B": "功能-结构型教材",
+        "C": "课文型教材",
+        "D": "任务型教材"
+      },
+      "answer": "B",
+      "explanation": "",
+      "sourcePage": 104,
+      "sourceQuestionNo": 62,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 399
+    },
+    {
+      "type": "SINGLE",
+      "content": "根据上述教材，下面哪种口语测试的题型不合适? ( )",
+      "options": {
+        "A": "角色扮演",
+        "B": "复述",
+        "C": "讨论或辩论",
+        "D": "问答"
+      },
+      "answer": "C",
+      "explanation": "",
+      "sourcePage": 104,
+      "sourceQuestionNo": 63,
+      "sourceSetIndex": 6,
+      "sourceYear": "",
+      "sourceSetTitle": "114 这样的问题，为什么美国的家长要这样呢? 面对这种情况，如果你是曹老师，请你给出最为合适的选择。( ) A. 自己是很有经验的老师，学生就是需要批评才能认",
+      "sortOrder": 400
+    }
+  ]
+}

@@ -1,4 +1,3 @@
-// 浜戝嚱鏁板叆鍙ｆ枃浠?
 const cloud = require('wx-server-sdk');
 
 cloud.init({
@@ -7,88 +6,129 @@ cloud.init({
 
 const db = cloud.database();
 
-/**
- * 鏇存柊绉戠洰浜戝嚱鏁?
- * 楠岃瘉绠＄悊鍛樻潈闄愬悗鏇存柊绉戠洰淇℃伅
- */
-exports.main = async (event, context) => {
-  const { token, examId, name, category, icon, sortOrder } = event;
-
-  // 1. 楠岃瘉绠＄悊鍛樻潈闄?
-  if (!token) {
-    return { success: false, error: '鏈彁渚涚櫥褰曚护鐗? };
-  }
-
+async function validateAdminToken(token) {
   const tokenResult = await db.collection('admin_tokens')
-    .where({ token: token })
+    .where({ token })
     .get();
 
   if (tokenResult.data.length === 0) {
     return {
-      success: false,
-      message: '???????????'
+      valid: false,
+      message: '登录状态无效，请重新登录'
     };
   }
 
   const tokenData = tokenResult.data[0];
-
-  // 2. 妫€鏌?token 鏄惁杩囨湡
-  if (new Date(tokenData.expiresAt) < new Date()) {
-    await db.collection('admin_tokens').doc(tokenData._id).remove();
-    return { success: false, error: '鐧诲綍浠ょ墝宸茶繃鏈燂紝璇烽噸鏂扮櫥褰? };
+  if (tokenData.expiresAt) {
+    const expiresAt = new Date(tokenData.expiresAt).getTime();
+    if (!Number.isNaN(expiresAt) && expiresAt <= Date.now()) {
+      await db.collection('admin_tokens').doc(tokenData._id).remove();
+      return {
+        valid: false,
+        message: '登录已过期，请重新登录'
+      };
+    }
   }
 
-  // 3. 楠岃瘉鍙傛暟
-  if (!examId) {
-    return { success: false, error: '鏈彁渚涚鐩?ID' };
-  }
-
-  if (!name || name.trim() === '') {
-    return { success: false, error: '绉戠洰鍚嶇О涓嶈兘涓虹┖' };
-  }
-
-  // 4. 鏌ヨ绉戠洰鏄惁瀛樺湪
-  const examResult = await db.collection('exams')
-    .doc(examId)
-    .get();
-
-  if (!examResult.data) {
-    return { success: false, error: '绉戠洰涓嶅瓨鍦? };
-  }
-
-  // 5. 鏋勫缓鏇存柊鏁版嵁
-  const updateData = {
-    name: name.trim(),
-    category: category ? category.trim() : '',
-    icon: icon ? icon.trim() : '馃摎',
-    sortOrder: sortOrder !== undefined ? parseInt(sortOrder) : 0,
-    updatedAt: new Date()
+  return {
+    valid: true,
+    tokenData
   };
+}
 
-  // 6. 鏇存柊绉戠洰
+function normalizeInput(event = {}) {
+  const category = typeof event.category === 'string' ? event.category.trim() : '';
+  const icon = typeof event.icon === 'string' ? event.icon.trim() : '';
+  return {
+    name: typeof event.name === 'string' ? event.name.trim() : '',
+    category: category || '默认分类',
+    icon: icon || '📚',
+    sortOrder: Number.isFinite(Number(event.sortOrder)) ? parseInt(event.sortOrder, 10) : 0,
+    isActive: event.isActive !== false
+  };
+}
+
+exports.main = async (event = {}) => {
   try {
+    const auth = await validateAdminToken(event.token);
+    if (!auth.valid) {
+      return {
+        success: false,
+        message: auth.message
+      };
+    }
+
+    const examId = event.examId;
+    if (!examId) {
+      return {
+        success: false,
+        message: '未提供科目 ID'
+      };
+    }
+
+    const payload = normalizeInput(event);
+    if (!payload.name) {
+      return {
+        success: false,
+        message: '科目名称不能为空'
+      };
+    }
+
+    const examResult = await db.collection('exams').doc(examId).get();
+    if (!examResult.data) {
+      return {
+        success: false,
+        message: '科目不存在'
+      };
+    }
+
+    const duplicateResult = await db.collection('exams')
+      .where({ name: payload.name })
+      .get();
+
+    const duplicated = duplicateResult.data.find(item => item._id !== examId);
+    if (duplicated) {
+      return {
+        success: false,
+        message: '科目名称已存在'
+      };
+    }
+
+    const updateData = {
+      ...payload,
+      updatedAt: new Date()
+    };
+
     await db.collection('exams').doc(examId).update({
       data: updateData
     });
 
-    // 7. 鏌ヨ璇ョ鐩殑棰樼洰鏁伴噺
-    const countResult = await db.collection('questions')
-      .where({ examId: examId })
-      .count();
+    const [questionCount, codeCount, permissionCount] = await Promise.all([
+      db.collection('questions').where({ examId }).count(),
+      db.collection('activation_codes').where({ examId }).count(),
+      db.collection('user_permissions').where({ examId }).count()
+    ]);
 
     return {
       success: true,
+      message: '科目更新成功',
       data: {
-        message: '绉戠洰鏇存柊鎴愬姛',
         exam: {
           _id: examId,
+          ...examResult.data,
           ...updateData
         },
-        questionCount: countResult.total
+        questionCount: questionCount.total || 0,
+        codeCount: codeCount.total || 0,
+        permissionCount: permissionCount.total || 0
       }
     };
-  } catch (err) {
-    console.error('鏇存柊绉戠洰澶辫触锛?, err);
-    return { success: false, error: '鏇存柊绉戠洰澶辫触锛? + err.message };
+  } catch (error) {
+    console.error('[adminUpdateExam] error', error);
+    return {
+      success: false,
+      message: '更新科目失败',
+      error: error.message
+    };
   }
 };

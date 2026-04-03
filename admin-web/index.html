@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -90,7 +90,7 @@
       cursor: not-allowed;
     }
 
-    /* 主界�?*/
+    /* 主界�?*/
     .main-container {
       display: none;
     }
@@ -343,7 +343,7 @@
       }
     }
 
-    /* 文本�?*/
+    /* 文本�?*/
     textarea {
       width: 100%;
       padding: 12px;
@@ -458,21 +458,21 @@
     <div class="login-box">
       <h1 class="login-title">管理后台登录</h1>
       <div class="form-group">
-        <label class="form-label">管理员密�?/label>
-        <input type="password" id="loginPassword" class="form-input" placeholder="请输入密�?>
+        <label class="form-label">管理员密码</label>
+        <input type="password" id="loginPassword" class="form-input" placeholder="请输入密码">
       </div>
       <button class="btn" onclick="login()">登录</button>
       <p class="help-text" style="text-align: center; margin-top: 16px;">默认密码：admin123</p>
     </div>
   </div>
 
-  <!-- 主界�?-->
+  <!-- 主界�?-->
   <div id="mainPage" class="main-container">
     <div class="header">
       <div class="header-title">刷题系统管理后台</div>
       <div class="header-right">
         <span id="adminInfo"></span>
-        <button class="btn-sm btn-secondary" onclick="logout()">退出登�?/button>
+        <button class="btn-sm btn-secondary" onclick="logout()">退出登录</button>
       </div>
     </div>
 
@@ -486,15 +486,16 @@
       <div class="sidebar-item" onclick="showPage('questions')">
         <span>✏️</span> 题目管理
       </div>
-            <div class="sidebar-item" onclick="showPage(''topics'')">
-        <span>??</span> ר�����
+      <div class="sidebar-item" onclick="showPage('topics')">
+        <span>🧩</span> 专题管理
       </div>
-      <div class="sidebar-item" onclick="showPage(''papers'')">
-        <span>??</span> �������
+      <div class="sidebar-item" onclick="showPage('papers')">
+        <span>📝</span> 试卷管理
       </div>
-      <div class="sidebar-item" onclick="showPage(''imports'')">
-        <span>??</span> ��������
-      </div><div class="sidebar-item" onclick="showPage('codes')">
+      <div class="sidebar-item" onclick="showPage('imports')">
+        <span>📥</span> 导入任务
+      </div>
+      <div class="sidebar-item" onclick="showPage('codes')">
         <span>🔑</span> 激活码管理
       </div>
     </div>
@@ -517,7 +518,7 @@
             <div class="stat-value" id="statCodes">0</div>
           </div>
           <div class="stat-card">
-            <div class="stat-label">已激活用�?/div>
+            <div class="stat-label">已激活用户</div>
             <div class="stat-value" id="statUsers">0</div>
           </div>
         </div>
@@ -536,8 +537,12 @@
                 <th>图标</th>
                 <th>科目名称</th>
                 <th>分类</th>
+                <th>状态</th>
                 <th>题目数量</th>
+                <th>激活码数量</th>
+                <th>已授权用户</th>
                 <th>排序</th>
+                <th>更新时间</th>
                 <th>操作</th>
               </tr>
             </thead>
@@ -556,44 +561,83 @@
                 <option value="">选择科目</option>
               </select>
               <button class="btn-sm btn-secondary" onclick="exportQuestions()">导出CSV</button>
+              <button class="btn-sm btn-danger" onclick="deduplicateQuestions()">检查并删除重复题</button>
               <button class="btn-sm btn-secondary" onclick="downloadCsvTemplate()">下载CSV模板</button>
+              <button class="btn-sm btn-secondary" onclick="downloadJsonTemplate()">下载JSON模板</button>
               <button class="btn-sm btn-primary" onclick="showImportModal()">批量导入</button>
             </div>
           </div>
           <div style="padding: 20px;">
-            <h3>CSV格式说明</h3>
-            <p style="margin: 12px 0; color: #666;">请按照以下格式准备CSV文件�?/p>
+            <h3>导入格式说明</h3>
+            <p style="margin: 12px 0; color: #666;">简单客观题建议使用 CSV；材料题、配图题、含子题结构的题库建议使用 JSON。</p>
             <pre style="background: #f9fafb; padding: 12px; border-radius: 4px; overflow-x: auto;">
-题型,题目内容,A选项,B选项,C选项,D选项,答案,解析
-单选题,以下哪个是正确的�?选项A的内�?选项B的内�?选项C的内�?选项D的内�?A,这是解析内容
-多选题,以下哪些是正确的�?选项A的内�?选项B的内�?选项C的内�?选项D的内�?AB,这是解析内容
-判断�?地球是圆的吗�?,,,,A,这是解析内容
+题型,题目内容,A选项,B选项,C选项,D选项,E选项,F选项,G选项,答案,解析
+单选题,以下哪个属于学习计划执行动作？,开始复盘,删除课程,取消笔记,关闭提醒,,,,A,开始复盘属于实际执行动作
+多选题,以下哪些属于高效刷题方法？,分专题练习,错题复盘,只看答案,定期模考,阶段复盘,限时练习,真题复盘,ABEFG,专题练习+错题复盘+阶段复盘+限时练习更有效
+判断题,题库刷题前先明确考试科目是合理的,,,,,,,,A,先选定科目和范围更利于整理题库
+填空题,企业常见的客户关系管理缩写是？,,,,,,,,CRM,常见缩写为 CRM
+简答题,请简述刷题后如何整理错题,,,,,,,,先分类记录错因，再定期复盘并二次练习,写出关键步骤即可
+计算题,某题库共 120 题，已完成 45 题，完成率是多少？,,,,,,,,37.5%,120 题完成 45 题即 37.5%
             </pre>
-            <p class="help-text">支持题型：单选题、多选题、判断题</p>
+            <p class="help-text">支持题型：单选题、多选题、判断题、填空题、简答题、开放题、论述题、计算题、材料题。</p>
+            <p class="help-text">CSV 适合普通题：选择题支持 <code>A-G</code> 7 个选项；填空题多个答案用 <code>|</code> 分隔；简答题/开放题/论述题/计算题可留空选项列。</p>
+            <p class="help-text">JSON 适合复杂题：可导入 <code>stem</code>、<code>analysis</code>、<code>media</code>、<code>children</code>，可承载配图题、材料题、子题结构。</p>
+          </div>
+          <div style="padding: 0 20px 20px;">
+            <div class="table-header" style="padding-left: 0; padding-right: 0; border-top: 1px solid #e5e7eb; margin-top: 8px;">
+              <div class="table-title">题目巡检</div>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <label style="font-size: 14px;"><input type="checkbox" id="questionMediaOnly" onchange="loadQuestionReviewList()"> 仅看待补图</label>
+                <button class="btn-sm btn-secondary" onclick="loadQuestionReviewList()">刷新题目列表</button>
+              </div>
+            </div>
+            <div class="help-text" style="margin-bottom: 8px;">先在上方选择科目，再在这里查看题目。遇到“看上图/图中”等题干但无图的题，可直接点“补图”。</div>
+            <div id="questionReviewSummary" class="help-text" style="margin-bottom: 8px;">请选择科目后查看题目列表</div>
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 90px;">序号</th>
+                  <th style="width: 90px;">题型</th>
+                  <th>题干</th>
+                  <th style="width: 140px;">图片状态</th>
+                  <th style="width: 220px;">操作</th>
+                </tr>
+              </thead>
+              <tbody id="questionReviewTableBody">
+                <tr><td colspan="5" style="color: #666;">请选择科目后查看题目列表</td></tr>
+              </tbody>
+            </table>
+            <div class="pagination" style="justify-content: flex-end; padding-left: 0; padding-right: 0;">
+              <button id="questionPrevBtn" onclick="prevQuestionReviewPage()">上一页</button>
+              <span class="pagination-info" id="questionPaginationInfo">第 0 / 0 页</span>
+              <button id="questionNextBtn" onclick="nextQuestionReviewPage()">下一页</button>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- 激活码管理页面 -->
       
-      <!-- ר�����ҳ�� -->
+      <!-- 专题管理页面 -->
       <div id="topicsPage" class="page">
         <div class="table-container">
           <div class="table-header">
-            <div class="table-title">ר�����</div>
+            <div class="table-title">专题管理</div>
             <div style="display: flex; gap: 8px; align-items: center;">
-              <select id="topicExamSelect" class="form-input" style="width: 200px;"><option value="">ѡ���Ŀ</option></select>
-              <button class="btn-sm btn-primary" onclick="showCreateTopicModal()">����ר��</button>
+              <select id="topicExamSelect" class="form-input" style="width: 200px;"><option value="">选择科目</option></select>
+              <button class="btn-sm btn-primary" onclick="showCreateTopicModal()">新增专题</button>
             </div>
           </div>
           <table>
             <thead>
               <tr>
-                <th>ר������</th>
-                <th>��Ŀ</th>
-                <th>�ϼ�</th>
-                <th>����</th>
-                <th>����</th>
+                <th>专题名称</th>
+                <th>科目</th>
+                <th>上级专题</th>
+                <th>题目数量</th>
+                <th>状态</th>
+                <th>排序</th>
+                <th>操作</th>
               </tr>
             </thead>
             <tbody id="topicsTableBody"></tbody>
@@ -601,24 +645,26 @@
         </div>
       </div>
 
-      <!-- �������ҳ�� -->
+      <!-- 试卷管理页面 -->
       <div id="papersPage" class="page">
         <div class="table-container">
           <div class="table-header">
-            <div class="table-title">�������</div>
+            <div class="table-title">试卷管理</div>
             <div style="display: flex; gap: 8px; align-items: center;">
-              <select id="paperExamSelect" class="form-input" style="width: 200px;"><option value="">ѡ���Ŀ</option></select>
-              <button class="btn-sm btn-primary" onclick="showCreatePaperModal()">��������</button>
+              <select id="paperExamSelect" class="form-input" style="width: 200px;"><option value="">选择科目</option></select>
+              <button class="btn-sm btn-primary" onclick="showCreatePaperModal()">新增试卷</button>
             </div>
           </div>
           <table>
             <thead>
               <tr>
-                <th>��������</th>
-                <th>���</th>
-                <th>��Ŀ</th>
-                <th>����</th>
-                <th>����</th>
+                <th>试卷名称</th>
+                <th>年份</th>
+                <th>科目</th>
+                <th>题目数量</th>
+                <th>状态</th>
+                <th>排序</th>
+                <th>操作</th>
               </tr>
             </thead>
             <tbody id="papersTableBody"></tbody>
@@ -626,21 +672,21 @@
         </div>
       </div>
 
-      <!-- ��������ҳ�� -->
+      <!-- 导入任务页面 -->
       <div id="importsPage" class="page">
         <div class="table-container">
           <div class="table-header">
-            <div class="table-title">��������</div>
-            <button class="btn-sm btn-primary" onclick="showCreateImportTaskModal()">��������</button>
+            <div class="table-title">导入任务</div>
+            <button class="btn-sm btn-primary" onclick="showCreateImportTaskModal()">新建任务</button>
           </div>
           <table>
             <thead>
               <tr>
-                <th>����ID</th>
-                <th>��Ŀ</th>
-                <th>״̬</th>
-                <th>����ʱ��</th>
-                <th>����</th>
+                <th>任务ID</th>
+                <th>科目</th>
+                <th>状态</th>
+                <th>创建时间</th>
+                <th>操作</th>
               </tr>
             </thead>
             <tbody id="importsTableBody"></tbody>
@@ -652,10 +698,25 @@
             <div class="table-title">激活码列表</div>
             <button class="btn-sm btn-success" onclick="showGenerateModal()">生成激活码</button>
           </div>
-          <div style="padding: 12px 20px; display: flex; gap: 12px; align-items: center;">
+          <div style="padding: 12px 20px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
             <label>筛选科目：</label>
-            <select id="filterExamSelect" class="form-input" style="width: 200px;" onchange="loadCodes()">
+            <select id="filterExamSelect" class="form-input" style="width: 200px;" onchange="resetCodesPageAndLoad()">
               <option value="">全部科目</option>
+            </select>
+            <label>来源：</label>
+            <select id="filterCodeSource" class="form-input" style="width: 160px;" onchange="resetCodesPageAndLoad()">
+              <option value="">全部来源</option>
+              <option value="MANUAL">手动生成</option>
+              <option value="XHS">小红书</option>
+              <option value="TB">淘宝</option>
+              <option value="PDD">拼多多</option>
+              <option value="XY">闲鱼</option>
+            </select>
+            <label>状态：</label>
+            <select id="filterCodeStatus" class="form-input" style="width: 160px;" onchange="resetCodesPageAndLoad()">
+              <option value="">全部状态</option>
+              <option value="UNUSED">未使用</option>
+              <option value="USED">已使用</option>
             </select>
           </div>
           <table id="codesTable">
@@ -664,7 +725,9 @@
                 <th>激活码</th>
                 <th>科目</th>
                 <th>来源</th>
-                <th>状�?/th>
+                <th>批次号</th>
+                <th>状态</th>
+                <th>使用信息</th>
                 <th>创建时间</th>
                 <th>操作</th>
               </tr>
@@ -672,9 +735,9 @@
             <tbody id="codesTableBody"></tbody>
           </table>
           <div class="pagination">
-            <button onclick="prevPage()" id="prevBtn">上一�?/button>
+            <button onclick="prevPage()" id="prevBtn">上一页</button>
             <span class="pagination-info" id="paginationInfo"></span>
-            <button onclick="nextPage()" id="nextBtn">下一�?/button>
+            <button onclick="nextPage()" id="nextBtn">下一页</button>
           </div>
         </div>
       </div>
@@ -685,17 +748,18 @@
   <div id="createExamModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title">添加科目</div>
+        <div class="modal-title" id="examModalTitle">添加科目</div>
         <button class="modal-close" onclick="closeModal('createExamModal')">&times;</button>
       </div>
       <div class="modal-body">
+        <input type="hidden" id="editingExamId">
         <div class="form-group">
           <label class="form-label">科目名称 *</label>
-          <input type="text" id="examName" class="form-input" placeholder="请输入科目名�?>
+          <input type="text" id="examName" class="form-input" placeholder="请输入科目名称">
         </div>
         <div class="form-group">
           <label class="form-label">分类</label>
-          <input type="text" id="examCategory" class="form-input" placeholder="请输入分�? value="默认分类">
+          <input type="text" id="examCategory" class="form-input" placeholder="例如：医考、法考、公考" value="默认分类">
         </div>
         <div class="form-group">
           <label class="form-label">图标</label>
@@ -703,12 +767,19 @@
         </div>
         <div class="form-group">
           <label class="form-label">排序</label>
-          <input type="number" id="examSortOrder" class="form-input" placeholder="数字越小越靠�? value="0">
+          <input type="number" id="examSortOrder" class="form-input" placeholder="数字越小越靠前" value="0">
+        </div>
+        <div class="form-group">
+          <label class="form-label">状态</label>
+          <select id="examIsActive" class="form-input">
+            <option value="true">启用</option>
+            <option value="false">停用</option>
+          </select>
         </div>
       </div>
       <div class="modal-footer">
         <button class="btn-sm btn-secondary" onclick="closeModal('createExamModal')">取消</button>
-        <button class="btn-sm btn-primary" onclick="createExam()">确定</button>
+        <button class="btn-sm btn-primary" onclick="submitExamForm()">确定</button>
       </div>
     </div>
   </div>
@@ -723,37 +794,59 @@
       <div class="modal-body">
         <div class="form-group">
           <label class="form-label">选择科目 *</label>
-          <select id="importExamSelect" class="form-input">
+          <select id="importExamSelect" class="form-input" onchange="handleImportExamChange(this.value)">
             <option value="">请选择科目</option>
           </select>
         </div>
         <div class="form-group">
+          <label class="form-label">导入到专题</label>
+          <select id="importTopicSelect" class="form-input">
+            <option value="">不绑定专题</option>
+          </select>
+          <p class="help-text">如果选择专题，本次导入的题目会自动归入该专题</p>
+        </div>
+        <div class="form-group">
+          <label class="form-label">导入到试卷</label>
+          <select id="importPaperSelect" class="form-input">
+            <option value="">不绑定试卷</option>
+          </select>
+          <p class="help-text">如果选择试卷，本次导入的题目会自动归入该试卷</p>
+        </div>
+        <div class="form-group">
+          <label class="form-label">数据格式 *</label>
+          <select id="importFormat" class="form-input" onchange="refreshImportPreview()">
+            <option value="csv">CSV（普通题推荐）</option>
+            <option value="json">JSON（材料题/配图题推荐）</option>
+          </select>
+          <p class="help-text">如果是 CTCSOL 这类带材料和配图的题库，优先使用 JSON 导入。</p>
+        </div>
+        <div class="form-group">
           <label class="form-label">导入方式 *</label>
-          <select id="importMode" class="form-input">
+          <select id="importMode" class="form-input" onchange="refreshImportPreview()">
             <option value="overwrite">覆盖导入（将删除该科目旧题）</option>
             <option value="append">追加导入</option>
           </select>
-          <p class="help-text">覆盖导入会先清空该科目已有题�?/p>
+          <p class="help-text">覆盖导入会先清空该科目已有题目</p>
         </div>
         <div class="form-group">
-          <label class="form-label">CSV文件 *</label>
+          <label class="form-label">导入文件</label>
           <div style="display: flex; gap: 8px; align-items: center;">
-            <input type="file" id="csvFileInput" accept=".csv" style="display: none;" onchange="handleCsvFile(event)">
-            <button class="btn-sm btn-secondary" onclick="document.getElementById('csvFileInput').click()">选择CSV文件</button>
-            <span class="help-text">选择后会自动读取，点击“开始导入”提�?/span>
+            <input type="file" id="importFileInput" accept=".csv,.json" style="display: none;" onchange="handleImportFile(event)">
+            <button class="btn-sm btn-secondary" onclick="document.getElementById('importFileInput').click()">选择文件</button>
+            <span class="help-text">支持 CSV / JSON，选择后会自动读取并预检</span>
           </div>
         </div>
         <div class="form-group">
-          <label class="form-label">CSV数据 *</label>
-          <textarea id="importData" placeholder="粘贴CSV数据，每行一道题..."></textarea>
-          <p class="help-text">支持逗号或管道符(|)分隔选项</p>
+          <label class="form-label">导入数据 *</label>
+          <textarea id="importData" placeholder="粘贴 CSV 或 JSON 数据..." oninput="refreshImportPreview()"></textarea>
+          <p class="help-text">CSV 支持逗号或管道符(|)分隔；JSON 支持数组或 <code>{ &quot;questions&quot;: [] }</code> 结构。</p>
         </div>
         <div id="importResult" style="margin-top: 16px; padding: 12px; background: #f9fafb; border-radius: 4px; display: none;">
         </div>
       </div>
       <div class="modal-footer">
         <button class="btn-sm btn-secondary" onclick="closeModal('importModal')">取消</button>
-        <button class="btn-sm btn-primary" id="importBtn" onclick="importQuestions()">开始导�?/button>
+        <button class="btn-sm btn-primary" id="importBtn" onclick="importQuestions()">开始导入</button>
       </div>
     </div>
   </div>
@@ -791,20 +884,25 @@
         </div>
         <div class="form-group">
           <label class="form-label">生成数量 *</label>
-          <input type="number" id="generateCount" class="form-input" placeholder="请输入生成数�? value="10" min="1" max="100">
+          <input type="number" id="generateCount" class="form-input" placeholder="请输入生成数量" value="10" min="1" max="100">
         </div>
         <div class="form-group">
           <label class="form-label">来源</label>
           <select id="generateSource" class="form-input">
             <option value="MANUAL">手动生成</option>
-            <option value="XHS">小红�?/option>
+            <option value="XHS">小红书</option>
             <option value="TB">淘宝</option>
-            <option value="PDD">拼多�?/option>
+            <option value="PDD">拼多多</option>
             <option value="XY">闲鱼</option>
           </select>
         </div>
+        <div class="form-group">
+          <label class="form-label">备注</label>
+          <input type="text" id="generateRemark" class="form-input" placeholder="例如：2026春季首批、淘宝店3月活动">
+        </div>
         <div id="generatedCodes" style="margin-top: 16px; display: none;">
-          <label class="form-label">生成的激活码�?/label>
+          <label class="form-label">生成结果</label>
+          <div id="generatedBatchInfo" class="help-text" style="margin-bottom: 8px;"></div>
           <div class="code-list" id="generatedCodesList"></div>
           <button class="btn-sm btn-primary" style="margin-top: 12px;" onclick="copyCodes()">复制全部</button>
         </div>
@@ -820,14 +918,24 @@
   <div id="toast" class="toast"></div>
 
   <script>
-�?/ 全局变量
+// 全局变量
 let currentToken = localStorage.getItem('adminToken') || '';
 let currentPage = 1;
 let pageSize = 20;
 let totalCodes = 0;
+let latestGeneratedCodes = [];
+let examsCache = [];
+let topicsCache = [];
+let papersCache = [];
+let questionReviewCache = [];
+let currentQuestionReviewPage = 1;
+let questionReviewPageSize = 50;
+let questionReviewTotal = 0;
+let questionReviewTotalPages = 0;
+let editingExamId = '';
 let app = null;
 
-// 初始�?Cloudbase
+// 初始�?Cloudbase
     async function initCloudbase() {
       try {
         // Wait for SDK to be available (static hosting may change path)
@@ -853,16 +961,16 @@ let app = null;
           throw new Error('Cloudbase SDK not ready');
         }
 
-        app = sdk.init({ env: 'production-2gvwtg0wc26c95c2' });
+        app = sdk.init({ env: 'cloud1-0g8twq2fde2fa6f0' });
         const auth = app.auth();
         const loginState = await auth.getLoginState();
         if (!loginState) {
           await auth.signInAnonymously();
         }
-    console.log('Cloudbase 初始化成�?);
+    console.log('Cloudbase 初始化成功');
   } catch (err) {
     console.error('Cloudbase 初始化失败：', err);
-    showToast('云环境初始化失败�? + err.message, 'error');
+    showToast('云环境初始化失败: ' + err.message, 'error');
   }
 }
 
@@ -888,7 +996,7 @@ function showToast(message, type = 'success') {
     async function login() {
       const password = document.getElementById('loginPassword').value;
       if (!password) {
-        showToast('请输入密�?, 'error');
+        showToast('请输入密码', 'error');
         return;
       }
 
@@ -904,11 +1012,11 @@ function showToast(message, type = 'success') {
           showToast(result.message || result.error || '登录失败', 'error');
         }
       } catch (error) {
-        showToast('登录失败�? + error.message, 'error');
+        showToast('登录失败: ' + error.message, 'error');
       }
     }
 
-// 退出登�?
+// 退出登�?
 function logout() {
   currentToken = '';
   localStorage.removeItem('adminToken');
@@ -917,7 +1025,7 @@ function logout() {
   document.getElementById('loginPassword').value = '';
 }
 
-// 显示主页�?
+// 显示主页�?
 async function showMainPage() {
   document.getElementById('loginPage').style.display = 'none';
   document.getElementById('mainPage').style.display = 'block';
@@ -947,16 +1055,23 @@ async function loadExams() {
   try {
     const result = await callCloudFunction('adminGetExams', { token: currentToken });
     if (result.success) {
-      const exams = result.data;
+      const exams = Array.isArray(result.data) ? result.data : [];
+      examsCache = exams.slice();
       const tbody = document.getElementById('examsTableBody');
       tbody.innerHTML = exams.map(exam => `
         <tr>
-          <td>${exam.icon}</td>
-          <td>${exam.name}</td>
-          <td>${exam.category}</td>
-          <td>${exam.questionCount}</td>
-          <td>${exam.sortOrder}</td>
+          <td>${escapeHtml(exam.icon || '📚')}</td>
+          <td>${escapeHtml(exam.name || '')}</td>
+          <td>${escapeHtml(exam.category || '-')}</td>
+          <td>${exam.isActive === false ? '<span style="color: #ef4444;">已停用</span>' : '<span style="color: #10b981;">已启用</span>'}</td>
+          <td>${exam.questionCount || 0}</td>
+          <td>${exam.codeCount || 0}</td>
+          <td>${exam.permissionCount || 0}</td>
+          <td>${exam.sortOrder || 0}</td>
+          <td>${escapeHtml(formatDateText(exam.updatedAtText || exam.updatedAt))}</td>
           <td>
+            <button class="btn-sm btn-secondary" onclick="showEditExamModal('${exam._id}')">编辑</button>
+            <button class="btn-sm ${exam.isActive === false ? 'btn-success' : 'btn-secondary'}" onclick="toggleExamStatus('${exam._id}')">${exam.isActive === false ? '启用' : '停用'}</button>
             <button class="btn-sm btn-danger" onclick="deleteExam('${exam._id}')">删除</button>
           </td>
         </tr>
@@ -964,30 +1079,69 @@ async function loadExams() {
     }
   } catch (error) {
     console.error('加载科目列表失败', error);
+    showToast('加载科目列表失败: ' + error.message, 'error');
   }
 }
 
-// 加载科目选择�?
+// 加载科目选择
 async function loadExamSelects() {
   try {
     const result = await callCloudFunction('adminGetExams', { token: currentToken });
     if (result.success) {
-      const exams = result.data;
-      const options = exams.map(exam => `<option value="${exam._id}">${exam.name}</option>`).join('');
-      document.getElementById('importExamSelect').innerHTML = '<option value="">?????</option>' + options;
-      document.getElementById('generateExamSelect').innerHTML = '<option value="">?????</option>' + options;
-      document.getElementById('filterExamSelect').innerHTML = '<option value="">????</option>' + options;
+      const exams = Array.isArray(result.data) ? result.data : [];
+      examsCache = exams.slice();
+      const options = exams.map(exam => {
+        const statusTag = exam.isActive === false ? ' [停用]' : '';
+        return `<option value="${exam._id}">${escapeHtml((exam.name || '') + statusTag)}</option>`;
+      }).join('');
+
+      document.getElementById('importExamSelect').innerHTML = '<option value="">请选择科目</option>' + options;
+      document.getElementById('generateExamSelect').innerHTML = '<option value="">请选择科目</option>' + options;
+      document.getElementById('filterExamSelect').innerHTML = '<option value="">全部科目</option>' + options;
       const exportSelect = document.getElementById('exportExamSelect');
       if (exportSelect) {
-        exportSelect.innerHTML = '<option value="">????</option>' + options;
+        exportSelect.innerHTML = '<option value="">请选择科目</option>' + options;
+        exportSelect.onchange = () => {
+          currentQuestionReviewPage = 1;
+          loadQuestionReviewList();
+        };
+      }
+      const importExamSelect = document.getElementById('importExamSelect');
+      if (importExamSelect) {
+        handleImportExamChange(importExamSelect.value);
       }
     }
   } catch (error) {
-    console.error('?????????', error);
+    console.error('加载科目下拉失败', error);
+    showToast('加载科目下拉失败: ' + error.message, 'error');
   }
 }
 
+function fillQuestionExamSelectFromCache() {
+  const exportSelect = document.getElementById('exportExamSelect');
+  if (!exportSelect) return;
+
+  const exams = Array.isArray(examsCache) ? examsCache : [];
+  const options = exams.map(exam => {
+    const statusTag = exam.isActive === false ? ' [停用]' : '';
+    return `<option value="${exam._id}">${escapeHtml((exam.name || '') + statusTag)}</option>`;
+  }).join('');
+
+  exportSelect.innerHTML = '<option value="">请选择科目</option>' + options;
+  exportSelect.onchange = () => {
+    currentQuestionReviewPage = 1;
+    loadQuestionReviewList();
+  };
+}
+
 function showPage(pageName) {
+  const cloudMainlineOnly = true;
+  const httpOnlyPages = ['imports'];
+
+  if (cloudMainlineOnly && httpOnlyPages.includes(pageName)) {
+    showToast('Cloud mainline active: this page still depends on the Node API and is disabled.', 'error');
+    return;
+  }
   document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
   document.querySelectorAll('.sidebar-item').forEach(item => item.classList.remove('active'));
 
@@ -1009,6 +1163,13 @@ if (pageName === 'papers') {
   loadPaperExamSelect();
   loadPapers();
 }
+if (pageName === 'questions') {
+  fillQuestionExamSelectFromCache();
+  loadExamSelects().finally(() => {
+    fillQuestionExamSelectFromCache();
+    loadQuestionReviewList();
+  });
+}
 if (pageName === 'imports') {
   loadImportTasks();
 }
@@ -1016,34 +1177,74 @@ if (pageName === 'imports') {
 
 // 显示添加科目模态框
 function showCreateExamModal() {
+  editingExamId = '';
+  document.getElementById('examModalTitle').textContent = '添加科目';
+  document.getElementById('editingExamId').value = '';
+  document.getElementById('examName').value = '';
+  document.getElementById('examCategory').value = '默认分类';
+  document.getElementById('examIcon').value = '📚';
+  document.getElementById('examSortOrder').value = '0';
+  document.getElementById('examIsActive').value = 'true';
   document.getElementById('createExamModal').classList.add('active');
 }
 
-// 创建科目
-async function createExam() {
+function showEditExamModal(examId) {
+  const exam = examsCache.find(item => item._id === examId);
+  if (!exam) {
+    showToast('未找到科目信息', 'error');
+    return;
+  }
+
+  editingExamId = examId;
+  document.getElementById('examModalTitle').textContent = '编辑科目';
+  document.getElementById('editingExamId').value = examId;
+  document.getElementById('examName').value = exam.name || '';
+  document.getElementById('examCategory').value = exam.category || '默认分类';
+  document.getElementById('examIcon').value = exam.icon || '📚';
+  document.getElementById('examSortOrder').value = String(exam.sortOrder || 0);
+  document.getElementById('examIsActive').value = exam.isActive === false ? 'false' : 'true';
+  document.getElementById('createExamModal').classList.add('active');
+}
+
+async function submitExamForm() {
   const name = document.getElementById('examName').value.trim();
   const category = document.getElementById('examCategory').value.trim();
   const icon = document.getElementById('examIcon').value.trim();
   const sortOrder = parseInt(document.getElementById('examSortOrder').value) || 0;
+  const isActive = document.getElementById('examIsActive').value !== 'false';
 
   if (!name) {
-    showToast('请输入科目名�?, 'error');
+    showToast('请输入科目名称', 'error');
     return;
   }
 
   try {
-    const result = await callCloudFunction('adminCreateExam', {
+    const payload = {
       token: currentToken,
       name,
       category,
       icon,
-      sortOrder
-    });
+      sortOrder,
+      isActive
+    };
+    const isEditing = !!editingExamId;
+    if (isEditing) {
+      payload.examId = editingExamId;
+    }
+
+    const result = await callCloudFunction(isEditing ? 'adminUpdateExam' : 'adminCreateExam', payload);
 
     if (result.success) {
-      showToast('科目创建成功');
-      closeModal('createExamModal');
+      showToast(isEditing ? '科目更新成功' : '科目创建成功');
+      editingExamId = '';
+      document.getElementById('examModalTitle').textContent = '添加科目';
+      document.getElementById('editingExamId').value = '';
       document.getElementById('examName').value = '';
+      document.getElementById('examCategory').value = '默认分类';
+      document.getElementById('examIcon').value = '📚';
+      document.getElementById('examSortOrder').value = '0';
+      document.getElementById('examIsActive').value = 'true';
+      closeModal('createExamModal');
       await loadExams();
       await loadExamSelects();
       await loadStats();
@@ -1051,20 +1252,65 @@ async function createExam() {
       showToast(result.message, 'error');
     }
   } catch (error) {
-    showToast('创建失败�? + error.message, 'error');
+    showToast((editingExamId ? '更新失败: ' : '创建失败: ') + error.message, 'error');
+  }
+}
+
+async function toggleExamStatus(examId) {
+  const exam = examsCache.find(item => item._id === examId);
+  if (!exam) {
+    showToast('未找到科目信息', 'error');
+    return;
+  }
+
+  const nextActive = exam.isActive === false;
+  const actionText = nextActive ? '启用' : '停用';
+  if (!confirm(`确定要${actionText}科目“${exam.name}”吗？`)) {
+    return;
+  }
+
+  try {
+    const result = await callCloudFunction('adminUpdateExam', {
+      token: currentToken,
+      examId,
+      name: exam.name,
+      category: exam.category,
+      icon: exam.icon,
+      sortOrder: exam.sortOrder,
+      isActive: nextActive
+    });
+
+    if (result.success) {
+      showToast(`科目已${actionText}`);
+      await loadExams();
+      await loadExamSelects();
+      await loadStats();
+    } else {
+      showToast(result.message, 'error');
+    }
+  } catch (error) {
+    showToast(`${actionText}失败: ` + error.message, 'error');
   }
 }
 
 // 删除科目
 async function deleteExam(examId) {
-  if (!confirm('确定要删除这个科目吗？相关的题目和激活码也将被删除�?)) {
+  const exam = examsCache.find(item => item._id === examId);
+  if (!exam) {
+    showToast('未找到科目信息', 'error');
+    return;
+  }
+
+  const summary = `题目 ${exam.questionCount || 0} / 激活码 ${exam.codeCount || 0} / 已授权用户 ${exam.permissionCount || 0}`;
+  if (!confirm(`确定要删除科目“${exam.name}”吗？\n删除后将级联清理：${summary}`)) {
     return;
   }
 
   try {
     const result = await callCloudFunction('adminDeleteExam', { token: currentToken, examId });
     if (result.success) {
-      showToast('删除成功');
+      const deleted = result.data && result.data.deleted ? result.data.deleted : {};
+      showToast(`删除成功：题目 ${deleted.questions || 0} / 激活码 ${deleted.codes || 0} / 用户 ${deleted.permissions || 0}`);
       await loadExams();
       await loadExamSelects();
       await loadStats();
@@ -1072,26 +1318,39 @@ async function deleteExam(examId) {
       showToast(result.message, 'error');
     }
   } catch (error) {
-    showToast('删除失败�? + error.message, 'error');
+    showToast('删除失败: ' + error.message, 'error');
   }
 }
 
 // 显示导入模态框
-    function showImportModal() {
-      document.getElementById('importModal').classList.add('active');
-      document.getElementById('importResult').style.display = 'none';
-    }
+function showImportModal() {
+  document.getElementById('importModal').classList.add('active');
+  const importResult = document.getElementById('importResult');
+  importResult.style.display = 'none';
+  importResult.innerHTML = '';
+  if (document.getElementById('importData').value.trim()) {
+    refreshImportPreview();
+  }
+}
 
-// handle CSV file selection
-function handleCsvFile(event) {
+const IMPORT_OPTION_KEYS = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+
+function handleImportFile(event) {
   const file = event.target && event.target.files ? event.target.files[0] : null;
   if (!file) return;
+
   const examSelect = document.getElementById('importExamSelect');
   const examId = examSelect ? examSelect.value : '';
   if (!examId) {
-    showToast('\u8bf7\u9009\u62e9\u79d1\u76ee', 'error');
+    showToast('请选择科目', 'error');
     event.target.value = '';
     return;
+  }
+
+  const extension = (file.name.split('.').pop() || '').toLowerCase();
+  const formatSelect = document.getElementById('importFormat');
+  if (formatSelect && (extension === 'json' || extension === 'csv')) {
+    formatSelect.value = extension;
   }
 
   const readAsText = (enc) => new Promise((resolve, reject) => {
@@ -1100,8 +1359,8 @@ function handleCsvFile(event) {
       reader.onload = () => resolve(String(reader.result || ''));
       reader.onerror = () => reject(reader.error || new Error('read failed'));
       reader.readAsText(file, enc);
-    } catch (e) {
-      reject(e);
+    } catch (error) {
+      reject(error);
     }
   });
 
@@ -1111,34 +1370,39 @@ function handleCsvFile(event) {
       reader.onload = () => resolve(reader.result);
       reader.onerror = () => reject(reader.error || new Error('read failed'));
       reader.readAsArrayBuffer(file);
-    } catch (e) {
-      reject(e);
+    } catch (error) {
+      reject(error);
     }
   });
 
   (async () => {
     let text = '';
-    try {
-      const buf = await readAsArrayBuffer();
-      if (buf && typeof TextDecoder !== 'undefined') {
-        const tryDecode = (enc) => {
-          try {
-            return new TextDecoder(enc, { fatal: false }).decode(buf);
-          } catch (e) {
-            return '';
+    if (extension === 'json') {
+      text = await readAsText('utf-8');
+    } else {
+      try {
+        const buffer = await readAsArrayBuffer();
+        if (buffer && typeof TextDecoder !== 'undefined') {
+          const tryDecode = (encoding) => {
+            try {
+              return new TextDecoder(encoding, { fatal: false }).decode(buffer);
+            } catch (error) {
+              return '';
+            }
+          };
+
+          let decoded = tryDecode('utf-8');
+          const badChars = (decoded.match(/\uFFFD/g) || []).length;
+          if (badChars > 5) {
+            decoded = tryDecode('gb18030') || tryDecode('gbk') || decoded;
           }
-        };
-        let t = tryDecode('utf-8');
-        const bad = (t.match(/\uFFFD/g) || []).length;
-        if (bad > 5) {
-          t = tryDecode('gb18030') || tryDecode('gbk') || t;
+          text = decoded;
+        } else {
+          text = await readAsText('utf-8');
         }
-        text = t;
-      } else {
+      } catch (error) {
         text = await readAsText('utf-8');
       }
-    } catch (e) {
-      text = await readAsText('utf-8');
     }
 
     if (text && text.charCodeAt(0) === 0xFEFF) {
@@ -1149,246 +1413,501 @@ function handleCsvFile(event) {
     if (importData) {
       importData.value = text.trim();
     }
+    refreshImportPreview();
   })().catch(() => {
-    showToast('\u8bfb\u53d6CSV\u6587\u4ef6\u5931\u8d25', 'error');
+    showToast('读取导入文件失败', 'error');
   });
 
   event.target.value = '';
 }
 
+function csvEscape(value) {
+  const text = String(value == null ? '' : value).replace(/\r?\n/g, ' ');
+  if (/[",\n|]/.test(text)) {
+    return `"${text.replace(/"/g, '""')}"`;
+  }
+  return text;
+}
+
 function downloadCsvTemplate() {
-      const template = [
-        '题型,题目内容,A选项,B选项,C选项,D选项,答案,解析',
-        '单选题,下列哪项属于个人知识管理的核心功能？,标签管理,快递查�?机票预订,外卖点餐,A,个人知识管理常包含标签与检索等功能�?,
-        '多选题,以下哪些属于高效学习习惯�?定期复盘,只看目录,做笔�?分散注意�?AC,复盘和笔记是常见高效学习方式�?,
-        '判断�?知识卡片可以帮助记忆和复习�?,,,,A,知识卡片有助于记忆巩固�?
-      ].join('\n');
-      const blob = new Blob(['\ufeff' + template], { type: 'text/csv;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = '题目导入模板.csv';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
+  const template = [
+    '题型,题目内容,A选项,B选项,C选项,D选项,E选项,F选项,G选项,答案,解析',
+    '单选题,下列哪项属于个人知识管理的核心功能？,标签管理,快递查询,机票预订,外卖点餐,,,,A,个人知识管理常包含标签与检索等功能',
+    '多选题,以下哪些属于高效学习习惯？,定期复盘,只看目录,做笔记,分散注意力,阶段总结,限时训练,真题复盘,ACEFG,复盘和笔记是常见高效学习方式',
+    '判断题,知识卡片可以帮助记忆和复习,,,,,,,,A,知识卡片有助于记忆巩固',
+    '填空题,企业资源计划的英文缩写是？,,,,,,,,ERP,ERP 是企业资源计划的常用缩写',
+    '简答题,请简述如何建立错题本,,,,,,,,按题型分类记录错因并定期复盘,答案写关键点即可',
+    '开放题,请结合自身情况说明如何安排考前冲刺,,,,,,,,先做近年真题，再按薄弱点专题强化,开放题会按简答题导入',
+    '计算题,某专题共 80 题，做完 20 题，完成率是多少？,,,,,,,,25%,80 题完成 20 题即 25%'
+  ].join('\n');
 
-async function exportQuestions() {
-      const examId = document.getElementById('exportExamSelect')?.value;
-      if (!examId) {
-        showToast('请选择科目', 'error');
-        return;
+  const blob = new Blob(['\ufeff' + template], { type: 'text/csv;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = '题目导入模板.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function downloadJsonTemplate() {
+  const template = {
+    questions: [
+      {
+        type: 'SINGLE',
+        content: '下列哪项属于个人知识管理的核心功能？',
+        options: {
+          A: '标签管理',
+          B: '快递查询',
+          C: '机票预订',
+          D: '外卖点餐'
+        },
+        answer: 'A',
+        explanation: '个人知识管理常包含标签与检索等功能'
+      },
+      {
+        type: 'CASE',
+        stem: [
+          { type: 'text', content: { zh: '请阅读材料并回答后面的 2 道题。' } },
+          { type: 'text', content: { zh: '某教师在线上文化活动中组织学生讨论春节礼俗，学生针对红包、压岁钱和拜年礼仪提出了多个问题。' } }
+        ],
+        media: [
+          { type: 'image', url: 'https://example.com/sample-image.png', caption: '示例配图，可替换为真实图片地址' }
+        ],
+        children: [
+          {
+            type: 'SINGLE',
+            content: '如果学生误把红包送给长辈，最合适的教学引导是什么？',
+            options: {
+              A: '直接批评学生不懂礼貌',
+              B: '解释红包使用场景的文化差异',
+              C: '忽略这个问题',
+              D: '要求学生背诵规则'
+            },
+            answer: 'B',
+            explanation: '应结合文化语境解释红包适用场景'
+          },
+          {
+            type: 'SHORT',
+            content: '请简述如何设计一次关于春节礼俗的课堂活动。',
+            answer: '可从情境导入、文化讲解、角色扮演和反思总结四步展开。',
+            explanation: '主观题可直接写参考答案或评分要点'
+          }
+        ]
       }
+    ]
+  };
 
-      try {
-        const all = [];
-        let page = 1;
-        const pageSize = 200;
-        let total = 0;
+  const json = JSON.stringify(template, null, 2);
+  const blob = new Blob(['\ufeff' + json], { type: 'application/json;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = '题目导入模板.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
 
-        do {
-          const result = await callCloudFunction('adminGetQuestions', {
-            token: currentToken,
-            examId,
-            page,
-            pageSize
-          });
+function getQuestionTypeLabel(type) {
+  const typeMap = {
+    SINGLE: '单选题',
+    MULTI: '多选题',
+    JUDGE: '判断题',
+    BLANK: '填空题',
+    SHORT: '简答题',
+    CALC: '计算题',
+    CASE: '材料题'
+  };
+  return typeMap[type] || type || '-';
+}
 
-          if (!result.success) {
-            showToast(result.message || result.error || '导出失败', 'error');
-            return;
-          }
+function questionNeedsMediaReview(question) {
+  const content = String(question.content || '').trim();
+  const hint = /(上图|下图|图中|图片|图示|如图|看图)/.test(content);
+  const hasMedia = Array.isArray(question.media) && question.media.length > 0;
+  return question.needsMediaReview === true || (!hasMedia && hint);
+}
 
-          const data = result.data || {};
-          const list = data.questions || [];
-          total = data.total || 0;
-          all.push(...list);
-          page += 1;
-        } while (all.length < total);
+function renderQuestionReviewState() {
+  const tbody = document.getElementById('questionReviewTableBody');
+  const summary = document.getElementById('questionReviewSummary');
+  const prevBtn = document.getElementById('questionPrevBtn');
+  const nextBtn = document.getElementById('questionNextBtn');
+  const paginationInfo = document.getElementById('questionPaginationInfo');
+  const onlyMedia = document.getElementById('questionMediaOnly')?.checked;
 
-        const rows = [];
-        rows.push('题型,题目内容,A选项,B选项,C选项,D选项,答案,解析');
+  if (summary) {
+    const mediaTag = onlyMedia ? '，当前为仅看待补图模式' : '';
+    summary.textContent = questionReviewTotal > 0
+      ? `当前科目共 ${questionReviewTotal} 道题，当前第 ${currentQuestionReviewPage} / ${questionReviewTotalPages || 1} 页，每页 ${questionReviewPageSize} 道${mediaTag}`
+      : '当前科目暂无题目';
+  }
 
-        for (const q of all) {
-          const typeMap = { SINGLE: '单选题', MULTI: '多选题', JUDGE: '判断�? };
-          const t = typeMap[q.type] || '单选题';
-          const opts = q.options || {};
-          const A = opts.A || '';
-          const B = opts.B || '';
-          const C = opts.C || '';
-          const D = opts.D || '';
-          let ans = q.answer || '';
-          if (q.type === 'MULTI' && Array.isArray(ans)) {
-            ans = ans.join('');
-          }
-          if (q.type === 'JUDGE') {
-            if (ans === 'true' || ans === true || ans === 'A') ans = 'A';
-            if (ans === 'false' || ans === false || ans === 'B') ans = 'B';
-          }
-          const content = (q.content || '').replace(/\n/g, ' ');
-          const explanation = (q.explanation || '').replace(/\n/g, ' ');
-          rows.push([t, content, A, B, C, D, ans, explanation].join(','));
-        }
+  if (paginationInfo) {
+    paginationInfo.textContent = questionReviewTotal > 0
+      ? `第 ${currentQuestionReviewPage} / ${questionReviewTotalPages || 1} 页，共 ${questionReviewTotal} 道`
+      : '第 0 / 0 页';
+  }
 
-        const csv = '\ufeff' + rows.join('\n');
-        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `题库导出_${Date.now()}.csv`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
+  if (prevBtn) {
+    prevBtn.disabled = currentQuestionReviewPage <= 1;
+  }
 
-        showToast('导出成功');
-      } catch (error) {
-        showToast('导出失败�? + error.message, 'error');
-      }
-    }
+  if (nextBtn) {
+    nextBtn.disabled = currentQuestionReviewPage >= questionReviewTotalPages;
+  }
 
-async function importQuestions() {
-  const examId = document.getElementById('importExamSelect').value;
-  const csvData = document.getElementById('importData').value.trim();
-  const importBtn = document.getElementById('importBtn');
-  const importMode = document.getElementById('importMode')?.value || 'overwrite';
+  if (!tbody) return;
+
+  let rows = questionReviewCache.slice();
+  if (onlyMedia) {
+    rows = rows.filter(item => questionNeedsMediaReview(item));
+  }
+
+  if (!rows.length) {
+    tbody.innerHTML = `<tr><td colspan="5" style="color: #666;">${onlyMedia ? '当前页没有待补图题目，可切换分页继续查看' : '当前科目暂无题目'}</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = rows.map(question => `
+    <tr>
+      <td>${question.sortOrder || '-'}</td>
+      <td>${escapeHtml(getQuestionTypeLabel(question.type))}</td>
+      <td title="${escapeHtml(question.content || '')}">${escapeHtml((question.content || '').slice(0, 80) || '-')}</td>
+      <td>${question.media && question.media.length ? '<span style="color: #10b981;">已补图</span>' : (questionNeedsMediaReview(question) ? '<span style="color: #ef4444;">待补图</span>' : '<span style="color: #6b7280;">无图片</span>')}</td>
+      <td>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="btn-sm btn-secondary" onclick="showUpdateQuestionMediaModal('${question._id}')">补图</button>
+          <button class="btn-sm btn-danger" onclick="deleteQuestion('${question._id}')">删除</button>
+        </div>
+      </td>
+    </tr>
+  `).join('');
+}
+
+async function loadQuestionReviewList() {
+  const examId = document.getElementById('exportExamSelect')?.value;
+  const tbody = document.getElementById('questionReviewTableBody');
+  if (!tbody) return;
 
   if (!examId) {
-    showToast('\u8bf7\u9009\u62e9\u79d1\u76ee', 'error');
-    return;
-  }
-
-  if (!csvData) {
-    showToast('\u8bf7\u8f93\u5165CSV\u6570\u636e', 'error');
-    return;
-  }
-
-  if (importMode === 'overwrite') {
-    const ok = confirm('\u8986\u76d6\u5bfc\u5165\u4f1a\u5148\u6e05\u7a7a\u8be5\u79d1\u76ee\u4e0b\u5df2\u6709\u9898\u76ee\uff0c\u662f\u5426\u7ee7\u7eed\uff1f');
-    if (!ok) return;
-  }
-
-  if (importBtn) {
-    importBtn.disabled = true;
-    importBtn.textContent = '\u5bfc\u5165\u4e2d...';
-  }
-
-  const lines = csvData.split('\n').filter(line => line.trim());
-  const questions = [];
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
-    if (!line) continue;
-
-    const parts = parseCSVLine(line);
-
-    if (parts.length < 7) {
-      console.warn(`\u7b2c ${i + 1} \u884c\u683c\u5f0f\u4e0d\u6b63\u786e\uff0c\u5df2\u8df3\u8fc7:`, line);
-      continue;
-    }
-
-    // skip header row
-    if (i == 0 && /\u9898\u578b/.test(parts[0])) {
-      continue;
-    }
-
-    let type = parts[0].trim();
-    const content = parts[1].trim();
-    const optionA = parts[2].trim();
-    const optionB = parts[3].trim();
-    const optionC = parts[4].trim();
-    const optionD = parts[5].trim();
-    const answer = parts[6].trim();
-    const explanation = parts[7] ? parts[7].trim() : '';
-
-    if (type.includes('\u591a\u9009')) {
-      type = 'MULTI';
-    } else if (type.includes('\u5224\u65ad')) {
-      type = 'JUDGE';
-    } else {
-      type = 'SINGLE';
-    }
-
-    const options = { A: optionA, B: optionB, C: optionC, D: optionD };
-
-    questions.push({
-      type,
-      content,
-      options,
-      answer,
-      explanation,
-      sortOrder: i
-    });
-  }
-
-  if (questions.length === 0) {
-    showToast('\u6ca1\u6709\u6709\u6548\u7684\u9898\u76ee\u6570\u636e', 'error');
-    if (importBtn) {
-      importBtn.disabled = false;
-      importBtn.textContent = '\u5f00\u59cb\u5bfc\u5165';
-    }
+    questionReviewCache = [];
+    questionReviewTotal = 0;
+    questionReviewTotalPages = 0;
+    tbody.innerHTML = '<tr><td colspan="5" style="color: #666;">请选择科目后查看题目列表</td></tr>';
+    renderQuestionReviewState();
     return;
   }
 
   try {
-    const result = await callCloudFunction('adminImportQuestions', {
+    const result = await callCloudFunction('adminGetQuestions', {
       token: currentToken,
       examId,
-      questions,
-      mode: importMode
+      page: currentQuestionReviewPage,
+      pageSize: questionReviewPageSize
     });
 
-    if (result.success) {
-      const { successCount, failCount, errors, deletedCount } = result.data;
-
-      document.getElementById('importResultSummary').innerHTML = `
-        <p><strong>\u5bfc\u5165\u5b8c\u6210\uff01</strong></p>
-        <p>\u6210\u529f\uff1a${successCount} \u6761</p>
-        <p>\u5931\u8d25\uff1a${failCount} \u6761</p>
-        ${typeof deletedCount === 'number' ? `<p>\u5df2\u5220\u9664\uff1a${deletedCount} \u6761</p>` : ''}
-      `;
-
-      if (errors && errors.length > 0) {
-        let detail = '<p><strong>\u5931\u8d25\u8be6\u60c5\uff1a</strong></p><ul>';
-        errors.slice(0, 10).forEach(err => {
-          detail += `<li>${err.question}: ${err.error}</li>`;
-        });
-        if (errors.length > 10) {
-          detail += `<li>...\u8fd8\u6709 ${errors.length - 10} \u6761</li>`;
-        }
-        detail += '</ul>';
-        document.getElementById('importResultDetail').innerHTML = detail;
-      } else {
-        document.getElementById('importResultDetail').innerHTML = '';
-      }
-
-      document.getElementById('importResultModal').classList.add('active');
-      showToast('\u5bfc\u5165\u5b8c\u6210');
-
-      if (successCount > 0) {
-        await loadStats();
-      }
-    } else {
-      document.getElementById('importResultSummary').innerHTML = '<p><strong>\u5bfc\u5165\u5931\u8d25</strong></p>';
-      document.getElementById('importResultDetail').innerHTML = `<p>${result.message || '\u672a\u77e5\u9519\u8bef'}</p>`;
-      document.getElementById('importResultModal').classList.add('active');
-      showToast('\u5bfc\u5165\u5931\u8d25', 'error');
+    if (!result.success) {
+      questionReviewCache = [];
+      questionReviewTotal = 0;
+      questionReviewTotalPages = 0;
+      tbody.innerHTML = `<tr><td colspan="5" style="color: #ef4444;">${escapeHtml(result.message || '加载题目失败')}</td></tr>`;
+      renderQuestionReviewState();
+      return;
     }
+
+    questionReviewCache = (result.data && result.data.questions) || [];
+    questionReviewTotal = (result.data && result.data.total) || 0;
+    questionReviewTotalPages = Math.max(1, (result.data && result.data.totalPages) || Math.ceil(questionReviewTotal / questionReviewPageSize) || 1);
+    currentQuestionReviewPage = Math.min(currentQuestionReviewPage, questionReviewTotalPages);
+    renderQuestionReviewState();
   } catch (error) {
-    document.getElementById('importResultSummary').innerHTML = '<p><strong>\u5bfc\u5165\u5931\u8d25</strong></p>';
-    document.getElementById('importResultDetail').innerHTML = `<p>${error.message}</p>`;
-    document.getElementById('importResultModal').classList.add('active');
-    showToast('\u5bfc\u5165\u5931\u8d25', 'error');
-  } finally {
-    if (importBtn) {
-      importBtn.disabled = false;
-      importBtn.textContent = '\u5f00\u59cb\u5bfc\u5165';
-    }
+    questionReviewCache = [];
+    questionReviewTotal = 0;
+    questionReviewTotalPages = 0;
+    tbody.innerHTML = `<tr><td colspan="5" style="color: #ef4444;">加载题目失败: ${escapeHtml(error.message)}</td></tr>`;
+    renderQuestionReviewState();
   }
 }
 
-function parseCSVLine(line) {
+function prevQuestionReviewPage() {
+  if (currentQuestionReviewPage <= 1) return;
+  currentQuestionReviewPage -= 1;
+  loadQuestionReviewList();
+}
+
+function nextQuestionReviewPage() {
+  if (currentQuestionReviewPage >= questionReviewTotalPages) return;
+  currentQuestionReviewPage += 1;
+  loadQuestionReviewList();
+}
+
+async function showUpdateQuestionMediaModal(questionId) {
+  const examId = document.getElementById('exportExamSelect')?.value;
+  if (!examId) {
+    showToast('请先选择科目', 'error');
+    return;
+  }
+
+  try {
+    const question = questionReviewCache.find(item => item._id === questionId);
+    if (!question) {
+      showToast('未找到题目信息', 'error');
+      return;
+    }
+
+    const currentMedia = Array.isArray(question.media) ? question.media : [];
+    const currentUrls = currentMedia.map(item => item.url).filter(Boolean).join('\n');
+    openSimpleModal('补图', `
+      <div class="form-group">
+        <label class="form-label">题干</label>
+        <div style="padding: 10px 12px; background: #f9fafb; border-radius: 6px; font-size: 14px; line-height: 1.7;">${escapeHtml(question.content || '-')}</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">补图说明</label>
+        <div style="padding: 10px 12px; background: #fff7ed; border-radius: 6px; font-size: 13px; color: #9a3412;">${escapeHtml(question.mediaReviewReason || (questionNeedsMediaReview(question) ? '该题题干提到了图片/图示，建议手动补图。' : '该题可按需手动补图'))}</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">图片 URL</label>
+        <textarea id="questionMediaUrls" style="min-height: 120px;" placeholder="每行一个图片 URL">${escapeHtml(currentUrls)}</textarea>
+        <p class="help-text">建议先把图片上传到云存储或可公网访问地址，再把 URL 粘贴到这里。</p>
+      </div>
+    `, `
+      <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">取消</button>
+      <button class="btn-sm btn-primary" id="saveQuestionMediaBtn">保存</button>
+    `);
+
+    document.getElementById('saveQuestionMediaBtn').onclick = async () => {
+      const urls = (document.getElementById('questionMediaUrls').value || '')
+        .split(/\r?\n/)
+        .map(item => item.trim())
+        .filter(Boolean);
+
+      const saveResult = await callCloudFunction('adminUpdateQuestion', {
+        token: currentToken,
+        questionId,
+        media: urls.map(url => ({ type: 'image', url })),
+        mediaReviewReason: urls.length ? '' : (question.mediaReviewReason || (questionNeedsMediaReview(question) ? '该题题干提到了图片/图示，建议手动补图。' : '该题需要手动补图'))
+      });
+
+      if (saveResult.success) {
+        showToast(urls.length ? '补图已保存' : '已清空图片');
+        closeSimpleModal();
+        await loadQuestionReviewList();
+      } else {
+        showToast(saveResult.message || '保存失败', 'error');
+      }
+    };
+  } catch (error) {
+    showToast('加载题目失败: ' + error.message, 'error');
+  }
+}
+
+async function deleteQuestion(questionId) {
+  const question = questionReviewCache.find(item => item._id === questionId);
+  if (!question) {
+    showToast('未找到题目信息', 'error');
+    return;
+  }
+
+  const title = (question.content || '').slice(0, 40) || '未命名题目';
+  if (!confirm(`确定要删除这道题吗？\n\n序号：${question.sortOrder || '-'}\n题型：${getQuestionTypeLabel(question.type)}\n题干：${title}`)) {
+    return;
+  }
+
+  try {
+    const result = await callCloudFunction('adminDeleteQuestion', {
+      token: currentToken,
+      questionId
+    });
+
+    if (!result.success) {
+      showToast(result.message || '删除失败', 'error');
+      return;
+    }
+
+    showToast('题目删除成功');
+    await loadStats();
+    await loadExams();
+    if (questionReviewCache.length === 1 && currentQuestionReviewPage > 1) {
+      currentQuestionReviewPage -= 1;
+    }
+    await loadQuestionReviewList();
+  } catch (error) {
+    showToast('删除失败: ' + error.message, 'error');
+  }
+}
+
+async function exportQuestions() {
+  const examId = document.getElementById('exportExamSelect')?.value;
+  if (!examId) {
+    showToast('请选择科目', 'error');
+    return;
+  }
+
+  try {
+    const all = [];
+    let page = 1;
+    const exportPageSize = 200;
+    let total = 0;
+
+    do {
+      const result = await callCloudFunction('adminGetQuestions', {
+        token: currentToken,
+        examId,
+        page,
+        pageSize: exportPageSize
+      });
+
+      if (!result.success) {
+        showToast(result.message || result.error || '导出失败', 'error');
+        return;
+      }
+
+      const data = result.data || {};
+      const list = data.questions || [];
+      total = data.total || 0;
+      all.push(...list);
+      page += 1;
+    } while (all.length < total);
+
+    const rows = ['题型,题目内容,A选项,B选项,C选项,D选项,E选项,F选项,G选项,答案,解析'];
+    const typeMap = {
+      SINGLE: '单选题',
+      MULTI: '多选题',
+      JUDGE: '判断题',
+      BLANK: '填空题',
+      SHORT: '简答题',
+      CALC: '计算题'
+    };
+
+    for (const question of all) {
+      const opts = question.options || {};
+      let answer = question.answer || '';
+      if (question.type === 'MULTI' && Array.isArray(answer)) {
+        answer = answer.join('');
+      }
+      if (question.type === 'BLANK' && Array.isArray(answer)) {
+        answer = answer.join('|');
+      }
+      if (question.type === 'JUDGE') {
+        if (answer === 'true' || answer === true) answer = 'A';
+        if (answer === 'false' || answer === false) answer = 'B';
+      }
+      const usesOptions = ['SINGLE', 'MULTI'].includes(question.type);
+
+      rows.push([
+        typeMap[question.type] || '单选题',
+        question.content || '',
+        usesOptions ? (opts.A || '') : '',
+        usesOptions ? (opts.B || '') : '',
+        usesOptions ? (opts.C || '') : '',
+        usesOptions ? (opts.D || '') : '',
+        usesOptions ? (opts.E || '') : '',
+        usesOptions ? (opts.F || '') : '',
+        usesOptions ? (opts.G || '') : '',
+        answer,
+        question.explanation || ''
+      ].map(csvEscape).join(','));
+    }
+
+    const csv = '\ufeff' + rows.join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `题库导出_${Date.now()}.csv`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    showToast('导出成功');
+  } catch (error) {
+    showToast('导出失败: ' + error.message, 'error');
+  }
+}
+
+async function deduplicateQuestions() {
+  const examId = document.getElementById('exportExamSelect')?.value;
+  if (!examId) {
+    showToast('请先选择科目', 'error');
+    return;
+  }
+
+  const exam = examsCache.find(item => item._id === examId);
+  const examName = exam ? exam.name : '当前科目';
+  const ok = confirm(`确定要检查并删除“${examName}”中的重复题吗？\n\n系统会优先按源题号判重，再按题干/选项/答案内容指纹判重。为避免超时，会分轮删除，每轮只删一小批。`);
+  if (!ok) return;
+
+  try {
+    let totalDeleted = 0;
+    let totalDuplicateQuestions = 0;
+    let totalDuplicateGroups = 0;
+    let hasMore = true;
+    let round = 0;
+    let lastData = null;
+
+    while (hasMore) {
+      round += 1;
+      const result = await callCloudFunction('adminDeduplicateQuestions', {
+        token: currentToken,
+        examId,
+        maxDelete: 10
+      });
+
+      if (!result.success) {
+        throw new Error(result.message || result.error || '重复题清理失败');
+      }
+
+      const data = result.data || {};
+      lastData = data;
+      totalDeleted += data.deletedCount || 0;
+      totalDuplicateQuestions = data.duplicateQuestionCount || totalDuplicateQuestions;
+      totalDuplicateGroups = data.duplicateGroupCount || totalDuplicateGroups;
+      hasMore = !!data.hasMore;
+
+      if (hasMore) {
+        showToast(`第 ${round} 轮已删除 ${data.deletedCount || 0} 道重复题，继续清理中...`);
+        await sleep(320);
+      }
+    }
+
+    const sampleHtml = (lastData && Array.isArray(lastData.deletedSamples) && lastData.deletedSamples.length)
+      ? `<p><strong>本轮删除示例：</strong></p><ul style="padding-left: 18px;">${lastData.deletedSamples.map(item => `<li>序号 ${escapeHtml(item.sortOrder || '-')}：${escapeHtml(item.content || '未命名题目')}</li>`).join('')}</ul>`
+      : '';
+
+    openImportResultModal(
+      `
+        <p><strong>重复题清理完成</strong></p>
+        <p>科目：${escapeHtml(examName)}</p>
+        <p>扫描题目：${lastData && lastData.scannedCount ? lastData.scannedCount : 0} 道</p>
+        <p>重复组数：${totalDuplicateGroups} 组</p>
+        <p>重复题数：${totalDuplicateQuestions} 道</p>
+        <p>已删除：${totalDeleted} 道</p>
+      `,
+      sampleHtml
+    );
+
+    await loadStats();
+    await loadExams();
+    await loadQuestionReviewList();
+  } catch (error) {
+    showToast('重复题清理失败: ' + error.message, 'error');
+  }
+}
+
+function detectDelimiter(line) {
+  const commaCount = (line.match(/,/g) || []).length;
+  const pipeCount = (line.match(/\|/g) || []).length;
+  return pipeCount > commaCount ? '|' : ',';
+}
+
+function parseCSVLine(line, delimiter = ',') {
   const parts = [];
   let current = '';
   let inQuotes = false;
@@ -1396,8 +1915,13 @@ function parseCSVLine(line) {
   for (let i = 0; i < line.length; i++) {
     const char = line[i];
     if (char === '"') {
-      inQuotes = !inQuotes;
-    } else if (char === ',' && !inQuotes) {
+      if (inQuotes && line[i + 1] === '"') {
+        current += '"';
+        i += 1;
+      } else {
+        inQuotes = !inQuotes;
+      }
+    } else if (char === delimiter && !inQuotes) {
       parts.push(current);
       current = '';
     } else {
@@ -1406,14 +1930,716 @@ function parseCSVLine(line) {
   }
   parts.push(current);
 
-  return parts;
+  return parts.map(item => String(item || '').trim());
+}
+
+function normalizeImportType(type) {
+  const value = String(type || '').trim();
+  if (value.includes('材料') || /CASE/i.test(value)) return 'CASE';
+  if (value.includes('多选') || /MULTI/i.test(value)) return 'MULTI';
+  if (value.includes('判断') || /JUDGE/i.test(value)) return 'JUDGE';
+  if (value.includes('填空') || /BLANK/i.test(value)) return 'BLANK';
+  if (value.includes('计算') || /CALC/i.test(value)) return 'CALC';
+  if (value.includes('简答') || value.includes('问答') || value.includes('开放') || value.includes('论述') || /SHORT|OPEN|ESSAY/i.test(value)) return 'SHORT';
+  return 'SINGLE';
+}
+
+function normalizeImportAnswer(type, answer) {
+  const rawText = Array.isArray(answer)
+    ? answer.join('|')
+    : String(answer || '').trim();
+  const text = rawText.toUpperCase();
+  if (!rawText) return null;
+
+  if (type === 'MULTI') {
+    const result = text
+      .split('')
+      .filter(char => IMPORT_OPTION_KEYS.includes(char))
+      .filter((char, index, arr) => arr.indexOf(char) === index)
+      .sort();
+    return result.length ? result : null;
+  }
+
+  if (type === 'JUDGE') {
+    if (['A', 'TRUE', 'T', '正确', '对'].includes(text)) return 'A';
+    if (['B', 'FALSE', 'F', '错误', '错'].includes(text)) return 'B';
+    return null;
+  }
+
+  if (type === 'BLANK') {
+    const result = rawText
+      .split('|')
+      .map(item => item.trim())
+      .filter(Boolean);
+    return result.length ? result : null;
+  }
+
+  if (type === 'SHORT' || type === 'CALC') {
+    return rawText;
+  }
+
+  return IMPORT_OPTION_KEYS.includes(text) ? text : null;
+}
+
+function renderTypeStats(typeStats = {}) {
+  const labels = {
+    SINGLE: '单选题',
+    MULTI: '多选题',
+    JUDGE: '判断题',
+    BLANK: '填空题',
+    SHORT: '简答题',
+    CALC: '计算题',
+    CASE: '材料题'
+  };
+
+  return Object.keys(labels)
+    .map(key => `${labels[key]} ${typeStats[key] || 0} 题`)
+    .join(' / ');
+}
+
+function parseImportCsv(csvData) {
+  const lines = String(csvData || '')
+    .replace(/\r\n/g, '\n')
+    .replace(/\r/g, '\n')
+    .split('\n');
+
+  const questions = [];
+  const errors = [];
+  const typeStats = {
+    SINGLE: 0,
+    MULTI: 0,
+    JUDGE: 0,
+    BLANK: 0,
+    SHORT: 0,
+    CALC: 0,
+    CASE: 0
+  };
+
+  let totalRows = 0;
+  let detectedDelimiter = ',';
+
+  lines.forEach((rawLine, index) => {
+    const line = rawLine.trim();
+    if (!line) return;
+
+    const lineNo = index + 1;
+    const delimiter = detectDelimiter(line);
+    detectedDelimiter = delimiter;
+    const parts = parseCSVLine(line, delimiter);
+
+    const firstCell = String(parts[0] || '');
+    if (lineNo === 1 && (firstCell.includes('\u9898\u578B') || /TYPE/i.test(firstCell))) {
+      return;
+    }
+
+    totalRows += 1;
+
+    if (parts.length < 10) {
+      errors.push({
+        lineNo,
+        question: parts[1] || '未命名题目',
+        error: '列数不足，至少需要 10 列'
+      });
+      return;
+    }
+
+    const type = normalizeImportType(parts[0]);
+    const content = (parts[1] || '').trim();
+    const answer = normalizeImportAnswer(type, parts[9]);
+    const explanation = (parts[10] || '').trim();
+
+    if (!content) {
+      errors.push({
+        lineNo,
+        question: '未命名题目',
+        error: '题目内容不能为空'
+      });
+      return;
+    }
+
+    const usesOptions = ['SINGLE', 'MULTI'].includes(type);
+    const options = type === 'JUDGE'
+      ? { A: '正确', B: '错误' }
+      : usesOptions
+        ? {
+            A: (parts[2] || '').trim(),
+            B: (parts[3] || '').trim(),
+            C: (parts[4] || '').trim(),
+            D: (parts[5] || '').trim(),
+            E: (parts[6] || '').trim(),
+            F: (parts[7] || '').trim(),
+            G: (parts[8] || '').trim()
+          }
+        : {};
+
+    const optionKeys = Object.keys(options).filter(key => options[key]);
+    if (usesOptions && optionKeys.length < 2) {
+      errors.push({
+        lineNo,
+        question: content,
+        error: '选择题至少需要 2 个有效选项'
+      });
+      return;
+    }
+
+    if (!answer) {
+      errors.push({
+        lineNo,
+        question: content,
+        error: '答案格式不正确'
+      });
+      return;
+    }
+
+    if (type === 'SINGLE' && !options[answer]) {
+      errors.push({
+        lineNo,
+        question: content,
+        error: '单选题答案未命中有效选项'
+      });
+      return;
+    }
+
+    if (type === 'MULTI') {
+      const invalidAnswer = answer.find(key => !options[key]);
+      if (invalidAnswer) {
+        errors.push({
+          lineNo,
+          question: content,
+          error: `多选题答案 ${invalidAnswer} 不存在于选项中`
+        });
+        return;
+      }
+    }
+
+    questions.push({
+      type,
+      content,
+      options,
+      answer,
+      explanation,
+      sortOrder: questions.length,
+      lineNo
+    });
+    typeStats[type] = (typeStats[type] || 0) + 1;
+  });
+
+  return {
+    questions,
+    errors,
+    totalRows,
+    validRows: questions.length,
+    invalidRows: errors.length,
+    typeStats,
+    detectedDelimiter
+  };
+}
+
+function getBlockText(blocks) {
+  if (!Array.isArray(blocks)) return '';
+  return blocks.map(block => {
+    if (!block || typeof block !== 'object') return '';
+    if (block.type === 'text') {
+      if (block.content && typeof block.content === 'object') {
+        return String(block.content.zh || block.content.text || '').trim();
+      }
+      return String(block.content || '').trim();
+    }
+    if (block.type === 'formula') return `[公式] ${String(block.latex || '').trim()}`;
+    if (block.type === 'image') return `[图片] ${String(block.caption || block.url || '').trim()}`;
+    if (block.type === 'table') return '[表格]';
+    return '';
+  }).filter(Boolean).join(' ');
+}
+
+function getQuestionPreviewTitle(question) {
+  return String(question.content || getBlockText(question.stem) || '未命名题目').trim();
+}
+
+function previewValidateQuestion(question, lineNo, stats, errors) {
+  const type = normalizeImportType(question.type);
+  const title = getQuestionPreviewTitle(question);
+
+  if (!title) {
+    errors.push({ lineNo, question: '未命名题目', error: '题目内容不能为空' });
+    return false;
+  }
+
+  if (type === 'CASE') {
+    if (!Array.isArray(question.children) || !question.children.length) {
+      errors.push({ lineNo, question: title, error: '材料题至少需要 1 个子题' });
+      return false;
+    }
+
+    let validChildren = 0;
+    question.children.forEach((child, index) => {
+      if (previewValidateQuestion(child, `${lineNo}.${index + 1}`, stats, errors)) {
+        validChildren += 1;
+      }
+    });
+
+    if (!validChildren) {
+      errors.push({ lineNo, question: title, error: '材料题子题均未通过校验' });
+      return false;
+    }
+
+    stats.CASE = (stats.CASE || 0) + 1;
+    return true;
+  }
+
+  const usesOptions = ['SINGLE', 'MULTI'].includes(type);
+  const rawOptions = question.options || {};
+  const optionMap = Array.isArray(rawOptions)
+    ? rawOptions.reduce((acc, item) => {
+        if (item && item.key) {
+          acc[String(item.key).toUpperCase()] = item.value || getBlockText(item.content);
+        }
+        return acc;
+      }, {})
+    : rawOptions;
+  const optionKeys = Object.keys(optionMap).filter(key => optionMap[key]);
+
+  if (usesOptions && optionKeys.length < 2) {
+    errors.push({ lineNo, question: title, error: '选择题至少需要 2 个有效选项' });
+    return false;
+  }
+
+  const answer = normalizeImportAnswer(type, question.answer);
+  if (type !== 'CASE' && !answer) {
+    errors.push({ lineNo, question: title, error: '答案格式不正确' });
+    return false;
+  }
+
+  if (type === 'SINGLE' && !optionMap[answer]) {
+    errors.push({ lineNo, question: title, error: '单选题答案未命中有效选项' });
+    return false;
+  }
+
+  if (type === 'MULTI') {
+    const invalidAnswer = answer.find(key => !optionMap[key]);
+    if (invalidAnswer) {
+      errors.push({ lineNo, question: title, error: `多选题答案 ${invalidAnswer} 不存在于选项中` });
+      return false;
+    }
+  }
+
+  stats[type] = (stats[type] || 0) + 1;
+  return true;
+}
+
+function parseImportJson(jsonData) {
+  const parsed = JSON.parse(String(jsonData || '').trim());
+  const questions = Array.isArray(parsed)
+    ? parsed
+    : (parsed && Array.isArray(parsed.questions) ? parsed.questions : null);
+
+  if (!questions) {
+    throw new Error('JSON 顶层必须是数组，或包含 questions 数组');
+  }
+
+  const errors = [];
+  const typeStats = {
+    SINGLE: 0,
+    MULTI: 0,
+    JUDGE: 0,
+    BLANK: 0,
+    SHORT: 0,
+    CALC: 0,
+    CASE: 0
+  };
+
+  let validRows = 0;
+  questions.forEach((question, index) => {
+    if (previewValidateQuestion(question, index + 1, typeStats, errors)) {
+      validRows += 1;
+    }
+  });
+
+  return {
+    questions,
+    errors,
+    totalRows: questions.length,
+    validRows,
+    invalidRows: errors.length,
+    typeStats,
+    detectedDelimiter: 'json'
+  };
+}
+
+function parseImportPayload(rawData, format) {
+  if (format === 'json') {
+    return parseImportJson(rawData);
+  }
+  return parseImportCsv(rawData);
+}
+
+function chunkArray(items, size) {
+  const result = [];
+  for (let i = 0; i < items.length; i += size) {
+    result.push(items.slice(i, i + size));
+  }
+  return result;
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function updateImportResultModal(summaryHtml, detailHtml = '') {
+  document.getElementById('importResultSummary').innerHTML = summaryHtml || '';
+  document.getElementById('importResultDetail').innerHTML = detailHtml || '';
+}
+
+function openImportResultModal(summaryHtml, detailHtml = '') {
+  updateImportResultModal(summaryHtml, detailHtml);
+  closeModal('importModal');
+  document.getElementById('importResultModal').classList.add('active');
+}
+
+function refreshImportPreview() {
+  const importResult = document.getElementById('importResult');
+  const importData = document.getElementById('importData').value.trim();
+  const importFormat = document.getElementById('importFormat')?.value || 'csv';
+  const importMode = document.getElementById('importMode')?.value || 'append';
+
+  if (!importData) {
+    importResult.style.display = 'none';
+    importResult.innerHTML = '';
+    return;
+  }
+
+  let preview;
+  try {
+    preview = parseImportPayload(importData, importFormat);
+  } catch (error) {
+    importResult.innerHTML = `
+      <p><strong>导入预检</strong></p>
+      <p>模式：${importMode === 'overwrite' ? '覆盖导入' : '追加导入'}</p>
+      <p>格式：${importFormat.toUpperCase()}</p>
+      <p style="color: #ef4444;">解析失败：${escapeHtml(error.message || '未知错误')}</p>
+    `;
+    importResult.style.display = 'block';
+    return;
+  }
+
+  let html = `
+    <p><strong>导入预检</strong></p>
+    <p>模式：${importMode === 'overwrite' ? '覆盖导入' : '追加导入'}</p>
+    <p>格式：${importFormat.toUpperCase()}</p>
+    <p>检测分隔符：${preview.detectedDelimiter === 'json' ? 'JSON' : (preview.detectedDelimiter === '|' ? '管道符 |' : '逗号 ,')}</p>
+    <p>有效题目：${preview.validRows} 条</p>
+    <p>无效题目：${preview.invalidRows} 条</p>
+    <p>题型统计：${renderTypeStats(preview.typeStats)}</p>
+  `;
+
+  if (preview.errors.length > 0) {
+    html += '<p style="margin-top: 8px;"><strong>前 5 条问题：</strong></p><ul style="padding-left: 18px;">';
+    preview.errors.slice(0, 5).forEach(item => {
+      html += `<li>第 ${item.lineNo} 行：${escapeHtml(item.question)} - ${escapeHtml(item.error)}</li>`;
+    });
+    if (preview.errors.length > 5) {
+      html += `<li>... 还有 ${preview.errors.length - 5} 条问题</li>`;
+    }
+    html += '</ul>';
+  }
+
+  importResult.innerHTML = html;
+  importResult.style.display = 'block';
+}
+
+async function importQuestions() {
+  const examId = document.getElementById('importExamSelect').value;
+  const topicId = document.getElementById('importTopicSelect')?.value || '';
+  const paperId = document.getElementById('importPaperSelect')?.value || '';
+  const rawData = document.getElementById('importData').value.trim();
+  const importFormat = document.getElementById('importFormat')?.value || 'csv';
+  const importBtn = document.getElementById('importBtn');
+  const importMode = document.getElementById('importMode')?.value || 'overwrite';
+
+  if (!examId) {
+    showToast('请选择科目', 'error');
+    return;
+  }
+
+  if (!rawData) {
+    showToast('请输入导入数据', 'error');
+    return;
+  }
+
+  let preview;
+  try {
+    preview = parseImportPayload(rawData, importFormat);
+  } catch (error) {
+    refreshImportPreview();
+    showToast(`解析${importFormat.toUpperCase()}失败: ` + error.message, 'error');
+    return;
+  }
+  refreshImportPreview();
+
+  if (preview.invalidRows > 0) {
+    showToast('请先修正导入预检中的错误', 'error');
+    return;
+  }
+
+  if (preview.validRows === 0) {
+    showToast('没有可导入的有效题目', 'error');
+    return;
+  }
+
+  if (importMode === 'overwrite') {
+    const ok = confirm('覆盖导入会先清空该科目下已有题目，是否继续？');
+    if (!ok) return;
+  }
+
+  if (importBtn) {
+    importBtn.disabled = true;
+    importBtn.textContent = '导入中 0%';
+  }
+
+  try {
+    const chunkSize = importFormat === 'json' ? 1 : 20;
+    const chunks = chunkArray(preview.questions, chunkSize);
+    openImportResultModal(
+      `
+        <p><strong>导入处理中</strong></p>
+        <p>模式：${importMode === 'overwrite' ? '覆盖导入' : '追加导入'}</p>
+        <p>格式：${importFormat.toUpperCase()}</p>
+        <p>总题数：${preview.validRows} 条</p>
+        <p>分批数：${chunks.length} 批</p>
+        <p>当前进度：0%</p>
+      `,
+      '<p>系统正在写入题库，请不要关闭页面。导入完成后会在这里显示成功或失败结果。</p>'
+    );
+    let aggregateSuccessCount = 0;
+    let aggregateFailCount = 0;
+    let aggregateDeletedCount = 0;
+    let aggregateSkippedCount = 0;
+    const aggregateErrors = [];
+    const aggregateTypeStats = {
+      SINGLE: 0,
+      MULTI: 0,
+      JUDGE: 0,
+      BLANK: 0,
+      SHORT: 0,
+      CALC: 0,
+      CASE: 0
+    };
+    let lastMessage = '';
+
+    if (importMode === 'overwrite') {
+      let clearRound = 0;
+      let hasMoreToDelete = true;
+
+      while (hasMoreToDelete) {
+        clearRound += 1;
+        updateImportResultModal(
+          `
+            <p><strong>导入处理中</strong></p>
+            <p>模式：覆盖导入</p>
+            <p>格式：${importFormat.toUpperCase()}</p>
+            <p>总题数：${preview.validRows} 条</p>
+            <p>分批数：${chunks.length} 批</p>
+            <p>当前步骤：1 / 2（清空旧题）</p>
+            <p>当前删除轮次：第 ${clearRound} 轮</p>
+            <p>当前进度：0%</p>
+          `,
+          `<p>系统正在分批清空该科目旧题，请不要关闭页面。</p><p>已删除旧题：${aggregateDeletedCount} 条</p>`
+        );
+
+        const clearResult = await callCloudFunction('adminImportQuestions', {
+          token: currentToken,
+          examId,
+          topicId,
+          paperId,
+          questions: [],
+          mode: 'overwrite'
+        });
+
+        if (!clearResult.success) {
+          throw new Error(clearResult.message || clearResult.error || '清空旧题失败');
+        }
+
+        const clearData = clearResult.data || {};
+        aggregateDeletedCount += clearData.deletedCount || 0;
+        hasMoreToDelete = !!clearData.hasMore;
+
+        if (hasMoreToDelete) {
+          await sleep(320);
+        }
+      }
+    }
+
+    for (let chunkIndex = 0; chunkIndex < chunks.length; chunkIndex++) {
+      const progress = Math.floor((chunkIndex / chunks.length) * 100);
+      if (importBtn) {
+        importBtn.textContent = `导入中 ${progress}%`;
+      }
+      updateImportResultModal(
+        `
+          <p><strong>导入处理中</strong></p>
+          <p>模式：${importMode === 'overwrite' ? '覆盖导入' : '追加导入'}</p>
+          <p>格式：${importFormat.toUpperCase()}</p>
+          <p>总题数：${preview.validRows} 条</p>
+          <p>分批数：${chunks.length} 批</p>
+          <p>当前步骤：${importMode === 'overwrite' ? '2 / 2（写入新题）' : '1 / 1（写入题库）'}</p>
+          <p>当前批次：第 ${chunkIndex + 1} / ${chunks.length} 批</p>
+          <p>当前进度：${progress}%</p>
+        `,
+        `<p>已删除旧题：${aggregateDeletedCount} 条</p><p>已成功写入：${aggregateSuccessCount} 条</p><p>已自动跳过重复题：${aggregateSkippedCount} 条</p>`
+      );
+
+      const result = await callCloudFunction('adminImportQuestions', {
+        token: currentToken,
+        examId,
+        topicId,
+        paperId,
+        questions: chunks[chunkIndex],
+        mode: 'append'
+      });
+
+      if (!result.success) {
+        throw new Error(result.message || result.error || `第 ${chunkIndex + 1} 批导入失败`);
+      }
+
+      lastMessage = result.message || '';
+      const chunkData = result.data || {};
+      aggregateSuccessCount += chunkData.successCount || 0;
+      aggregateSkippedCount += chunkData.skippedCount || 0;
+      aggregateFailCount += chunkData.failCount || 0;
+      aggregateDeletedCount += chunkData.deletedCount || 0;
+      aggregateErrors.push(...(chunkData.errors || []));
+
+      const chunkTypeStats = chunkData.typeStats || {};
+      Object.keys(aggregateTypeStats).forEach(key => {
+        aggregateTypeStats[key] += chunkTypeStats[key] || 0;
+      });
+
+      if (chunkIndex < chunks.length - 1) {
+        await sleep(320);
+      }
+    }
+
+    if (importBtn) {
+      importBtn.textContent = '导入中 100%';
+    }
+    updateImportResultModal(
+      `
+        <p><strong>导入处理中</strong></p>
+        <p>模式：${importMode === 'overwrite' ? '覆盖导入' : '追加导入'}</p>
+        <p>格式：${importFormat.toUpperCase()}</p>
+        <p>总题数：${preview.validRows} 条</p>
+        <p>分批数：${chunks.length} 批</p>
+        <p>当前进度：100%</p>
+      `,
+      `<p>已成功写入：${aggregateSuccessCount} 条</p><p>已自动跳过重复题：${aggregateSkippedCount} 条</p>`
+    );
+
+    const result = {
+      success: true,
+      message: lastMessage,
+      data: {
+        successCount: aggregateSuccessCount,
+        skippedCount: aggregateSkippedCount,
+        failCount: aggregateFailCount,
+        deletedCount: aggregateDeletedCount,
+        errors: aggregateErrors,
+        typeStats: aggregateTypeStats
+      }
+    };
+
+    if (result.success) {
+      const { successCount, skippedCount, failCount, errors = [], deletedCount, typeStats = {} } = result.data || {};
+
+      updateImportResultModal(`
+        <p><strong>导入完成</strong></p>
+        <p>成功：${successCount || 0} 条</p>
+        <p>跳过重复：${skippedCount || 0} 条</p>
+        <p>失败：${failCount || 0} 条</p>
+        ${typeof deletedCount === 'number' ? `<p>已删除旧题：${deletedCount} 条</p>` : ''}
+        <p>题型统计：${renderTypeStats(typeStats)}</p>
+      `);
+
+      if (errors.length > 0) {
+        let detail = '<p><strong>失败详情：</strong></p><ul style="padding-left: 18px;">';
+        errors.slice(0, 10).forEach(item => {
+          const lineText = item.lineNo ? `第 ${item.lineNo} 行` : '未知行';
+          detail += `<li>${lineText}：${escapeHtml(item.question || '未命名题目')} - ${escapeHtml(item.error || '未知错误')}</li>`;
+        });
+        if (errors.length > 10) {
+          detail += `<li>... 还有 ${errors.length - 10} 条</li>`;
+        }
+        detail += '</ul>';
+        document.getElementById('importResultDetail').innerHTML = detail;
+      } else {
+        document.getElementById('importResultDetail').innerHTML = '';
+      }
+      showToast('导入完成');
+
+      if (successCount > 0) {
+        await loadStats();
+        await loadExams();
+        await loadQuestionReviewList();
+      }
+    } else {
+      updateImportResultModal(
+        '<p><strong>导入失败</strong></p>',
+        `<p>${escapeHtml(result.message || '未知错误')}</p>`
+      );
+      showToast('导入失败', 'error');
+    }
+  } catch (error) {
+    const message = error.message || '未知错误';
+    const isTimeout = /TIME_LIMIT_EXCEEDED|timed out/i.test(message);
+    updateImportResultModal(
+      `<p><strong>${isTimeout ? '导入状态待确认' : '导入失败'}</strong></p>`,
+      isTimeout
+        ? `<p>云函数调用超时，但云端可能仍在继续执行。</p><p>建议立即到“科目管理”查看题目数量是否变化，或到“题目管理”导出当前科目核对结果。</p><p>错误信息：${escapeHtml(message)}</p>`
+        : `<p>${escapeHtml(message)}</p>`
+    );
+    showToast('导入失败', 'error');
+  } finally {
+    if (importBtn) {
+      importBtn.disabled = false;
+      importBtn.textContent = '开始导入';
+    }
+  }
 }
 
 // 显示生成激活码模态框
 function showGenerateModal() {
   document.getElementById('generateModal').classList.add('active');
   document.getElementById('generatedCodes').style.display = 'none';
+  document.getElementById('generatedBatchInfo').textContent = '';
   document.getElementById('generatedCodesList').innerHTML = '';
+  document.getElementById('generateRemark').value = '';
+  latestGeneratedCodes = [];
+}
+
+function escapeHtml(value) {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function getSourceLabel(source) {
+  const sourceMap = {
+    MANUAL: '手动生成',
+    XHS: '小红书',
+    TB: '淘宝',
+    PDD: '拼多多',
+    XY: '闲鱼'
+  };
+  return sourceMap[source] || source || '-';
+}
+
+function formatDateText(value) {
+  if (!value) return '-';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return '-';
+  return date.toLocaleString();
 }
 
 // 生成激活码
@@ -1421,6 +2647,7 @@ async function generateCodes() {
   const examId = document.getElementById('generateExamSelect').value;
   const count = parseInt(document.getElementById('generateCount').value) || 10;
   const source = document.getElementById('generateSource').value;
+  const remark = document.getElementById('generateRemark').value.trim();
 
   if (!examId) {
     showToast('请选择科目', 'error');
@@ -1428,7 +2655,7 @@ async function generateCodes() {
   }
 
   if (count < 1 || count > 100) {
-    showToast('生成数量必须�?-100之间', 'error');
+    showToast('生成数量必须在 1 到 100 之间', 'error');
     return;
   }
 
@@ -1437,51 +2664,70 @@ async function generateCodes() {
       token: currentToken,
       examId,
       count,
-      source
+      source,
+      remark
     });
 
     if (result.success) {
-      const codes = result.data.codes;
+      const { codes = [], batchNo = '', examName = '', source: generatedSource = '', remark: generatedRemark = '' } = result.data || {};
+      latestGeneratedCodes = codes.slice();
+
+      document.getElementById('generatedBatchInfo').textContent =
+        `批次号：${batchNo || '-'} ｜ 科目：${examName || '-'} ｜ 来源：${getSourceLabel(generatedSource)}${generatedRemark ? ` ｜ 备注：${generatedRemark}` : ''}`;
       document.getElementById('generatedCodesList').innerHTML = codes.map(code =>
-        `<div class="code-item"><span>${code}</span><button class="btn-sm btn-secondary" onclick="copyCode('${code}')">复制</button></div>`
+        `<div class="code-item"><span>${escapeHtml(code)}</span><button class="btn-sm btn-secondary" onclick="copyCode('${escapeHtml(code)}')">复制</button></div>`
       ).join('');
       document.getElementById('generatedCodes').style.display = 'block';
 
-      showToast(`成功生成 ${count} 个激活码`);
+      showToast(`成功生成 ${codes.length} 个激活码`);
       await loadStats();
       await loadCodes();
     } else {
       showToast(result.message, 'error');
     }
   } catch (error) {
-    showToast('生成失败�? + error.message, 'error');
+    showToast('生成失败: ' + error.message, 'error');
   }
 }
 
 // 复制单个激活码
 function copyCode(code) {
   navigator.clipboard.writeText(code).then(() => {
-    showToast('已复�?);
+    showToast('已复制');
   });
 }
 
 // 复制全部激活码
 function copyCodes() {
-  const codes = document.getElementById('generatedCodesList').innerText;
+  const codes = latestGeneratedCodes.join('\n');
+  if (!codes) {
+    showToast('没有可复制的激活码', 'error');
+    return;
+  }
+
   navigator.clipboard.writeText(codes).then(() => {
-    showToast('已复制全�?);
+    showToast('已复制全部激活码');
   });
+}
+
+function resetCodesPageAndLoad() {
+  currentPage = 1;
+  loadCodes();
 }
 
 // 加载激活码列表
 async function loadCodes() {
   try {
     const examId = document.getElementById('filterExamSelect').value;
+    const source = document.getElementById('filterCodeSource').value;
+    const status = document.getElementById('filterCodeStatus').value;
     const offset = (currentPage - 1) * pageSize;
 
     const result = await callCloudFunction('adminGetCodes', {
       token: currentToken,
       examId,
+      source,
+      status,
       limit: pageSize,
       offset
     });
@@ -1493,11 +2739,13 @@ async function loadCodes() {
       const tbody = document.getElementById('codesTableBody');
       tbody.innerHTML = list.map(code => `
         <tr>
-          <td style="font-family: monospace;">${code.code}</td>
-          <td>${code.examName}</td>
-          <td>${code.source}</td>
-          <td>${code.isUsed ? '<span style="color: #10b981;">已使�?/span>' : '<span style="color: #f59e0b;">未使�?/span>'}</td>
-          <td>${new Date(code.createdAt).toLocaleString()}</td>
+          <td style="font-family: monospace;">${escapeHtml(code.code)}</td>
+          <td>${escapeHtml(code.examName)}</td>
+          <td>${escapeHtml(getSourceLabel(code.source))}</td>
+          <td style="font-family: monospace;">${escapeHtml(code.batchNo || '-')}</td>
+          <td>${code.isUsed ? '<span style="color: #10b981;">已使用</span>' : '<span style="color: #f59e0b;">未使用</span>'}</td>
+          <td>${escapeHtml(code.usedInfo || '-')}</td>
+          <td>${escapeHtml(formatDateText(code.createdAtText || code.createdAt))}</td>
           <td>
             ${!code.isUsed ? `<button class="btn-sm btn-danger" onclick="deleteCode('${code._id}')">删除</button>` : '-'}
           </td>
@@ -1510,6 +2758,7 @@ async function loadCodes() {
     }
   } catch (error) {
     console.error('加载激活码列表失败', error);
+    showToast('加载激活码列表失败: ' + error.message, 'error');
   }
 }
 
@@ -1522,18 +2771,19 @@ async function deleteCode(codeId) {
   try {
     const result = await callCloudFunction('adminDeleteCode', { token: currentToken, codeId });
     if (result.success) {
-      showToast('删除成功');
+      const deletedCode = result.data && result.data.code ? `：${result.data.code}` : '';
+      showToast('删除成功' + deletedCode);
       await loadCodes();
       await loadStats();
     } else {
       showToast(result.message, 'error');
     }
   } catch (error) {
-    showToast('删除失败�? + error.message, 'error');
+    showToast('删除失败: ' + error.message, 'error');
   }
 }
 
-// 上一�?
+// 上一页
 function prevPage() {
   if (currentPage > 1) {
     currentPage--;
@@ -1541,7 +2791,7 @@ function prevPage() {
   }
 }
 
-// 下一�?
+// 下一页
 function nextPage() {
   if (currentPage < Math.ceil(totalCodes / pageSize)) {
     currentPage++;
@@ -1554,7 +2804,7 @@ function closeModal(modalId) {
   document.getElementById(modalId).classList.remove('active');
 }
 
-// 调用云函�?
+// 调用云函�?
     async function callCloudFunction(name, data) {
       if (!app) {
         throw new Error('Cloudbase 未初始化');
@@ -1577,7 +2827,7 @@ document.getElementById('loginPassword').addEventListener('keypress', function(e
   }
 });
 
-// ===== ���� API ���� =====
+// ===== ���� API ���� =====
 const API_BASE = '/api/v1';
 async function apiRequest(url, options = {}) {
   try {
@@ -1591,7 +2841,7 @@ async function apiRequest(url, options = {}) {
     return await res.json();
   } catch (e) {
     console.error('API request failed', e);
-    showToast('�ӿ�����ʧ��', 'error');
+    showToast('�ӿ�����ʧ��', 'error');
     return null;
   }
 }
@@ -1607,83 +2857,216 @@ function closeSimpleModal() {
   document.getElementById('simpleModal').classList.remove('active');
 }
 
-// ===== ר����� =====
+// ===== 专题管理 =====
+function buildTopicOptionHtml(topics, excludeTopicId = '') {
+  const roots = topics.filter(item => !item.parentId);
+  const childMap = {};
+
+  topics.forEach(item => {
+    const key = item.parentId || '__root__';
+    if (!childMap[key]) childMap[key] = [];
+    childMap[key].push(item);
+  });
+
+  const rows = ['<option value="">无（一级专题）</option>'];
+  const walk = (items, depth) => {
+    items.forEach(item => {
+      if (item._id === excludeTopicId) return;
+      const prefix = depth > 0 ? `${'　'.repeat(depth)}└ ` : '';
+      rows.push(`<option value="${item._id}">${escapeHtml(prefix + item.name)}</option>`);
+      walk(childMap[item._id] || [], depth + 1);
+    });
+  };
+
+  walk(roots, 0);
+  return rows.join('');
+}
+
+async function loadImportTopicOptions(examId, selectedTopicId = '') {
+  const select = document.getElementById('importTopicSelect');
+  if (!select) return;
+
+  if (!examId) {
+    select.innerHTML = '<option value="">不绑定专题</option>';
+    return;
+  }
+
+  try {
+    const result = await callCloudFunction('adminGetTopics', {
+      token: currentToken,
+      examId
+    });
+
+    if (!result.success) {
+      select.innerHTML = '<option value="">不绑定专题</option>';
+      return;
+    }
+
+    const topics = Array.isArray(result.data) ? result.data : [];
+    const options = topics.map(item => {
+      const prefix = item.parentId ? '└ ' : '';
+      return `<option value="${item._id}">${escapeHtml(prefix + item.name)}</option>`;
+    }).join('');
+
+    select.innerHTML = '<option value="">不绑定专题</option>' + options;
+    if (selectedTopicId) {
+      select.value = selectedTopicId;
+    }
+  } catch (error) {
+    select.innerHTML = '<option value="">不绑定专题</option>';
+  }
+}
+
+function handleImportExamChange(examId) {
+  loadImportTopicOptions(examId);
+  loadImportPaperOptions(examId);
+}
+
+async function loadImportPaperOptions(examId, selectedPaperId = '') {
+  const select = document.getElementById('importPaperSelect');
+  if (!select) return;
+
+  if (!examId) {
+    select.innerHTML = '<option value="">不绑定试卷</option>';
+    return;
+  }
+
+  try {
+    const result = await callCloudFunction('adminGetPapers', {
+      token: currentToken,
+      examId
+    });
+
+    if (!result.success) {
+      select.innerHTML = '<option value="">不绑定试卷</option>';
+      return;
+    }
+
+    const papers = Array.isArray(result.data) ? result.data : [];
+    const options = papers.map(item =>
+      `<option value="${item._id}">${escapeHtml(`${item.year || ''} ${item.title || ''}`.trim())}</option>`
+    ).join('');
+
+    select.innerHTML = '<option value="">不绑定试卷</option>' + options;
+    if (selectedPaperId) {
+      select.value = selectedPaperId;
+    }
+  } catch (error) {
+    select.innerHTML = '<option value="">不绑定试卷</option>';
+  }
+}
+
 async function loadTopicExamSelect() {
-  const res = await apiRequest(`${API_BASE}/exams`);
-  if (!res?.success) return;
-  const options = res.data.map(e => `<option value="${e._id}">${e.name}</option>`).join('');
   const select = document.getElementById('topicExamSelect');
-  if (select) {
-    select.innerHTML = '<option value="">ѡ���Ŀ</option>' + options;
-    select.onchange = loadTopics;
+  if (!select) return;
+
+  try {
+    const result = await callCloudFunction('adminGetExams', { token: currentToken });
+    if (!result.success) return;
+
+    const exams = Array.isArray(result.data) ? result.data : [];
+    select.innerHTML = '<option value="">选择科目</option>' +
+      exams.map(item => `<option value="${item._id}">${escapeHtml(item.name)}</option>`).join('');
+    select.onchange = () => {
+      loadTopics();
+    };
+  } catch (error) {
+    console.error('加载专题科目失败', error);
   }
 }
 
 async function loadTopics() {
   const examId = document.getElementById('topicExamSelect')?.value || '';
-  const [topicsRes, examsRes] = await Promise.all([
-    apiRequest(`${API_BASE}/admin/topics${examId ? `?examId=${examId}` : ''}`),
-    apiRequest(`${API_BASE}/exams`)
-  ]);
-  if (!topicsRes?.success || !examsRes?.success) return;
-
-  const examMap = new Map(examsRes.data.map(e => [e._id, e.name]));
-  const topics = topicsRes.data || [];
-  const topicMap = new Map(topics.map(t => [t._id, t.name]));
   const tbody = document.getElementById('topicsTableBody');
   if (!tbody) return;
-  tbody.innerHTML = topics.map(t => `
-    <tr>
-      <td>${t.name}</td>
-      <td>${examMap.get(String(t.examId)) || '-'}</td>
-      <td>${t.parentId ? (topicMap.get(String(t.parentId)) || '-') : '-'}</td>
-      <td>${t.order || 0}</td>
-      <td>
-        <button class="btn-sm btn-secondary" onclick="editTopic('${t._id}')">�༭</button>
-        <button class="btn-sm btn-danger" onclick="deleteTopic('${t._id}')">ɾ��</button>
-      </td>
-    </tr>
-  `).join('');
+
+  try {
+    const result = await callCloudFunction('adminGetTopics', {
+      token: currentToken,
+      examId: examId || undefined
+    });
+
+    if (!result.success) {
+      showToast(result.message, 'error');
+      return;
+    }
+
+    topicsCache = Array.isArray(result.data) ? result.data : [];
+    tbody.innerHTML = topicsCache.map(topic => `
+      <tr>
+        <td>${escapeHtml(topic.name || '')}</td>
+        <td>${escapeHtml(topic.examName || '-')}</td>
+        <td>${escapeHtml(topic.parentName || '-')}</td>
+        <td>${topic.questionCount || 0}</td>
+        <td>${topic.isActive === false ? '<span style="color: #ef4444;">已停用</span>' : '<span style="color: #10b981;">已启用</span>'}</td>
+        <td>${topic.order || 0}</td>
+        <td>
+          <button class="btn-sm btn-secondary" onclick="showEditTopicModal('${topic._id}')">编辑</button>
+          <button class="btn-sm ${topic.isActive === false ? 'btn-success' : 'btn-secondary'}" onclick="toggleTopicStatus('${topic._id}')">${topic.isActive === false ? '启用' : '停用'}</button>
+          <button class="btn-sm btn-danger" onclick="deleteTopic('${topic._id}')">删除</button>
+        </td>
+      </tr>
+    `).join('');
+  } catch (error) {
+    console.error('加载专题失败', error);
+    showToast('加载专题失败: ' + error.message, 'error');
+  }
 }
 
 function showCreateTopicModal() {
-  openSimpleModal('����ר��', `
+  openSimpleModal('新增专题', `
     <div class="form-group">
-      <label class="form-label">��Ŀ *</label>
+      <label class="form-label">科目 *</label>
       <select id="topicExamId" class="form-input"></select>
     </div>
     <div class="form-group">
-      <label class="form-label">ר������ *</label>
+      <label class="form-label">专题名称 *</label>
       <input id="topicName" class="form-input" />
     </div>
     <div class="form-group">
-      <label class="form-label">�ϼ�ר��</label>
+      <label class="form-label">上级专题</label>
       <select id="topicParentId" class="form-input">
-        <option value="">�ޣ�һ��ר�⣩</option>
+        <option value="">无（一级专题）</option>
       </select>
     </div>
     <div class="form-group">
-      <label class="form-label">����</label>
+      <label class="form-label">排序</label>
       <input id="topicOrder" type="number" class="form-input" value="0" />
     </div>
+    <div class="form-group">
+      <label class="form-label">状态</label>
+      <select id="topicIsActive" class="form-input">
+        <option value="true">启用</option>
+        <option value="false">停用</option>
+      </select>
+    </div>
   `, `
-    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">ȡ��</button>
-    <button class="btn-sm btn-primary" id="saveTopicBtn">����</button>
+    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">取消</button>
+    <button class="btn-sm btn-primary" id="saveTopicBtn">确定</button>
   `);
 
   Promise.all([
-    apiRequest(`${API_BASE}/exams`),
-    apiRequest(`${API_BASE}/admin/topics`)
+    callCloudFunction('adminGetExams', { token: currentToken }),
+    callCloudFunction('adminGetTopics', { token: currentToken })
   ]).then(([examsRes, topicsRes]) => {
-    if (examsRes?.success) {
+    if (examsRes.success) {
       const select = document.getElementById('topicExamId');
-      select.innerHTML = '<option value="">ѡ���Ŀ</option>' +
-        examsRes.data.map(e => `<option value="${e._id}">${e.name}</option>`).join('');
+      const currentExamId = document.getElementById('topicExamSelect')?.value || '';
+      select.innerHTML = '<option value="">选择科目</option>' +
+        (examsRes.data || []).map(item => `<option value="${item._id}">${escapeHtml(item.name)}</option>`).join('');
+      if (currentExamId) {
+        select.value = currentExamId;
+      }
+      select.onchange = () => {
+        const currentTopics = (topicsRes.data || []).filter(item => item.examId === select.value);
+        document.getElementById('topicParentId').innerHTML = buildTopicOptionHtml(currentTopics);
+      };
     }
-    if (topicsRes?.success) {
-      const parentSelect = document.getElementById('topicParentId');
-      parentSelect.innerHTML = '<option value="">�ޣ�һ��ר�⣩</option>' +
-        topicsRes.data.map(t => `<option value="${t._id}">${t.name}</option>`).join('');
+
+    if (topicsRes.success) {
+      const currentExamId = document.getElementById('topicExamId')?.value || '';
+      const currentTopics = (topicsRes.data || []).filter(item => item.examId === currentExamId);
+      document.getElementById('topicParentId').innerHTML = buildTopicOptionHtml(currentTopics);
     }
   });
 
@@ -1692,155 +3075,255 @@ function showCreateTopicModal() {
     const name = document.getElementById('topicName').value.trim();
     const parentId = document.getElementById('topicParentId').value;
     const order = parseInt(document.getElementById('topicOrder').value, 10) || 0;
+    const isActive = document.getElementById('topicIsActive').value !== 'false';
+
     if (!examId || !name) {
-      showToast('����д������', 'error');
+      showToast('请填写必填项', 'error');
       return;
     }
-    const payload = { examId, name, order };
-    if (parentId) payload.parentId = parentId;
-    const res = await apiRequest(`${API_BASE}/admin/topics`, {
-      method: 'POST',
-      body: JSON.stringify(payload)
+
+    const result = await callCloudFunction('adminCreateTopic', {
+      token: currentToken,
+      examId,
+      name,
+      parentId,
+      order,
+      isActive
     });
-    if (res?.success) {
-      showToast('ר�ⴴ���ɹ�');
+
+    if (result.success) {
+      showToast('专题创建成功');
       closeSimpleModal();
-      loadTopics();
+      await loadTopics();
+      await loadImportTopicOptions(document.getElementById('importExamSelect')?.value || '');
     } else {
-      showToast(res?.message || '����ʧ��', 'error');
+      showToast(result.message || '创建失败', 'error');
     }
   };
 }
 
-async function editTopic(id) {
-  const res = await apiRequest(`${API_BASE}/admin/topics`);
-  if (!res?.success) return;
-  const topic = res.data.find(t => t._id === id);
-  if (!topic) return;
+function showEditTopicModal(topicId) {
+  const topic = topicsCache.find(item => item._id === topicId);
+  if (!topic) {
+    showToast('未找到专题信息', 'error');
+    return;
+  }
 
-  openSimpleModal('�༭ר��', `
+  const currentTopics = topicsCache.filter(item => item.examId === topic.examId);
+  openSimpleModal('编辑专题', `
     <div class="form-group">
-      <label class="form-label">ר������ *</label>
-      <input id="topicName" class="form-input" value="${topic.name}" />
+      <label class="form-label">专题名称 *</label>
+      <input id="topicName" class="form-input" value="${escapeHtml(topic.name || '')}" />
     </div>
     <div class="form-group">
-      <label class="form-label">�ϼ�ר��</label>
-      <select id="topicParentId" class="form-input"></select>
+      <label class="form-label">上级专题</label>
+      <select id="topicParentId" class="form-input">${buildTopicOptionHtml(currentTopics, topicId)}</select>
     </div>
     <div class="form-group">
-      <label class="form-label">����</label>
+      <label class="form-label">排序</label>
       <input id="topicOrder" type="number" class="form-input" value="${topic.order || 0}" />
     </div>
+    <div class="form-group">
+      <label class="form-label">状态</label>
+      <select id="topicIsActive" class="form-input">
+        <option value="true">启用</option>
+        <option value="false">停用</option>
+      </select>
+    </div>
   `, `
-    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">ȡ��</button>
-    <button class="btn-sm btn-primary" id="saveTopicBtn">����</button>
+    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">取消</button>
+    <button class="btn-sm btn-primary" id="saveTopicBtn">确定</button>
   `);
 
-  const parentSelect = document.getElementById('topicParentId');
-  parentSelect.innerHTML = '<option value="">�ޣ�һ��ר�⣩</option>' +
-    res.data.filter(t => t._id !== id).map(t => `<option value="${t._id}">${t.name}</option>`).join('');
-  if (topic.parentId) parentSelect.value = String(topic.parentId);
+  document.getElementById('topicParentId').value = topic.parentId || '';
+  document.getElementById('topicIsActive').value = topic.isActive === false ? 'false' : 'true';
 
   document.getElementById('saveTopicBtn').onclick = async () => {
     const name = document.getElementById('topicName').value.trim();
     const parentId = document.getElementById('topicParentId').value;
     const order = parseInt(document.getElementById('topicOrder').value, 10) || 0;
+    const isActive = document.getElementById('topicIsActive').value !== 'false';
+
     if (!name) {
-      showToast('����д������', 'error');
+      showToast('专题名称不能为空', 'error');
       return;
     }
-    const payload = { name, order, parentId: parentId || null };
-    const updateRes = await apiRequest(`${API_BASE}/admin/topics/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(payload)
+
+    const result = await callCloudFunction('adminUpdateTopic', {
+      token: currentToken,
+      topicId,
+      name,
+      parentId,
+      order,
+      isActive
     });
-    if (updateRes?.success) {
-      showToast('ר����³ɹ�');
+
+    if (result.success) {
+      showToast('专题更新成功');
       closeSimpleModal();
-      loadTopics();
+      await loadTopics();
+      await loadImportTopicOptions(document.getElementById('importExamSelect')?.value || '');
     } else {
-      showToast(updateRes?.message || '����ʧ��', 'error');
+      showToast(result.message || '更新失败', 'error');
     }
   };
 }
 
-async function deleteTopic(id) {
-  if (!confirm('ȷ��Ҫɾ����ר����')) return;
-  const res = await apiRequest(`${API_BASE}/admin/topics/${id}`, { method: 'DELETE' });
-  if (res?.success) {
-    showToast('ר����ɾ��');
-    loadTopics();
+async function toggleTopicStatus(topicId) {
+  const topic = topicsCache.find(item => item._id === topicId);
+  if (!topic) {
+    showToast('未找到专题信息', 'error');
+    return;
+  }
+
+  const nextActive = topic.isActive === false;
+  const actionText = nextActive ? '启用' : '停用';
+  if (!confirm(`确定要${actionText}专题“${topic.name}”吗？`)) {
+    return;
+  }
+
+  const result = await callCloudFunction('adminUpdateTopic', {
+    token: currentToken,
+    topicId,
+    name: topic.name,
+    parentId: topic.parentId || '',
+    order: topic.order || 0,
+    isActive: nextActive
+  });
+
+  if (result.success) {
+    showToast(`专题已${actionText}`);
+    await loadTopics();
+    await loadImportTopicOptions(document.getElementById('importExamSelect')?.value || '');
   } else {
-    showToast(res?.message || 'ɾ��ʧ��', 'error');
+    showToast(result.message || `${actionText}失败`, 'error');
   }
 }
 
-// ===== ������� =====
+async function deleteTopic(topicId) {
+  const topic = topicsCache.find(item => item._id === topicId);
+  if (!topic) {
+    showToast('未找到专题信息', 'error');
+    return;
+  }
+
+  if (!confirm(`确定要删除专题“${topic.name}”吗？已归属到该专题的题目将被解除专题归属。`)) {
+    return;
+  }
+
+  const result = await callCloudFunction('adminDeleteTopic', {
+    token: currentToken,
+    topicId
+  });
+
+  if (result.success) {
+    const affectedQuestions = result.data && typeof result.data.affectedQuestions === 'number'
+      ? result.data.affectedQuestions
+      : 0;
+    showToast(`专题删除成功，已解除 ${affectedQuestions} 道题的专题归属`);
+    await loadTopics();
+    await loadImportTopicOptions(document.getElementById('importExamSelect')?.value || '');
+  } else {
+    showToast(result.message || '删除失败', 'error');
+  }
+}
+
+// ===== 试卷管理 =====
 async function loadPaperExamSelect() {
-  const res = await apiRequest(`${API_BASE}/exams`);
-  if (!res?.success) return;
-  const options = res.data.map(e => `<option value="${e._id}">${e.name}</option>`).join('');
   const select = document.getElementById('paperExamSelect');
-  if (select) {
-    select.innerHTML = '<option value="">ѡ���Ŀ</option>' + options;
-    select.onchange = loadPapers;
+  if (!select) return;
+
+  try {
+    const result = await callCloudFunction('adminGetExams', { token: currentToken });
+    if (!result.success) return;
+
+    select.innerHTML = '<option value="">选择科目</option>' +
+      (result.data || []).map(item => `<option value="${item._id}">${escapeHtml(item.name)}</option>`).join('');
+    select.onchange = () => {
+      loadPapers();
+    };
+  } catch (error) {
+    console.error('加载试卷科目失败', error);
   }
 }
 
 async function loadPapers() {
   const examId = document.getElementById('paperExamSelect')?.value || '';
-  const [papersRes, examsRes] = await Promise.all([
-    apiRequest(`${API_BASE}/admin/papers${examId ? `?examId=${examId}` : ''}`),
-    apiRequest(`${API_BASE}/exams`)
-  ]);
-  if (!papersRes?.success || !examsRes?.success) return;
-
-  const examMap = new Map(examsRes.data.map(e => [e._id, e.name]));
-  const papers = papersRes.data || [];
   const tbody = document.getElementById('papersTableBody');
   if (!tbody) return;
-  tbody.innerHTML = papers.map(p => `
-    <tr>
-      <td>${p.title}</td>
-      <td>${p.year}</td>
-      <td>${examMap.get(String(p.examId)) || '-'}</td>
-      <td>${p.order || 0}</td>
-      <td>
-        <button class="btn-sm btn-secondary" onclick="editPaper('${p._id}')">�༭</button>
-        <button class="btn-sm btn-danger" onclick="deletePaper('${p._id}')">ɾ��</button>
-      </td>
-    </tr>
-  `).join('');
+
+  try {
+    const result = await callCloudFunction('adminGetPapers', {
+      token: currentToken,
+      examId: examId || undefined
+    });
+
+    if (!result.success) {
+      showToast(result.message, 'error');
+      return;
+    }
+
+    papersCache = Array.isArray(result.data) ? result.data : [];
+    tbody.innerHTML = papersCache.map(paper => `
+      <tr>
+        <td>${escapeHtml(paper.title || '')}</td>
+        <td>${paper.year || '-'}</td>
+        <td>${escapeHtml(paper.examName || '-')}</td>
+        <td>${paper.questionCount || 0}</td>
+        <td>${paper.isActive === false ? '<span style="color: #ef4444;">已停用</span>' : '<span style="color: #10b981;">已启用</span>'}</td>
+        <td>${paper.order || 0}</td>
+        <td>
+          <button class="btn-sm btn-secondary" onclick="showEditPaperModal('${paper._id}')">编辑</button>
+          <button class="btn-sm ${paper.isActive === false ? 'btn-success' : 'btn-secondary'}" onclick="togglePaperStatus('${paper._id}')">${paper.isActive === false ? '启用' : '停用'}</button>
+          <button class="btn-sm btn-danger" onclick="deletePaper('${paper._id}')">删除</button>
+        </td>
+      </tr>
+    `).join('');
+  } catch (error) {
+    console.error('加载试卷失败', error);
+    showToast('加载试卷失败: ' + error.message, 'error');
+  }
 }
 
 function showCreatePaperModal() {
-  openSimpleModal('��������', `
+  openSimpleModal('新增试卷', `
     <div class="form-group">
-      <label class="form-label">��Ŀ *</label>
+      <label class="form-label">科目 *</label>
       <select id="paperExamId" class="form-input"></select>
     </div>
     <div class="form-group">
-      <label class="form-label">�������� *</label>
+      <label class="form-label">试卷名称 *</label>
       <input id="paperTitle" class="form-input" />
     </div>
     <div class="form-group">
-      <label class="form-label">��� *</label>
-      <input id="paperYear" type="number" class="form-input" />
+      <label class="form-label">年份 *</label>
+      <input id="paperYear" type="number" class="form-input" value="${new Date().getFullYear()}" />
     </div>
     <div class="form-group">
-      <label class="form-label">����</label>
+      <label class="form-label">排序</label>
       <input id="paperOrder" type="number" class="form-input" value="0" />
     </div>
+    <div class="form-group">
+      <label class="form-label">状态</label>
+      <select id="paperIsActive" class="form-input">
+        <option value="true">启用</option>
+        <option value="false">停用</option>
+      </select>
+    </div>
   `, `
-    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">ȡ��</button>
-    <button class="btn-sm btn-primary" id="savePaperBtn">����</button>
+    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">取消</button>
+    <button class="btn-sm btn-primary" id="savePaperBtn">确定</button>
   `);
 
-  apiRequest(`${API_BASE}/exams`).then(res => {
-    if (res?.success) {
+  callCloudFunction('adminGetExams', { token: currentToken }).then(result => {
+    if (result.success) {
       const select = document.getElementById('paperExamId');
-      select.innerHTML = '<option value="">ѡ���Ŀ</option>' +
-        res.data.map(e => `<option value="${e._id}">${e.name}</option>`).join('');
+      const currentExamId = document.getElementById('paperExamSelect')?.value || '';
+      select.innerHTML = '<option value="">选择科目</option>' +
+        (result.data || []).map(item => `<option value="${item._id}">${escapeHtml(item.name)}</option>`).join('');
+      if (currentExamId) {
+        select.value = currentExamId;
+      }
     }
   });
 
@@ -1849,84 +3332,158 @@ function showCreatePaperModal() {
     const title = document.getElementById('paperTitle').value.trim();
     const year = parseInt(document.getElementById('paperYear').value, 10);
     const order = parseInt(document.getElementById('paperOrder').value, 10) || 0;
+    const isActive = document.getElementById('paperIsActive').value !== 'false';
+
     if (!examId || !title || !year) {
-      showToast('����д������', 'error');
+      showToast('请填写必填项', 'error');
       return;
     }
-    const payload = { examId, title, year, order };
-    const res = await apiRequest(`${API_BASE}/admin/papers`, {
-      method: 'POST',
-      body: JSON.stringify(payload)
+
+    const result = await callCloudFunction('adminCreatePaper', {
+      token: currentToken,
+      examId,
+      title,
+      year,
+      order,
+      isActive
     });
-    if (res?.success) {
-      showToast('���ⴴ���ɹ�');
+
+    if (result.success) {
+      showToast('试卷创建成功');
       closeSimpleModal();
-      loadPapers();
+      await loadPapers();
+      await loadImportPaperOptions(document.getElementById('importExamSelect')?.value || '');
     } else {
-      showToast(res?.message || '����ʧ��', 'error');
+      showToast(result.message || '创建失败', 'error');
     }
   };
 }
 
-async function editPaper(id) {
-  const res = await apiRequest(`${API_BASE}/admin/papers`);
-  if (!res?.success) return;
-  const paper = res.data.find(p => p._id === id);
-  if (!paper) return;
+function showEditPaperModal(paperId) {
+  const paper = papersCache.find(item => item._id === paperId);
+  if (!paper) {
+    showToast('未找到试卷信息', 'error');
+    return;
+  }
 
-  openSimpleModal('�༭����', `
+  openSimpleModal('编辑试卷', `
     <div class="form-group">
-      <label class="form-label">�������� *</label>
-      <input id="paperTitle" class="form-input" value="${paper.title}" />
+      <label class="form-label">试卷名称 *</label>
+      <input id="paperTitle" class="form-input" value="${escapeHtml(paper.title || '')}" />
     </div>
     <div class="form-group">
-      <label class="form-label">��� *</label>
-      <input id="paperYear" type="number" class="form-input" value="${paper.year}" />
+      <label class="form-label">年份 *</label>
+      <input id="paperYear" type="number" class="form-input" value="${paper.year || ''}" />
     </div>
     <div class="form-group">
-      <label class="form-label">����</label>
+      <label class="form-label">排序</label>
       <input id="paperOrder" type="number" class="form-input" value="${paper.order || 0}" />
     </div>
+    <div class="form-group">
+      <label class="form-label">状态</label>
+      <select id="paperIsActive" class="form-input">
+        <option value="true">启用</option>
+        <option value="false">停用</option>
+      </select>
+    </div>
   `, `
-    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">ȡ��</button>
-    <button class="btn-sm btn-primary" id="savePaperBtn">����</button>
+    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">取消</button>
+    <button class="btn-sm btn-primary" id="savePaperBtn">确定</button>
   `);
+
+  document.getElementById('paperIsActive').value = paper.isActive === false ? 'false' : 'true';
 
   document.getElementById('savePaperBtn').onclick = async () => {
     const title = document.getElementById('paperTitle').value.trim();
     const year = parseInt(document.getElementById('paperYear').value, 10);
     const order = parseInt(document.getElementById('paperOrder').value, 10) || 0;
+    const isActive = document.getElementById('paperIsActive').value !== 'false';
+
     if (!title || !year) {
-      showToast('����д������', 'error');
+      showToast('请填写必填项', 'error');
       return;
     }
-    const payload = { title, year, order };
-    const updateRes = await apiRequest(`${API_BASE}/admin/papers/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(payload)
+
+    const result = await callCloudFunction('adminUpdatePaper', {
+      token: currentToken,
+      paperId,
+      title,
+      year,
+      order,
+      isActive
     });
-    if (updateRes?.success) {
-      showToast('������³ɹ�');
+
+    if (result.success) {
+      showToast('试卷更新成功');
       closeSimpleModal();
-      loadPapers();
+      await loadPapers();
+      await loadImportPaperOptions(document.getElementById('importExamSelect')?.value || '');
     } else {
-      showToast(updateRes?.message || '����ʧ��', 'error');
+      showToast(result.message || '更新失败', 'error');
     }
   };
 }
 
-async function deletePaper(id) {
-  if (!confirm('ȷ��Ҫɾ����������')) return;
-  const res = await apiRequest(`${API_BASE}/admin/papers/${id}`, { method: 'DELETE' });
-  if (res?.success) {
-    showToast('������ɾ��');
-    loadPapers();
+async function togglePaperStatus(paperId) {
+  const paper = papersCache.find(item => item._id === paperId);
+  if (!paper) {
+    showToast('未找到试卷信息', 'error');
+    return;
+  }
+
+  const nextActive = paper.isActive === false;
+  const actionText = nextActive ? '启用' : '停用';
+  if (!confirm(`确定要${actionText}试卷“${paper.title}”吗？`)) {
+    return;
+  }
+
+  const result = await callCloudFunction('adminUpdatePaper', {
+    token: currentToken,
+    paperId,
+    title: paper.title,
+    year: paper.year,
+    order: paper.order || 0,
+    isActive: nextActive
+  });
+
+  if (result.success) {
+    showToast(`试卷已${actionText}`);
+    await loadPapers();
+    await loadImportPaperOptions(document.getElementById('importExamSelect')?.value || '');
   } else {
-    showToast(res?.message || 'ɾ��ʧ��', 'error');
+    showToast(result.message || `${actionText}失败`, 'error');
   }
 }
 
-// ===== �������� =====
+async function deletePaper(paperId) {
+  const paper = papersCache.find(item => item._id === paperId);
+  if (!paper) {
+    showToast('未找到试卷信息', 'error');
+    return;
+  }
+
+  if (!confirm(`确定要删除试卷“${paper.title}”吗？已归属到该试卷的题目将被解除试卷归属。`)) {
+    return;
+  }
+
+  const result = await callCloudFunction('adminDeletePaper', {
+    token: currentToken,
+    paperId
+  });
+
+  if (result.success) {
+    const affectedQuestions = result.data && typeof result.data.affectedQuestions === 'number'
+      ? result.data.affectedQuestions
+      : 0;
+    showToast(`试卷删除成功，已解除 ${affectedQuestions} 道题的试卷归属`);
+    await loadPapers();
+    await loadImportPaperOptions(document.getElementById('importExamSelect')?.value || '');
+  } else {
+    showToast(result.message || '删除失败', 'error');
+  }
+}
+
+// ===== �������� =====
 async function loadImportTasks() {
   const tasksRes = await apiRequest(`${API_BASE}/admin/import/tasks`);
   const examsRes = await apiRequest(`${API_BASE}/exams`);
@@ -1941,30 +3498,30 @@ async function loadImportTasks() {
       <td>${examMap.get(String(t.examId)) || '-'}</td>
       <td>${t.status || '-'}</td>
       <td>${t.createdAt ? new Date(t.createdAt).toLocaleString('zh-CN') : '-'}</td>
-      <td><button class="btn-sm btn-secondary" onclick="viewImportTask('${t._id}')">�鿴</button></td>
+      <td><button class="btn-sm btn-secondary" onclick="viewImportTask('${t._id}')">�鿴</button></td>
     </tr>
   `).join('');
 }
 
 function showCreateImportTaskModal() {
-  openSimpleModal('������������', `
+  openSimpleModal('������������', `
     <div class="form-group">
-      <label class="form-label">��Ŀ</label>
+      <label class="form-label">��Ŀ</label>
       <select id="importTaskExamId" class="form-input"></select>
     </div>
     <div class="form-group">
-      <label class="form-label">ԭʼ�ı�����ѡ��</label>
+      <label class="form-label">ԭʼ�ı�����ѡ��</label>
       <textarea id="importTaskRawText" class="form-input" style="min-height: 120px;"></textarea>
     </div>
   `, `
-    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">ȡ��</button>
-    <button class="btn-sm btn-primary" id="saveImportTaskBtn">����</button>
+    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">ȡ��</button>
+    <button class="btn-sm btn-primary" id="saveImportTaskBtn">����</button>
   `);
 
   apiRequest(`${API_BASE}/exams`).then(res => {
     if (res?.success) {
       const select = document.getElementById('importTaskExamId');
-      select.innerHTML = '<option value="">ѡ���Ŀ</option>' +
+      select.innerHTML = '<option value="">ѡ���Ŀ</option>' +
         res.data.map(e => `<option value="${e._id}">${e.name}</option>`).join('');
     }
   });
@@ -1978,11 +3535,11 @@ function showCreateImportTaskModal() {
       body: JSON.stringify(payload)
     });
     if (res?.success) {
-      showToast('�����Ѵ���');
+      showToast('�����Ѵ���');
       closeSimpleModal();
       loadImportTasks();
     } else {
-      showToast(res?.message || '����ʧ��', 'error');
+      showToast(res?.message || '����ʧ��', 'error');
     }
   };
 }
@@ -1991,17 +3548,17 @@ async function viewImportTask(id) {
   const res = await apiRequest(`${API_BASE}/admin/import/tasks/${id}`);
   if (!res?.success) return;
   const task = res.data;
-  openSimpleModal('������������', `
+  openSimpleModal('������������', `
     <pre style="white-space: pre-wrap; background: #f7f7f7; padding: 12px; border-radius: 6px;">${JSON.stringify(task, null, 2)}</pre>
   `, `
-    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">�ر�</button>
+    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">�ر�</button>
   `);
 }</script>
-  <!-- ͨ�ñ༭ģ̬�� -->
+  <!-- ͨ�ñ༭ģ̬�� -->
   <div id="simpleModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title" id="simpleModalTitle">����</div>
+        <div class="modal-title" id="simpleModalTitle">����</div>
         <button class="modal-close" onclick="closeSimpleModal()">&times;</button>
       </div>
       <div class="modal-body" id="simpleModalBody"></div>
@@ -2010,6 +3567,7 @@ async function viewImportTask(id) {
   </div>
 </body>
 </html>
+
 
 
 

@@ -1,4 +1,4 @@
-﻿/* pages/index/index.wxss */
+/* pages/index/index.wxss */
 .search-bar {
   padding: 20rpx 24rpx;
   background: #fff;
@@ -22,6 +22,54 @@
   flex: 1;
   font-size: 28rpx;
   color: #333;
+}
+
+.entry-grid {
+  padding: 0 24rpx 20rpx;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16rpx;
+}
+
+.entry-item {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 16rpx;
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.06);
+}
+
+.entry-icon {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 16rpx;
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.entry-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-title {
+  font-size: 28rpx;
+  color: #2B2B2B;
+  font-weight: 600;
+  margin-bottom: 4rpx;
+}
+
+.entry-subtitle {
+  font-size: 22rpx;
+  color: #8B8B8B;
 }
 
 .category-scroll {
@@ -55,6 +103,29 @@
   padding: 20rpx 24rpx;
 }
 
+.exam-group {
+  margin-bottom: 28rpx;
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14rpx;
+  padding: 0 6rpx;
+}
+
+.group-title {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #1F2937;
+}
+
+.group-hint {
+  font-size: 22rpx;
+  color: #94A3B8;
+}
+
 .exam-card {
   display: flex;
   align-items: center;
@@ -63,6 +134,21 @@
   padding: 22rpx 24rpx;
   margin-bottom: 20rpx;
   box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.06);
+}
+
+.exam-card.locked-card {
+  opacity: 0.7;
+  box-shadow: 0 2rpx 8rpx rgba(15, 23, 42, 0.05);
+}
+
+.exam-card.locked-card .exam-icon {
+  filter: saturate(0.7);
+}
+
+.exam-card.locked-card .exam-name,
+.exam-card.locked-card .exam-category,
+.exam-card.locked-card .exam-count {
+  color: #94A3B8;
 }
 
 .exam-icon {
@@ -88,14 +174,31 @@
   min-width: 0;
 }
 
+.exam-name-row {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  margin-bottom: 8rpx;
+}
+
 .exam-name {
   font-size: 32rpx;
   font-weight: 600;
   color: #2B2B2B;
-  margin-bottom: 8rpx;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-width: 0;
+}
+
+.exam-pill {
+  flex-shrink: 0;
+  padding: 4rpx 12rpx;
+  border-radius: 999rpx;
+  font-size: 20rpx;
+  font-weight: 600;
+  color: #2563EB;
+  background: rgba(37, 99, 235, 0.1);
 }
 
 .exam-meta {
@@ -113,6 +216,11 @@
 .exam-count {
   font-size: 26rpx;
   color: #9AA4B2;
+}
+
+.exam-remaining {
+  font-size: 24rpx;
+  color: #F59E0B;
 }
 
 .exam-status {

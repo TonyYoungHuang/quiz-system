@@ -1,4 +1,3 @@
-// 浜戝嚱鏁板叆鍙ｆ枃浠?
 const cloud = require('wx-server-sdk');
 
 cloud.init({
@@ -7,95 +6,108 @@ cloud.init({
 
 const db = cloud.database();
 
-/**
- * 鑾峰彇棰樼洰鍒楄〃浜戝嚱鏁帮紙绠＄悊鐗堬級
- * 鏀寔鍒嗛〉銆佹寜绉戠洰绛涢€夈€佹寜棰樺瀷绛涢€?
- */
-exports.main = async (event, context) => {
-  const { token, examId, questionType, page = 1, pageSize = 50 } = event;
-
-  // 1. 楠岃瘉绠＄悊鍛樻潈闄?
-  if (!token) {
-    return { success: false, error: '鏈彁渚涚櫥褰曚护鐗? };
-  }
-
+async function validateAdminToken(token) {
   const tokenResult = await db.collection('admin_tokens')
-      .where({ token: token })
-      .get();
+    .where({ token })
+    .get();
 
-    if (tokenResult.data.length === 0) {
+  if (tokenResult.data.length === 0) {
+    return {
+      valid: false,
+      message: '登录状态无效，请重新登录'
+    };
+  }
+
+  const tokenData = tokenResult.data[0];
+  if (tokenData.expiresAt) {
+    const expiresAt = new Date(tokenData.expiresAt).getTime();
+    if (!Number.isNaN(expiresAt) && expiresAt <= Date.now()) {
+      await db.collection('admin_tokens').doc(tokenData._id).remove();
       return {
-        success: false,
-        message: '???????????'
+        valid: false,
+        message: '登录已过期，请重新登录'
       };
-    }
-
-    const tokenData = tokenResult.data[0];
-    if (tokenData.expiresAt) {
-      const exp = new Date(tokenData.expiresAt).getTime();
-      if (!Number.isNaN(exp) && exp <= Date.now()) {
-        await db.collection('admin_tokens').doc(tokenData._id).remove();
-        return {
-          success: false,
-          message: '???????????'
-        };
-      }
-    }
-
-  // 2.  妫€鏌?token 鏄惁杩囨湡
-  if (new Date(tokenData.expiresAt) < new Date()) {
-    await db.collection('admin_tokens').doc(tokenData._id).remove();
-    return { success: false, error: '鐧诲綍浠ょ墝宸茶繃鏈燂紝璇烽噸鏂扮櫥褰? };
-  }
-
-  // 3. 鏋勫缓鏌ヨ鏉′欢
-  let whereCondition = {};
-
-  if (examId) {
-    whereCondition.examId = examId;
-  }
-
-  if (questionType) {
-    whereCondition.type = questionType;
-  }
-
-  // 4. 鏌ヨ鎬绘暟
-  const countResult = await db.collection('questions')
-    .where(whereCondition)
-    .count();
-
-  const total = countResult.total;
-
-  // 5. ????????
-  const skip = (page - 1) * pageSize;
-  const query = db.collection('questions').where(whereCondition);
-  const pageResult = await query.skip(skip).limit(pageSize).get();
-  let questions = pageResult.data || [];
-
-  // 6.  鑾峰彇绉戠洰鍚嶇О锛堝鏋滄寜绉戠洰绛涢€夛級
-  let examName = null;
-  if (examId) {
-    try {
-      const examResult = await db.collection('exams')
-        .doc(examId)
-        .get();
-      if (examResult.data) {
-        examName = examResult.data.name;
-      }
-    } catch (err) {
-      console.error('鑾峰彇绉戠洰鍚嶇О澶辫触锛?, err);
     }
   }
 
   return {
-    success: true,
-    data: {
-      questions: questions,
-      total: total,
-      page: page,
-      pageSize: pageSize,
-      totalPages: Math.ceil(total / pageSize),
-      examName: examName
-    }
+    valid: true,
+    tokenData
   };
+}
+
+function normalizeJudgeQuestion(question) {
+  if (question.type !== 'JUDGE') {
+    return question;
+  }
+
+  let answer = question.answer;
+  if (answer === 'true' || answer === true) answer = 'A';
+  if (answer === 'false' || answer === false) answer = 'B';
+
+  const options = question.options && Object.keys(question.options).length > 0
+    ? question.options
+    : { A: '正确', B: '错误' };
+
+  return {
+    ...question,
+    answer,
+    options
+  };
+}
+
+exports.main = async (event = {}) => {
+  const page = Math.max(1, parseInt(event.page, 10) || 1);
+  const pageSize = Math.max(1, Math.min(parseInt(event.pageSize, 10) || 50, 200));
+
+  try {
+    const auth = await validateAdminToken(event.token);
+    if (!auth.valid) {
+      return {
+        success: false,
+        message: auth.message
+      };
+    }
+
+    const where = {};
+    if (event.examId) where.examId = event.examId;
+    if (event.questionType) where.type = event.questionType;
+
+    const countResult = await db.collection('questions').where(where).count();
+    const total = countResult.total || 0;
+    const skip = (page - 1) * pageSize;
+
+    const query = db.collection('questions').where(where);
+    const pageResult = await query
+      .orderBy('sortOrder', 'asc')
+      .orderBy('createdAt', 'asc')
+      .skip(skip)
+      .limit(pageSize)
+      .get();
+
+    let examName = '';
+    if (event.examId) {
+      const examResult = await db.collection('exams').doc(event.examId).get().catch(() => ({ data: null }));
+      examName = examResult.data ? examResult.data.name || '' : '';
+    }
+
+    return {
+      success: true,
+      data: {
+        questions: (pageResult.data || []).map(normalizeJudgeQuestion),
+        total,
+        page,
+        pageSize,
+        totalPages: Math.ceil(total / pageSize),
+        examName
+      }
+    };
+  } catch (error) {
+    console.error('[adminGetQuestions] error', error);
+    return {
+      success: false,
+      message: '获取题目列表失败',
+      error: error.message
+    };
+  }
 };

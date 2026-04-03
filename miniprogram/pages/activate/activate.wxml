@@ -1,19 +1,19 @@
-﻿<!--pages/activate/activate.wxml-->
+<!--pages/activate/activate.wxml-->
 <view class="container">
   <view wx:if="{{examId}}" class="exam-info-card">
-    <view class="exam-info-title">当前待激活科目</view>
-    <view class="exam-info-name">{{examName || '未选择科目'}}</view>
+    <view class="exam-info-title">{{ui.pendingTitle}}</view>
+    <view class="exam-info-name">{{examName || ui.noExam}}</view>
   </view>
 
   <view class="activate-card">
-    <view class="card-title">激活科目</view>
-    <view class="card-desc">输入激活码即可开通该科目</view>
+    <view class="card-title">{{ui.activateTitle}}</view>
+    <view class="card-desc">{{ui.activateDesc}}</view>
 
     <view class="code-input-wrapper">
       <input
         class="code-input"
         type="text"
-        placeholder="请输入 8-12 位激活码"
+        placeholder="{{ui.codePlaceholder}}"
         value="{{activationCode}}"
         bindinput="onCodeInput"
         bindconfirm="onActivate"
@@ -27,8 +27,8 @@
     </view>
 
     <view class="code-tips">
-      <text class="tips-icon">提示</text>
-      <text>激活码为 8-12 位字母或数字</text>
+      <text class="tips-icon">{{ui.tipsLabel}}</text>
+      <text>{{ui.tipsText}}</text>
     </view>
   </view>
 
@@ -37,15 +37,15 @@
     bindtap="onActivate"
     disabled="{{activating || !activationCode}}"
   >
-    {{activating ? '激活中...' : '立即激活'}}
+    {{activating ? ui.activating : ui.activateNow}}
   </button>
 
   <view class="activated-list">
-    <view class="list-title">已激活科目</view>
+    <view class="list-title">{{ui.activatedList}}</view>
 
     <view wx:if="{{activatedExams.length === 0}}" class="empty-activated">
-      <text class="empty-icon">暂无</text>
-      <text>暂无已激活科目</text>
+      <text class="empty-icon">{{ui.emptyTitle}}</text>
+      <text>{{ui.emptyText}}</text>
     </view>
 
     <view wx:else class="exam-items">
@@ -57,7 +57,7 @@
         data-exam="{{item.examId}}"
       >
         <view class="item-icon">
-          <text class="item-icon-text">{{item.examId.iconText || '书'}}</text>
+          <text class="item-icon-text">{{item.examId.iconText || ui.defaultIcon}}</text>
         </view>
         <view class="item-info">
           <view class="item-name">{{item.examId.name}}</view>
