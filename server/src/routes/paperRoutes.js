@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router();
 const paperController = require('../controllers/paperController');
 
+// public papers
+router.get('/papers', paperController.getPapers);
+
 router.get('/admin/papers', paperController.getPapers);
 router.post('/admin/papers', paperController.createPaper);
 router.put('/admin/papers/:id', paperController.updatePaper);

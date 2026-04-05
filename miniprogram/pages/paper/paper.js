@@ -24,6 +24,21 @@ Page({
     this.loadExams(examId || '');
   },
 
+  promptActivate() {
+    wx.showModal({
+      title: '提示',
+      content: '请先激活科目后，再使用模拟考试。',
+      confirmText: '去激活',
+      success: (res) => {
+        if (res.confirm) {
+          wx.switchTab({ url: '/pages/activate/activate' });
+          return;
+        }
+        wx.navigateBack({ delta: 1 });
+      }
+    });
+  },
+
   async loadExams(initialExamId) {
     this.setData({ loading: true });
     try {
@@ -31,14 +46,23 @@ Page({
       await app.getActivatedExams();
       const res = await api.getExams();
       const allExams = res.data || [];
-      const activatedIds = (app.globalData.activatedExams || [])
-        .map(item => item.examId && item.examId._id)
-        .filter(Boolean);
-      const exams = activatedIds.length
-        ? allExams.filter(item => activatedIds.includes(item._id))
-        : allExams;
+      const activatedIds = app.getActivatedExamIds();
+      const exams = allExams.filter(item => activatedIds.includes(item._id));
+
+      if (!exams.length) {
+        this.setData({
+          exams: [],
+          selectedExamId: '',
+          selectedExamName: '',
+          papers: [],
+          loading: false
+        });
+        this.promptActivate();
+        return;
+      }
+
       let selectedExamId = initialExamId;
-      if (!selectedExamId && exams.length > 0) {
+      if (!selectedExamId || !exams.some(item => item._id === selectedExamId)) {
         selectedExamId = exams[0]._id;
       }
       const selectedExam = exams.find(e => e._id === selectedExamId) || {};
@@ -89,8 +113,17 @@ Page({
       util.showError('\u8be5\u8bd5\u5377\u6682\u65e0\u53ef\u5237\u9898\u76ee');
       return;
     }
-    wx.navigateTo({
-      url: `/pages/exam/exam?examId=${examId}&paperId=${paperId}&title=${encodeURIComponent(paperTitle)}`
+    const app = getApp();
+    app.ensureExamPermission(examId).then(hasPermission => {
+      if (!hasPermission) {
+        this.promptActivate();
+        return;
+      }
+      wx.navigateTo({
+        url: `/pages/exam/exam?examId=${examId}&paperId=${paperId}&title=${encodeURIComponent(paperTitle)}`
+      });
+    }).catch(() => {
+      util.showError('获取激活状态失败');
     });
   },
 

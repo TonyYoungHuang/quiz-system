@@ -123,6 +123,7 @@ Page({
     correctCount: 0,
     favoriteIds: [],
     userId: '',
+    batchStart: 0,
     ui: {
       back: '返回',
       sheet: '目录',
@@ -156,6 +157,8 @@ Page({
       targetQuestionId: questionId || '',
       practiceMode: mode === 'wrong' ? 'wrong' : (mode === 'favorite' ? 'favorite' : 'regular')
     });
+    this.allQuestions = [];
+    this.currentBatchStart = 0;
     this.loadQuestions();
   },
 
@@ -177,6 +180,22 @@ Page({
 
   isFavoritePractice() {
     return this.data.practiceMode === 'favorite';
+  },
+
+  isSequentialPractice() {
+    return !!this.data.topicId || !!this.data.paperId;
+  },
+
+  isReferenceOnlyQuestion(question) {
+    return this.isSequentialPractice() && question && (question.type === 'SHORT' || question.type === 'CALC');
+  },
+
+  getProgressScope() {
+    if (this.isWrongPractice()) return { mode: 'wrong' };
+    if (this.isFavoritePractice()) return { mode: 'favorite' };
+    if (this.data.topicId) return { mode: 'topic', topicId: this.data.topicId };
+    if (this.data.paperId) return { mode: 'paper', paperId: this.data.paperId };
+    return { mode: 'regular' };
   },
 
   getQuestionRequestParams() {
@@ -226,23 +245,27 @@ Page({
   },
 
   persistProgress(nextIndex) {
-    if (!this.isRegularPractice() || !this.data.userId || !this.data.examId || !this.data.questions.length) {
+    if ((!this.isRegularPractice() && !this.isSequentialPractice()) || !this.data.userId || !this.data.examId || !this.data.questions.length) {
       return;
     }
 
     const queueIds = this.getCurrentQueueIds();
     const resumeIndex = typeof nextIndex === 'number' ? nextIndex : this.findResumeIndex();
+    const scope = this.getProgressScope();
     if (!queueIds.length || resumeIndex >= queueIds.length) {
-      practice.clearExamProgress(this.data.userId, this.data.examId);
+      practice.clearExamProgress(this.data.userId, this.data.examId, scope);
       return;
     }
 
     practice.saveExamProgress(this.data.userId, this.data.examId, {
       queueIds,
       currentIndex: resumeIndex,
-      mode: 'regular',
-      version: 2
-    });
+      mode: scope.mode,
+      version: 3,
+      topicId: this.data.topicId || '',
+      paperId: this.data.paperId || '',
+      batchStart: this.data.batchStart || 0
+    }, scope);
   },
 
   restoreQuestionsByQueue(allQuestions, queueIds = []) {
@@ -306,28 +329,112 @@ Page({
     try {
       const app = getApp();
       const userId = await app.ensureUserIdentity();
-      const requestParams = this.getQuestionRequestParams();
-      let sourceQuestions = questionCache.getCache(requestParams);
-
-      if (!Array.isArray(sourceQuestions) || sourceQuestions.length === 0) {
-        const res = await api.getQuestions(this.data.examId, {
-          userId,
-          topicId: this.data.topicId || undefined,
-          paperId: this.data.paperId || undefined
+      const permissionRes = await api.checkPermission(userId, this.data.examId);
+      if (!permissionRes || permissionRes.hasPermission !== true) {
+        util.hideLoading();
+        wx.showModal({
+          title: '提示',
+          content: '当前科目尚未激活，请先使用激活码开通后再刷题。',
+          confirmText: '去激活',
+          success: (res) => {
+            if (res.confirm) {
+              app.globalData.pendingActivateExam = {
+                examId: this.data.examId,
+                examName: this.data.examName
+              };
+              wx.switchTab({ url: '/pages/activate/activate' });
+              return;
+            }
+            wx.navigateBack({ delta: 1 });
+          }
         });
-        sourceQuestions = res.data || [];
-        questionCache.setCache(requestParams, sourceQuestions);
+        return;
       }
-
-      const allQuestions = sourceQuestions.map(q => normalizeQuestion(q));
-      const questionBankCount = countAnswerableQuestions(allQuestions);
+      const requestParams = this.getQuestionRequestParams();
       const records = practice.getExamRecords(userId, this.data.examId);
       const answeredIds = new Set(practice.getAnsweredQuestionIds(userId, this.data.examId));
       const wrongIds = new Set(practice.getPendingWrongQuestionIds(userId, this.data.examId));
       const favoriteIds = practice.getFavoriteQuestionIds(userId, this.data.examId);
+      const scope = this.getProgressScope();
+      const regularProgress = this.isRegularPractice()
+        ? practice.getExamProgress(userId, this.data.examId, scope)
+        : null;
+      const sequentialProgress = this.isSequentialPractice()
+        ? practice.getExamProgress(userId, this.data.examId, scope)
+        : null;
+
+      let sourceQuestions = null;
+      let totalCountFromServer = 0;
+      const canUseCache = false;
+
+      if (canUseCache) {
+        sourceQuestions = questionCache.getCache(requestParams);
+      }
+
+      if (!Array.isArray(sourceQuestions) || sourceQuestions.length === 0) {
+        const fetchOptions = {
+          userId,
+          topicId: this.data.topicId || undefined,
+          paperId: this.data.paperId || undefined
+        };
+
+        if (this.isWrongPractice()) {
+          const wrongQuestionIds = Array.from(wrongIds);
+          if (!wrongQuestionIds.length) {
+            util.hideLoading();
+            wx.showModal({
+              title: '提示',
+              content: '当前错题本为空，继续保持。',
+              showCancel: false,
+              success: () => wx.navigateBack()
+            });
+            return;
+          }
+          fetchOptions.questionIds = wrongQuestionIds;
+        } else if (this.isFavoritePractice()) {
+          if (!favoriteIds.length) {
+            util.hideLoading();
+            wx.showModal({
+              title: '提示',
+              content: '当前收藏夹为空，先去做题时收藏一些重点题吧。',
+              showCancel: false,
+              success: () => wx.navigateBack()
+            });
+            return;
+          }
+          fetchOptions.questionIds = favoriteIds;
+        } else if (this.isRegularPractice()) {
+          if (regularProgress && Array.isArray(regularProgress.queueIds) && regularProgress.queueIds.length) {
+            fetchOptions.questionIds = regularProgress.queueIds;
+          } else {
+            fetchOptions.excludeIds = Array.from(answeredIds);
+            fetchOptions.limit = MAX_RENDER_QUESTIONS;
+          }
+        } else if (this.isSequentialPractice()) {
+          if (sequentialProgress && Array.isArray(sequentialProgress.queueIds) && sequentialProgress.queueIds.length) {
+            fetchOptions.questionIds = sequentialProgress.queueIds;
+          } else {
+            fetchOptions.limit = MAX_RENDER_QUESTIONS;
+            fetchOptions.skip = this.currentBatchStart || 0;
+          }
+        }
+
+        const res = await api.getQuestions(this.data.examId, fetchOptions);
+        sourceQuestions = res.data || [];
+        totalCountFromServer = Number(res.totalCount) || 0;
+
+        if (canUseCache) {
+          questionCache.setCache(requestParams, sourceQuestions);
+        }
+      }
+
+      const allQuestions = (sourceQuestions || []).map(q => normalizeQuestion(q));
+      this.allQuestions = allQuestions;
+      const questionBankCount = totalCountFromServer || countAnswerableQuestions(allQuestions);
       let questions = [];
       let currentIndex = 0;
       let userAnswers = {};
+      this.currentBatchStart = 0;
 
       if (this.isWrongPractice()) {
         questions = clampQuestionBatch(allQuestions.filter(item => wrongIds.has(item._id)), true);
@@ -354,10 +461,10 @@ Page({
           return;
         }
       } else if (this.isRegularPractice()) {
-        const progress = practice.getExamProgress(userId, this.data.examId);
+        const progress = regularProgress;
         if (progress && Array.isArray(progress.queueIds) && progress.queueIds.length) {
           if (!progress.version && allQuestions.length > progress.queueIds.length) {
-            practice.clearExamProgress(userId, this.data.examId);
+            practice.clearExamProgress(userId, this.data.examId, scope);
           } else {
           questions = this.restoreQuestionsByQueue(allQuestions, progress.queueIds);
           currentIndex = Math.max(0, Math.min(progress.currentIndex || 0, Math.max(questions.length - 1, 0)));
@@ -373,7 +480,7 @@ Page({
             questions = [];
             currentIndex = 0;
             userAnswers = {};
-            practice.clearExamProgress(userId, this.data.examId);
+            practice.clearExamProgress(userId, this.data.examId, scope);
           } else {
             util.showSuccess('已恢复上次进度');
           }
@@ -389,8 +496,9 @@ Page({
               queueIds: questions.map(item => item._id),
               currentIndex: 0,
               mode: 'regular',
-              version: 2
-            });
+              version: 3,
+              batchStart: 0
+            }, scope);
           }
         }
 
@@ -404,16 +512,52 @@ Page({
           });
           return;
         }
+      } else if (this.isSequentialPractice()) {
+        const progress = sequentialProgress;
+        if (progress && Array.isArray(progress.queueIds) && progress.queueIds.length) {
+          questions = this.restoreQuestionsByQueue(allQuestions, progress.queueIds);
+          currentIndex = Math.max(0, Math.min(progress.currentIndex || 0, Math.max(questions.length - 1, 0)));
+          questions.forEach(item => {
+            if (records[item._id] && records[item._id].answeredAt) {
+              userAnswers[item._id] = records[item._id].lastUserAnswer;
+            }
+            (item.children || []).forEach(child => {
+              if (records[child._id] && records[child._id].answeredAt) {
+                userAnswers[child._id] = records[child._id].lastUserAnswer;
+              }
+            });
+          });
+          this.currentBatchStart = Number(progress.batchStart) || 0;
+        }
+
+        if (!questions.length) {
+          const batchStart = this.currentBatchStart || 0;
+          questions = allQuestions.slice(batchStart, batchStart + MAX_RENDER_QUESTIONS);
+          currentIndex = 0;
+          userAnswers = {};
+          this.currentBatchStart = batchStart;
+          if (questions.length) {
+            practice.saveExamProgress(userId, this.data.examId, {
+              queueIds: questions.map(item => item._id),
+              currentIndex: 0,
+              mode: scope.mode,
+              version: 3,
+              topicId: this.data.topicId || '',
+              paperId: this.data.paperId || '',
+              batchStart
+            }, scope);
+          }
+        }
       } else {
-        questions = this.data.paperId
-          ? clampQuestionBatch(allQuestions, true)
-          : clampQuestionBatch(allQuestions);
+        questions = clampQuestionBatch(allQuestions);
       }
 
       questions = this.applyFavoriteFlags(questions, favoriteIds);
 
       if (!questions.length) {
-        questionCache.clearCache(requestParams);
+        if (canUseCache) {
+          questionCache.clearCache(requestParams);
+        }
         util.hideLoading();
         wx.showModal({
           title: '提示',
@@ -442,7 +586,8 @@ Page({
         userAnswers,
         favoriteIds,
         userId,
-        showResult: false
+        showResult: false,
+        batchStart: this.currentBatchStart || 0
       });
       this.refreshSummary();
       util.hideLoading();
@@ -477,8 +622,8 @@ Page({
     util.showSuccess(result.isFavorite ? '已加入收藏夹' : '已取消收藏');
   },
 
-  checkQuestionCorrect(question) {
-    const userAnswer = this.data.userAnswers[question._id];
+  checkQuestionCorrect(question, answers = this.data.userAnswers) {
+    const userAnswer = answers[question._id];
     if (!userAnswer) return false;
 
     if (question.type === 'MULTI') {
@@ -494,7 +639,7 @@ Page({
     }
 
     if (question.type === 'SHORT' || question.type === 'CALC') {
-      return false;
+      return this.isReferenceOnlyQuestion(question) && !!userAnswer;
     }
 
     return userAnswer === question.answer;
@@ -508,9 +653,9 @@ Page({
         if (!res.confirm) return;
 
         const summary = this.buildSessionSummary();
-        if (this.isRegularPractice() && summary.answeredCount > 0) {
+        if ((this.isRegularPractice() || this.isSequentialPractice()) && summary.answeredCount > 0) {
           this.persistProgress();
-          this.openResultPage(summary, summary.remainingCount > 0);
+          this.openResultPage(summary, this.canResume(summary));
           return;
         }
 
@@ -610,23 +755,57 @@ Page({
     try {
       const app = getApp();
       const userId = await app.ensureUserIdentity();
-      const isCorrect = this.checkQuestionCorrect(currentQuestion);
+      const userAnswers = { ...this.data.userAnswers };
 
-      if (currentQuestion.type !== 'CASE') {
-        practice.upsertQuestionRecord(
-          userId,
-          this.data.examId,
-          currentQuestion,
-          this.data.userAnswers[currentQuestion._id],
-          isCorrect
-        );
+      if (currentQuestion.type === 'CASE') {
+        let hasAnsweredChild = false;
+        (currentQuestion.children || []).forEach(child => {
+          if (this.isReferenceOnlyQuestion(child) && !userAnswers[child._id]) {
+            userAnswers[child._id] = '__REFERENCE_VIEWED__';
+          }
+          if (!this.hasQuestionAnswer(child, userAnswers)) return;
+          hasAnsweredChild = true;
+          practice.upsertQuestionRecord(
+            userId,
+            this.data.examId,
+            child,
+            userAnswers[child._id],
+            this.isReferenceOnlyQuestion(child) ? true : this.checkQuestionCorrect(child, userAnswers)
+          );
+        });
+        if (!hasAnsweredChild) {
+          util.showError('璇峰厛瀹屾垚褰撳墠棰樼洰');
+          return;
+        }
+        if (this.isRegularPractice() || this.isSequentialPractice()) {
+          this.persistProgress(this.data.currentIndex);
+        }
+        this.setData({ showResult: true, userAnswers });
+        this.refreshSummary();
+        return;
       }
 
-      if (this.isRegularPractice()) {
+      if (this.isReferenceOnlyQuestion(currentQuestion) && !userAnswers[currentQuestion._id]) {
+        userAnswers[currentQuestion._id] = '__REFERENCE_VIEWED__';
+      }
+
+      const isCorrect = this.isReferenceOnlyQuestion(currentQuestion)
+        ? true
+        : this.checkQuestionCorrect(currentQuestion, userAnswers);
+
+      practice.upsertQuestionRecord(
+        userId,
+        this.data.examId,
+        currentQuestion,
+        userAnswers[currentQuestion._id],
+        isCorrect
+      );
+
+      if (this.isRegularPractice() || this.isSequentialPractice()) {
         this.persistProgress(this.data.currentIndex);
       }
 
-      this.setData({ showResult: true });
+      this.setData({ showResult: true, userAnswers });
       this.refreshSummary();
     } catch (error) {
       console.error('[exam] submit answer failed', error);
@@ -653,12 +832,39 @@ Page({
     if (this.isRegularPractice()) {
       const answeredCount = practice.getAnsweredQuestionIds(this.data.userId, this.data.examId).length;
       canResume = (this.data.questionBankCount || 0) > answeredCount;
-    }
-
-    if (this.isRegularPractice()) {
-      practice.clearExamProgress(this.data.userId, this.data.examId);
+      practice.clearExamProgress(this.data.userId, this.data.examId, this.getProgressScope());
+    } else if (this.isSequentialPractice()) {
+      const nextBatchStart = (this.data.batchStart || 0) + (this.data.questions || []).length;
+      if (nextBatchStart < (this.data.questionBankCount || 0)) {
+        const nextQuestions = (this.allQuestions || []).slice(nextBatchStart, nextBatchStart + MAX_RENDER_QUESTIONS);
+        if (nextQuestions.length) {
+          practice.saveExamProgress(this.data.userId, this.data.examId, {
+            queueIds: nextQuestions.map(item => item._id),
+            currentIndex: 0,
+            mode: this.getProgressScope().mode,
+            version: 3,
+            topicId: this.data.topicId || '',
+            paperId: this.data.paperId || '',
+            batchStart: nextBatchStart
+          }, this.getProgressScope());
+          canResume = true;
+        }
+      } else {
+        practice.clearExamProgress(this.data.userId, this.data.examId, this.getProgressScope());
+      }
     }
     this.openResultPage(summary, canResume);
+  },
+
+  canResume(summary) {
+    if (this.isRegularPractice()) {
+      return summary.remainingCount > 0;
+    }
+    if (this.isSequentialPractice()) {
+      if (summary.remainingCount > 0) return true;
+      return ((this.data.batchStart || 0) + (this.data.questions || []).length) < (this.data.questionBankCount || 0);
+    }
+    return false;
   },
 
   onShareAppMessage() {

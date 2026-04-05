@@ -13,7 +13,10 @@
       <view class="topic-header">
         <view class="topic-header-main">
           <text class="topic-name">{{item.name}}</text>
-          <text class="topic-count">{{item.questionCount || 0}}{{ui.countSuffix}}</text>
+          <view class="topic-meta">
+            <view class="topic-meta-icon"></view>
+            <text class="topic-count">{{item.questionCount || 0}}{{ui.countSuffix}}</text>
+          </view>
         </view>
         <button wx:if="{{!item.children || item.children.length === 0}}" class="topic-start" bindtap="onStartTopic" data-topic-id="{{item._id}}" data-topic-name="{{item.name}}" data-question-count="{{item.questionCount || 0}}">{{ui.start}}</button>
       </view>

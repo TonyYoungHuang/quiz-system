@@ -209,7 +209,26 @@ Page({
   onEntryTap(e) {
     const url = e.currentTarget.dataset.url;
     if (!url) return;
-    wx.navigateTo({ url });
+    const app = getApp();
+    app.ensureAnyActivatedExam().then(hasActivatedExam => {
+      if (hasActivatedExam) {
+        wx.navigateTo({ url });
+        return;
+      }
+
+      wx.showModal({
+        title: '提示',
+        content: '请先激活至少一个科目后，再使用专题训练、模拟考试、错题本和收藏夹。',
+        confirmText: '去激活',
+        success: (res) => {
+          if (res.confirm) {
+            wx.switchTab({ url: '/pages/activate/activate' });
+          }
+        }
+      });
+    }).catch(() => {
+      util.showError('获取激活状态失败');
+    });
   },
 
   onPullDownRefresh() {

@@ -112,10 +112,10 @@ function getExamById(examId) {
 }
 
 function getQuestions(examId, options = {}) {
-  const { type, userId, topicId, paperId } = options;
+  const { type, userId, topicId, paperId, questionIds, excludeIds, limit, skip } = options;
   return withFallback(
-    () => request(`/questions/${examId}`, { params: { type, userId, topicId, paperId } }),
-    () => callCloudFunction('getQuestions', { examId, type, topicId, paperId, userId })
+    () => request(`/questions/${examId}`, { params: { type, userId, topicId, paperId, questionIds, excludeIds, limit, skip } }),
+    () => callCloudFunction('getQuestions', { examId, type, topicId, paperId, userId, questionIds, excludeIds, limit, skip })
   );
 }
 

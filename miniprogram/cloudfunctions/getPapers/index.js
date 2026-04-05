@@ -6,6 +6,29 @@ cloud.init({
 
 const db = cloud.database();
 
+function getCurrentUserId(event = {}) {
+  const wxContext = cloud.getWXContext();
+  return wxContext.OPENID || event.userId || '';
+}
+
+async function hasExamPermission(userId, examId) {
+  if (!userId || !examId) return false;
+
+  const result = await db.collection('user_permissions')
+    .where({
+      userId,
+      examId
+    })
+    .limit(1)
+    .get();
+
+  if (!result.data.length) return false;
+
+  const permission = result.data[0];
+  return permission.isPermanent ||
+    (permission.expiresAt && new Date(permission.expiresAt) > new Date());
+}
+
 async function getQuestionCount(paperId) {
   const result = await db.collection('questions')
     .where({ paperId })
@@ -16,13 +39,26 @@ async function getQuestionCount(paperId) {
 
 exports.main = async (event = {}) => {
   try {
-    const where = {
-      isActive: true
-    };
-
-    if (event.examId) {
-      where.examId = event.examId;
+    const userId = getCurrentUserId(event);
+    if (!event.examId) {
+      return {
+        success: false,
+        message: '缺少 examId 参数'
+      };
     }
+
+    const allowed = await hasExamPermission(userId, event.examId);
+    if (!allowed) {
+      return {
+        success: false,
+        message: '未激活该科目'
+      };
+    }
+
+    const where = {
+      isActive: true,
+      examId: event.examId
+    };
 
     const result = await db.collection('papers')
       .where(where)

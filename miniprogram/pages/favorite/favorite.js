@@ -26,6 +26,21 @@ Page({
     this.loadFavorites();
   },
 
+  promptActivate() {
+    wx.showModal({
+      title: '提示',
+      content: '请先激活科目后，再使用收藏夹。',
+      confirmText: '去激活',
+      success: (res) => {
+        if (res.confirm) {
+          wx.switchTab({ url: '/pages/activate/activate' });
+          return;
+        }
+        wx.navigateBack({ delta: 1 });
+      }
+    });
+  },
+
   async loadFavorites() {
     this.setData({ loading: true });
     try {
@@ -35,12 +50,17 @@ Page({
 
       const res = await api.getExams();
       const exams = res.data || [];
-      const activatedIds = (app.globalData.activatedExams || [])
-        .map(item => item.examId && item.examId._id)
-        .filter(Boolean);
-      const visibleExams = activatedIds.length
-        ? exams.filter(item => activatedIds.includes(item._id))
-        : exams;
+      const activatedIds = app.getActivatedExamIds();
+      const visibleExams = exams.filter(item => activatedIds.includes(item._id));
+
+      if (!visibleExams.length) {
+        this.setData({
+          favorites: [],
+          loading: false
+        });
+        this.promptActivate();
+        return;
+      }
 
       const favorites = practice.getFavoriteExamSummaries(userId, visibleExams)
         .sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
@@ -60,9 +80,17 @@ Page({
     const examId = e.currentTarget.dataset.examId;
     const examName = e.currentTarget.dataset.examName;
     if (!examId) return;
-
-    wx.navigateTo({
-      url: `/pages/exam/exam?examId=${examId}&title=${encodeURIComponent(examName || '')}&mode=favorite`
+    const app = getApp();
+    app.ensureExamPermission(examId).then(hasPermission => {
+      if (!hasPermission) {
+        this.promptActivate();
+        return;
+      }
+      wx.navigateTo({
+        url: `/pages/exam/exam?examId=${examId}&title=${encodeURIComponent(examName || '')}&mode=favorite`
+      });
+    }).catch(() => {
+      util.showError('获取激活状态失败');
     });
   },
 
@@ -71,9 +99,17 @@ Page({
     const examName = e.currentTarget.dataset.examName;
     const questionId = e.currentTarget.dataset.questionId;
     if (!examId || !questionId) return;
-
-    wx.navigateTo({
-      url: `/pages/exam/exam?examId=${examId}&title=${encodeURIComponent(examName || '')}&mode=favorite&questionId=${encodeURIComponent(questionId)}`
+    const app = getApp();
+    app.ensureExamPermission(examId).then(hasPermission => {
+      if (!hasPermission) {
+        this.promptActivate();
+        return;
+      }
+      wx.navigateTo({
+        url: `/pages/exam/exam?examId=${examId}&title=${encodeURIComponent(examName || '')}&mode=favorite&questionId=${encodeURIComponent(questionId)}`
+      });
+    }).catch(() => {
+      util.showError('获取激活状态失败');
     });
   },
 

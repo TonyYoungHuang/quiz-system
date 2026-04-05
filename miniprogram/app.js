@@ -116,10 +116,25 @@ App({
     return this.fetchActivatedExams(userId);
   },
 
-  hasExamPermission(examId) {
-    const activatedIds = (this.globalData.activatedExams || [])
-      .map(p => p.examId && p.examId._id)
+  getActivatedExamIds() {
+    return (this.globalData.activatedExams || [])
+      .map(item => item.examId && item.examId._id)
       .filter(Boolean);
+  },
+
+  async ensureAnyActivatedExam() {
+    await this.getActivatedExams();
+    return this.getActivatedExamIds().length > 0;
+  },
+
+  async ensureExamPermission(examId) {
+    if (!examId) return false;
+    await this.getActivatedExams();
+    return this.hasExamPermission(examId);
+  },
+
+  hasExamPermission(examId) {
+    const activatedIds = this.getActivatedExamIds();
     return activatedIds.includes(examId);
   }
 });

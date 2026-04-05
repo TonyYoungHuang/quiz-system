@@ -20,12 +20,36 @@ Page({
     this.loadWrongExams();
   },
 
+  promptActivate() {
+    wx.showModal({
+      title: '提示',
+      content: '请先激活科目后，再使用错题本。',
+      confirmText: '去激活',
+      success: (res) => {
+        if (res.confirm) {
+          wx.switchTab({ url: '/pages/activate/activate' });
+          return;
+        }
+        wx.navigateBack({ delta: 1 });
+      }
+    });
+  },
+
   async loadWrongExams() {
     this.setData({ loading: true });
     try {
       const app = getApp();
       const userId = await app.ensureUserIdentity();
       const permissions = await app.getActivatedExams();
+      if (!permissions || !permissions.length) {
+        this.setData({
+          wrongExams: [],
+          loading: false
+        });
+        this.promptActivate();
+        return;
+      }
+
       const exams = (permissions || [])
         .map(item => item.examId)
         .filter(Boolean)
@@ -53,9 +77,17 @@ Page({
     const examId = e.currentTarget.dataset.id;
     const examName = e.currentTarget.dataset.name;
     if (!examId) return;
-
-    wx.navigateTo({
-      url: `/pages/exam/exam?examId=${examId}&title=${encodeURIComponent(examName || '')}&mode=wrong`
+    const app = getApp();
+    app.ensureExamPermission(examId).then(hasPermission => {
+      if (!hasPermission) {
+        this.promptActivate();
+        return;
+      }
+      wx.navigateTo({
+        url: `/pages/exam/exam?examId=${examId}&title=${encodeURIComponent(examName || '')}&mode=wrong`
+      });
+    }).catch(() => {
+      util.showError('获取激活状态失败');
     });
   },
 

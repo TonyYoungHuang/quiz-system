@@ -6,8 +6,17 @@ function getRecordKey(userId, examId) {
   return `${RECORDS_PREFIX}_${userId}_${examId}`;
 }
 
-function getProgressKey(userId, examId) {
-  return `${PROGRESS_PREFIX}_${userId}_${examId}`;
+function getProgressScopeSuffix(scope) {
+  if (!scope || typeof scope !== 'object') return 'regular';
+  if (scope.mode === 'wrong') return 'wrong';
+  if (scope.mode === 'favorite') return 'favorite';
+  if (scope.topicId) return `topic_${scope.topicId}`;
+  if (scope.paperId) return `paper_${scope.paperId}`;
+  return scope.mode || 'regular';
+}
+
+function getProgressKey(userId, examId, scope) {
+  return `${PROGRESS_PREFIX}_${userId}_${examId}_${getProgressScopeSuffix(scope)}`;
 }
 
 function getFavoriteKey(userId, examId) {
@@ -108,22 +117,22 @@ function upsertQuestionRecord(userId, examId, question, userAnswer, isCorrect) {
   return current;
 }
 
-function getExamProgress(userId, examId) {
+function getExamProgress(userId, examId, scope) {
   if (!userId || !examId) return null;
-  return loadJson(getProgressKey(userId, examId), null);
+  return loadJson(getProgressKey(userId, examId, scope), null);
 }
 
-function saveExamProgress(userId, examId, progress) {
+function saveExamProgress(userId, examId, progress, scope) {
   if (!userId || !examId) return false;
-  return saveJson(getProgressKey(userId, examId), {
+  return saveJson(getProgressKey(userId, examId, scope), {
     ...(progress || {}),
     updatedAt: Date.now()
   });
 }
 
-function clearExamProgress(userId, examId) {
+function clearExamProgress(userId, examId, scope) {
   if (!userId || !examId) return;
-  removeJson(getProgressKey(userId, examId));
+  removeJson(getProgressKey(userId, examId, scope));
 }
 
 function getFavoriteQuestionMap(userId, examId) {

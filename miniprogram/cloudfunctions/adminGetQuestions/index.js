@@ -72,6 +72,7 @@ exports.main = async (event = {}) => {
     const where = {};
     if (event.examId) where.examId = event.examId;
     if (event.questionType) where.type = event.questionType;
+    if (event.topicId) where.topicId = event.topicId;
 
     const countResult = await db.collection('questions').where(where).count();
     const total = countResult.total || 0;

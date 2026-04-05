@@ -587,7 +587,14 @@
             <div class="table-header" style="padding-left: 0; padding-right: 0; border-top: 1px solid #e5e7eb; margin-top: 8px;">
               <div class="table-title">题目巡检</div>
               <div style="display: flex; gap: 8px; align-items: center;">
+                <select id="questionTopicSelect" class="form-input" style="width: 220px;">
+                  <option value="">全部专题</option>
+                </select>
                 <label style="font-size: 14px;"><input type="checkbox" id="questionMediaOnly" onchange="loadQuestionReviewList()"> 仅看待补图</label>
+                <span id="questionSelectionInfo" class="help-text" style="margin-top: 0;">已选 0 题</span>
+                <button class="btn-sm btn-secondary" onclick="toggleSelectAllQuestions(true)">全选本页</button>
+                <button class="btn-sm btn-secondary" onclick="clearQuestionSelection()">取消选择</button>
+                <button class="btn-sm btn-danger" onclick="showBatchDeleteQuestionsModal()">批量删除</button>
                 <button class="btn-sm btn-secondary" onclick="loadQuestionReviewList()">刷新题目列表</button>
               </div>
             </div>
@@ -596,6 +603,9 @@
             <table>
               <thead>
                 <tr>
+                  <th style="width: 56px; text-align: center;">
+                    <input type="checkbox" id="questionSelectAll" onchange="toggleSelectAllQuestions(this.checked)">
+                  </th>
                   <th style="width: 90px;">序号</th>
                   <th style="width: 90px;">题型</th>
                   <th>题干</th>
@@ -604,7 +614,7 @@
                 </tr>
               </thead>
               <tbody id="questionReviewTableBody">
-                <tr><td colspan="5" style="color: #666;">请选择科目后查看题目列表</td></tr>
+                <tr><td colspan="6" style="color: #666;">请选择科目后查看题目列表</td></tr>
               </tbody>
             </table>
             <div class="pagination" style="justify-content: flex-end; padding-left: 0; padding-right: 0;">
@@ -932,6 +942,7 @@ let currentQuestionReviewPage = 1;
 let questionReviewPageSize = 50;
 let questionReviewTotal = 0;
 let questionReviewTotalPages = 0;
+let selectedQuestionIds = [];
 let editingExamId = '';
 let app = null;
 
@@ -1099,9 +1110,17 @@ async function loadExamSelects() {
       document.getElementById('generateExamSelect').innerHTML = '<option value="">请选择科目</option>' + options;
       document.getElementById('filterExamSelect').innerHTML = '<option value="">全部科目</option>' + options;
       const exportSelect = document.getElementById('exportExamSelect');
+      const questionTopicSelect = document.getElementById('questionTopicSelect');
       if (exportSelect) {
         exportSelect.innerHTML = '<option value="">请选择科目</option>' + options;
         exportSelect.onchange = () => {
+          currentQuestionReviewPage = 1;
+          loadQuestionTopicOptions(exportSelect.value);
+          loadQuestionReviewList();
+        };
+      }
+      if (questionTopicSelect) {
+        questionTopicSelect.onchange = () => {
           currentQuestionReviewPage = 1;
           loadQuestionReviewList();
         };
@@ -1130,8 +1149,50 @@ function fillQuestionExamSelectFromCache() {
   exportSelect.innerHTML = '<option value="">请选择科目</option>' + options;
   exportSelect.onchange = () => {
     currentQuestionReviewPage = 1;
+    loadQuestionTopicOptions(exportSelect.value);
     loadQuestionReviewList();
   };
+  const questionTopicSelect = document.getElementById('questionTopicSelect');
+  if (questionTopicSelect) {
+    questionTopicSelect.onchange = () => {
+      currentQuestionReviewPage = 1;
+      loadQuestionReviewList();
+    };
+  }
+}
+
+async function loadQuestionTopicOptions(examId, selectedTopicId = '') {
+  const select = document.getElementById('questionTopicSelect');
+  if (!select) return;
+
+  if (!examId) {
+    select.innerHTML = '<option value="">全部专题</option>';
+    return;
+  }
+
+  try {
+    const result = await callCloudFunction('adminGetTopics', {
+      token: currentToken,
+      examId
+    });
+
+    if (!result.success) {
+      select.innerHTML = '<option value="">全部专题</option>';
+      return;
+    }
+
+    const topics = Array.isArray(result.data) ? result.data : [];
+    const options = topics.map(item => {
+      const prefix = item.parentId ? '└ ' : '';
+      return `<option value="${item._id}">${escapeHtml(prefix + item.name)}</option>`;
+    }).join('');
+    select.innerHTML = '<option value="">全部专题</option>' + options;
+    if (selectedTopicId) {
+      select.value = selectedTopicId;
+    }
+  } catch (error) {
+    select.innerHTML = '<option value="">全部专题</option>';
+  }
 }
 
 function showPage(pageName) {
@@ -1532,6 +1593,79 @@ function questionNeedsMediaReview(question) {
   return question.needsMediaReview === true || (!hasMedia && hint);
 }
 
+function getVisibleQuestionRows() {
+  const onlyMedia = document.getElementById('questionMediaOnly')?.checked;
+  let rows = questionReviewCache.slice();
+  if (onlyMedia) {
+    rows = rows.filter(item => questionNeedsMediaReview(item));
+  }
+  return rows;
+}
+
+function updateQuestionSelectionState() {
+  const info = document.getElementById('questionSelectionInfo');
+  const selectAll = document.getElementById('questionSelectAll');
+  const visibleRows = getVisibleQuestionRows();
+  const visibleIds = new Set(visibleRows.map(item => item._id));
+
+  selectedQuestionIds = selectedQuestionIds.filter(id => visibleIds.has(id));
+  const selectedCount = selectedQuestionIds.length;
+
+  if (info) {
+    info.textContent = `已选 ${selectedCount} 题`;
+  }
+
+  if (selectAll) {
+    selectAll.checked = visibleRows.length > 0 && selectedCount === visibleRows.length;
+    selectAll.indeterminate = selectedCount > 0 && selectedCount < visibleRows.length;
+  }
+}
+
+function toggleQuestionSelection(questionId, checked) {
+  if (!questionId) return;
+  if (checked) {
+    if (!selectedQuestionIds.includes(questionId)) {
+      selectedQuestionIds.push(questionId);
+    }
+  } else {
+    selectedQuestionIds = selectedQuestionIds.filter(id => id !== questionId);
+  }
+  updateQuestionSelectionState();
+}
+
+function toggleSelectAllQuestions(checked) {
+  const visibleRows = getVisibleQuestionRows();
+  const visibleIds = visibleRows.map(item => item._id);
+
+  if (checked) {
+    const merged = new Set([...selectedQuestionIds, ...visibleIds]);
+    selectedQuestionIds = Array.from(merged);
+  } else {
+    const visibleIdSet = new Set(visibleIds);
+    selectedQuestionIds = selectedQuestionIds.filter(id => !visibleIdSet.has(id));
+  }
+
+  const checkboxes = document.querySelectorAll('.question-row-checkbox');
+  checkboxes.forEach(node => {
+    node.checked = !!checked;
+  });
+  updateQuestionSelectionState();
+}
+
+function clearQuestionSelection() {
+  selectedQuestionIds = [];
+  const checkboxes = document.querySelectorAll('.question-row-checkbox');
+  checkboxes.forEach(node => {
+    node.checked = false;
+  });
+  updateQuestionSelectionState();
+}
+
+function getSelectedQuestionItems() {
+  const visibleIds = new Set(selectedQuestionIds);
+  return questionReviewCache.filter(item => visibleIds.has(item._id));
+}
+
 function renderQuestionReviewState() {
   const tbody = document.getElementById('questionReviewTableBody');
   const summary = document.getElementById('questionReviewSummary');
@@ -1563,19 +1697,27 @@ function renderQuestionReviewState() {
 
   if (!tbody) return;
 
-  let rows = questionReviewCache.slice();
-  if (onlyMedia) {
-    rows = rows.filter(item => questionNeedsMediaReview(item));
-  }
+  const rows = getVisibleQuestionRows();
 
   if (!rows.length) {
-    tbody.innerHTML = `<tr><td colspan="5" style="color: #666;">${onlyMedia ? '当前页没有待补图题目，可切换分页继续查看' : '当前科目暂无题目'}</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="6" style="color: #666;">${onlyMedia ? '当前页没有待补图题目，可切换分页继续查看' : '当前科目暂无题目'}</td></tr>`;
+    clearQuestionSelection();
     return;
   }
 
-  tbody.innerHTML = rows.map(question => `
+  const pageStartIndex = (currentQuestionReviewPage - 1) * questionReviewPageSize;
+
+  tbody.innerHTML = rows.map((question, index) => `
     <tr>
-      <td>${question.sortOrder || '-'}</td>
+      <td style="text-align: center;">
+        <input
+          type="checkbox"
+          class="question-row-checkbox"
+          ${selectedQuestionIds.includes(question._id) ? 'checked' : ''}
+          onchange="toggleQuestionSelection('${question._id}', this.checked)"
+        >
+      </td>
+      <td title="原排序号：${escapeHtml(question.sortOrder || '-')}">${pageStartIndex + index + 1}</td>
       <td>${escapeHtml(getQuestionTypeLabel(question.type))}</td>
       <td title="${escapeHtml(question.content || '')}">${escapeHtml((question.content || '').slice(0, 80) || '-')}</td>
       <td>${question.media && question.media.length ? '<span style="color: #10b981;">已补图</span>' : (questionNeedsMediaReview(question) ? '<span style="color: #ef4444;">待补图</span>' : '<span style="color: #6b7280;">无图片</span>')}</td>
@@ -1587,10 +1729,12 @@ function renderQuestionReviewState() {
       </td>
     </tr>
   `).join('');
+  updateQuestionSelectionState();
 }
 
 async function loadQuestionReviewList() {
   const examId = document.getElementById('exportExamSelect')?.value;
+  const topicId = document.getElementById('questionTopicSelect')?.value || '';
   const tbody = document.getElementById('questionReviewTableBody');
   if (!tbody) return;
 
@@ -1598,7 +1742,8 @@ async function loadQuestionReviewList() {
     questionReviewCache = [];
     questionReviewTotal = 0;
     questionReviewTotalPages = 0;
-    tbody.innerHTML = '<tr><td colspan="5" style="color: #666;">请选择科目后查看题目列表</td></tr>';
+    selectedQuestionIds = [];
+    tbody.innerHTML = '<tr><td colspan="6" style="color: #666;">请选择科目后查看题目列表</td></tr>';
     renderQuestionReviewState();
     return;
   }
@@ -1607,6 +1752,7 @@ async function loadQuestionReviewList() {
     const result = await callCloudFunction('adminGetQuestions', {
       token: currentToken,
       examId,
+      topicId: topicId || undefined,
       page: currentQuestionReviewPage,
       pageSize: questionReviewPageSize
     });
@@ -1615,7 +1761,8 @@ async function loadQuestionReviewList() {
       questionReviewCache = [];
       questionReviewTotal = 0;
       questionReviewTotalPages = 0;
-      tbody.innerHTML = `<tr><td colspan="5" style="color: #ef4444;">${escapeHtml(result.message || '加载题目失败')}</td></tr>`;
+      selectedQuestionIds = [];
+      tbody.innerHTML = `<tr><td colspan="6" style="color: #ef4444;">${escapeHtml(result.message || '加载题目失败')}</td></tr>`;
       renderQuestionReviewState();
       return;
     }
@@ -1624,12 +1771,14 @@ async function loadQuestionReviewList() {
     questionReviewTotal = (result.data && result.data.total) || 0;
     questionReviewTotalPages = Math.max(1, (result.data && result.data.totalPages) || Math.ceil(questionReviewTotal / questionReviewPageSize) || 1);
     currentQuestionReviewPage = Math.min(currentQuestionReviewPage, questionReviewTotalPages);
+    selectedQuestionIds = [];
     renderQuestionReviewState();
   } catch (error) {
     questionReviewCache = [];
     questionReviewTotal = 0;
     questionReviewTotalPages = 0;
-    tbody.innerHTML = `<tr><td colspan="5" style="color: #ef4444;">加载题目失败: ${escapeHtml(error.message)}</td></tr>`;
+    selectedQuestionIds = [];
+    tbody.innerHTML = `<tr><td colspan="6" style="color: #ef4444;">加载题目失败: ${escapeHtml(error.message)}</td></tr>`;
     renderQuestionReviewState();
   }
 }
@@ -1731,6 +1880,7 @@ async function deleteQuestion(questionId) {
     }
 
     showToast('题目删除成功');
+    selectedQuestionIds = selectedQuestionIds.filter(id => id !== questionId);
     await loadStats();
     await loadExams();
     if (questionReviewCache.length === 1 && currentQuestionReviewPage > 1) {
@@ -1739,6 +1889,85 @@ async function deleteQuestion(questionId) {
     await loadQuestionReviewList();
   } catch (error) {
     showToast('删除失败: ' + error.message, 'error');
+  }
+}
+
+function showBatchDeleteQuestionsModal() {
+  const selectedQuestions = getSelectedQuestionItems();
+  if (!selectedQuestions.length) {
+    showToast('请先勾选要删除的题目', 'error');
+    return;
+  }
+
+  const previewList = selectedQuestions.slice(0, 20).map((question, index) => `
+    <li style="margin-bottom: 8px; line-height: 1.6;">
+      <strong>${index + 1}. [${escapeHtml(getQuestionTypeLabel(question.type))}]</strong>
+      <span>序号 ${escapeHtml(question.sortOrder || '-')}：</span>
+      <span>${escapeHtml((question.content || '未命名题目').slice(0, 80))}</span>
+    </li>
+  `).join('');
+  const moreText = selectedQuestions.length > 20
+    ? `<p class="help-text" style="margin-top: 8px;">其余 ${selectedQuestions.length - 20} 道题将在确认后一起删除。</p>`
+    : '';
+
+  openSimpleModal('批量删除题目确认', `
+    <div class="form-group">
+      <div style="padding: 12px; background: #fff7ed; border-radius: 6px; color: #9a3412; font-size: 14px; line-height: 1.7;">
+        你已选中 <strong>${selectedQuestions.length}</strong> 道题。删除后不可恢复，请再次确认。
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">本次删除清单</label>
+      <div style="max-height: 320px; overflow-y: auto; background: #f9fafb; border-radius: 6px; padding: 12px;">
+        <ol style="padding-left: 18px;">${previewList}</ol>
+        ${moreText}
+      </div>
+    </div>
+  `, `
+    <button class="btn-sm btn-secondary" onclick="closeSimpleModal()">取消</button>
+    <button class="btn-sm btn-danger" id="confirmBatchDeleteBtn">确认删除</button>
+  `);
+
+  document.getElementById('confirmBatchDeleteBtn').onclick = async () => {
+    await confirmBatchDeleteQuestions();
+  };
+}
+
+async function confirmBatchDeleteQuestions() {
+  const selectedQuestions = getSelectedQuestionItems();
+  if (!selectedQuestions.length) {
+    closeSimpleModal();
+    showToast('当前页已没有选中的题目', 'error');
+    return;
+  }
+
+  const selectedIds = selectedQuestions.map(item => item._id);
+
+  try {
+    const result = await callCloudFunction('adminBatchDeleteQuestions', {
+      token: currentToken,
+      questionIds: selectedIds
+    });
+
+    if (!result.success) {
+      showToast(result.message || '批量删除失败', 'error');
+      return;
+    }
+
+    closeSimpleModal();
+    selectedQuestionIds = [];
+    const deletedCount = result.data && typeof result.data.deletedCount === 'number'
+      ? result.data.deletedCount
+      : selectedIds.length;
+    showToast(`批量删除成功，共删除 ${deletedCount} 道题`);
+    await loadStats();
+    await loadExams();
+    if (questionReviewCache.length === selectedIds.length && currentQuestionReviewPage > 1) {
+      currentQuestionReviewPage -= 1;
+    }
+    await loadQuestionReviewList();
+  } catch (error) {
+    showToast('批量删除失败: ' + error.message, 'error');
   }
 }
 
@@ -2281,6 +2510,119 @@ function chunkArray(items, size) {
   return result;
 }
 
+function estimatePayloadBytes(value) {
+  try {
+    return new Blob([JSON.stringify(value)]).size;
+  } catch (error) {
+    return JSON.stringify(value).length * 2;
+  }
+}
+
+function sanitizeImportQuestion(question) {
+  if (!question || typeof question !== 'object') return question;
+
+  const allowedKeys = [
+    'type',
+    'content',
+    'explanation',
+    'stem',
+    'analysis',
+    'options',
+    'answer',
+    'media',
+    'sortOrder',
+    'lineNo',
+    'needsMediaReview',
+    'mediaReviewReason',
+    'mediaPrompt',
+    'sourcePage',
+    'sourceQuestionNo',
+    'children'
+  ];
+
+  const payload = {};
+  allowedKeys.forEach(key => {
+    if (question[key] === undefined) return;
+    if (key === 'children' && Array.isArray(question.children)) {
+      payload.children = question.children.map(child => sanitizeImportQuestion(child));
+      return;
+    }
+    payload[key] = question[key];
+  });
+  return payload;
+}
+
+function chunkImportQuestions(questions, format) {
+  const sanitizedQuestions = questions.map(item => sanitizeImportQuestion(item));
+  if (format !== 'json') {
+    return chunkArray(sanitizedQuestions, 20);
+  }
+
+  const maxItemsPerChunk = 10;
+  const maxPayloadBytes = 64 * 1024;
+  const chunks = [];
+  let currentChunk = [];
+  let currentBytes = 0;
+
+  sanitizedQuestions.forEach(question => {
+    const questionBytes = estimatePayloadBytes(question);
+    const willOverflow =
+      currentChunk.length > 0 &&
+      (currentChunk.length >= maxItemsPerChunk || currentBytes + questionBytes > maxPayloadBytes);
+
+    if (willOverflow) {
+      chunks.push(currentChunk);
+      currentChunk = [];
+      currentBytes = 0;
+    }
+
+    currentChunk.push(question);
+    currentBytes += questionBytes;
+  });
+
+  if (currentChunk.length > 0) {
+    chunks.push(currentChunk);
+  }
+
+  return chunks;
+}
+
+function isRetryableCloudError(error) {
+  const message = String(
+    (error && (error.message || error.errMsg || error.error || error.toString && error.toString())) || ''
+  ).toLowerCase();
+
+  return (
+    message.includes('network request error') ||
+    message.includes('timeout') ||
+    message.includes('timed out') ||
+    message.includes('failed to fetch') ||
+    message.includes('fetch failed') ||
+    message.includes('econnreset') ||
+    message.includes('socket hang up')
+  );
+}
+
+async function callCloudFunctionWithRetry(name, data, options = {}) {
+  const retries = Number.isFinite(Number(options.retries)) ? Number(options.retries) : 3;
+  const baseDelay = Number.isFinite(Number(options.baseDelay)) ? Number(options.baseDelay) : 800;
+  let lastError = null;
+
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      return await callCloudFunction(name, data);
+    } catch (error) {
+      lastError = error;
+      if (attempt >= retries || !isRetryableCloudError(error)) {
+        break;
+      }
+      await sleep(baseDelay * attempt);
+    }
+  }
+
+  throw lastError;
+}
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -2397,8 +2739,7 @@ async function importQuestions() {
   }
 
   try {
-    const chunkSize = importFormat === 'json' ? 1 : 20;
-    const chunks = chunkArray(preview.questions, chunkSize);
+    const chunks = chunkImportQuestions(preview.questions, importFormat);
     openImportResultModal(
       `
         <p><strong>导入处理中</strong></p>
@@ -2446,13 +2787,16 @@ async function importQuestions() {
           `<p>系统正在分批清空该科目旧题，请不要关闭页面。</p><p>已删除旧题：${aggregateDeletedCount} 条</p>`
         );
 
-        const clearResult = await callCloudFunction('adminImportQuestions', {
+        const clearResult = await callCloudFunctionWithRetry('adminImportQuestions', {
           token: currentToken,
           examId,
           topicId,
           paperId,
           questions: [],
           mode: 'overwrite'
+        }, {
+          retries: 4,
+          baseDelay: 1000
         });
 
         if (!clearResult.success) {
@@ -2488,13 +2832,16 @@ async function importQuestions() {
         `<p>已删除旧题：${aggregateDeletedCount} 条</p><p>已成功写入：${aggregateSuccessCount} 条</p><p>已自动跳过重复题：${aggregateSkippedCount} 条</p>`
       );
 
-      const result = await callCloudFunction('adminImportQuestions', {
+      const result = await callCloudFunctionWithRetry('adminImportQuestions', {
         token: currentToken,
         examId,
         topicId,
         paperId,
         questions: chunks[chunkIndex],
         mode: 'append'
+      }, {
+        retries: 4,
+        baseDelay: 1000
       });
 
       if (!result.success) {
@@ -3082,22 +3429,28 @@ function showCreateTopicModal() {
       return;
     }
 
-    const result = await callCloudFunction('adminCreateTopic', {
-      token: currentToken,
-      examId,
-      name,
-      parentId,
-      order,
-      isActive
-    });
+    try {
+      const result = await callCloudFunction('adminCreateTopic', {
+        token: currentToken,
+        examId,
+        name,
+        parentId,
+        order,
+        isActive
+      });
 
-    if (result.success) {
-      showToast('专题创建成功');
-      closeSimpleModal();
-      await loadTopics();
-      await loadImportTopicOptions(document.getElementById('importExamSelect')?.value || '');
-    } else {
-      showToast(result.message || '创建失败', 'error');
+      if (result.success) {
+        showToast('专题创建成功');
+        closeSimpleModal();
+        await loadTopics();
+        await loadImportTopicOptions(document.getElementById('importExamSelect')?.value || '');
+      } else {
+        const detail = result.error ? `：${result.error}` : '';
+        showToast((result.message || '创建失败') + detail, 'error');
+      }
+    } catch (error) {
+      console.error('创建专题失败', error);
+      showToast('创建专题失败: ' + (error.message || '未知错误'), 'error');
     }
   };
 }

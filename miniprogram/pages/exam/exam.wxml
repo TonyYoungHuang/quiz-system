@@ -177,8 +177,14 @@
               <input wx:for="{{child.blankCountArray}}" wx:for-item="b" wx:key="index" class="blank-input" placeholder="{{ui.blankPlaceholder}}" bindinput="onBlankInput" data-question-id="{{child._id}}" data-blank-index="{{index}}" />
             </view>
 
-            <view wx:if="{{child.type === 'SHORT' || child.type === 'CALC'}}" class="short-input">
+            <view wx:if="{{(child.type === 'SHORT' || child.type === 'CALC') && !(topicId || paperId)}}" class="short-input">
               <textarea class="short-textarea" placeholder="{{ui.shortPlaceholder}}" bindinput="onTextAnswerInput" data-question-id="{{child._id}}"></textarea>
+            </view>
+            <view wx:if="{{(child.type === 'SHORT' || child.type === 'CALC') && (topicId || paperId)}}" class="answer-analysis">
+              <view class="analysis-title">参考答案题</view>
+              <view class="analysis-content">
+                <text class="block-text">本题暂不支持作答输入，点击提交后直接查看参考答案。</text>
+              </view>
             </view>
 
             <view wx:if="{{child.needsMediaReview && (!child.media || !child.media.length)}}" class="answer-analysis">
@@ -238,8 +244,14 @@
           <input wx:for="{{item.blankCountArray}}" wx:for-item="b" wx:key="index" class="blank-input" placeholder="{{ui.blankPlaceholder}}" bindinput="onBlankInput" data-question-id="{{item._id}}" data-blank-index="{{index}}" />
         </view>
 
-        <view wx:if="{{item.type === 'SHORT' || item.type === 'CALC'}}" class="short-input">
+        <view wx:if="{{(item.type === 'SHORT' || item.type === 'CALC') && !(topicId || paperId)}}" class="short-input">
           <textarea class="short-textarea" placeholder="{{ui.shortPlaceholder}}" bindinput="onTextAnswerInput" data-question-id="{{item._id}}"></textarea>
+        </view>
+        <view wx:if="{{(item.type === 'SHORT' || item.type === 'CALC') && (topicId || paperId)}}" class="answer-analysis">
+          <view class="analysis-title">参考答案题</view>
+          <view class="analysis-content">
+            <text class="block-text">本题暂不支持作答输入，点击提交后直接查看参考答案。</text>
+          </view>
         </view>
 
         <view wx:if="{{showResult}}" class="answer-analysis">
@@ -257,7 +269,7 @@
         </view>
 
         <view class="footer-buttons">
-          <button wx:if="{{!showResult}}" class="btn-submit" bindtap="onSubmitAnswer" disabled="{{!exam.isAnswered(userAnswers[item._id], item.type)}}">{{ui.submit}}</button>
+          <button wx:if="{{!showResult}}" class="btn-submit" bindtap="onSubmitAnswer" disabled="{{item.type !== 'CASE' && !(((topicId || paperId) && (item.type === 'SHORT' || item.type === 'CALC')) || exam.isAnswered(userAnswers[item._id], item.type))}}">{{ui.submit}}</button>
           <view wx:else class="result-buttons">
             <button wx:if="{{index < questions.length - 1}}" class="btn-next" bindtap="onNextQuestion">{{ui.next}}</button>
             <button wx:else class="btn-finish" bindtap="onFinishExam">{{ui.viewResult}}</button>
