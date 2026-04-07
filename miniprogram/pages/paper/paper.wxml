@@ -9,12 +9,19 @@
   </scroll-view>
 
   <view class="paper-list">
-    <view wx:for="{{papers}}" wx:key="_id" class="paper-card" bindtap="onStartPaper" data-paper-id="{{item._id}}" data-paper-title="{{item.title}}" data-question-count="{{item.questionCount || 0}}">
-      <view class="paper-info">
-        <view class="paper-title">{{item.title}}</view>
-        <view class="paper-meta">{{item.year}} · {{item.questionCount || 0}}{{ui.countSuffix}}</view>
+    <view wx:for="{{papers}}" wx:key="_id" class="paper-card">
+      <view class="paper-header">
+        <view class="paper-header-main">
+          <text class="paper-name">{{item.title}}</text>
+          <view class="paper-meta">
+            <view class="paper-meta-icon"></view>
+            <text class="paper-count">{{item.questionCount || 0}}{{ui.countSuffix}}</text>
+            <text wx:if="{{item.year}}" class="paper-divider">·</text>
+            <text wx:if="{{item.year}}" class="paper-year">{{item.year}}</text>
+          </view>
+        </view>
+        <button class="paper-start" bindtap="onStartPaper" data-paper-id="{{item._id}}" data-paper-title="{{item.title}}" data-question-count="{{item.questionCount || 0}}">{{ui.start}}</button>
       </view>
-      <view class="paper-action">{{ui.start}}</view>
     </view>
 
     <view wx:if="{{papers.length === 0}}" class="empty-state">

@@ -11,15 +11,15 @@
 
 .exam-tab-list {
   display: inline-flex;
-  padding: 16rpx 24rpx;
-  gap: 16rpx;
+  padding: 18rpx 24rpx;
+  gap: 18rpx;
 }
 
 .exam-tab {
-  padding: 12rpx 28rpx;
+  padding: 14rpx 34rpx;
   background: #F2F4F7;
-  border-radius: 32rpx;
-  font-size: 26rpx;
+  border-radius: 36rpx;
+  font-size: 28rpx;
   color: #4A90E2;
   font-weight: 600;
   white-space: nowrap;
@@ -36,38 +36,76 @@
 
 .paper-card {
   background: #fff;
-  border-radius: 16rpx;
-  padding: 20rpx;
-  margin-bottom: 16rpx;
+  border-radius: 18rpx;
+  padding: 24rpx 24rpx 22rpx;
+  margin-bottom: 18rpx;
+  box-shadow: 0 6rpx 18rpx rgba(37, 99, 235, 0.08);
+}
+
+.paper-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.06);
+  gap: 24rpx;
 }
 
-.paper-info {
+.paper-header-main {
   display: flex;
   flex-direction: column;
+  gap: 10rpx;
+  flex: 1;
+  min-width: 0;
 }
 
-.paper-title {
-  font-size: 30rpx;
-  font-weight: 600;
-  color: #2B2B2B;
-  margin-bottom: 6rpx;
+.paper-name {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #273142;
+  line-height: 1.35;
+  word-break: break-all;
 }
 
 .paper-meta {
-  font-size: 24rpx;
-  color: #8B8B8B;
+  display: inline-flex;
+  align-items: center;
+  gap: 12rpx;
+  flex-wrap: wrap;
 }
 
-.paper-action {
+.paper-meta-icon {
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7EB6FF 0%, #4A90E2 100%);
+  box-shadow: 0 0 0 6rpx rgba(74, 144, 226, 0.12);
+}
+
+.paper-count,
+.paper-divider,
+.paper-year {
+  font-size: 25rpx;
+  color: #7E8A9F;
+  font-weight: 600;
+}
+
+.paper-start {
   background: #4A90E2;
   color: #fff;
-  border-radius: 28rpx;
-  padding: 6rpx 20rpx;
+  border-radius: 30rpx;
+  width: 176rpx;
+  min-width: 176rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  padding: 0;
+  margin: 0 0 0 auto;
+  text-align: center;
   font-size: 24rpx;
+  font-weight: 700;
+  box-shadow: 0 8rpx 18rpx rgba(74, 144, 226, 0.2);
+}
+
+.paper-start::after {
+  border: none;
 }
 
 .empty-state {

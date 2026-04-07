@@ -190,6 +190,10 @@ Page({
     return this.isSequentialPractice() && question && (question.type === 'SHORT' || question.type === 'CALC');
   },
 
+  isAutoFullScoreQuestion(question) {
+    return !!(question && question.autoFullScore === true);
+  },
+
   getProgressScope() {
     if (this.isWrongPractice()) return { mode: 'wrong' };
     if (this.isFavoritePractice()) return { mode: 'favorite' };
@@ -639,6 +643,7 @@ Page({
     }
 
     if (question.type === 'SHORT' || question.type === 'CALC') {
+      if (this.isAutoFullScoreQuestion(question)) return true;
       return this.isReferenceOnlyQuestion(question) && !!userAnswer;
     }
 
@@ -770,7 +775,9 @@ Page({
             this.data.examId,
             child,
             userAnswers[child._id],
-            this.isReferenceOnlyQuestion(child) ? true : this.checkQuestionCorrect(child, userAnswers)
+            (this.isReferenceOnlyQuestion(child) || this.isAutoFullScoreQuestion(child))
+              ? true
+              : this.checkQuestionCorrect(child, userAnswers)
           );
         });
         if (!hasAnsweredChild) {
@@ -789,7 +796,7 @@ Page({
         userAnswers[currentQuestion._id] = '__REFERENCE_VIEWED__';
       }
 
-      const isCorrect = this.isReferenceOnlyQuestion(currentQuestion)
+      const isCorrect = (this.isReferenceOnlyQuestion(currentQuestion) || this.isAutoFullScoreQuestion(currentQuestion))
         ? true
         : this.checkQuestionCorrect(currentQuestion, userAnswers);
 

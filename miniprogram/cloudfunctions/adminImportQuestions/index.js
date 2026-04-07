@@ -429,6 +429,9 @@ function buildQuestionPayload(question = {}, index, parentContext = {}) {
   if (Number.isFinite(Number(question.sourceQuestionNo))) {
     payload.sourceQuestionNo = parseInt(question.sourceQuestionNo, 10);
   }
+  if (question.autoFullScore === true) {
+    payload.autoFullScore = true;
+  }
 
   if (type === 'CASE') {
     const children = Array.isArray(question.children) ? question.children : [];
