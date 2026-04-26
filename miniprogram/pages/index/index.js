@@ -4,8 +4,17 @@ const util = require('../../utils/util');
 const practice = require('../../utils/practice');
 const share = require('../../utils/share');
 
+function resolveExamIcon(icon, fallback = '📚') {
+  const value = String(icon || '').trim();
+  return value || fallback;
+}
+
 Page({
   data: {
+    navBar: {
+      statusBarHeight: 20,
+      navHeight: 44
+    },
     exams: [],
     filteredExams: [],
     examGroups: [],
@@ -44,6 +53,7 @@ Page({
       }
     ],
     ui: {
+      pageTitle: '\u9898\u5e93',
       searchIcon: '\u641c',
       searchPlaceholder: '\u641c\u7d22\u79d1\u76ee\u540d\u79f0',
       allCategory: '\u5168\u90e8',
@@ -52,7 +62,7 @@ Page({
       moreExamsGroup: '\u5176\u4ed6\u79d1\u76ee',
       moreExamsHint: '\u672a\u6fc0\u6d3b\u79d1\u76ee\u5df2\u5f31\u5316\u663e\u793a',
       statusActivated: '\u5df2\u6fc0\u6d3b',
-      statusPending: '\u5f85\u6fc0\u6d3b',
+      statusPending: '\u53bb\u6fc0\u6d3b',
       lockedIcon: '\u9501',
       activatedIcon: '\u2713',
       questionUnit: '\u9053\u9898',
@@ -63,11 +73,41 @@ Page({
   },
 
   onLoad() {
+    this.setupCustomNavBar();
     this.loadExams();
   },
 
   onShow() {
+    this.updateCustomTabBar();
     this.refreshExamStatus();
+  },
+
+  setupCustomNavBar() {
+    const systemInfo = wx.getSystemInfoSync ? wx.getSystemInfoSync() : {};
+    const statusBarHeight = systemInfo.statusBarHeight || 20;
+    let navHeight = 44;
+
+    if (wx.getMenuButtonBoundingClientRect) {
+      const menuButton = wx.getMenuButtonBoundingClientRect();
+      if (menuButton && menuButton.top) {
+        const verticalPadding = Math.max(menuButton.top - statusBarHeight, 6);
+        navHeight = menuButton.height + verticalPadding * 2;
+      }
+    }
+
+    this.setData({
+      navBar: {
+        statusBarHeight,
+        navHeight
+      }
+    });
+  },
+
+  updateCustomTabBar() {
+    if (typeof this.getTabBar !== 'function') return;
+    const tabBar = this.getTabBar();
+    if (!tabBar) return;
+    tabBar.setData({ selected: 0 });
   },
 
   async loadExams() {
@@ -77,10 +117,12 @@ Page({
       await app.getActivatedExams();
       const res = await api.getExams();
       const exams = res.data || [];
-      const categories = [...new Set(exams.map(e => e.category))];
+      const categories = [...new Set(exams.map((exam) => exam.category))];
 
       const userId = app.globalData.userId;
-      const activatedIds = (app.globalData.activatedExams || []).map(p => p.examId && p.examId._id).filter(Boolean);
+      const activatedIds = (app.globalData.activatedExams || [])
+        .map((permission) => permission.examId && permission.examId._id)
+        .filter(Boolean);
       const hydratedExams = this.hydrateExamState(exams, userId, activatedIds);
 
       this.setData({
@@ -98,7 +140,9 @@ Page({
   async refreshExamStatus() {
     const app = getApp();
     const userId = await app.ensureUserIdentity();
-    const activatedIds = (app.globalData.activatedExams || []).map(p => p.examId && p.examId._id).filter(Boolean);
+    const activatedIds = (app.globalData.activatedExams || [])
+      .map((permission) => permission.examId && permission.examId._id)
+      .filter(Boolean);
 
     const exams = this.hydrateExamState(this.data.exams, userId, activatedIds);
 
@@ -122,10 +166,10 @@ Page({
     let { exams, selectedCategory, searchText } = this.data;
 
     if (selectedCategory) {
-      exams = exams.filter(e => e.category === selectedCategory);
+      exams = exams.filter((exam) => exam.category === selectedCategory);
     }
     if (searchText) {
-      exams = exams.filter(e => e.name.includes(searchText));
+      exams = exams.filter((exam) => exam.name.includes(searchText));
     }
 
     const filteredExams = this.sortExams(exams);
@@ -134,11 +178,12 @@ Page({
   },
 
   hydrateExamState(exams, userId, activatedIds) {
-    return exams.map(exam => {
+    return exams.map((exam) => {
       const questionCount = exam.questionCount || 0;
       const answeredCount = userId ? practice.getAnsweredQuestionIds(userId, exam._id).length : 0;
       return {
         ...exam,
+        displayIcon: resolveExamIcon(exam.icon),
         isActivated: activatedIds.includes(exam._id),
         answeredCount,
         remainingQuestionCount: Math.max(questionCount - answeredCount, 0)
@@ -163,10 +208,10 @@ Page({
   },
 
   buildExamGroups(exams) {
-    const activated = exams.filter(exam => exam.isActivated);
-    const pending = exams.filter(exam => !exam.isActivated);
+    const activated = exams.filter((exam) => exam.isActivated);
+    const pending = exams.filter((exam) => !exam.isActivated);
     const groups = [];
-    const ui = this.data.ui;
+    const { ui } = this.data;
 
     if (activated.length) {
       groups.push({
@@ -201,7 +246,8 @@ Page({
     const app = getApp();
     app.globalData.pendingActivateExam = {
       examId: exam._id,
-      examName: exam.name
+      examName: exam.name,
+      examIcon: exam.displayIcon || resolveExamIcon(exam.icon)
     };
     wx.switchTab({ url: '/pages/activate/activate' });
   },
@@ -209,17 +255,18 @@ Page({
   onEntryTap(e) {
     const url = e.currentTarget.dataset.url;
     if (!url) return;
+
     const app = getApp();
-    app.ensureAnyActivatedExam().then(hasActivatedExam => {
+    app.ensureAnyActivatedExam().then((hasActivatedExam) => {
       if (hasActivatedExam) {
         wx.navigateTo({ url });
         return;
       }
 
       wx.showModal({
-        title: '提示',
-        content: '请先激活至少一个科目后，再使用专题训练、模拟考试、错题本和收藏夹。',
-        confirmText: '去激活',
+        title: '\u63d0\u793a',
+        content: '\u8bf7\u5148\u6fc0\u6d3b\u81f3\u5c11\u4e00\u4e2a\u79d1\u76ee\u540e\uff0c\u518d\u4f7f\u7528\u4e13\u9898\u8bad\u7ec3\u3001\u6a21\u62df\u8003\u8bd5\u3001\u9519\u9898\u672c\u548c\u6536\u85cf\u5939\u3002',
+        confirmText: '\u53bb\u6fc0\u6d3b',
         success: (res) => {
           if (res.confirm) {
             wx.switchTab({ url: '/pages/activate/activate' });
@@ -227,7 +274,7 @@ Page({
         }
       });
     }).catch(() => {
-      util.showError('获取激活状态失败');
+      util.showError('\u83b7\u53d6\u6fc0\u6d3b\u72b6\u6001\u5931\u8d25');
     });
   },
 
@@ -237,13 +284,13 @@ Page({
 
   onShareAppMessage() {
     return share.buildSharePayload({
-      title: '题库刷题小程序，支持激活码开通、专题训练和模拟考试'
+      title: '\u9898\u5e93\u5237\u9898\u5c0f\u7a0b\u5e8f\uff0c\u652f\u6301\u6fc0\u6d3b\u5f00\u901a\u3001\u4e13\u9898\u8bad\u7ec3\u548c\u6a21\u62df\u8003\u8bd5'
     });
   },
 
   onShareTimeline() {
     return {
-      title: '题库刷题小程序，支持激活码开通、专题训练和模拟考试'
+      title: '\u9898\u5e93\u5237\u9898\u5c0f\u7a0b\u5e8f\uff0c\u652f\u6301\u6fc0\u6d3b\u5f00\u901a\u3001\u4e13\u9898\u8bad\u7ec3\u548c\u6a21\u62df\u8003\u8bd5'
     };
   }
 });

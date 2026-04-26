@@ -106,6 +106,11 @@ const normalizeQuestion = (question, parentId, childIndex) => {
 
 Page({
   data: {
+    navBar: {
+      statusBarHeight: 20,
+      navHeight: 44,
+      heroOffset: 44
+    },
     examId: '',
     examName: '',
     topicId: '',
@@ -125,28 +130,33 @@ Page({
     userId: '',
     batchStart: 0,
     ui: {
-      back: '返回',
-      sheet: '目录',
-      progressPrefix: '第',
-      progressSuffix: '题',
-      totalHintPrefix: '题库共',
-      remainingHintPrefix: '本轮剩余新题',
-      blankPlaceholder: '填空',
-      shortPlaceholder: '请输入答案',
-      analysisTitle: '答案解析',
-      correctAnswer: '正确答案：',
-      mediaMissingTitle: '原题需要配图',
-      mediaMissingDesc: '当前还没有补上原题图片，请在后台题目管理中补图后再复习。',
-      submit: '提交答案',
-      next: '下一题',
-      viewResult: '查看结果',
-      sheetTitle: '答题卡',
-      answered: '已答',
-      unanswered: '未答'
+      back: '\u8fd4\u56de',
+      sheet: '\u76ee\u5f55',
+      progressPrefix: '\u7b2c',
+      progressSuffix: '\u9898',
+      totalHintPrefix: '\u9898\u5e93\u5171',
+      remainingHintPrefix: '\u672c\u8f6e\u5269\u4f59',
+      blankPlaceholder: '\u586b\u7a7a',
+      shortPlaceholder: '\u8bf7\u8f93\u5165\u7b54\u6848',
+      analysisTitle: '\u7b54\u6848\u89e3\u6790',
+      correctAnswer: '\u6b63\u786e\u7b54\u6848\uff1a',
+      mediaMissingTitle: '\u539f\u9898\u9700\u8981\u914d\u56fe',
+      mediaMissingDesc: '\u5f53\u524d\u8fd8\u6ca1\u6709\u8865\u4e0a\u539f\u9898\u56fe\u7247\uff0c\u8bf7\u5728\u540e\u53f0\u9898\u76ee\u7ba1\u7406\u4e2d\u8865\u56fe\u540e\u518d\u590d\u4e60\u3002',
+      submit: '\u63d0\u4ea4\u7b54\u6848',
+      next: '\u4e0b\u4e00\u9898',
+      viewResult: '\u67e5\u770b\u7ed3\u679c',
+      sheetTitle: '\u7b54\u9898\u5361',
+      answered: '\u5df2\u7b54',
+      unanswered: '\u672a\u7b54',
+      favorite: '\u6536\u85cf',
+      favorited: '\u5df2\u6536\u85cf',
+      referenceTitle: '\u53c2\u8003\u7b54\u6848\u9898',
+      referenceDesc: '\u672c\u9898\u6682\u4e0d\u652f\u6301\u4f5c\u7b54\u8f93\u5165\uff0c\u70b9\u51fb\u63d0\u4ea4\u540e\u76f4\u63a5\u67e5\u770b\u53c2\u8003\u7b54\u6848\u3002'
     }
   },
 
   onLoad(options) {
+    this.setupCustomNavBar();
     const { examId, examName, title, topicId, paperId, mode, questionId } = options || {};
     const displayTitle = title ? decodeURIComponent(title) : (examName ? decodeURIComponent(examName) : '');
     this.setData({
@@ -160,6 +170,30 @@ Page({
     this.allQuestions = [];
     this.currentBatchStart = 0;
     this.loadQuestions();
+  },
+
+  setupCustomNavBar() {
+    const systemInfo = wx.getSystemInfoSync ? wx.getSystemInfoSync() : {};
+    const statusBarHeight = systemInfo.statusBarHeight || 20;
+    let navHeight = 44;
+    let heroOffset = 44;
+
+    if (wx.getMenuButtonBoundingClientRect) {
+      const menuButton = wx.getMenuButtonBoundingClientRect();
+      if (menuButton && menuButton.top) {
+        const verticalPadding = Math.max(menuButton.top - statusBarHeight, 6);
+        navHeight = menuButton.height + verticalPadding * 2;
+        heroOffset = Math.max((menuButton.bottom || (menuButton.top + menuButton.height)) - statusBarHeight, menuButton.height);
+      }
+    }
+
+    this.setData({
+      navBar: {
+        statusBarHeight,
+        navHeight,
+        heroOffset
+      }
+    });
   },
 
   onHide() {
@@ -235,6 +269,36 @@ Page({
     return this.data.questions[this.data.currentIndex];
   },
 
+  findQuestionById(questionId, questions = this.data.questions) {
+    const visit = (list = []) => {
+      for (let i = 0; i < list.length; i += 1) {
+        const question = list[i];
+        if (!question) continue;
+        if (question._id === questionId) return question;
+        if (question.type === 'CASE' && Array.isArray(question.children)) {
+          const childMatch = visit(question.children);
+          if (childMatch) return childMatch;
+        }
+      }
+      return null;
+    };
+
+    return visit(questions);
+  },
+
+  normalizeQueueQuestionIds(questionIds = []) {
+    const seen = new Set();
+    return (questionIds || []).map(id => {
+      const normalized = String(id || '').trim();
+      if (!normalized) return '';
+      return normalized.split('__')[0];
+    }).filter(id => {
+      if (!id || seen.has(id)) return false;
+      seen.add(id);
+      return true;
+    });
+  },
+
   getCurrentQueueIds() {
     return (this.data.questions || []).map(item => item._id).filter(Boolean);
   },
@@ -246,6 +310,16 @@ Page({
       idx += 1;
     }
     return Math.min(idx, questions.length);
+  },
+
+  findFirstUnansweredIndex(answers = this.data.userAnswers) {
+    const { questions } = this.data;
+    for (let idx = 0; idx < questions.length; idx += 1) {
+      if (!this.hasQuestionAnswer(questions[idx], answers)) {
+        return idx;
+      }
+    }
+    return questions.length;
   },
 
   persistProgress(nextIndex) {
@@ -383,7 +457,7 @@ Page({
         };
 
         if (this.isWrongPractice()) {
-          const wrongQuestionIds = Array.from(wrongIds);
+          const wrongQuestionIds = this.normalizeQueueQuestionIds(Array.from(wrongIds));
           if (!wrongQuestionIds.length) {
             util.hideLoading();
             wx.showModal({
@@ -441,7 +515,8 @@ Page({
       this.currentBatchStart = 0;
 
       if (this.isWrongPractice()) {
-        questions = clampQuestionBatch(allQuestions.filter(item => wrongIds.has(item._id)), true);
+        const wrongQueueIds = new Set(this.normalizeQueueQuestionIds(Array.from(wrongIds)));
+        questions = clampQuestionBatch(allQuestions.filter(item => wrongQueueIds.has(item._id)), true);
         if (!questions.length) {
           util.hideLoading();
           wx.showModal({
@@ -532,6 +607,17 @@ Page({
             });
           });
           this.currentBatchStart = Number(progress.batchStart) || 0;
+          while (currentIndex < questions.length && this.hasQuestionAnswer(questions[currentIndex], userAnswers)) {
+            currentIndex += 1;
+          }
+          if (!questions.length || currentIndex >= questions.length) {
+            const nextBatchStart = (Number(progress.batchStart) || 0) + questions.length;
+            questions = [];
+            currentIndex = 0;
+            userAnswers = {};
+            this.currentBatchStart = nextBatchStart;
+            practice.clearExamProgress(userId, this.data.examId, scope);
+          }
         }
 
         if (!questions.length) {
@@ -712,8 +798,8 @@ Page({
     if (this.data.showResult) return;
 
     const { questionId, option } = e.currentTarget.dataset;
-    const { questions, userAnswers } = this.data;
-    const question = questions.find(q => q._id === questionId);
+    const { userAnswers } = this.data;
+    const question = this.findQuestionById(questionId);
     if (!question) return;
 
     if (question.type === 'MULTI') {
@@ -737,6 +823,8 @@ Page({
     const { questionId, blankIndex } = e.currentTarget.dataset;
     const value = e.detail.value || '';
     const { userAnswers } = this.data;
+    const question = this.findQuestionById(questionId);
+    if (!question) return;
     const current = Array.isArray(userAnswers[questionId]) ? userAnswers[questionId] : [];
     current[blankIndex] = value;
     userAnswers[questionId] = current;
@@ -748,6 +836,8 @@ Page({
     const { questionId } = e.currentTarget.dataset;
     const value = e.detail.value || '';
     const { userAnswers } = this.data;
+    const question = this.findQuestionById(questionId);
+    if (!question) return;
     userAnswers[questionId] = value;
     this.setData({ userAnswers });
     this.refreshSummary();
@@ -841,23 +931,37 @@ Page({
       canResume = (this.data.questionBankCount || 0) > answeredCount;
       practice.clearExamProgress(this.data.userId, this.data.examId, this.getProgressScope());
     } else if (this.isSequentialPractice()) {
-      const nextBatchStart = (this.data.batchStart || 0) + (this.data.questions || []).length;
-      if (nextBatchStart < (this.data.questionBankCount || 0)) {
-        const nextQuestions = (this.allQuestions || []).slice(nextBatchStart, nextBatchStart + MAX_RENDER_QUESTIONS);
-        if (nextQuestions.length) {
-          practice.saveExamProgress(this.data.userId, this.data.examId, {
-            queueIds: nextQuestions.map(item => item._id),
-            currentIndex: 0,
-            mode: this.getProgressScope().mode,
-            version: 3,
-            topicId: this.data.topicId || '',
-            paperId: this.data.paperId || '',
-            batchStart: nextBatchStart
-          }, this.getProgressScope());
-          canResume = true;
-        }
+      if (summary.remainingCount > 0) {
+        const resumeIndex = this.findFirstUnansweredIndex();
+        practice.saveExamProgress(this.data.userId, this.data.examId, {
+          queueIds: (this.data.questions || []).map(item => item._id),
+          currentIndex: resumeIndex,
+          mode: this.getProgressScope().mode,
+          version: 3,
+          topicId: this.data.topicId || '',
+          paperId: this.data.paperId || '',
+          batchStart: this.data.batchStart || 0
+        }, this.getProgressScope());
+        canResume = true;
       } else {
-        practice.clearExamProgress(this.data.userId, this.data.examId, this.getProgressScope());
+        const nextBatchStart = (this.data.batchStart || 0) + (this.data.questions || []).length;
+        if (nextBatchStart < (this.data.questionBankCount || 0)) {
+          const nextQuestions = (this.allQuestions || []).slice(nextBatchStart, nextBatchStart + MAX_RENDER_QUESTIONS);
+          if (nextQuestions.length) {
+            practice.saveExamProgress(this.data.userId, this.data.examId, {
+              queueIds: nextQuestions.map(item => item._id),
+              currentIndex: 0,
+              mode: this.getProgressScope().mode,
+              version: 3,
+              topicId: this.data.topicId || '',
+              paperId: this.data.paperId || '',
+              batchStart: nextBatchStart
+            }, this.getProgressScope());
+            canResume = true;
+          }
+        } else {
+          practice.clearExamProgress(this.data.userId, this.data.examId, this.getProgressScope());
+        }
       }
     }
     this.openResultPage(summary, canResume);
@@ -875,19 +979,19 @@ Page({
   },
 
   onShareAppMessage() {
-    const examName = this.data.examName || '题库';
+    const examName = this.data.examName || '\u9898\u5e93';
     const title = this.isWrongPractice()
-      ? `我正在复习《${examName}》错题，一起来刷题吧`
-      : `我正在练习《${examName}》，一起来刷题吧`;
+      ? `\u6211\u6b63\u5728\u590d\u4e60\u300a${examName}\u300b\u9519\u9898\uff0c\u4e00\u8d77\u6765\u5237\u9898\u5427`
+      : `\u6211\u6b63\u5728\u7ec3\u4e60\u300a${examName}\u300b\uff0c\u4e00\u8d77\u6765\u5237\u9898\u5427`;
     return share.buildSharePayload({ title });
   },
 
   onShareTimeline() {
-    const examName = this.data.examName || '题库';
+    const examName = this.data.examName || '\u9898\u5e93';
     return {
       title: this.isWrongPractice()
-        ? `我正在复习《${examName}》错题`
-        : `我正在练习《${examName}》`
+        ? `\u6211\u6b63\u5728\u590d\u4e60\u300a${examName}\u300b\u9519\u9898`
+        : `\u6211\u6b63\u5728\u7ec3\u4e60\u300a${examName}\u300b`
     };
   }
 });

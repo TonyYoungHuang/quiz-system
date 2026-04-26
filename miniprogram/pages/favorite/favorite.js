@@ -3,22 +3,41 @@ const util = require('../../utils/util');
 const practice = require('../../utils/practice');
 const share = require('../../utils/share');
 
+function resolveExamIcon(icon, fallback = '📚') {
+  const value = String(icon || '').trim();
+  return value || fallback;
+}
+
 Page({
   data: {
+    navBar: {
+      statusBarHeight: 20,
+      navHeight: 44
+    },
     favorites: [],
+    totalFavoriteCount: 0,
     loading: false,
     ui: {
       title: '收藏夹',
-      start: '开始复习',
-      countSuffix: '题',
-      questionTitle: '已收藏题目',
-      remove: '取消收藏',
-      emptyTitle: '暂无收藏题',
-      emptyDesc: '做题时点击收藏，重点题目会出现在这里'
+      desc: '把重点题目收进这里，方便考前反复回看',
+      backIcon: '<',
+      badgeSuffix: '个科目',
+      heroTotalLabel: '累计收藏',
+      heroExamLabel: '收藏科目',
+      listTitle: '收藏列表',
+      listHint: '优先回看重点收藏',
+      reminderTag: '重点收藏',
+      defaultCategory: '默认分类',
+      countSuffix: '道已收藏',
+      action: '开始复习',
+      previewTitle: '最近收藏',
+      emptyTitle: '暂时还没有收藏题目',
+      emptyDesc: '做题时点击收藏，重点题目会自动汇总到这里'
     }
   },
 
   onLoad() {
+    this.setupCustomNavBar();
     this.loadFavorites();
   },
 
@@ -26,17 +45,47 @@ Page({
     this.loadFavorites();
   },
 
+  setupCustomNavBar() {
+    const systemInfo = wx.getSystemInfoSync ? wx.getSystemInfoSync() : {};
+    const statusBarHeight = systemInfo.statusBarHeight || 20;
+    let navHeight = 44;
+
+    if (wx.getMenuButtonBoundingClientRect) {
+      const menuButton = wx.getMenuButtonBoundingClientRect();
+      if (menuButton && menuButton.top) {
+        const verticalPadding = Math.max(menuButton.top - statusBarHeight, 6);
+        navHeight = menuButton.height + verticalPadding * 2;
+      }
+    }
+
+    this.setData({
+      navBar: {
+        statusBarHeight,
+        navHeight
+      }
+    });
+  },
+
+  onBack() {
+    const pages = getCurrentPages();
+    if (pages.length > 1) {
+      wx.navigateBack({ delta: 1 });
+      return;
+    }
+    wx.switchTab({ url: '/pages/index/index' });
+  },
+
   promptActivate() {
     wx.showModal({
       title: '提示',
-      content: '请先激活科目后，再使用收藏夹。',
+      content: '请先激活至少一个科目后，再使用收藏夹。',
       confirmText: '去激活',
       success: (res) => {
         if (res.confirm) {
           wx.switchTab({ url: '/pages/activate/activate' });
           return;
         }
-        wx.navigateBack({ delta: 1 });
+        this.onBack();
       }
     });
   },
@@ -56,6 +105,7 @@ Page({
       if (!visibleExams.length) {
         this.setData({
           favorites: [],
+          totalFavoriteCount: 0,
           loading: false
         });
         this.promptActivate();
@@ -63,10 +113,17 @@ Page({
       }
 
       const favorites = practice.getFavoriteExamSummaries(userId, visibleExams)
-        .sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
+        .sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0))
+        .map(item => ({
+          ...item,
+          displayIcon: resolveExamIcon(item.icon),
+          previewQuestions: (item.favoriteQuestions || []).slice(0, 2)
+        }));
+      const totalFavoriteCount = favorites.reduce((sum, item) => sum + Number(item.favoriteCount || 0), 0);
 
       this.setData({
         favorites,
+        totalFavoriteCount,
         loading: false
       });
     } catch (error) {
@@ -113,45 +170,19 @@ Page({
     });
   },
 
-  async onRemoveFavorite(e) {
-    const examId = e.currentTarget.dataset.examId;
-    const questionId = e.currentTarget.dataset.questionId;
-    if (!examId || !questionId) return;
-
-    e.stopPropagation && e.stopPropagation();
-
-    try {
-      const app = getApp();
-      const userId = await app.ensureUserIdentity();
-      const favorites = practice.getFavoriteQuestionMap(userId, examId);
-      const question = favorites[questionId];
-      if (!question) {
-        util.showError('该收藏题已不存在');
-        return;
-      }
-
-      practice.toggleFavoriteQuestion(userId, examId, { _id: questionId, ...question });
-      util.showSuccess('已取消收藏');
-      this.loadFavorites();
-    } catch (error) {
-      console.error('[favorite] remove favorite failed', error);
-      util.showError('取消收藏失败');
-    }
-  },
-
   onPullDownRefresh() {
-    this.loadFavorites().then(() => wx.stopPullDownRefresh());
+    Promise.resolve(this.loadFavorites()).finally(() => wx.stopPullDownRefresh());
   },
 
   onShareAppMessage() {
     return share.buildSharePayload({
-      title: '我把重点题都放进收藏夹了，方便反复复习'
+      title: '我把重点题目都收进收藏夹了，方便考前集中回看'
     });
   },
 
   onShareTimeline() {
     return {
-      title: '我把重点题都放进收藏夹了，方便反复复习'
+      title: '我把重点题目都收进收藏夹了，方便考前集中回看'
     };
   }
 });

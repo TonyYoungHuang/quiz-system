@@ -1,32 +1,81 @@
-<!--pages/paper/paper.wxml-->
 <view class="container">
+  <view class="hero-panel">
+    <view class="page-header" style="padding-top: {{navBar.statusBarHeight}}px;">
+      <view class="page-header-bar" style="height: {{navBar.navHeight}}px;">
+        <view class="page-header-back" bindtap="onBack">
+          <text class="page-header-back-text">{{ui.backIcon}}</text>
+        </view>
+        <text class="page-header-title">{{ui.title}}</text>
+        <view class="page-header-placeholder"></view>
+      </view>
+    </view>
+
+    <view class="hero-card">
+      <view class="hero-badge">
+        <text wx:if="{{selectedExamIcon}}" class="hero-badge-icon">{{selectedExamIcon}}</text>
+        <text>{{selectedExamName || ui.defaultExamName}}</text>
+      </view>
+      <view class="hero-title">{{ui.title}}</view>
+      <view class="hero-subtitle">{{selectedExamName || ui.subtitle}}</view>
+      <view class="hero-stats">
+        <view class="hero-stat">
+          <text class="hero-stat-value">{{exams.length}}</text>
+          <text class="hero-stat-label">{{ui.heroExamLabel}}</text>
+        </view>
+        <view class="hero-stat">
+          <text class="hero-stat-value">{{papers.length}}</text>
+          <text class="hero-stat-label">{{ui.heroPaperLabel}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
   <scroll-view class="exam-tabs" scroll-x enhanced show-scrollbar="{{false}}">
     <view class="exam-tab-list">
-      <view wx:for="{{exams}}" wx:key="_id" class="exam-tab {{selectedExamId === item._id ? 'active' : ''}}" bindtap="onExamTap" data-exam-id="{{item._id}}" data-exam-name="{{item.name}}">
-        {{item.name}}
+      <view
+        wx:for="{{exams}}"
+        wx:key="_id"
+        class="exam-tab {{selectedExamId === item._id ? 'active' : ''}}"
+        bindtap="onExamTap"
+        data-exam-id="{{item._id}}"
+        data-exam-name="{{item.name}}"
+        data-exam-icon="{{item.displayIcon}}"
+      >
+        <text wx:if="{{item.displayIcon}}" class="exam-tab-icon">{{item.displayIcon}}</text>
+        <text>{{item.name}}</text>
       </view>
     </view>
   </scroll-view>
 
-  <view class="paper-list">
-    <view wx:for="{{papers}}" wx:key="_id" class="paper-card">
-      <view class="paper-header">
-        <view class="paper-header-main">
-          <text class="paper-name">{{item.title}}</text>
-          <view class="paper-meta">
-            <view class="paper-meta-icon"></view>
-            <text class="paper-count">{{item.questionCount || 0}}{{ui.countSuffix}}</text>
-            <text wx:if="{{item.year}}" class="paper-divider">·</text>
-            <text wx:if="{{item.year}}" class="paper-year">{{item.year}}</text>
-          </view>
-        </view>
-        <button class="paper-start" bindtap="onStartPaper" data-paper-id="{{item._id}}" data-paper-title="{{item.title}}" data-question-count="{{item.questionCount || 0}}">{{ui.start}}</button>
-      </view>
-    </view>
+  <view class="section-header">
+    <text class="section-title">{{ui.listTitle}}</text>
+    <text class="section-pill">{{ui.listHint}}</text>
+  </view>
 
+  <view class="paper-list">
     <view wx:if="{{papers.length === 0}}" class="empty-state">
       <text class="empty-title">{{ui.emptyTitle}}</text>
       <text class="empty-desc">{{ui.emptyDesc}}</text>
+    </view>
+
+    <view wx:for="{{papers}}" wx:key="_id" class="paper-card">
+      <view class="paper-main">
+        <text class="paper-name">{{item.title}}</text>
+        <view class="paper-meta">
+          <text class="paper-tag">{{ui.cardTag}}</text>
+          <text class="paper-count">{{item.questionCount || 0}}{{ui.countSuffix}}</text>
+          <text wx:if="{{item.year}}" class="paper-year">{{item.year}}?</text>
+        </view>
+      </view>
+      <button
+        class="paper-action"
+        bindtap="onStartPaper"
+        data-paper-id="{{item._id}}"
+        data-paper-title="{{item.title}}"
+        data-question-count="{{item.questionCount || 0}}"
+      >
+        {{ui.start}}
+      </button>
     </view>
   </view>
 </view>

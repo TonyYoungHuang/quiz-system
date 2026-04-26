@@ -19,7 +19,7 @@ Page({
     ui: {
       title: '本次成绩',
       scoreLabel: '得分',
-      totalLabel: '题库总量',
+      totalLabel: '题目总量',
       answeredLabel: '已作答',
       correctLabel: '答对',
       wrongLabel: '答错',
@@ -66,21 +66,21 @@ Page({
 
   getComment(score, answered, remaining) {
     if (!answered) {
-      return { commentEmoji: '🙂', commentText: '本次还没有正式提交答案，可以继续练习。' };
+      return { commentEmoji: '🙂', commentText: '这次还没有正式提交答案，可以继续完成当前练习。' };
     }
     if (remaining > 0) {
-      return { commentEmoji: '📘', commentText: '本次已按当前作答完成结算，剩余题目下次可继续。' };
+      return { commentEmoji: '📝', commentText: '本次成绩按当前已作答内容结算，剩余题目下次还可以继续。' };
     }
     if (score === 100) {
-      return { commentEmoji: '😃', commentText: '满分，继续保持。' };
+      return { commentEmoji: '🏆', commentText: '满分表现，继续保持现在的状态。' };
     }
     if (score >= 80) {
-      return { commentEmoji: '😉', commentText: '整体不错，再刷一轮会更稳。' };
+      return { commentEmoji: '😄', commentText: '整体发挥不错，再刷一轮会更稳。' };
     }
     if (score >= 60) {
-      return { commentEmoji: '🙂', commentText: '已经及格，建议优先复习错题。' };
+      return { commentEmoji: '🙂', commentText: '已经及格，建议优先回顾这次错题。' };
     }
-    return { commentEmoji: '😓', commentText: '建议先回顾错题，再继续刷新题。' };
+    return { commentEmoji: '💪', commentText: '建议先回顾错题，再继续刷新题巩固。' };
   },
 
   getRetryText(mode, resumeAvailable) {
@@ -110,7 +110,7 @@ Page({
   },
 
   onShareAppMessage() {
-    const examTitle = this.data.title || '题库';
+    const examTitle = this.data.title || '??';
     return {
       title: `我刚完成《${examTitle}》的一轮练习，一起来刷题吧`,
       path: '/pages/index/index'
@@ -118,7 +118,7 @@ Page({
   },
 
   onShareTimeline() {
-    const examTitle = this.data.title || '题库';
+    const examTitle = this.data.title || '??';
     return {
       title: `我刚完成《${examTitle}》的一轮练习`
     };

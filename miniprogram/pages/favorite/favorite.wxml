@@ -1,54 +1,80 @@
 <view class="container">
-  <view wx:if="{{favorites.length === 0}}" class="empty-state">
-    <text class="empty-title">{{ui.emptyTitle}}</text>
-    <text class="empty-desc">{{ui.emptyDesc}}</text>
+  <view class="hero-panel">
+    <view class="page-header" style="padding-top: {{navBar.statusBarHeight}}px;">
+      <view class="page-header-bar" style="height: {{navBar.navHeight}}px;">
+        <view class="page-header-back" bindtap="onBack">
+          <text class="page-header-back-text">{{ui.backIcon}}</text>
+        </view>
+        <text class="page-header-title">{{ui.title}}</text>
+        <view class="page-header-placeholder"></view>
+      </view>
+    </view>
+
+    <view class="hero-card">
+      <view class="hero-badge">{{favorites.length}}{{ui.badgeSuffix}}</view>
+      <view class="hero-title">{{ui.title}}</view>
+      <view class="hero-subtitle">{{ui.desc}}</view>
+      <view class="hero-stats">
+        <view class="hero-stat">
+          <text class="hero-stat-value">{{totalFavoriteCount}}</text>
+          <text class="hero-stat-label">{{ui.heroTotalLabel}}</text>
+        </view>
+        <view class="hero-stat">
+          <text class="hero-stat-value">{{favorites.length}}</text>
+          <text class="hero-stat-label">{{ui.heroExamLabel}}</text>
+        </view>
+      </view>
+    </view>
   </view>
 
-  <view wx:else class="favorite-list">
-    <view
-      wx:for="{{favorites}}"
-      wx:key="_id"
-      wx:for-item="exam"
-      class="favorite-card"
-      bindtap="onStartFavorite"
-      data-exam-id="{{exam._id}}"
-      data-exam-name="{{exam.name}}"
-    >
-      <view class="favorite-main">
-        <view class="favorite-name">{{exam.name}}</view>
-        <view class="favorite-meta">{{exam.category}}</view>
-      </view>
-      <view class="favorite-side">
-        <view class="favorite-count">{{exam.favoriteCount}}{{ui.countSuffix}}</view>
-        <view class="favorite-action">{{ui.start}}</view>
+  <view class="section-header">
+    <text class="section-title">{{ui.listTitle}}</text>
+    <text class="section-pill">{{ui.listHint}}</text>
+  </view>
+
+  <view class="favorite-list">
+    <view wx:if="{{favorites.length === 0}}" class="empty-state">
+      <view class="empty-icon">藏</view>
+      <text class="empty-title">{{ui.emptyTitle}}</text>
+      <text class="empty-desc">{{ui.emptyDesc}}</text>
+    </view>
+
+    <view wx:for="{{favorites}}" wx:key="_id" class="favorite-card">
+      <view class="favorite-top">
+        <view class="favorite-icon">{{item.displayIcon}}</view>
+        <view class="favorite-main">
+          <view class="favorite-name-row">
+            <text class="favorite-name">{{item.name}}</text>
+            <text class="favorite-badge">{{ui.reminderTag}}</text>
+          </view>
+          <view class="favorite-meta">
+            <text class="favorite-category">{{item.category || ui.defaultCategory}}</text>
+            <text class="favorite-count">{{item.favoriteCount}}{{ui.countSuffix}}</text>
+          </view>
+        </view>
+        <button
+          class="favorite-action"
+          bindtap="onStartFavorite"
+          data-exam-id="{{item._id}}"
+          data-exam-name="{{item.name}}"
+        >
+          {{ui.action}}
+        </button>
       </view>
 
-      <view class="favorite-questions">
-        <view class="favorite-question-title">{{ui.questionTitle}}</view>
+      <view wx:if="{{item.previewQuestions.length}}" class="favorite-preview">
+        <text class="preview-title">{{ui.previewTitle}}</text>
         <view
-          wx:for="{{exam.favoriteQuestions}}"
-          wx:key="questionId"
+          wx:for="{{item.previewQuestions}}"
           wx:for-item="question"
-          wx:for-index="questionIndex"
-          class="favorite-question-row"
+          wx:key="questionId"
+          class="preview-item"
+          bindtap="onOpenFavoriteQuestion"
+          data-exam-id="{{item._id}}"
+          data-exam-name="{{item.name}}"
+          data-question-id="{{question.questionId}}"
         >
-          <view
-            class="favorite-question-item"
-            bindtap="onOpenFavoriteQuestion"
-            data-exam-id="{{exam._id}}"
-            data-exam-name="{{exam.name}}"
-            data-question-id="{{question.questionId}}"
-          >
-            {{questionIndex + 1}}. {{question.content}}
-          </view>
-          <view
-            class="favorite-remove"
-            catchtap="onRemoveFavorite"
-            data-exam-id="{{exam._id}}"
-            data-question-id="{{question.questionId}}"
-          >
-            {{ui.remove}}
-          </view>
+          {{index + 1}}. {{question.content}}
         </view>
       </view>
     </view>

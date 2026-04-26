@@ -1,4 +1,4 @@
 {
-  "navigationBarTitleText": "\u4e13\u9898\u8bad\u7ec3",
+  "navigationStyle": "custom",
   "enablePullDownRefresh": true
 }

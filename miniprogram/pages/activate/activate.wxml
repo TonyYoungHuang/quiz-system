@@ -1,51 +1,76 @@
 <!--pages/activate/activate.wxml-->
 <view class="container">
-  <view wx:if="{{examId}}" class="exam-info-card">
-    <view class="exam-info-title">{{ui.pendingTitle}}</view>
-    <view class="exam-info-name">{{examName || ui.noExam}}</view>
-  </view>
-
-  <view class="activate-card">
-    <view class="card-title">{{ui.activateTitle}}</view>
-    <view class="card-desc">{{ui.activateDesc}}</view>
-
-    <view class="code-input-wrapper">
-      <input
-        class="code-input"
-        type="text"
-        placeholder="{{ui.codePlaceholder}}"
-        value="{{activationCode}}"
-        bindinput="onCodeInput"
-        bindconfirm="onActivate"
-        maxlength="12"
-        auto-focus
-        confirm-type="done"
-      />
-      <view class="code-clear" wx:if="{{activationCode}}" bindtap="onClearCode">
-        <text>×</text>
+  <view class="hero-panel">
+    <view class="page-header" style="padding-top: {{navBar.statusBarHeight}}px;">
+      <view class="page-header-bar" style="height: {{navBar.navHeight}}px;">
+        <text class="page-header-title">{{ui.pageTitle}}</text>
       </view>
     </view>
 
-    <view class="code-tips">
-      <text class="tips-icon">{{ui.tipsLabel}}</text>
-      <text>{{ui.tipsText}}</text>
+    <view class="hero-card">
+      <view class="hero-title">{{ui.activateDesc}}</view>
+      <view wx:if="{{examName}}" class="hero-current">
+        <text wx:if="{{examIcon}}" class="hero-current-icon">{{examIcon}}</text>
+        {{ui.pendingTitle}} {{examName}}
+      </view>
+      <view class="hero-stats">
+        <view class="hero-stat">
+          <text class="hero-stat-value">{{inputDigits}}</text>
+          <text class="hero-stat-label">{{ui.inputDigitsLabel}}</text>
+        </view>
+        <view class="hero-stat">
+          <text class="hero-stat-value">{{activatedExams.length}}</text>
+          <text class="hero-stat-label">{{ui.activatedCountLabel}}</text>
+        </view>
+      </view>
     </view>
   </view>
 
-  <button
-    class="activate-btn {{activating || !activationCode ? 'disabled' : ''}}"
-    bindtap="onActivate"
-    disabled="{{activating || !activationCode}}"
-  >
-    {{activating ? ui.activating : ui.activateNow}}
-  </button>
+  <view class="content-shell">
+    <view class="activate-card">
+      <view class="card-header">
+        <text class="card-title">{{ui.activateFormTitle}}</text>
+        <text class="card-badge">{{ui.codeRule}}</text>
+      </view>
 
-  <view class="activated-list">
-    <view class="list-title">{{ui.activatedList}}</view>
+      <view class="code-input-wrapper">
+        <view class="code-icon">{{ui.codeIcon}}</view>
+        <input
+          class="code-input"
+          type="text"
+          placeholder="{{ui.codePlaceholder}}"
+          placeholder-class="code-placeholder"
+          value="{{activationCode}}"
+          bindinput="onCodeInput"
+          bindconfirm="onActivate"
+          maxlength="12"
+          confirm-type="done"
+        />
+        <view class="code-clear" wx:if="{{activationCode}}" bindtap="onClearCode">x</view>
+      </view>
+
+      <view class="code-tips">
+        <text class="tips-label">{{ui.tipsLabel}}</text>
+        <text class="tips-text">{{ui.tipsText}}</text>
+      </view>
+
+      <button
+        class="activate-btn {{activating || !activationCode ? 'disabled' : ''}}"
+        bindtap="onActivate"
+        disabled="{{activating || !activationCode}}"
+      >
+        {{activating ? ui.activating : ui.activateNow}}
+      </button>
+    </view>
+
+    <view class="section-header">
+      <text class="section-title">{{ui.activatedList}}</text>
+      <text class="section-pill">{{activatedExams.length}}{{ui.countSuffix}}</text>
+    </view>
 
     <view wx:if="{{activatedExams.length === 0}}" class="empty-activated">
       <text class="empty-icon">{{ui.emptyTitle}}</text>
-      <text>{{ui.emptyText}}</text>
+      <text class="empty-text">{{ui.emptyText}}</text>
     </view>
 
     <view wx:else class="exam-items">
@@ -57,17 +82,19 @@
         data-exam="{{item.examId}}"
       >
         <view class="item-icon">
-          <text class="item-icon-text">{{item.examId.iconText || ui.defaultIcon}}</text>
+          <text class="item-icon-text">{{item.examId.displayIcon}}</text>
         </view>
         <view class="item-info">
-          <view class="item-name">{{item.examId.name}}</view>
+          <view class="item-name-row">
+            <text class="item-name">{{item.examId.name}}</text>
+            <text class="item-pill">{{ui.activatedTag}}</text>
+          </view>
           <view class="item-meta">
-            <text class="tag tag-primary">{{item.examId.category}}</text>
+            <text class="item-category">{{item.examId.category}}</text>
+            <text class="item-count">{{item.examId.questionCount || 0}} {{ui.questionUnit}}</text>
           </view>
         </view>
-        <view class="item-arrow">
-          <text>></text>
-        </view>
+        <view class="item-action">{{ui.goPractice}}</view>
       </view>
     </view>
   </view>

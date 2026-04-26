@@ -1,37 +1,85 @@
-<!--pages/topic/topic.wxml-->
 <view class="container">
+  <view class="hero-panel">
+    <view class="page-header" style="padding-top: {{navBar.statusBarHeight}}px;">
+      <view class="page-header-bar" style="height: {{navBar.navHeight}}px;">
+        <view class="page-header-back" bindtap="onBack">
+          <text class="page-header-back-text">{{ui.backIcon}}</text>
+        </view>
+        <text class="page-header-title">{{ui.title}}</text>
+        <view class="page-header-placeholder"></view>
+      </view>
+    </view>
+
+    <view class="hero-card">
+      <view class="hero-badge">
+        <text wx:if="{{selectedExamIcon}}" class="hero-badge-icon">{{selectedExamIcon}}</text>
+        <text>{{selectedExamName || ui.defaultExamName}}</text>
+      </view>
+      <view class="hero-title">{{ui.title}}</view>
+      <view class="hero-subtitle">{{selectedExamName || ui.subtitle}}</view>
+      <view class="hero-stats">
+        <view class="hero-stat">
+          <text class="hero-stat-value">{{exams.length}}</text>
+          <text class="hero-stat-label">{{ui.heroExamLabel}}</text>
+        </view>
+        <view class="hero-stat">
+          <text class="hero-stat-value">{{topicCards.length}}</text>
+          <text class="hero-stat-label">{{ui.heroTopicLabel}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
   <scroll-view class="exam-tabs" scroll-x enhanced show-scrollbar="{{false}}">
     <view class="exam-tab-list">
-      <view wx:for="{{exams}}" wx:key="_id" class="exam-tab {{selectedExamId === item._id ? 'active' : ''}}" bindtap="onExamTap" data-exam-id="{{item._id}}" data-exam-name="{{item.name}}">
-        {{item.name}}
+      <view
+        wx:for="{{exams}}"
+        wx:key="_id"
+        class="exam-tab {{selectedExamId === item._id ? 'active' : ''}}"
+        bindtap="onExamTap"
+        data-exam-id="{{item._id}}"
+        data-exam-name="{{item.name}}"
+        data-exam-icon="{{item.displayIcon}}"
+      >
+        <text wx:if="{{item.displayIcon}}" class="exam-tab-icon">{{item.displayIcon}}</text>
+        <text>{{item.name}}</text>
       </view>
     </view>
   </scroll-view>
 
+  <view class="section-header">
+    <text class="section-title">{{ui.listTitle}}</text>
+    <text class="section-pill">{{ui.listHint}}</text>
+  </view>
+
   <view class="topic-list">
-    <view wx:for="{{topicGroups}}" wx:key="_id" class="topic-card">
-      <view class="topic-header">
-        <view class="topic-header-main">
-          <text class="topic-name">{{item.name}}</text>
-          <view class="topic-meta">
-            <view class="topic-meta-icon"></view>
-            <text class="topic-count">{{item.questionCount || 0}}{{ui.countSuffix}}</text>
-          </view>
-        </view>
-        <button wx:if="{{!item.children || item.children.length === 0}}" class="topic-start" bindtap="onStartTopic" data-topic-id="{{item._id}}" data-topic-name="{{item.name}}" data-question-count="{{item.questionCount || 0}}">{{ui.start}}</button>
-      </view>
-
-      <view wx:if="{{item.children && item.children.length}}" class="topic-children">
-        <view wx:for="{{item.children}}" wx:key="_id" class="topic-child" bindtap="onStartTopic" data-topic-id="{{item._id}}" data-topic-name="{{item.name}}" data-question-count="{{item.questionCount || 0}}">
-          <text>{{item.name}}</text>
-          <text class="topic-child-count">{{item.questionCount || 0}}{{ui.countSuffix}}</text>
-        </view>
-      </view>
-    </view>
-
-    <view wx:if="{{topicGroups.length === 0}}" class="empty-state">
+    <view wx:if="{{topicCards.length === 0}}" class="empty-state">
       <text class="empty-title">{{ui.emptyTitle}}</text>
       <text class="empty-desc">{{ui.emptyDesc}}</text>
+    </view>
+
+    <view
+      wx:for="{{topicCards}}"
+      wx:key="_id"
+      class="topic-card"
+    >
+      <view class="topic-main">
+        <text class="topic-name">{{item.name}}</text>
+        <text wx:if="{{item.parentName}}" class="topic-parent">{{item.parentName}}</text>
+        <view class="topic-meta">
+          <text class="topic-tag">{{item.tagText}}</text>
+          <text class="topic-count">{{item.questionCount}}{{ui.countSuffix}}</text>
+        </view>
+      </view>
+      <button
+        class="topic-action"
+        bindtap="onStartTopic"
+        data-topic-id="{{item._id}}"
+        data-topic-name="{{item.name}}"
+        data-question-count="{{item.questionCount}}"
+      >
+        {{ui.start}}
+      </button>
     </view>
   </view>
 </view>

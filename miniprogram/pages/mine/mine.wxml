@@ -1,54 +1,50 @@
 <!--pages/mine/mine.wxml-->
 <view class="container">
-  <view class="user-card">
-    <view class="user-avatar">
-      <text>{{ui.userLabel}}</text>
-    </view>
-    <view class="user-info">
-      <view class="user-name">{{ui.userName}}</view>
-      <view class="user-id">{{ui.userIdPrefix}}{{userId}}</view>
+  <view class="hero-panel">
+    <view class="page-header" style="padding-top: {{navBar.statusBarHeight}}px;">
+      <view class="page-header-bar" style="height: {{navBar.navHeight}}px;">
+        <text class="page-header-title">{{ui.pageTitle}}</text>
+      </view>
     </view>
   </view>
 
-  <view class="stats-card">
-    <view class="stat-item">
-      <view class="stat-value">{{activatedCount}}</view>
-      <view class="stat-label">{{ui.activatedLabel}}</view>
-    </view>
-    <view class="stat-divider"></view>
-    <view class="stat-item">
-      <view class="stat-value">{{totalQuestions}}</view>
-      <view class="stat-label">{{ui.totalQuestionsLabel}}</view>
-    </view>
-  </view>
-
-  <view class="menu-list">
-    <view class="menu-item" bindtap="onMyExams">
-      <view class="menu-left">
-        <text class="menu-icon">{{ui.userLabel}}</text>
-        <text class="menu-title">{{ui.myExams}}</text>
+  <view class="content-shell">
+    <view class="user-card">
+      <view class="user-avatar">{{ui.userLabel}}</view>
+      <view class="user-info">
+        <view class="user-name">{{ui.userName}}</view>
+        <view class="user-id">{{ui.userIdPrefix}}{{userId}}</view>
+        <view class="user-summary">{{ui.summaryPrefix}} {{activatedCount}} {{ui.summaryMiddle}} {{totalQuestions}} {{ui.summarySuffix}}</view>
       </view>
-      <text class="menu-arrow">></text>
     </view>
 
-    <view class="menu-item" bindtap="onHistory">
-      <view class="menu-left">
-        <text class="menu-icon">{{ui.userLabel}}</text>
-        <text class="menu-title">{{ui.history}}</text>
+    <view class="stats-grid">
+      <view class="stat-card">
+        <view class="stat-value">{{activatedCount}}</view>
+        <view class="stat-label">{{ui.activatedLabel}}</view>
       </view>
-      <text class="menu-arrow">></text>
-    </view>
-
-    <view class="menu-item" bindtap="onAbout">
-      <view class="menu-left">
-        <text class="menu-icon">{{ui.userLabel}}</text>
-        <text class="menu-title">{{ui.about}}</text>
+      <view class="stat-card">
+        <view class="stat-value">{{totalQuestions}}</view>
+        <view class="stat-label">{{ui.totalQuestionsLabel}}</view>
       </view>
-      <text class="menu-arrow">></text>
     </view>
-  </view>
 
-  <view class="version-info">
-    <text>{{ui.version}}</text>
+    <view class="section-header">
+      <text class="section-title">{{ui.sectionTitle}}</text>
+      <text class="section-pill">{{ui.sectionHint}}</text>
+    </view>
+
+    <view class="menu-list">
+      <view wx:for="{{menuItems}}" wx:key="key" class="menu-card" bindtap="onMenuTap" data-action="{{item.key}}">
+        <view class="menu-icon">{{item.icon}}</view>
+        <view class="menu-info">
+          <view class="menu-title">{{item.title}}</view>
+          <view class="menu-subtitle">{{item.subtitle}}</view>
+        </view>
+        <view class="menu-action">{{item.actionText}}</view>
+      </view>
+    </view>
+
+    <view class="version-pill">{{ui.version}}</view>
   </view>
 </view>

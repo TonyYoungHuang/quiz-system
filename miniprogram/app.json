@@ -18,10 +18,11 @@
     "backgroundTextStyle": "light"
   },
   "tabBar": {
+    "custom": true,
     "color": "#999999",
-    "selectedColor": "#4A90E2",
-    "backgroundColor": "#ffffff",
-    "borderStyle": "black",
+    "selectedColor": "#246BDB",
+    "backgroundColor": "#F8FBFF",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/index",

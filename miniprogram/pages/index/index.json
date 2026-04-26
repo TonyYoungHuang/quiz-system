@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "\u9898\u5e93",
+  "navigationStyle": "custom",
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark"
 }

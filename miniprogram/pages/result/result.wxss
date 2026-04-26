@@ -1,52 +1,55 @@
 .container {
   min-height: 100vh;
-  background: #f6f7fb;
-  padding: 32rpx 24rpx 48rpx;
+  background: linear-gradient(180deg, #4B8FE9 0%, #DDEBFF 280rpx, #F3F7FD 640rpx, #F4F7FC 100%);
+  padding: 28rpx 24rpx 48rpx;
   box-sizing: border-box;
 }
 
 .result-card,
 .comment-card {
-  background: #fff;
-  border-radius: 24rpx;
-  box-shadow: 0 8rpx 24rpx rgba(15, 23, 42, 0.08);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FDFEFF 100%);
+  border-radius: 28rpx;
+  border: 2rpx solid rgba(205, 222, 248, 0.88);
+  box-shadow: 0 12rpx 28rpx rgba(83, 122, 196, 0.10);
 }
 
 .result-card {
-  padding: 40rpx 32rpx;
+  padding: 34rpx 28rpx;
 }
 
 .page-title {
   font-size: 36rpx;
-  font-weight: 600;
+  font-weight: 800;
   color: #111827;
 }
 
 .exam-title {
-  margin-top: 12rpx;
+  margin-top: 10rpx;
   font-size: 26rpx;
   color: #6b7280;
+  font-weight: 600;
 }
 
 .score-row {
-  margin-top: 32rpx;
+  margin-top: 28rpx;
   display: flex;
   align-items: center;
-  gap: 24rpx;
+  gap: 22rpx;
 }
 
 .score-value {
-  width: 168rpx;
-  height: 168rpx;
+  width: 160rpx;
+  height: 160rpx;
   border-radius: 50%;
   background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 72rpx;
-  font-weight: 700;
+  font-size: 68rpx;
+  font-weight: 800;
   flex-shrink: 0;
+  box-shadow: 0 16rpx 28rpx rgba(53, 122, 189, 0.18);
 }
 
 .score-meta {
@@ -56,17 +59,18 @@
 .score-label {
   font-size: 30rpx;
   color: #111827;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .accuracy-line {
   margin-top: 12rpx;
   font-size: 26rpx;
   color: #6b7280;
+  font-weight: 600;
 }
 
 .stats-grid {
-  margin-top: 32rpx;
+  margin-top: 30rpx;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16rpx;
@@ -74,16 +78,16 @@
 
 .stat-item {
   background: #f8fafc;
-  border-radius: 18rpx;
-  padding: 24rpx;
+  border-radius: 20rpx;
+  padding: 22rpx;
 }
 
 .stat-item.success {
-  background: rgba(34, 197, 94, 0.1);
+  background: rgba(34, 197, 94, 0.10);
 }
 
 .stat-item.danger {
-  background: rgba(239, 68, 68, 0.1);
+  background: rgba(239, 68, 68, 0.10);
 }
 
 .stat-item.warning {
@@ -92,19 +96,20 @@
 
 .stat-value {
   font-size: 40rpx;
-  font-weight: 700;
+  font-weight: 800;
   color: #111827;
 }
 
 .stat-label {
-  margin-top: 10rpx;
+  margin-top: 8rpx;
   font-size: 24rpx;
   color: #6b7280;
+  font-weight: 600;
 }
 
 .comment-card {
-  margin-top: 24rpx;
-  padding: 28rpx;
+  margin-top: 20rpx;
+  padding: 28rpx 24rpx;
   text-align: center;
 }
 
@@ -117,10 +122,11 @@
   font-size: 28rpx;
   line-height: 1.6;
   color: #374151;
+  font-weight: 600;
 }
 
 .action-buttons {
-  margin-top: 28rpx;
+  margin-top: 24rpx;
   display: flex;
   gap: 16rpx;
 }
@@ -128,9 +134,17 @@
 .action-buttons button {
   flex: 1;
   height: 88rpx;
-  line-height: 88rpx;
   border-radius: 44rpx;
   font-size: 30rpx;
+  font-weight: 700;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.action-buttons button::after {
   border: none;
 }
 
@@ -143,4 +157,5 @@
 .btn-primary {
   background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
   color: #fff;
+  box-shadow: 0 12rpx 24rpx rgba(53, 122, 189, 0.18);
 }
